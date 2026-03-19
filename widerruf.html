@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Widerruf – Kristin Schnödt</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/LogoNeu_2026_final_OH.png">
+  <style>
+    :root{--alabaster:#F8F3F5;--m100:#F8F3F5;--m200:#ECDDE1;--m300:#D9C0C8;--m400:#C49EAA;--m500:#B5818C;--m700:#7A4A58;--m900:#2E2028;--schiefer:#696E6B;--white:#FFFFFF;--display:'Cormorant Garamond',Georgia,serif;--body:'Montserrat',system-ui,sans-serif;--ease:cubic-bezier(0.25,1,0.5,1);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;font-size:16px;}
+    body{font-family:var(--body);color:var(--schiefer);background:var(--alabaster);-webkit-font-smoothing:antialiased;}
+    /* NAV */
+    .nav{position:sticky;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 4rem;background:rgba(248,243,245,0.97);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(46,32,40,0.07);}
+    .nav-logo{text-decoration:none;display:flex;align-items:center;}
+    .nav-logo img{height:42px;width:auto;}
+    .nav-links{display:flex;gap:2.5rem;list-style:none;}
+    .nav-links a{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--schiefer);text-decoration:none;transition:color 0.3s;}
+    .nav-links a:hover{color:var(--m500);}
+    .nav-btn{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.75rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;}
+    .nav-btn:hover{background:var(--m700);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .nav-hamburger span{display:block;width:24px;height:1.5px;background:var(--m900);}
+    /* PAGE HERO */
+    .page-hero{background:var(--m900);padding:6rem 4rem;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 10% 100%,rgba(181,129,140,0.25) 0%,transparent 55%);}
+    .page-hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;}
+    .page-eyebrow{font-size:0.66rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--m400);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;}
+    .page-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--m500);}
+    .page-h1{font-family:var(--display);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:400;color:var(--white);line-height:1.1;}
+    .page-h1 em{font-style:italic;color:var(--m400);}
+    /* CONTENT */
+    .legal-body{max-width:900px;margin:0 auto;padding:6rem 4rem;}
+    .legal-body h1{font-family:var(--display);font-size:2.4rem;font-weight:400;color:var(--m900);margin-bottom:2rem;display:none;}
+    .legal-body h2{font-family:var(--display);font-size:1.6rem;font-weight:400;color:var(--m900);margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--m200);}
+    .legal-body h3{font-family:var(--display);font-size:1.25rem;font-weight:500;color:var(--m700);margin:1.75rem 0 0.75rem;}
+    .legal-body h4{font-size:0.9rem;font-weight:600;color:var(--m900);margin:1.25rem 0 0.5rem;text-transform:uppercase;letter-spacing:0.06em;}
+    .legal-body p{font-size:0.93rem;line-height:1.85;color:var(--schiefer);margin-bottom:1rem;}
+    .legal-body ul,.legal-body ol{padding-left:1.5rem;margin-bottom:1rem;}
+    .legal-body li{font-size:0.93rem;line-height:1.8;color:var(--schiefer);margin-bottom:0.4rem;}
+    .legal-body a{color:var(--m700);text-decoration:underline;}
+    .legal-body a:hover{color:var(--m500);}
+    .legal-body strong,.legal-body b{font-weight:600;color:var(--m900);}
+    .legal-body br+br{display:none;}
+    /* FOOTER */
+    .footer{background:var(--m900);padding:4rem 4rem 2.5rem;}
+    .footer-inner{max-width:1200px;margin:0 auto;}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;border-top:1px solid rgba(181,129,140,0.14);}
+    .footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.28);}
+    .footer-legal{display:flex;gap:2rem;list-style:none;}
+    .footer-legal a{font-size:0.75rem;color:rgba(255,255,255,0.28);text-decoration:none;transition:color 0.3s;}
+    .footer-legal a:hover{color:var(--m400);}
+    @media(max-width:768px){
+      .nav{padding:1rem 1.75rem;}
+      .nav-links{display:none;}
+      .nav-hamburger{display:flex;}
+      .nav-btn{font-size:0.6rem;padding:0.6rem 1rem;}
+      .page-hero{padding:4rem 1.75rem;}
+      .legal-body{padding:4rem 1.75rem;}
+      .footer{padding:3rem 1.75rem 2rem;}
+      .footer-bottom{flex-direction:column;gap:1rem;text-align:center;}
+      .footer-legal{flex-wrap:wrap;justify-content:center;}
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="Logo%20und%20Farbcodes/Logo_Tiefpflaume_Alabaster.png" alt="Kristin Schnödt">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#behandlungen">Behandlungen</a></li>
+      <li><a href="index.html#kurse">Online-Kurse</a></li>
+      <li><a href="index.html#purvidual">PURVIDUAL</a></li>
+      <li><a href="index.html#schulungen">Schulungen</a></li>
+    </ul>
+    <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="nav-btn" target="_blank" rel="noopener">Termin buchen</a>
+    <button class="nav-hamburger" aria-label="Menü" id="navToggle"><span></span><span></span><span></span></button>
+  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-eyebrow">Rechtliches</div>
+      <h1 class="page-h1">Widerrufs&shy;belehrung</h1>
+    </div>
+  </section>
+
+  <main class="legal-body">
+    <div><h1>Widerrufsbelehrung &amp; Widerrufsformular</h1>
+
+<h2>A. Widerrufsbelehrung</h2>
+
+<h3>Einleitung</h3>
+
+<p>Verbrauchern steht ein Widerrufsrecht nach folgender Ma&szlig;gabe zu, wobei Verbraucher jede nat&uuml;rliche Person ist, die ein Rechtsgesch&auml;ft zu Zwecken abschlie&szlig;t, die &uuml;berwiegend weder ihrer gewerblichen noch ihrer selbst&auml;ndigen beruflichen T&auml;tigkeit zugerechnet werden k&ouml;nnen:</p>
+
+<h3>Widerrufsrecht</h3>
+
+<p>Du hast das Recht, binnen vierzehn Tagen ohne Angabe von Gr&uuml;nden diesen Vertrag zu widerrufen.</p>
+
+<p>Die Widerrufsfrist betr&auml;gt vierzehn Tage ab dem Tag, an dem du oder ein von dir benannter Dritter, der nicht der Bef&ouml;rderer ist, die letzte Ware in Besitz genommen hast bzw. hat.</p>
+
+<p>Abweichend hiervon betr&auml;gt die Widerrufsfrist im Falle eines Vertrags zur regelm&auml;&szlig;igen Lieferung von Waren &uuml;ber einen festgelegten Zeitraum hinweg vierzehn Tage ab dem Tag, an dem du oder ein von dir benannter Dritter, der nicht der Bef&ouml;rderer ist, die erste Ware in Besitz genommen hast bzw. hat.</p>
+
+<p>Um dein Widerrufsrecht auszu&uuml;ben, musst du uns (Kristin Schn&ouml;dt, PURVIDUAL, Dr.-Heinrich-Stromer-Str. 27, 91275 Auerbach, Deutschland, Tel.: 015757202153, E-Mail: kontak@purvidual.de) mittels einer eindeutigen Erkl&auml;rung (z. B. ein mit der Post versandter Brief oder E-Mail) &uuml;ber deinen Entschluss, diesen Vertrag zu widerrufen, informieren. Du kannst daf&uuml;r das beigef&uuml;gte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.</p>
+
+<p>Zur Wahrung der Widerrufsfrist reicht es aus, dass du die Mitteilung &uuml;ber die Aus&uuml;bung des Widerrufsrechts vor Ablauf der Widerrufsfrist absendest.</p>
+
+<h3>Folgen des Widerrufs</h3>
+
+<p>Wenn du diesen Vertrag widerrufst, haben wir dir alle Zahlungen, die wir von dir erhalten haben, einschlie&szlig;lich der Lieferkosten (mit Ausnahme der zus&auml;tzlichen Kosten, die sich daraus ergeben, dass du eine andere Art der Lieferung als die von uns angebotene, g&uuml;nstigste Standardlieferung gew&auml;hlt hast), unverz&uuml;glich und sp&auml;testens binnen vierzehn Tagen ab dem Tag zur&uuml;ckzuzahlen, an dem die Mitteilung &uuml;ber deinen Widerruf dieses Vertrags bei uns eingegangen ist. F&uuml;r diese R&uuml;ckzahlung verwenden wir dasselbe Zahlungsmittel, das du bei der urspr&uuml;nglichen Transaktion eingesetzt hast, es sei denn, mit dir wurde ausdr&uuml;cklich etwas anderes vereinbart; in keinem Fall werden dir wegen dieser R&uuml;ckzahlung Entgelte berechnet. Wir k&ouml;nnen die R&uuml;ckzahlung verweigern, bis wir die Waren wieder zur&uuml;ckerhalten haben oder bis du den Nachweis erbracht hast, dass du die Waren zur&uuml;ckgesandt hast, je nachdem, welches der fr&uuml;here Zeitpunkt ist.</p>
+
+<p>Du hast die Waren unverz&uuml;glich und in jedem Fall sp&auml;testens binnen vierzehn Tagen ab dem Tag, an dem du uns &uuml;ber den Widerruf dieses Vertrags unterrichtest, an uns zur&uuml;ckzusenden oder zu &uuml;bergeben. Die Frist ist gewahrt, wenn du die Waren vor Ablauf der Frist von vierzehn Tagen absendest.</p>
+
+<p>Du tr&auml;gst die unmittelbaren Kosten der R&uuml;cksendung der Waren.</p>
+
+<p>Du musst f&uuml;r einen etwaigen Wertverlust der Waren nur aufkommen, wenn dieser Wertverlust auf einen zur Pr&uuml;fung der Beschaffenheit, Eigenschaften und Funktionsweise der Waren nicht notwendigen Umgang mit ihnen zur&uuml;ckzuf&uuml;hren ist.</p>
+
+<h3>Ausschluss bzw. vorzeitiges Erl&ouml;schen des Widerrufsrechts</h3>
+
+<p>Das Widerrufsrecht erlischt vorzeitig bei Vertr&auml;gen zur Lieferung versiegelter Waren, die aus Gr&uuml;nden des Gesundheitsschutzes oder der Hygiene nicht zur R&uuml;ckgabe geeignet sind, wenn ihre Versiegelung nach der Lieferung entfernt wurde.</p>
+
+<h3>Allgemeine Hinweise</h3>
+
+<p>1) Bitte vermeide Besch&auml;digungen und Verunreinigungen der Ware. Sende die Ware bitte in Originalverpackung mit s&auml;mtlichem Zubeh&ouml;r und mit allen Verpackungsbestandteilen an uns zur&uuml;ck. Verwende ggf. eine sch&uuml;tzende Umverpackung. Wenn du die Originalverpackung nicht mehr besitzt, sorge bitte mit einer geeigneten Verpackung f&uuml;r einen ausreichenden Schutz vor Transportsch&auml;den.<br />
+2) Sende die Ware bitte nicht unfrei an uns zur&uuml;ck.<br />
+3) Bitte beachte, dass die vorgenannten Ziffern 1-2 nicht Voraussetzung f&uuml;r die wirksame Aus&uuml;bung des Widerrufsrechts sind.</p>
+
+<h2>B. Widerrufsformular</h2>
+
+<p>Wenn du den Vertrag widerrufen m&ouml;chtest, dann f&uuml;lle bitte dieses Formular aus und sende es zur&uuml;ck.</p>
+
+<p>An</p>
+
+<p>Kristin Schn&ouml;dt<br />
+PURVIDUAL<br />
+Dr.-Heinrich-Stromer-Str. 27<br />
+91275 Auerbach<br />
+Deutschland</p>
+
+<p>E-Mail: kontak@purvidual.de</p>
+
+<p>Hiermit widerrufe ich (*) den von mir abgeschlossenen Vertrag &uuml;ber den Kauf der folgenden Waren (*) / die Erbringung der folgenden Dienstleistung (*)</p>
+
+<p>_______________________________________________________</p>
+
+<p>_______________________________________________________</p>
+
+<p>Bestellt am (*) ____________ / erhalten am (*) __________________</p>
+
+<p>________________________________________________________<br />
+Name des Verbrauchers</p>
+
+<p>________________________________________________________<br />
+Anschrift des Verbrauchers</p>
+
+<p>________________________________________________________<br />
+Unterschrift des Verbrauchers (nur bei Mitteilung auf Papier)</p>
+
+<p>_________________________<br />
+Datum</p>
+
+<p>(*) Unzutreffendes streichen</p></div><div id="itkanzlei_txt_copyright" style="font-size: 12px; margin-top: 8em;"><div style="display: inline-block; vertical-align: top;"><a href="https://www.it-recht-kanzlei.de/" target="_blank"><img src="https://www.it-recht-kanzlei.de/logo/Copyright-Logo_Widerrufsbelehrung.png?i=487aa-2ef2c-39c9-907f-1" id="itkanzlei_img_copyright" alt="&copy; IT-Recht Kanzlei" title="&copy; IT-Recht Kanzlei" style="margin-top: -20px; border-style: none; max-width: 100%;" /></a></div><div style="display: inline-block; vertical-align: top; margin-left: 5px; float: right; white-space: nowrap;">Stand: 18.03.2026, 14:13:16</div><div style="clear: right;"></div></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Kristin Schnödt. Alle Rechte vorbehalten.</p>
+        <ul class="footer-legal">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="agb.html">AGB</a></li>
+          <li><a href="widerruf.html">Widerruf</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('navToggle').addEventListener('click',function(){
+      const ul=document.querySelector('.nav-links');
+      const open=ul.style.display==='flex';
+      ul.style.display=open?'none':'flex';
+      ul.style.flexDirection=open?'':'column';
+      ul.style.position=open?'':'absolute';
+      ul.style.top=open?'':'100%';
+      ul.style.left=open?'':'0';
+      ul.style.right=open?'':'0';
+      ul.style.background=open?'':'rgba(248,243,245,0.97)';
+      ul.style.padding=open?'':'1rem 1.75rem 1.5rem';
+      ul.style.gap=open?'':'1.25rem';
+    });
+  </script>
+</body>
+</html>

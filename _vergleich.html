@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #2E2028; font-family: 'Montserrat', sans-serif; padding: 2rem; }
+  h1 { color: #C49EAA; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; text-align: center; margin-bottom: 2rem; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .card { background: #3a2e35; border-radius: 4px; overflow: hidden; }
+  .card img { width: 100%; height: 520px; object-fit: cover; object-position: center top; display: block; transition: transform 0.4s; }
+  .card img:hover { transform: scale(1.03); }
+  .label { padding: 1rem; text-align: center; }
+  .label p { color: #F8F3F5; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; }
+  .label small { color: #B5818C; font-size: 0.6rem; }
+</style>
+</head>
+<body>
+<h1>Header-Bild Vergleich — Kristin Schnödt</h1>
+<div class="grid">
+  <div class="card">
+    <img src="Bilder/Kristin/Groß (DSC_3974).jpeg" alt="DSC_3974">
+    <div class="label"><p>Option A</p><small>DSC_3974</small></div>
+  </div>
+  <div class="card">
+    <img src="Bilder/Kristin/Groß (DSC_4164).jpeg" alt="DSC_4164">
+    <div class="label"><p>Option B</p><small>DSC_4164</small></div>
+  </div>
+  <div class="card">
+    <img src="Bilder/Kristin/Groß (DSC_4231).jpeg" alt="DSC_4231">
+    <div class="label"><p>Option C</p><small>DSC_4231</small></div>
+  </div>
+</div>
+</body>
+</html>

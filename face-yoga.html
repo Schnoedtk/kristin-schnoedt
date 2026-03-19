@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Face Yoga – Kristin Schnödt</title>
+  <meta name="description" content="Face Yoga mit Kristin Schnödt – natürliche Gesichtsverjüngung ohne Nadel und Skalpell. Entdecke die Methode, die deine Haut von innen strahlen lässt.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/Profil_tiefpflaume.png">
+
+  <style>
+    :root{
+      --alabaster:#F8F3F5;--m100:#F8F3F5;--m200:#ECDDE1;--m300:#D9C0C8;
+      --m400:#C49EAA;--m500:#B5818C;--m700:#7A4A58;--m900:#2E2028;
+      --schiefer:#696E6B;--white:#FFFFFF;
+      --display:'Cormorant Garamond',Georgia,serif;
+      --body:'Montserrat',system-ui,sans-serif;
+      --ease:cubic-bezier(0.25,1,0.5,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;font-size:16px;}
+    body{font-family:var(--body);color:var(--schiefer);background:var(--alabaster);-webkit-font-smoothing:antialiased;}
+
+    /* ── SCROLL REVEAL ── */
+    .rv{opacity:0;transform:translateY(28px);transition:opacity 0.75s var(--ease),transform 0.75s var(--ease);}
+    .rv.on{opacity:1;transform:none;}
+    .d1{transition-delay:0.05s;}.d2{transition-delay:0.15s;}.d3{transition-delay:0.25s;}.d4{transition-delay:0.35s;}.d5{transition-delay:0.45s;}
+
+    /* ── NAV ── */
+    .nav{position:sticky;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 4rem;background:rgba(248,243,245,0.97);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(46,32,40,0.07);}
+    .nav-logo{text-decoration:none;display:flex;align-items:center;}
+    .nav-logo img{height:42px;width:auto;}
+    .nav-links{display:flex;gap:2.5rem;list-style:none;}
+    .nav-links a{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--schiefer);text-decoration:none;transition:color 0.3s;}
+    .nav-links a:hover{color:var(--m500);}
+    .nav-btn{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.75rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;}
+    .nav-btn:hover{background:var(--m700);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .nav-hamburger span{display:block;width:24px;height:1.5px;background:var(--m900);}
+
+    /* ── HERO ── */
+    .fy-hero{position:relative;background:var(--m900);min-height:90vh;display:flex;align-items:flex-end;overflow:hidden;}
+    .fy-hero-bg{position:absolute;inset:0;}
+    .fy-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center center;opacity:0.42;}
+    .fy-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(46,32,40,0.95) 0%,rgba(46,32,40,0.5) 55%,rgba(46,32,40,0.15) 100%);}
+    .fy-hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 4rem 6rem;width:100%;}
+    .fy-eyebrow{font-size:0.66rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--m400);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;}
+    .fy-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--m500);}
+    .fy-h1{font-family:var(--display);font-size:clamp(2.5rem,4.8vw,5rem);font-weight:300;color:var(--white);line-height:1.1;max-width:800px;}
+    .fy-h1 em{font-style:italic;color:var(--m400);}
+    .fy-hero-sub{font-size:0.93rem;line-height:1.8;color:rgba(255,255,255,0.68);max-width:480px;margin-top:1.5rem;}
+    .fy-hero-cta{display:inline-block;margin-top:2.5rem;font-size:0.7rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;padding:1rem 2.25rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;}
+    .fy-hero-cta:hover{background:var(--m700);}
+
+    /* ── SECTION BASE ── */
+    .sec{padding:7rem 4rem;}
+    .sec-inner{max-width:1200px;margin:0 auto;}
+    .sec-eyebrow{font-size:0.65rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--m500);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;}
+    .sec-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--m500);}
+    .sec-h2{font-family:var(--display);font-size:clamp(2.2rem,4vw,3.6rem);font-weight:400;color:var(--m900);line-height:1.1;margin-bottom:1.5rem;}
+    .sec-h2 em{font-style:italic;color:var(--m500);}
+    .sec-lead{font-size:1rem;line-height:1.85;color:var(--schiefer);max-width:640px;}
+
+    /* ── INTRO / WAS IST FACE YOGA ── */
+    .fy-intro{background:var(--white);}
+    .fy-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+    .fy-intro-img{position:relative;}
+    .fy-intro-img img{width:100%;height:580px;object-fit:cover;border-radius:2px;}
+    .fy-intro-img-accent{position:absolute;bottom:-2rem;right:-2rem;width:200px;height:200px;border:1.5px solid rgba(181,129,140,0.35);border-radius:2px;z-index:0;}
+    .fy-intro-text{display:flex;flex-direction:column;gap:1.5rem;}
+    .fy-intro-text p{font-size:0.95rem;line-height:1.9;color:var(--schiefer);}
+    .fy-benefits{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem 2rem;margin-top:1rem;}
+    .fy-benefit{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.85rem;line-height:1.6;color:var(--m900);}
+    .fy-benefit::before{content:'';display:block;flex-shrink:0;width:5px;height:5px;background:var(--m500);border-radius:50%;margin-top:0.45rem;}
+
+    /* ── METHOD SECTION ── */
+    .fy-method{background:var(--m900);}
+    .fy-method .sec-eyebrow{color:var(--m400);}
+    .fy-method .sec-eyebrow::before{background:var(--m400);}
+    .fy-method .sec-h2{color:var(--white);}
+    .fy-method .sec-h2 em{color:var(--m400);}
+    .fy-method-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;margin-top:4rem;}
+    .fy-method-img{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .fy-method-img img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;border-radius:2px;}
+    .fy-method-img img:first-child{margin-top:3rem;}
+    .fy-method-text{color:rgba(255,255,255,0.75);}
+    .fy-method-text p{font-size:0.95rem;line-height:1.9;margin-bottom:1.5rem;}
+    .fy-method-text p:last-child{margin-bottom:0;}
+    .fy-method-text strong{color:var(--white);}
+    .fy-pillars{display:flex;flex-direction:column;gap:1.25rem;margin-top:2rem;}
+    .fy-pillar{display:flex;align-items:flex-start;gap:1.25rem;background:rgba(181,129,140,0.1);border:1px solid rgba(181,129,140,0.2);padding:1.25rem 1.5rem;border-radius:2px;}
+    .fy-pillar-num{font-family:var(--display);font-size:2rem;font-weight:300;color:var(--m400);line-height:1;flex-shrink:0;width:2.5rem;}
+    .fy-pillar-body h4{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--m300);margin-bottom:0.35rem;}
+    .fy-pillar-body p{font-size:0.87rem;line-height:1.75;color:rgba(255,255,255,0.65);margin:0;}
+
+    /* ── IN AKTION (single image + text) ── */
+    .fy-aktion{background:var(--alabaster);}
+    .fy-aktion-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+    .fy-aktion-img img{width:100%;height:560px;object-fit:cover;object-position:center top;border-radius:2px;}
+    .fy-aktion-text{display:flex;flex-direction:column;gap:1.5rem;}
+    .fy-aktion-text p{font-size:0.95rem;line-height:1.9;color:var(--schiefer);}
+    .fy-aktion-text .sec-h2{margin-bottom:0.5rem;}
+
+    /* ── SNAPSHOT SLIDER ── */
+    .fy-slider{background:var(--m200);padding:0;overflow:hidden;position:relative;}
+    .fy-slider-track{display:flex;transition:transform 0.8s var(--ease);will-change:transform;}
+    .fy-slider-track img{flex-shrink:0;width:100vw;height:520px;object-fit:cover;object-position:center;}
+    .fy-slider-dots{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);display:flex;gap:0.5rem;z-index:2;}
+    .fy-slider-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:background 0.3s,transform 0.3s;border:none;padding:0;}
+    .fy-slider-dot.active{background:var(--white);transform:scale(1.3);}
+    .fy-slider-prev,.fy-slider-next{position:absolute;top:50%;transform:translateY(-50%);z-index:2;background:rgba(46,32,40,0.45);border:none;cursor:pointer;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background 0.3s;}
+    .fy-slider-prev:hover,.fy-slider-next:hover{background:rgba(46,32,40,0.72);}
+    .fy-slider-prev{left:1.5rem;}
+    .fy-slider-next{right:1.5rem;}
+    .fy-slider-prev svg,.fy-slider-next svg{stroke:white;fill:none;stroke-width:2;}
+
+    /* ── ONLINE KURSE ── */
+    .fy-kurse{background:var(--white);}
+    .fy-kurse-intro{text-align:center;max-width:620px;margin:0 auto 4rem;}
+    .fy-kurse-intro .sec-eyebrow{justify-content:center;}
+    .fy-kurse-intro .sec-eyebrow::before{display:none;}
+    .fy-kurse-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem;}
+    .fy-kurs-card{background:var(--alabaster);border-radius:2px;padding:2rem;display:flex;flex-direction:column;gap:1rem;border:1px solid var(--m200);transition:box-shadow 0.3s;}
+    .fy-kurs-card:hover{box-shadow:0 8px 32px rgba(46,32,40,0.1);}
+    .fy-kurs-badge{font-size:0.6rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--m500);background:var(--m200);padding:0.3rem 0.75rem;border-radius:2px;align-self:flex-start;}
+    .fy-kurs-badge.highlight{background:var(--m500);color:var(--white);}
+    .fy-kurs-title{font-family:var(--display);font-size:1.5rem;font-weight:400;color:var(--m900);line-height:1.2;}
+    .fy-kurs-desc{font-size:0.83rem;line-height:1.75;color:var(--schiefer);flex-grow:1;}
+    .fy-kurs-foot{display:flex;flex-direction:column;align-items:stretch;gap:0.75rem;padding-top:1.5rem;border-top:1px solid var(--m200);margin-top:auto;}
+    .fy-kurs-price-row{text-align:center;padding:0.4rem 0;}
+    .fy-kurs-price{font-family:var(--display);font-size:2.4rem;font-weight:300;color:var(--m700);line-height:1;display:block;}
+    .fy-kurs-dur{font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--m400);display:block;margin-top:0.25rem;}
+    .fy-kurs-btn{font-size:0.66rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.9rem 1.25rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;text-align:center;display:block;}
+    .fy-kurs-btn:hover{background:var(--m700);}
+    .fy-kurs-btn.outline{background:transparent;border:1px solid var(--m500);color:var(--m700);}
+    .fy-kurs-btn.outline:hover{background:var(--m500);color:var(--white);}
+
+    /* ── OFFLINE KURSE ── */
+    .fy-offline{background:var(--m900);}
+    .fy-offline .sec-eyebrow{color:var(--m400);}
+    .fy-offline .sec-eyebrow::before{background:var(--m400);}
+    .fy-offline .sec-h2{color:var(--white);}
+    .fy-offline .sec-h2 em{color:var(--m400);}
+    .fy-offline-intro{max-width:620px;margin-bottom:4rem;}
+    .fy-offline-intro p{font-size:0.93rem;line-height:1.85;color:rgba(255,255,255,0.62);margin-top:1rem;}
+    .fy-offline-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+    .fy-offline-card{background:rgba(181,129,140,0.08);border:1px solid rgba(181,129,140,0.22);border-radius:2px;padding:2.5rem;display:flex;flex-direction:column;gap:1.25rem;}
+    .fy-offline-icon{width:48px;height:48px;border-radius:50%;background:rgba(181,129,140,0.18);display:flex;align-items:center;justify-content:center;}
+    .fy-offline-icon svg{stroke:var(--m400);fill:none;stroke-width:1.5;}
+    .fy-offline-title{font-family:var(--display);font-size:1.75rem;font-weight:400;color:var(--white);line-height:1.15;}
+    .fy-offline-desc{font-size:0.88rem;line-height:1.8;color:rgba(255,255,255,0.6);}
+    .fy-offline-details{display:flex;flex-direction:column;gap:0.5rem;}
+    .fy-offline-detail{display:flex;align-items:center;gap:0.65rem;font-size:0.82rem;color:rgba(255,255,255,0.55);}
+    .fy-offline-detail::before{content:'';display:block;width:4px;height:4px;background:var(--m400);border-radius:50%;flex-shrink:0;}
+    .fy-offline-btn{display:block;text-align:center;font-size:0.67rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.95rem 1.5rem;background:transparent;border:1px solid rgba(181,129,140,0.5);color:var(--m300);text-decoration:none;border-radius:2px;transition:background 0.3s,border-color 0.3s,color 0.3s;margin-top:auto;}
+    .fy-offline-btn:hover{background:var(--m500);border-color:var(--m500);color:var(--white);}
+
+    /* ── TESTIMONIALS ── */
+    .fy-testi{background:var(--alabaster);}
+    .fy-testi-intro{text-align:center;max-width:600px;margin:0 auto 4rem;}
+    .fy-testi-intro .sec-eyebrow{justify-content:center;}
+    .fy-testi-intro .sec-eyebrow::before{display:none;}
+    .fy-testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+    .fy-testi-card{background:var(--white);border-radius:2px;padding:2.5rem;display:flex;flex-direction:column;gap:1.25rem;box-shadow:0 2px 16px rgba(46,32,40,0.06);}
+    .fy-testi-stars{display:flex;gap:3px;}
+    .fy-testi-star{width:14px;height:14px;fill:var(--m500);}
+    .fy-testi-quote{font-family:var(--display);font-size:1.25rem;font-style:italic;font-weight:400;color:var(--m900);line-height:1.55;}
+    .fy-testi-text{font-size:0.85rem;line-height:1.8;color:var(--schiefer);}
+    .fy-testi-author{display:flex;align-items:center;gap:1rem;margin-top:auto;padding-top:1.25rem;border-top:1px solid var(--m200);}
+    .fy-testi-photo{width:46px;height:46px;border-radius:50%;object-fit:cover;flex-shrink:0;}
+    .fy-testi-name{font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--m900);}
+    .fy-testi-role{font-size:0.72rem;color:var(--m400);margin-top:0.15rem;}
+
+    /* ── CLOSING STRIP ── */
+    .fy-strip{background:var(--m500);padding:5rem 4rem;text-align:center;}
+    .fy-strip h2{font-family:var(--display);font-size:clamp(2rem,3.5vw,3.2rem);font-weight:400;color:var(--white);margin-bottom:1rem;}
+    .fy-strip h2 em{font-style:italic;color:var(--m200);}
+    .fy-strip p{font-size:0.93rem;color:rgba(255,255,255,0.78);max-width:520px;margin:0 auto 2.5rem;}
+    .fy-strip-btn{display:inline-block;font-size:0.7rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;padding:1.1rem 2.5rem;background:var(--white);color:var(--m700);text-decoration:none;border-radius:2px;transition:background 0.3s,color 0.3s;}
+    .fy-strip-btn:hover{background:var(--m200);color:var(--m900);}
+
+    /* ── FOOTER ── */
+    .footer{background:var(--m900);padding:4rem 4rem 2.5rem;}
+    .footer-inner{max-width:1200px;margin:0 auto;}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;border-top:1px solid rgba(181,129,140,0.14);}
+    .footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.28);}
+    .footer-legal{display:flex;gap:2rem;list-style:none;}
+    .footer-legal a{font-size:0.75rem;color:rgba(255,255,255,0.28);text-decoration:none;transition:color 0.3s;}
+    .footer-legal a:hover{color:var(--m400);}
+
+    /* ── MOBILE ── */
+    @media(max-width:768px){
+      .nav{padding:1rem 1.75rem;}
+      .nav-links{display:none;}
+      .nav-hamburger{display:flex;}
+      .nav-btn{font-size:0.6rem;padding:0.6rem 1rem;}
+
+      .fy-hero{min-height:70vh;}
+      .fy-hero-content{padding:0 1.75rem 4rem;}
+      .fy-h1{font-size:clamp(2.2rem,8vw,3.5rem);}
+
+      .sec{padding:5rem 1.75rem;}
+
+      .fy-intro-grid{grid-template-columns:1fr;gap:2.5rem;}
+      .fy-intro-img img{height:340px;}
+      .fy-intro-img-accent{display:none;}
+      .fy-benefits{grid-template-columns:1fr;}
+
+      .fy-method-grid{grid-template-columns:1fr;gap:3rem;}
+      .fy-method-img{grid-template-columns:1fr 1fr;}
+      .fy-method-img img{height:220px;}
+      .fy-method-img img:first-child{margin-top:0;}
+
+      .fy-aktion-grid{grid-template-columns:1fr;gap:2.5rem;}
+      .fy-aktion-img img{height:320px;}
+
+      .fy-slider-track img{height:280px;}
+
+      .fy-kurse-grid{grid-template-columns:1fr 1fr;gap:1.25rem;}
+
+      .fy-offline-grid{grid-template-columns:1fr;gap:1.5rem;}
+      .fy-offline-intro .sec-h2{white-space:normal;}
+
+      .fy-testi-grid{grid-template-columns:1fr;}
+
+      .fy-strip{padding:4rem 1.75rem;}
+
+      .footer{padding:3rem 1.75rem 2rem;}
+      .footer-bottom{flex-direction:column;gap:1rem;text-align:center;}
+      .footer-legal{flex-wrap:wrap;justify-content:center;}
+    }
+    @media(max-width:480px){
+      .fy-kurse-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="Logo%20und%20Farbcodes/Logo_Tiefpflaume_Alabaster.png" alt="Kristin Schnödt">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#behandlungen">Behandlungen</a></li>
+      <li><a href="index.html#kurse">Online-Kurse</a></li>
+      <li><a href="index.html#purvidual">PURVIDUAL</a></li>
+      <li><a href="index.html#schulungen">Schulungen</a></li>
+    </ul>
+    <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="nav-btn" target="_blank" rel="noopener">Termin buchen</a>
+    <button class="nav-hamburger" aria-label="Menü" id="navToggle"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="fy-hero">
+    <div class="fy-hero-bg">
+      <img src="Bilder/Online-Programme/4-Beauties.jpeg" alt="Face Yoga mit Kristin Schnödt">
+    </div>
+    <div class="fy-hero-content">
+      <div class="fy-eyebrow rv d1">Natürliche Gesichtsverjüngung</div>
+      <h1 class="fy-h1 rv d2">Dein Gesicht kann mehr,<br><em>als du denkst.</em></h1>
+      <p class="fy-hero-sub rv d3">Face Yoga ist die wirksamste Methode, um Falten auf natürlichem Weg zu reduzieren, Gesichtskonturen zu straffen und ein dauerhaftes Strahlen von innen zu entwickeln — ohne Nadeln, ohne Botox.</p>
+      <a href="#kurse" class="fy-hero-cta rv d4">Jetzt Schnupperkurs starten – 29 €</a>
+    </div>
+  </section>
+
+  <!-- ── WAS IST FACE YOGA ── -->
+  <section class="fy-intro sec" id="face-yoga">
+    <div class="sec-inner fy-intro-grid">
+      <div class="fy-intro-img rv d1">
+        <img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4531).jpeg" alt="Face Yoga Übungen">
+        <div class="fy-intro-img-accent"></div>
+      </div>
+      <div class="fy-intro-text">
+        <div class="sec-eyebrow rv d1">Was ist Face Yoga?</div>
+        <h2 class="sec-h2 rv d2">Mehr als nur<br><em>Mimiktraining</em></h2>
+        <div class="rv d3">
+          <p>Face Yoga ist gezielte Muskelarbeit für das Gesicht. Genau wie beim Körper verlieren die über 40 Muskeln im Gesicht mit der Zeit an Tonus, Volumen und Spannkraft. Das Ergebnis: Falten, hängende Konturen, ein müder Ausdruck.</p>
+          <p>Mit den richtigen Übungen kannst du diese Muskeln gezielt aufbauen, straffen und regenerieren. Kombiniert mit Atemtechniken, Akupressur und Selbstmassage entsteht eine ganzheitliche Routine, die dein Gesicht spürbar verändert.</p>
+          <p>Kein einmaliger Behandlungstermin — sondern eine tägliche Praxis, deren Ergebnisse sich mit der Zeit addieren und tief verankern.</p>
+        </div>
+        <div class="fy-benefits rv d4">
+          <div class="fy-benefit">Falten natürlich reduzieren</div>
+          <div class="fy-benefit">Konturen straffen & heben</div>
+          <div class="fy-benefit">Durchblutung & Leuchtkraft fördern</div>
+          <div class="fy-benefit">Lymphfluss aktivieren</div>
+          <div class="fy-benefit">Unterkiefer & Hals definieren</div>
+          <div class="fy-benefit">Stressspannung im Gesicht lösen</div>
+          <div class="fy-benefit">Haut von innen nähren</div>
+          <div class="fy-benefit">Wirkung wächst mit der Zeit</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── KRISTINS METHODE ── -->
+  <section class="fy-method sec" id="methode">
+    <div class="sec-inner">
+      <div class="sec-eyebrow rv d1">Kristins Methode</div>
+      <h2 class="sec-h2 rv d2">Das steckt hinter <em>meinem Ansatz</em></h2>
+      <div class="fy-method-grid">
+        <div class="fy-method-img rv d2">
+          <img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4542).jpeg" alt="Kristin Schnödt Face Yoga Methode">
+          <img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4549).jpeg" alt="Kristin Schnödt Behandlung">
+        </div>
+        <div class="fy-method-text rv d3">
+          <p>Seit über 18 Jahren arbeite ich täglich mit Gesichtshaut. Ich kenne die Unterschiede zwischen dem, was wirklich funktioniert, und dem, was sich gut anfühlt, aber keine langfristige Wirkung hat.</p>
+          <p>Face Yoga verbinde ich mit meinem Wissen aus der professionellen Kosmetik: <strong>Anatomie, Muskelphysiologie, Bindegewebsstrukturen</strong> — und einer tiefen Überzeugung, dass die Haut die Kraft zur Selbstregulation hat, wenn wir ihr die richtigen Impulse geben.</p>
+          <p>Meine Übungen sind präzise, alltagstauglich und sofort spürbar wirksam. Du brauchst keine Vorkenntnisse — nur 10–15 Minuten am Tag.</p>
+          <div class="fy-pillars">
+            <div class="fy-pillar rv d3">
+              <div class="fy-pillar-num">01</div>
+              <div class="fy-pillar-body">
+                <h4>Gezielte Muskelarbeit</h4>
+                <p>Jede Übung aktiviert spezifische Gesichtsmuskeln — aufbauend, tonisierend, strukturgebend.</p>
+              </div>
+            </div>
+            <div class="fy-pillar rv d4">
+              <div class="fy-pillar-num">02</div>
+              <div class="fy-pillar-body">
+                <h4>Atemführung & innere Ruhe</h4>
+                <p>Bewusste Atmung steigert die Sauerstoffversorgung und löst Verspannungen, die sichtbar altern lassen.</p>
+              </div>
+            </div>
+            <div class="fy-pillar rv d5">
+              <div class="fy-pillar-num">03</div>
+              <div class="fy-pillar-body">
+                <h4>Selbstmassage & Akupressur</h4>
+                <p>Drainage, Lymphaktivierung und gezielte Druckpunkte für sichtbare Frische und Konturenklarheit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── IN AKTION ── -->
+  <section class="fy-aktion sec" id="aktion">
+    <div class="sec-inner fy-aktion-grid">
+      <div class="fy-aktion-img rv d1">
+        <img src="Bilder/Online-Programme/2-Beauties_blond.jpeg" alt="Face Yoga und Cupping erleben">
+      </div>
+      <div class="fy-aktion-text">
+        <div class="sec-eyebrow rv d1">Offline &amp; Online</div>
+        <h2 class="sec-h2 rv d2">Face Yoga und Cupping,<br><em>die Frauen lieben es.</em></h2>
+        <p class="rv d3">Ob im persönlichen Workshop in meinem Studio oder bequem von zu Hause aus — meine Kurse verbinden Wirksamkeit mit echter Gemeinschaft. Frauen aller Altersgruppen erleben, wie schnell sich ihr Gesicht verändert, wenn sie die richtigen Techniken kennen.</p>
+        <p class="rv d4">In kleinen Gruppen entstehen Energie, Motivation und Ergebnisse, die alleine kaum möglich wären. Die Rückmeldungen sprechen für sich.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SNAPSHOT SLIDER ── -->
+  <div class="fy-slider" id="snapshotSlider">
+    <div class="fy-slider-track" id="sliderTrack">
+      <img src="Bilder/Face-Yoga/Snapshot.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_1.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_2.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_3.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_4.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_5.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_6.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_7.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_8.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_9.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_10.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_11.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_12.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_13.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_14.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_15.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_16.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_17.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_18.PNG" alt="Face Yoga Moment">
+      <img src="Bilder/Face-Yoga/Snapshot_19.PNG" alt="Face Yoga Moment">
+    </div>
+    <button class="fy-slider-prev" id="sliderPrev" aria-label="Zurück">
+      <svg width="18" height="18" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="fy-slider-next" id="sliderNext" aria-label="Weiter">
+      <svg width="18" height="18" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="fy-slider-dots" id="sliderDots"></div>
+  </div>
+
+  <!-- ── ONLINE KURSE ── -->
+  <section class="fy-kurse sec" id="kurse">
+    <div class="sec-inner">
+      <div class="fy-kurse-intro">
+        <div class="sec-eyebrow rv d1">Online-Kurse</div>
+        <h2 class="sec-h2 rv d2">Dein Einstieg in die<br><em>natürliche Verjüngung</em></h2>
+        <p class="sec-lead rv d3">Von ersten Übungen bis zur intensiven Transformation — wähle das Programm, das zu dir passt.</p>
+      </div>
+      <div class="fy-kurse-grid">
+
+        <!-- Schnupperkurs -->
+        <div class="fy-kurs-card rv d1">
+          <span class="fy-kurs-badge">Einstieg</span>
+          <h3 class="fy-kurs-title">Face Yoga<br>Schnupperkurs</h3>
+          <p class="fy-kurs-desc">Dein erster Schritt — die wichtigsten Übungen, sofort anwendbar. Spürbar nach der ersten Einheit.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-top:auto;">
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Sofortiger Online-Zugang</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Video-geführte Übungsroutine</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Für absolute Einsteigerinnen</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Lebenslanger Zugriff</li>
+          </ul>
+          <div class="fy-kurs-foot">
+            <div class="fy-kurs-price-row">
+              <span class="fy-kurs-price">29 €</span>
+              <span class="fy-kurs-dur">einmalig</span>
+            </div>
+            <a href="https://alfima.com/kristin_schnoedt/face-yoga-schnupperkurs" class="fy-kurs-btn" target="_blank" rel="noopener">Jetzt starten</a>
+          </div>
+        </div>
+
+        <!-- Cupping Kurs -->
+        <div class="fy-kurs-card rv d2">
+          <span class="fy-kurs-badge">Technik-Kurs</span>
+          <h3 class="fy-kurs-title">Cupping<br>Kurs</h3>
+          <p class="fy-kurs-desc">Gesichtscupping für straffe Konturen, Lymphdrainage und sichtbare Frische — lerne die Technik von Grund auf.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-top:auto;">
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Schritt-für-Schritt Anleitung</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Professionelle Cupping-Technik</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Sofortige Ergebnisse sichtbar</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Lebenslanger Zugriff</li>
+          </ul>
+          <div class="fy-kurs-foot">
+            <div class="fy-kurs-price-row">
+              <span class="fy-kurs-price">179 €</span>
+              <span class="fy-kurs-dur">einmalig</span>
+            </div>
+            <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="fy-kurs-btn" target="_blank" rel="noopener">Jetzt starten</a>
+          </div>
+        </div>
+
+        <!-- Göttinnen-Glow -->
+        <div class="fy-kurs-card rv d3">
+          <span class="fy-kurs-badge highlight">Beliebt</span>
+          <h3 class="fy-kurs-title">Göttinnen-<br>Glow</h3>
+          <p class="fy-kurs-desc">Das vollständige Programm für deine Transformation. Face Yoga, Cupping, Ernährung, Live Calls — alles in einem.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-top:auto;">
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Bei bis zu 6 Live Calls dabei sein</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Community & Austausch</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Ganzheitliches Programm</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Lebenslanger Zugriff</li>
+          </ul>
+          <div class="fy-kurs-foot">
+            <div class="fy-kurs-price-row">
+              <span class="fy-kurs-price">299 €</span>
+              <span class="fy-kurs-dur">einmalig</span>
+            </div>
+            <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="fy-kurs-btn" target="_blank" rel="noopener">Jetzt starten</a>
+          </div>
+        </div>
+
+        <!-- Göttinnen-Booster -->
+        <div class="fy-kurs-card rv d4" style="text-align:center;align-items:center;">
+          <span class="fy-kurs-badge" style="align-self:center;">Premium</span>
+          <h3 class="fy-kurs-title">Göttinnen-<br>Booster</h3>
+          <p class="fy-kurs-desc">Die intensive 1:1-Begleitung für maximale Transformation. Individuell, persönlich, auf dich zugeschnitten.</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-top:auto;text-align:left;width:100%;">
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Persönliche 1:1-Begleitung</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Individueller Trainingsplan</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Direkter Zugang zu Kristin</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Maximale Ergebnisse</li>
+          </ul>
+          <div class="fy-kurs-foot" style="width:100%;">
+            <div class="fy-kurs-price-row">
+              <span class="fy-kurs-price">998 €</span>
+              <span class="fy-kurs-dur">einmalig</span>
+            </div>
+            <a href="https://wa.me/4915757202153" class="fy-kurs-btn" target="_blank" rel="noopener">Anfragen</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── OFFLINE KURSE ── -->
+  <section class="fy-offline sec" id="offline-kurse">
+    <div class="sec-inner">
+      <div class="fy-offline-intro">
+        <div class="sec-eyebrow rv d1">Vor Ort</div>
+        <h2 class="sec-h2 rv d2" style="font-size:clamp(1.5rem,2.4vw,2.4rem);white-space:nowrap;">Face Yoga & Cupping <em>live erleben</em></h2>
+        <p class="rv d3">Wer das Gemeinschaftsgefühl sucht und Kristin persönlich erleben möchte: In kleinen Gruppen im Studio in Auerbach biete ich regelmäßig Präsenz-Workshops an. Termine auf Anfrage.</p>
+      </div>
+      <div class="fy-offline-grid">
+
+        <div class="fy-offline-card rv d2">
+          <div class="fy-offline-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="fy-offline-title">Face Yoga<br>Offline-Kurs</h3>
+          <p class="fy-offline-desc">Lerne Face Yoga in einer kleinen Gruppe direkt bei mir im Studio. Persönliches Feedback, gemeinsame Energie und sofortige Korrekturen — so lernst du schneller und tiefer.</p>
+          <div class="fy-offline-details">
+            <div class="fy-offline-detail">Kleine Gruppen (max. 4 Personen)</div>
+            <div class="fy-offline-detail">Studio Auerbach / Umgebung</div>
+            <div class="fy-offline-detail">Persönliches Feedback von Kristin</div>
+            <div class="fy-offline-detail">Inklusive Übungsunterlagen</div>
+          </div>
+          <a href="https://wa.me/4915757202153" class="fy-offline-btn" target="_blank" rel="noopener">Auf Anfrage</a>
+        </div>
+
+        <div class="fy-offline-card rv d3">
+          <div class="fy-offline-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12s1.5-2 4-2 4 2 4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3 class="fy-offline-title">Cupping<br>Offline-Kurs</h3>
+          <p class="fy-offline-desc">Gesichtscupping live und unter Anleitung erlernen. Du übst an dir selbst und bekommst direktes Feedback zur Technik — für sofortige, sichtbare Ergebnisse.</p>
+          <div class="fy-offline-details">
+            <div class="fy-offline-detail">Kleine Gruppen (max. 4 Personen)</div>
+            <div class="fy-offline-detail">Studio Auerbach / Umgebung</div>
+            <div class="fy-offline-detail">Cupping-Set zum Mitnehmen</div>
+            <div class="fy-offline-detail">Persönliche Übungsbegleitung</div>
+          </div>
+          <a href="https://wa.me/4915757202153" class="fy-offline-btn" target="_blank" rel="noopener">Auf Anfrage</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ── -->
+  <section class="fy-testi sec" id="erfahrungen">
+    <div class="sec-inner">
+      <div class="fy-testi-intro">
+        <div class="sec-eyebrow rv d1">Erfahrungen</div>
+        <h2 class="sec-h2 rv d2">Was Frauen über ihre<br><em>Ergebnisse sagen</em></h2>
+        <p class="sec-lead rv d3" style="margin:0 auto;text-align:center;">Echte Stimmen von Frauen, die Face Yoga<br>täglich in ihr Leben integriert haben.</p>
+      </div>
+      <div class="fy-testi-grid">
+
+        <div class="fy-testi-card rv d1">
+          <div class="fy-testi-stars">
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="fy-testi-quote">„Ich fühle mich bei ihr nie unter Druck gesetzt."</p>
+          <p class="fy-testi-text">Ich habe das starke Gefühl, hier wirklich nachhaltige und wertvolle Dinge für meine tägliche und zukünftige Gesichtspflege zu lernen – weit über eine kurze Begleitung hinaus. Besonders schätze ich Kristins optimistische und lustige Art. Ich fühle mich bei ihr nie unter Druck gesetzt, nie als würde ich etwas falsch machen oder müsste schon weiter oder besser sein.</p>
+          <div class="fy-testi-author">
+            <img class="fy-testi-photo" src="Bilder/Kundinnen/Stephanie.H.png" alt="Stephanie H.">
+            <div>
+              <div class="fy-testi-name">Stephanie H.</div>
+              <div class="fy-testi-role">Kursteilnehmerin · Göttinnen-Booster</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fy-testi-card rv d2">
+          <div class="fy-testi-stars">
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="fy-testi-quote">„Das Beste: Es kostet keine Zeit. Ich mache es beim Kaffee — und mein Gesicht sieht frischer aus als seit Jahren."</p>
+          <p class="fy-testi-text">Kristin erklärt so verständlich, warum jede Übung wirkt. Das hat mir geholfen, am Ball zu bleiben. Keine Magie — einfach Konsequenz. Meine Lider wirken weniger schwer und das Oval ist deutlich straffer.</p>
+          <div class="fy-testi-author">
+            <img class="fy-testi-photo" src="Bilder/Kundinnen/Manu.D.png" alt="Manu D.">
+            <div>
+              <div class="fy-testi-name">Manu D.</div>
+              <div class="fy-testi-role">Kursteilnehmerin · Face Yoga Schnupperkurs</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fy-testi-card rv d3">
+          <div class="fy-testi-stars">
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="fy-testi-quote">„Ich bin absolut begeistert und unfassbar zufrieden."</p>
+          <p class="fy-testi-text">Mein Ziel war es, wieder mehr Frische, Festigkeit und ein strahlendes Aussehen für mein Gesicht zu bekommen. Ich kann nur sagen: Ich bin absolut begeistert und unfassbar zufrieden mit den Inhalten, die Kristin in ihrem Programm liefert! Es ist wirklich unglaublich, wie viel Wissen und wertvolle Tools man hier an die Hand bekommt.</p>
+          <div class="fy-testi-author">
+            <img class="fy-testi-photo" src="Bilder/Kundinnen/Miriam.L.png" alt="Miriam L.">
+            <div>
+              <div class="fy-testi-name">Miriam L.</div>
+              <div class="fy-testi-role">Kursteilnehmerin · Göttinnen-Booster</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CLOSING STRIP ── -->
+  <section class="fy-strip">
+    <h2 class="rv d1">Bereit für dein <em>strahlendstes Gesicht?</em></h2>
+    <p class="rv d2">Starte heute. 10 Minuten am Tag. Sichtbare Ergebnisse in wenigen Wochen.</p>
+    <a href="https://alfima.com/kristin_schnoedt/face-yoga-schnupperkurs" class="fy-strip-btn rv d3" target="_blank" rel="noopener">Zum Schnupperkurs – 29 €</a>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Kristin Schnödt. Alle Rechte vorbehalten.</p>
+        <ul class="footer-legal">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="agb.html">AGB</a></li>
+          <li><a href="widerruf.html">Widerruf</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Mobile nav ──
+    document.getElementById('navToggle').addEventListener('click', function(){
+      const ul = document.querySelector('.nav-links');
+      const open = ul.style.display === 'flex';
+      ul.style.display = open ? 'none' : 'flex';
+      ul.style.flexDirection = open ? '' : 'column';
+      ul.style.position = open ? '' : 'absolute';
+      ul.style.top = open ? '' : '100%';
+      ul.style.left = open ? '' : '0';
+      ul.style.right = open ? '' : '0';
+      ul.style.background = open ? '' : 'rgba(248,243,245,0.97)';
+      ul.style.padding = open ? '' : '1rem 1.75rem 1.5rem';
+      ul.style.gap = open ? '' : '1.25rem';
+    });
+
+    // ── Scroll reveal ──
+    const obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
+
+    // ── Snapshot Slider ──
+    (function(){
+      const track = document.getElementById('sliderTrack');
+      const dotsContainer = document.getElementById('sliderDots');
+      const slides = track.querySelectorAll('img');
+      const total = slides.length;
+      let current = 0;
+      let timer;
+
+      // Build dots
+      slides.forEach(function(_, i){
+        const d = document.createElement('button');
+        d.className = 'fy-slider-dot' + (i === 0 ? ' active' : '');
+        d.addEventListener('click', function(){ goTo(i); resetTimer(); });
+        dotsContainer.appendChild(d);
+      });
+
+      function goTo(n){
+        current = (n + total) % total;
+        track.style.transform = 'translateX(-' + (current * 100) + 'vw)';
+        dotsContainer.querySelectorAll('.fy-slider-dot').forEach(function(d, i){
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      function next(){ goTo(current + 1); }
+      function prev(){ goTo(current - 1); }
+
+      function resetTimer(){
+        clearInterval(timer);
+        timer = setInterval(next, 3500);
+      }
+
+      document.getElementById('sliderNext').addEventListener('click', function(){ next(); resetTimer(); });
+      document.getElementById('sliderPrev').addEventListener('click', function(){ prev(); resetTimer(); });
+
+      // Pause on hover
+      track.parentElement.addEventListener('mouseenter', function(){ clearInterval(timer); });
+      track.parentElement.addEventListener('mouseleave', resetTimer);
+
+      // Start auto-play
+      resetTimer();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty News – Kristin Schnödt</title>
+  <meta name="description" content="Wissen, Inspiration und Tipps rund um Face Yoga, Cupping, natürliche Hautpflege und ganzheitliche Schönheit — von Kristin Schnödt.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/Profil_tiefpflaume.png">
+
+  <style>
+    :root{
+      --alabaster:#F8F3F5;--m100:#F8F3F5;--m200:#ECDDE1;--m300:#D9C0C8;
+      --m400:#C49EAA;--m500:#B5818C;--m700:#7A4A58;--m900:#2E2028;
+      --schiefer:#696E6B;--white:#FFFFFF;
+      --display:'Cormorant Garamond',Georgia,serif;
+      --body:'Montserrat',system-ui,sans-serif;
+      --ease:cubic-bezier(0.25,1,0.5,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;font-size:16px;}
+    body{font-family:var(--body);color:var(--schiefer);background:var(--alabaster);-webkit-font-smoothing:antialiased;}
+
+    /* ── SCROLL REVEAL ── */
+    .rv{opacity:0;transform:translateY(24px);transition:opacity 0.7s var(--ease),transform 0.7s var(--ease);}
+    .rv.on{opacity:1;transform:none;}
+    .d1{transition-delay:0.05s;}.d2{transition-delay:0.15s;}.d3{transition-delay:0.25s;}.d4{transition-delay:0.35s;}.d5{transition-delay:0.45s;}
+
+    /* ── NAV ── */
+    .nav{position:sticky;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 4rem;background:rgba(248,243,245,0.97);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(46,32,40,0.07);}
+    .nav-logo{text-decoration:none;display:flex;align-items:center;}
+    .nav-logo img{height:42px;width:auto;}
+    .nav-links{display:flex;gap:2.5rem;list-style:none;}
+    .nav-links a{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--schiefer);text-decoration:none;transition:color 0.3s;}
+    .nav-links a:hover{color:var(--m500);}
+    .nav-btn{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.75rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;}
+    .nav-btn:hover{background:var(--m700);}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .nav-hamburger span{display:block;width:24px;height:1.5px;background:var(--m900);}
+
+    /* ── PAGE HERO ── */
+    .bn-hero{background:var(--m900);padding:6rem 4rem 5rem;position:relative;overflow:hidden;}
+    .bn-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 10% 100%,rgba(181,129,140,0.22) 0%,transparent 55%);}
+    .bn-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1;}
+    .bn-eyebrow{font-size:0.65rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--m400);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;}
+    .bn-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--m500);}
+    .bn-h1{font-family:var(--display);font-size:clamp(2.8rem,5vw,5rem);font-weight:300;color:var(--white);line-height:1.08;}
+    .bn-h1 em{font-style:italic;color:var(--m400);}
+    .bn-hero-sub{font-size:0.9rem;line-height:1.85;color:rgba(255,255,255,0.58);max-width:500px;margin-top:1.25rem;}
+
+    /* ── FILTER BAR ── */
+    .bn-filter{background:var(--white);border-bottom:1px solid var(--m200);padding:0 4rem;}
+    .bn-filter-inner{max-width:1200px;margin:0 auto;display:flex;gap:0;overflow-x:auto;scrollbar-width:none;}
+    .bn-filter-inner::-webkit-scrollbar{display:none;}
+    .bn-filter-btn{font-size:0.65rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:1.1rem 1.5rem;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;color:var(--schiefer);transition:color 0.3s,border-color 0.3s;white-space:nowrap;}
+    .bn-filter-btn:hover{color:var(--m500);}
+    .bn-filter-btn.active{color:var(--m700);border-bottom-color:var(--m500);}
+
+    /* ── MAIN CONTENT ── */
+    .bn-main{max-width:1200px;margin:0 auto;padding:5rem 4rem 7rem;}
+
+    /* ── FEATURED POST ── */
+    .bn-featured{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:2px;overflow:hidden;background:var(--m900);margin-bottom:5rem;box-shadow:0 4px 32px rgba(46,32,40,0.12);}
+    .bn-featured-img{position:relative;min-height:480px;}
+    .bn-featured-img img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+    .bn-featured-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(46,32,40,0) 60%,rgba(46,32,40,0.5) 100%);}
+    .bn-featured-body{padding:3.5rem;display:flex;flex-direction:column;justify-content:center;gap:1.25rem;}
+    .bn-featured-eyebrow{display:flex;align-items:center;gap:1rem;}
+    .bn-tag{font-size:0.58rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;padding:0.25rem 0.75rem;border-radius:2px;background:var(--m500);color:var(--white);}
+    .bn-tag.cupping{background:var(--m400);}
+    .bn-tag.purvidual{background:var(--m700);}
+    .bn-tag.news{background:var(--schiefer);}
+    .bn-featured-date{font-size:0.68rem;color:rgba(255,255,255,0.38);}
+    .bn-featured-title{font-family:var(--display);font-size:clamp(1.8rem,2.8vw,2.8rem);font-weight:400;color:var(--white);line-height:1.18;}
+    .bn-featured-title em{font-style:italic;color:var(--m400);}
+    .bn-featured-excerpt{font-size:0.88rem;line-height:1.85;color:rgba(255,255,255,0.62);}
+    .bn-featured-link{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.67rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--m300);text-decoration:none;transition:color 0.3s;margin-top:0.5rem;}
+    .bn-featured-link:hover{color:var(--white);}
+    .bn-featured-link svg{stroke:currentColor;fill:none;stroke-width:1.5;transition:transform 0.3s;}
+    .bn-featured-link:hover svg{transform:translateX(4px);}
+
+    /* ── POST GRID ── */
+    .bn-grid-label{font-size:0.63rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--m400);margin-bottom:2rem;display:flex;align-items:center;gap:0.75rem;}
+    .bn-grid-label::after{content:'';flex:1;height:1px;background:var(--m200);}
+    .bn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;}
+
+    /* ── POST CARD ── */
+    .bn-card{background:var(--white);border-radius:2px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow 0.35s var(--ease),transform 0.35s var(--ease);box-shadow:0 1px 8px rgba(46,32,40,0.06);}
+    .bn-card:hover{box-shadow:0 8px 32px rgba(46,32,40,0.12);transform:translateY(-4px);}
+    .bn-card-img{position:relative;overflow:hidden;}
+    .bn-card-img img{width:100%;height:240px;object-fit:cover;object-position:center top;display:block;transition:transform 0.7s var(--ease);}
+    .bn-card:hover .bn-card-img img{transform:scale(1.04);}
+    .bn-card-body{padding:1.75rem;display:flex;flex-direction:column;gap:0.85rem;flex:1;}
+    .bn-card-meta{display:flex;align-items:center;gap:0.75rem;}
+    .bn-card-date{font-size:0.67rem;color:var(--m400);}
+    .bn-card-title{font-family:var(--display);font-size:1.5rem;font-weight:400;color:var(--m900);line-height:1.25;}
+    .bn-card-excerpt{font-size:0.83rem;line-height:1.8;color:var(--schiefer);flex:1;}
+    .bn-card-link{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.63rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--m700);text-decoration:none;transition:color 0.3s;margin-top:0.5rem;}
+    .bn-card-link:hover{color:var(--m500);}
+    .bn-card-link svg{stroke:currentColor;fill:none;stroke-width:1.5;transition:transform 0.3s;}
+    .bn-card-link:hover svg{transform:translateX(3px);}
+
+    /* ── NEWSLETTER CTA ── */
+    .bn-newsletter{background:var(--m900);padding:5rem 4rem;text-align:center;}
+    .bn-newsletter-inner{max-width:560px;margin:0 auto;}
+    .bn-newsletter-eyebrow{font-size:0.63rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--m400);margin-bottom:1.25rem;}
+    .bn-newsletter h2{font-family:var(--display);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;color:var(--white);line-height:1.15;margin-bottom:1rem;}
+    .bn-newsletter h2 em{font-style:italic;color:var(--m400);}
+    .bn-newsletter p{font-size:0.88rem;line-height:1.8;color:rgba(255,255,255,0.55);margin-bottom:2rem;}
+    .bn-nl-form{display:flex;gap:0.75rem;max-width:440px;margin:0 auto;}
+    .bn-nl-input{flex:1;padding:0.95rem 1.25rem;background:rgba(255,255,255,0.07);border:1px solid rgba(181,129,140,0.3);border-radius:2px;color:var(--white);font-family:var(--body);font-size:0.83rem;outline:none;transition:border-color 0.3s;}
+    .bn-nl-input::placeholder{color:rgba(255,255,255,0.28);}
+    .bn-nl-input:focus{border-color:var(--m400);}
+    .bn-nl-btn{font-size:0.66rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.95rem 1.5rem;background:var(--m500);color:var(--white);border:none;border-radius:2px;cursor:pointer;transition:background 0.3s;white-space:nowrap;}
+    .bn-nl-btn:hover{background:var(--m700);}
+
+    /* ── FOOTER ── */
+    .footer{background:var(--m900);padding:4rem 4rem 2.5rem;}
+    .footer-inner{max-width:1200px;margin:0 auto;}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;border-top:1px solid rgba(181,129,140,0.14);}
+    .footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.28);}
+    .footer-legal{display:flex;gap:2rem;list-style:none;}
+    .footer-legal a{font-size:0.75rem;color:rgba(255,255,255,0.28);text-decoration:none;transition:color 0.3s;}
+    .footer-legal a:hover{color:var(--m400);}
+
+    /* ── MOBILE ── */
+    @media(max-width:768px){
+      .nav{padding:1rem 1.75rem;}
+      .nav-links{display:none;}
+      .nav-hamburger{display:flex;}
+      .nav-btn{font-size:0.6rem;padding:0.6rem 1rem;}
+      .bn-hero{padding:4rem 1.75rem 3.5rem;}
+      .bn-filter{padding:0 1.75rem;}
+      .bn-main{padding:3.5rem 1.75rem 5rem;}
+      .bn-featured{grid-template-columns:1fr;}
+      .bn-featured-img{min-height:280px;}
+      .bn-featured-body{padding:2rem 1.75rem;}
+      .bn-grid{grid-template-columns:1fr;gap:1.75rem;}
+      .bn-newsletter{padding:4rem 1.75rem;}
+      .bn-nl-form{flex-direction:column;}
+      .footer{padding:3rem 1.75rem 2rem;}
+      .footer-bottom{flex-direction:column;gap:1rem;text-align:center;}
+      .footer-legal{flex-wrap:wrap;justify-content:center;}
+    }
+    @media(min-width:769px) and (max-width:1024px){
+      .bn-grid{grid-template-columns:1fr 1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <img src="Logo%20und%20Farbcodes/Logo_Tiefpflaume_Alabaster.png" alt="Kristin Schnödt">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#behandlungen">Behandlungen</a></li>
+      <li><a href="index.html#kurse">Online-Kurse</a></li>
+      <li><a href="index.html#purvidual">PURVIDUAL</a></li>
+      <li><a href="index.html#schulungen">Schulungen</a></li>
+    </ul>
+    <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="nav-btn" target="_blank" rel="noopener">Termin buchen</a>
+    <button class="nav-hamburger" aria-label="Menü" id="navToggle"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="bn-hero">
+    <div class="bn-hero-inner">
+      <div class="bn-eyebrow rv d1">Wissen & Inspiration</div>
+      <h1 class="bn-h1 rv d2">Beauty News —<br><em>direkt von Kristin.</em></h1>
+      <p class="bn-hero-sub rv d3">Tipps, Hintergründe und Einblicke rund um Face Yoga, Cupping, natürliche Hautpflege und alles, was deine Haut wirklich braucht.</p>
+    </div>
+  </section>
+
+  <!-- ── FILTER ── -->
+  <div class="bn-filter">
+    <div class="bn-filter-inner">
+      <button class="bn-filter-btn active" data-filter="all">Alle Beiträge</button>
+      <button class="bn-filter-btn" data-filter="face-yoga">Face Yoga</button>
+      <button class="bn-filter-btn" data-filter="cupping">Cupping</button>
+      <button class="bn-filter-btn" data-filter="hautpflege">Hautpflege</button>
+      <button class="bn-filter-btn" data-filter="purvidual">PURVIDUAL</button>
+      <button class="bn-filter-btn" data-filter="news">News</button>
+    </div>
+  </div>
+
+  <!-- ── MAIN ── -->
+  <div class="bn-main">
+
+    <!-- ════════════════════════════════════════════════
+         FEATURED / NEUESTER BEITRAG
+         → Immer den aktuellsten Beitrag hier eintragen
+         ════════════════════════════════════════════════ -->
+    <article class="bn-featured rv d1" data-category="face-yoga">
+      <div class="bn-featured-img">
+        <img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4531).jpeg" alt="5 Face Yoga Übungen für straffe Konturen">
+      </div>
+      <div class="bn-featured-body">
+        <div class="bn-featured-eyebrow">
+          <span class="bn-tag">Face Yoga</span>
+          <span class="bn-featured-date">19. März 2026</span>
+        </div>
+        <h2 class="bn-featured-title">5 Face Yoga Übungen,<br><em>die sofort wirken</em></h2>
+        <p class="bn-featured-excerpt">Dein Gesicht hat über 40 Muskeln — und die meisten davon trainieren wir nie gezielt. Dabei ist genau das der Schlüssel zu strafferen Konturen, weniger Falten und einem frischeren Ausdruck. Ich zeige dir die 5 Übungen, die ich selbst jeden Morgen mache.</p>
+        <a href="#" class="bn-featured-link">
+          Weiterlesen
+          <svg width="16" height="12" viewBox="0 0 16 12"><path d="M1 6h14M10 1l5 5-5 5"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <!-- ════════════════════════════════════════════════
+         BEITRAGS-GRID
+         → Neue Beiträge oben einfügen (copy & paste)
+         ════════════════════════════════════════════════ -->
+    <p class="bn-grid-label">Alle Beiträge</p>
+    <div class="bn-grid" id="postGrid">
+
+      <!-- ── BEITRAG 1 ── -->
+      <article class="bn-card rv d1" data-category="cupping">
+        <div class="bn-card-img">
+          <img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4563).jpeg" alt="Cupping für das Gesicht">
+        </div>
+        <div class="bn-card-body">
+          <div class="bn-card-meta">
+            <span class="bn-tag cupping">Cupping</span>
+            <span class="bn-card-date">12. März 2026</span>
+          </div>
+          <h3 class="bn-card-title">Was ist Gesichtscupping — und warum liebe ich es?</h3>
+          <p class="bn-card-excerpt">Cupping klingt erstmal ungewohnt. Aber kaum eine Technik aktiviert Lymphfluss, Durchblutung und Bindegewebe so effektiv wie dieses uralte Tool — modern angewendet.</p>
+          <a href="#" class="bn-card-link">Weiterlesen <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+        </div>
+      </article>
+
+      <!-- ── BEITRAG 2 ── -->
+      <article class="bn-card rv d2" data-category="hautpflege">
+        <div class="bn-card-img">
+          <img src="Bilder/Kristin/Gro%C3%9F%20(DSC_4700).jpeg" alt="Natürliche Hautpflege">
+        </div>
+        <div class="bn-card-body">
+          <div class="bn-card-meta">
+            <span class="bn-tag purvidual">Hautpflege</span>
+            <span class="bn-card-date">5. März 2026</span>
+          </div>
+          <h3 class="bn-card-title">Warum weniger Pflege oft mehr bewirkt</h3>
+          <p class="bn-card-excerpt">Viele meiner Kundinnen kommen mit 12-Schritt-Routinen zu mir — und gehen mit drei Produkten nach Hause. Hier erkläre ich, warum Vereinfachung oft die wirkungsvollste Entscheidung ist.</p>
+          <a href="#" class="bn-card-link">Weiterlesen <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+        </div>
+      </article>
+
+      <!-- ── BEITRAG 3 ── -->
+      <article class="bn-card rv d3" data-category="face-yoga">
+        <div class="bn-card-img">
+          <img src="Bilder/Online-Programme/4_herzlich_lachen.jpeg" alt="Botox oder Face Yoga">
+        </div>
+        <div class="bn-card-body">
+          <div class="bn-card-meta">
+            <span class="bn-tag">Face Yoga</span>
+            <span class="bn-card-date">26. Februar 2026</span>
+          </div>
+          <h3 class="bn-card-title">Botox oder Face Yoga — was funktioniert wirklich?</h3>
+          <p class="bn-card-excerpt">Ich bin gegen Botox. Das sage ich offen. Aber nicht ohne Grund — und ich erkläre dir genau, warum Face Yoga langfristig das Überzeugendere ist.</p>
+          <a href="#" class="bn-card-link">Weiterlesen <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+        </div>
+      </article>
+
+      <!-- ── BEITRAG 4 ── -->
+      <article class="bn-card rv d1" data-category="purvidual">
+        <div class="bn-card-img">
+          <img src="Bilder/PURVIDUAL/DSC_4474.jpg" alt="PURVIDUAL Pflege">
+        </div>
+        <div class="bn-card-body">
+          <div class="bn-card-meta">
+            <span class="bn-tag purvidual">PURVIDUAL</span>
+            <span class="bn-card-date">18. Februar 2026</span>
+          </div>
+          <h3 class="bn-card-title">Was PURVIDUAL bedeutet — und warum es so heißt</h3>
+          <p class="bn-card-excerpt">PURe Pflege, VIDU — ich sehe dich — und INDIVIDUAL. Hinter diesem Namen steckt meine ganze Philosophie: Pflege, die wirklich zu dir passt, nicht zu allen.</p>
+          <a href="#" class="bn-card-link">Weiterlesen <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+        </div>
+      </article>
+
+      <!-- ── BEITRAG 5 ── -->
+      <article class="bn-card rv d2" data-category="hautpflege">
+        <div class="bn-card-img">
+          <img src="Bilder/Online-Programme/Beauty_blond.jpeg" alt="Haut über 40">
+        </div>
+        <div class="bn-card-body">
+          <div class="bn-card-meta">
+            <span class="bn-tag purvidual">Hautpflege</span>
+            <span class="bn-card-date">10. Februar 2026</span>
+          </div>
+          <h3 class="bn-card-title">Haut ab 40 — was sich verändert und was wirklich hilft</h3>
+          <p class="bn-card-excerpt">Ab 40 verlangsamt sich die Zellerneuerung, Kollagen nimmt ab und die Haut reagiert empfindlicher. Ich erkläre, was dahintersteckt — und wie du gegensteuern kannst.</p>
+          <a href="#" class="bn-card-link">Weiterlesen <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+        </div>
+      </article>
+
+      <!-- ── BEITRAG 6 ── -->
+      <article class="bn-card rv d3" data-category="news">
+        <div class="bn-card-img">
+          <img src="Bilder/Online-Programme/3-Beauties_Bank.jpeg" alt="Neue Kurse 2026">
+        </div>
+        <div class="bn-card-body">
+          <div class="bn-card-meta">
+            <span class="bn-tag news">News</span>
+            <span class="bn-card-date">1. Februar 2026</span>
+          </div>
+          <h3 class="bn-card-title">Neue Kurse & Workshops im Frühjahr 2026</h3>
+          <p class="bn-card-excerpt">Es gibt Neuigkeiten: Das Kursangebot wächst. Face Yoga Offline, Cupping Workshops und mehr — hier erfährst du zuerst, was kommt.</p>
+          <a href="#" class="bn-card-link">Weiterlesen <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+        </div>
+      </article>
+
+      <!--
+      ══════════════════════════════════════════════════════════
+      NEUEN BEITRAG HINZUFÜGEN — einfach diesen Block kopieren:
+
+      <article class="bn-card rv d1" data-category="KATEGORIE">
+        KATEGORIEN: face-yoga | cupping | hautpflege | purvidual | news
+        <div class="bn-card-img">
+          <img src="Bilder/Blog/DEIN-BILD.jpg" alt="Bildbeschreibung">
+        </div>
+        <div class="bn-card-body">
+          <div class="bn-card-meta">
+            <span class="bn-tag">KATEGORIE</span>
+            <span class="bn-card-date">TT. Monat JJJJ</span>
+          </div>
+          <h3 class="bn-card-title">Dein Beitragstitel</h3>
+          <p class="bn-card-excerpt">Kurze Beschreibung des Beitrags, ca. 2–3 Sätze.</p>
+          <a href="LINK-ZUM-BEITRAG" class="bn-card-link">Weiterlesen <svg width="14" height="10" viewBox="0 0 14 10"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+        </div>
+      </article>
+      ══════════════════════════════════════════════════════════
+      -->
+
+    </div><!-- /bn-grid -->
+  </div><!-- /bn-main -->
+
+  <!-- ── NEWSLETTER ── -->
+  <section class="bn-newsletter">
+    <div class="bn-newsletter-inner">
+      <div class="bn-newsletter-eyebrow rv d1">Nichts verpassen</div>
+      <h2 class="rv d2">Neue Beiträge direkt<br><em>in dein Postfach</em></h2>
+      <p class="rv d3">Melde dich an und erhalte Tipps, Inspirationen und Neuigkeiten — kein Spam, nur echtes Wissen.</p>
+      <form class="bn-nl-form rv d4" onsubmit="return false;">
+        <input class="bn-nl-input" type="email" placeholder="Deine E-Mail-Adresse">
+        <button class="bn-nl-btn" type="submit">Anmelden</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Kristin Schnödt. Alle Rechte vorbehalten.</p>
+        <ul class="footer-legal">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="agb.html">AGB</a></li>
+          <li><a href="widerruf.html">Widerruf</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Mobile nav ──
+    document.getElementById('navToggle').addEventListener('click', function(){
+      var ul = document.querySelector('.nav-links');
+      var open = ul.style.display === 'flex';
+      ul.style.display = open ? 'none' : 'flex';
+      ul.style.flexDirection = open ? '' : 'column';
+      ul.style.position = open ? '' : 'absolute';
+      ul.style.top = open ? '' : '100%';
+      ul.style.left = open ? '' : '0';
+      ul.style.right = open ? '' : '0';
+      ul.style.background = open ? '' : 'rgba(248,243,245,0.97)';
+      ul.style.padding = open ? '' : '1rem 1.75rem 1.5rem';
+      ul.style.gap = open ? '' : '1.25rem';
+    });
+
+    // ── Scroll reveal ──
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('on'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
+
+    // ── Kategorie-Filter ──
+    var filterBtns = document.querySelectorAll('.bn-filter-btn');
+    var posts = document.querySelectorAll('[data-category]');
+
+    filterBtns.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        filterBtns.forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        var filter = btn.getAttribute('data-filter');
+        posts.forEach(function(post){
+          if(filter === 'all' || post.getAttribute('data-category') === filter){
+            post.style.display = '';
+          } else {
+            post.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

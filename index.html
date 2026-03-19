@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kristin Schnödt – Natürliche Hautverjüngung | Face Yoga &amp; PURVIDUAL</title>
+  <meta name="description" content="Spezialistin für natürliche Hautverjüngung ohne Botox. Buccale Massage, Face Yoga, Göttinnen-Haut Kurse, PURVIDUAL Clean Beauty – Kosmetikstudio Auerbach i.d.Opf.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/LogoNeu_2026_final_OH.png">
+  <style>
+    /* ============================================================
+       BRAND DESIGN SYSTEM
+    ============================================================ */
+    :root {
+      --alabaster: #F8F3F5;
+      --m100: #F8F3F5;
+      --m200: #ECDDE1;
+      --m300: #D9C0C8;
+      --m400: #C49EAA;
+      --m500: #B5818C;
+      --m700: #7A4A58;
+      --m900: #2E2028;
+      --schiefer: #696E6B;
+      --white: #FFFFFF;
+      --display: 'Cormorant Garamond', Georgia, serif;
+      --body: 'Montserrat', system-ui, sans-serif;
+      --ease: cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--body); color: var(--schiefer); background: var(--alabaster); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+    /* ---- CURSOR ---- */
+    .cur-dot { width: 10px; height: 10px; background: var(--m500); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: transform 0.2s var(--ease); mix-blend-mode: multiply; }
+    .cur-ring { width: 38px; height: 38px; border: 1px solid rgba(181,129,140,0.55); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transition: transform 0.35s var(--ease), border-color 0.3s; }
+    @media (hover:none) { .cur-dot, .cur-ring { display: none; } }
+
+    /* ---- NAV ---- */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 2rem 4rem; transition: padding 0.5s var(--ease), background 0.5s, box-shadow 0.5s; }
+    .nav.stuck { padding: 1rem 4rem; background: rgba(248,243,245,0.95); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(46,32,40,0.07); }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo img { height: 46px; width: auto; transition: opacity 0.4s; }
+    .nav-logo .logo-light { display: none; }
+    .nav.stuck .nav-logo .logo-dark { display: none; }
+    .nav.stuck .nav-logo .logo-light { display: block; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; }
+    .nav.stuck .nav-links a { color: var(--schiefer); }
+    .nav-links a:hover { color: var(--m500) !important; }
+    /* Topbar */
+    .topbar{background:var(--m700);padding:0.55rem 4rem;display:flex;align-items:center;justify-content:center;gap:0.75rem;position:relative;z-index:200;}
+    .topbar-text{font-size:0.65rem;font-weight:500;letter-spacing:0.1em;color:rgba(255,255,255,0.82);}
+    .topbar-link{font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.4);transition:border-color 0.3s;}
+    .topbar-link:hover{border-color:var(--white);}
+    .topbar-icon{font-size:0.9rem;line-height:1;}
+    .nav-gift{font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 1.25rem;border:1px solid rgba(181,129,140,0.5);color:var(--m400);text-decoration:none;border-radius:2px;transition:background 0.3s,color 0.3s,border-color 0.3s;display:flex;align-items:center;gap:0.5rem;}
+    .nav.stuck .nav-gift{border-color:var(--m300);color:var(--m700);}
+    .nav-gift:hover{background:var(--m500);border-color:var(--m500);color:var(--white);}
+    .nav-btn { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.75rem 1.75rem; background: var(--m500); color: var(--white); text-decoration: none; border-radius: 2px; transition: background 0.3s; }
+    .nav-btn:hover { background: var(--m700); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 1.5px; background: var(--white); transition: background 0.3s; }
+    .nav.stuck .nav-hamburger span { background: var(--m900); }
+
+    /* ---- HERO ---- */
+    .hero { position: relative; height: 100vh; min-height: 700px; background: var(--m900); display: flex; align-items: center; overflow: hidden; }
+    .hero-aurora { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 70% at 10% 90%, rgba(181,129,140,0.38) 0%, transparent 55%), radial-gradient(ellipse 55% 75% at 85% 15%, rgba(122,74,88,0.28) 0%, transparent 55%); animation: auroraShift 9s ease-in-out infinite alternate; }
+    @keyframes auroraShift { 0% { opacity:.75; transform: scale(1); } 100% { opacity:1; transform: scale(1.06) rotate(1.5deg); } }
+    .hero-grain { position: absolute; inset: 0; opacity: 0.035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 200px; }
+
+    /* Animated blobs - brand symbol */
+    .hero-blobs { position: absolute; top: -80px; right: -60px; width: 580px; height: 580px; z-index: 2; pointer-events: none; }
+    .blob { position: absolute; filter: blur(1px); }
+    .blob-1 { width: 360px; height: 400px; top: 30px; right: 80px; background: radial-gradient(ellipse at 40% 40%, rgba(181,129,140,0.18) 0%, rgba(181,129,140,0.05) 70%, transparent 100%); border: 1.5px solid rgba(181,129,140,0.38); border-radius: 58% 42% 65% 35% / 45% 55% 45% 55%; animation: blob1 10s ease-in-out infinite; }
+    .blob-2 { width: 300px; height: 340px; top: 130px; right: 20px; background: radial-gradient(ellipse at 60% 60%, rgba(122,74,88,0.15) 0%, rgba(122,74,88,0.04) 70%, transparent 100%); border: 1.5px solid rgba(122,74,88,0.32); border-radius: 42% 58% 35% 65% / 55% 45% 55% 45%; animation: blob2 12s ease-in-out infinite; }
+    @keyframes blob1 { 0%,100%{ border-radius:58% 42% 65% 35%/45% 55% 45% 55%; transform:translateY(0) rotate(0deg); } 33%{ border-radius:42% 58% 35% 65%/55% 45% 55% 45%; transform:translateY(-18px) rotate(4deg); } 66%{ border-radius:65% 35% 42% 58%/35% 65% 45% 55%; transform:translateY(10px) rotate(-3deg); } }
+    @keyframes blob2 { 0%,100%{ border-radius:42% 58% 35% 65%/55% 45% 55% 45%; transform:translateY(0) rotate(0deg); } 33%{ border-radius:58% 42% 65% 35%/45% 55% 45% 55%; transform:translateY(15px) rotate(-5deg); } 66%{ border-radius:35% 65% 58% 42%/65% 35% 55% 45%; transform:translateY(-8px) rotate(3deg); } }
+
+    /* Hero photo */
+    .hero-photo { position: absolute; right: 0; top: 0; bottom: 0; width: 45%; z-index: 1; }
+    .hero-photo::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 60%; background: linear-gradient(to right, var(--m900) 0%, transparent 100%); z-index: 2; }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.65; }
+
+    .hero-vline { position: absolute; top: 0; bottom: 0; right: 42%; width: 1px; background: linear-gradient(to bottom, transparent 0%, rgba(181,129,140,0.3) 40%, rgba(181,129,140,0.3) 60%, transparent 100%); z-index: 2; }
+    .hero-content { position: relative; z-index: 3; max-width: 1300px; margin: 0 auto; padding: 5rem 4rem 0; width: 100%; }
+
+    .hero-eyebrow { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1.75rem; display: flex; align-items: center; gap: 1rem; opacity: 0; animation: riseUp 0.85s 0.25s var(--ease) forwards; }
+    .hero-eyebrow::before { content: ''; display: block; width: 36px; height: 1px; background: var(--m400); flex-shrink: 0; }
+
+    .hero-h1 { font-family: var(--display); font-size: clamp(2.4rem, 4.5vw, 5rem); font-weight: 400; line-height: 1.1; color: var(--white); margin-bottom: 1.25rem; max-width: 640px; opacity: 0; animation: riseUp 0.9s 0.45s var(--ease) forwards; }
+    .hero-h1 em { font-style: italic; color: var(--m400); }
+    .hero-tagline { font-family: var(--display); font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 300; font-style: italic; color: rgba(255,255,255,0.75); margin-bottom: 2rem; max-width: 540px; opacity: 0; animation: riseUp 0.9s 0.65s var(--ease) forwards; }
+    .hero-sub { font-size: 0.9rem; font-weight: 400; line-height: 1.75; color: rgba(255,255,255,0.55); max-width: 440px; margin-bottom: 3rem; opacity: 0; animation: riseUp 0.9s 0.8s var(--ease) forwards; }
+    .hero-actions { display: flex; gap: 1.5rem; align-items: center; opacity: 0; animation: riseUp 0.9s 1s var(--ease) forwards; }
+    .hero-stat { position: absolute; right: 48%; bottom: 8rem; z-index: 3; text-align: right; opacity: 0; animation: riseUp 0.9s 1.1s var(--ease) forwards; }
+    .hero-stat-n { font-family: var(--display); font-size: 5rem; font-weight: 300; color: var(--white); line-height: 1; }
+    .hero-stat-l { font-size: 0.63rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--m400); }
+    .hero-scroll { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 0.6rem; opacity: 0; animation: fadeIn 1s 1.3s ease forwards; }
+    .hero-scroll-t { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.35); }
+    .hero-scroll-l { width: 1px; height: 42px; background: linear-gradient(to bottom, rgba(181,129,140,0.7), transparent); animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{ opacity:.4; transform:scaleY(1); } 50%{ opacity:1; transform:scaleY(1.08); } }
+    @keyframes riseUp { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+    /* ---- BUTTONS ---- */
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.8rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 1.1rem 2.4rem; background: var(--m500); color: var(--white); text-decoration: none; border-radius: 2px; position: relative; overflow: hidden; transition: color 0.4s; }
+    .btn-primary::before { content: ''; position: absolute; inset: 0; background: var(--m700); transform: translateX(-101%); transition: transform 0.45s var(--ease); }
+    .btn-primary:hover::before { transform: translateX(0); }
+    .btn-primary > * { position: relative; z-index: 1; }
+    .btn-ghost { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
+    .btn-ghost:hover { color: var(--white); }
+    .btn-ghost svg { transition: transform 0.3s; }
+    .btn-ghost:hover svg { transform: translateX(5px); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 1.1rem 2.4rem; border: 1px solid rgba(181,129,140,0.4); color: var(--m300); text-decoration: none; border-radius: 2px; transition: background 0.4s, border-color 0.4s, color 0.4s; }
+    .btn-outline:hover { background: var(--m500); border-color: var(--m500); color: var(--white); }
+    .btn-white { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 1.1rem 2.5rem; background: var(--white); color: var(--m700); text-decoration: none; border-radius: 2px; transition: background 0.4s, color 0.4s; }
+    .btn-white:hover { background: var(--m900); color: var(--white); }
+    .arrow-svg { flex-shrink: 0; }
+
+    /* ---- TRUST BAR ---- */
+    .trust { background: var(--white); border-bottom: 1px solid var(--m200); padding: 2.5rem 4rem; display: flex; align-items: center; justify-content: center; gap: 4rem; }
+    .trust-item { display: flex; align-items: center; gap: 1rem; }
+    .trust-n { font-family: var(--display); font-size: 2.5rem; font-weight: 400; color: var(--m700); line-height: 1; }
+    .trust-l { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--schiefer); line-height: 1.5; max-width: 90px; }
+    .trust-div { width: 1px; height: 44px; background: var(--m200); }
+
+    /* ---- SHARED SECTIONS ---- */
+    .sec { padding: 8rem 4rem; }
+    .sec-inner { max-width: 1200px; margin: 0 auto; }
+    .eyebrow { font-size: 0.66rem; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: var(--m500); display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+    .eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--m500); flex-shrink: 0; }
+    .sec-h2 { font-family: var(--display); font-size: clamp(2.4rem, 4.5vw, 4rem); font-weight: 400; line-height: 1.1; color: var(--m900); margin-bottom: 1.5rem; }
+    .sec-h2 em { font-style: italic; color: var(--m700); }
+    .sec-sub { font-size: 0.97rem; font-weight: 400; line-height: 1.8; color: var(--schiefer); max-width: 580px; }
+    .rv { opacity: 0; transform: translateY(38px); transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); }
+    .rv.on { opacity: 1; transform: none; }
+    .d1{transition-delay:.1s;} .d2{transition-delay:.2s;} .d3{transition-delay:.3s;} .d4{transition-delay:.4s;} .d5{transition-delay:.5s;}
+
+    /* ---- MISSION ---- */
+    .mission { background: var(--m900); padding: 9rem 4rem; position: relative; overflow: hidden; text-align: center; }
+    .mission::before { content: '\201C'; position: absolute; top: -5rem; left: 1rem; font-family: var(--display); font-size: 22rem; font-weight: 300; color: rgba(181,129,140,0.05); line-height: 1; pointer-events: none; }
+    .mission-inner { max-width: 860px; margin: 0 auto; }
+    .mission-quote { font-family: var(--display); font-size: clamp(1.8rem, 3.6vw, 3.1rem); font-weight: 300; font-style: italic; line-height: 1.5; color: var(--white); margin-bottom: 2.5rem; }
+    .mission-quote strong { font-weight: 500; font-style: normal; color: var(--m400); }
+    .mission-rule { width: 56px; height: 1px; background: var(--m500); margin: 0 auto 1.25rem; }
+    .mission-by { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m500); }
+
+    /* ---- SERVICES ---- */
+    .services { background: var(--alabaster); }
+    .services-head { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 5rem; }
+    .services-intro { font-size: 0.96rem; line-height: 1.8; color: var(--schiefer); }
+    .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--m200); }
+    .svc { background: var(--white); padding: 3.5rem; position: relative; overflow: hidden; cursor: default; }
+    .svc::after { content: ''; position: absolute; inset: 0; background: var(--m900); transform: translateY(101%); transition: transform 0.52s var(--ease); z-index: 0; }
+    .svc:hover::after { transform: translateY(0); }
+    .svc > * { position: relative; z-index: 1; }
+    .svc-num { font-family: var(--display); font-size: 5rem; font-weight: 300; color: var(--m200); line-height: 1; margin-bottom: 1.5rem; transition: color 0.5s; }
+    .svc:hover .svc-num { color: rgba(181,129,140,0.18); }
+    .svc-title { font-family: var(--display); font-size: 1.9rem; font-weight: 500; color: var(--m900); margin-bottom: 0.5rem; transition: color 0.5s; }
+    .svc:hover .svc-title { color: var(--white); }
+    .svc-tag { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--m500); margin-bottom: 1.5rem; transition: color 0.5s; }
+    .svc:hover .svc-tag { color: var(--m400); }
+    .svc-desc { font-size: 0.9rem; line-height: 1.75; color: var(--schiefer); margin-bottom: 2.25rem; transition: color 0.5s; }
+    .svc:hover .svc-desc { color: rgba(255,255,255,0.65); }
+    .svc-link { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--m700); text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; transition: color 0.5s; }
+    .svc:hover .svc-link { color: var(--m300); }
+    .svc-link svg { transition: transform 0.3s; }
+    .svc-link:hover svg { transform: translateX(4px); }
+
+    /* ---- TREATMENTS ---- */
+    .treat { background: var(--m200); padding: 8rem 4rem; }
+    .treat-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .treat-img-wrap { position: relative; position: sticky; top: 140px; }
+    .treat-img { width: 100%; aspect-ratio: 4/5; overflow: hidden; }
+    .treat-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+    .treat-img:hover img { transform: scale(1.03); }
+    .treat-badge { position: absolute; bottom: -1.75rem; right: -1.75rem; width: 140px; height: 140px; border-radius: 50%; background: var(--m500); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .treat-badge-n { font-family: var(--display); font-size: 2.75rem; font-weight: 400; color: var(--white); line-height: 1; }
+    .treat-badge-l { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.78); line-height: 1.4; }
+
+    /* Treatment list with dropdown */
+    .treat-list { list-style: none; margin-top: 2.5rem; }
+    .treat-item { border-bottom: 1px solid var(--m300); overflow: hidden; }
+    .treat-item-row { padding: 1.25rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; cursor: pointer; transition: padding-left 0.3s var(--ease); }
+    .treat-item.open .treat-item-row { padding-left: 0.5rem; }
+    .treat-item-name { font-family: var(--display); font-size: 1.22rem; font-weight: 500; color: var(--m900); }
+    .treat-item-right { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
+    .treat-item-tag { font-size: 0.58rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.8rem; background: var(--m900); color: var(--white); border-radius: 2px; white-space: nowrap; }
+    .treat-chevron { width: 18px; height: 18px; color: var(--m500); transition: transform 0.35s var(--ease); flex-shrink: 0; }
+    .treat-item.open .treat-chevron { transform: rotate(180deg); }
+    .treat-panel { max-height: 0; overflow: hidden; transition: max-height 0.5s var(--ease); }
+    .treat-item.open .treat-panel { max-height: 320px; }
+    .treat-panel-inner { display: grid; grid-template-columns: 120px 1fr; gap: 1.25rem; padding: 0 0 1.5rem; }
+    .treat-panel-img { aspect-ratio: 1; overflow: hidden; border-radius: 2px; }
+    .treat-panel-img img { width: 100%; height: 100%; object-fit: cover; }
+    .treat-panel-desc { font-size: 0.88rem; line-height: 1.7; color: var(--m900); padding-top: 0.25rem; }
+
+    /* ---- COURSES ---- */
+    .courses { background: var(--white); }
+    .courses-head { text-align: center; margin-bottom: 5rem; }
+    .courses-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+    .course { padding: 3.5rem; border: 1px solid var(--m200); position: relative; overflow: hidden; transition: border-color 0.4s, box-shadow 0.5s, transform 0.5s var(--ease); display: flex; flex-direction: column; }
+    .course::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--m500); transform: scaleX(0); transform-origin: left; transition: transform 0.5s var(--ease); }
+    .course:hover { border-color: transparent; box-shadow: 0 28px 80px rgba(46,32,40,0.1); transform: translateY(-5px); }
+    .course:hover::before { transform: scaleX(1); }
+    .course-badge { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.63rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.45rem 1rem; background: var(--m100); color: var(--m700); border-radius: 2px; margin-bottom: 2rem; align-self: flex-start; white-space: nowrap; }
+    .course-badge.prem { background: var(--m900); color: var(--m400); }
+    .course-badge.starter { background: var(--m200); color: var(--m700); }
+    .course-h3 { font-family: var(--display); font-size: 2rem; font-weight: 400; color: var(--m900); line-height: 1.15; margin-bottom: 0.5rem; }
+    .course-tag { font-size: 0.85rem; font-style: italic; color: var(--m500); margin-bottom: 1.5rem; }
+    .course-desc { font-size: 0.88rem; line-height: 1.75; color: var(--schiefer); margin-bottom: 2rem; flex: 1; }
+    .course-feats { list-style: none; margin-bottom: 2rem; }
+    .course-feat { font-size: 0.83rem; padding: 0.6rem 0; border-bottom: 1px solid var(--m100); color: var(--schiefer); display: flex; align-items: center; gap: 0.75rem; }
+    .course-feat::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--m500); flex-shrink: 0; }
+    .course-foot { display: flex; flex-direction: column; align-items: stretch; gap: 0.75rem; padding-top: 2rem; border-top: 1px solid var(--m200); margin-top: auto; }
+    .course-price-row { text-align: center; padding: 0.5rem 0; }
+    .course-price { font-family: var(--display); font-size: 2.6rem; font-weight: 300; color: var(--m700); line-height: 1; display: block; }
+    .course-price-sep { display: none; }
+    .course-dur { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--m400); display: block; margin-top: 0.3rem; }
+    .course-cta { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.95rem 1.5rem; background: var(--m500); color: var(--white); text-decoration: none; border-radius: 2px; transition: background 0.3s; text-align: center; display: block; }
+    .course-cta:hover { background: var(--m700); }
+
+    /* ---- PURVIDUAL ---- */
+    .purv { background: var(--m900); padding: 10rem 4rem; position: relative; overflow: hidden; }
+    .purv::before { content: 'PURVIDUAL'; position: absolute; bottom: -5rem; left: -1rem; font-family: var(--display); font-size: 19vw; font-weight: 700; color: rgba(255,255,255,0.022); white-space: nowrap; pointer-events: none; letter-spacing: -0.02em; line-height: 1; }
+    .purv-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+    .purv-tag { font-size: 0.64rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m400); display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+    .purv-tag::before { content: ''; display: block; width: 28px; height: 1px; background: var(--m500); }
+    .purv-h2 { font-family: var(--display); font-size: clamp(2.4rem, 4vw, 4rem); font-weight: 400; line-height: 1.15; color: var(--white); margin-bottom: 1.5rem; }
+    .purv-h2 em { font-style: italic; color: var(--m400); }
+    .purv-p { font-size: 0.96rem; line-height: 1.8; color: rgba(255,255,255,0.55); margin-bottom: 2.5rem; }
+    .purv-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+    .purv-pill { padding: 1.5rem; border: 1px solid rgba(181,129,140,0.2); transition: border-color 0.35s; }
+    .purv-pill:hover { border-color: rgba(181,129,140,0.5); }
+    .purv-pill-t { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--m400); margin-bottom: 0.5rem; }
+    .purv-pill-d { font-size: 0.84rem; line-height: 1.6; color: rgba(255,255,255,0.45); }
+
+    /* PURVIDUAL product images */
+    .purv-products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .purv-prod { aspect-ratio: 3/4; position: relative; overflow: hidden; transition: transform 0.55s var(--ease); }
+    .purv-prod:hover { transform: scale(1.03); }
+    .purv-prod img { width: 100%; height: 100%; object-fit: cover; }
+    .purv-prod::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(46,32,40,0.6), transparent 55%); }
+    .purv-prod:nth-child(2) { margin-top: 2.5rem; }
+    .purv-prod:nth-child(3) { margin-top: 5rem; }
+
+    /* ---- TESTIMONIALS ---- */
+    .testi { background: var(--alabaster); }
+    .testi-head { margin-bottom: 4rem; }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .testi-card { background: var(--white); padding: 3rem; border: 1px solid var(--m200); transition: transform 0.45s var(--ease), box-shadow 0.45s, border-color 0.45s; }
+    .testi-card:hover { transform: translateY(-5px); box-shadow: 0 22px 60px rgba(46,32,40,0.09); border-color: var(--m300); }
+    .testi-stars { display: flex; gap: 0.2rem; margin-bottom: 1.5rem; }
+    .star { color: var(--m500); font-size: 0.9rem; }
+    .testi-q { font-family: var(--display); font-size: 1.12rem; font-weight: 400; font-style: italic; line-height: 1.6; color: var(--m900); margin-bottom: 2rem; }
+    .testi-auth { display: flex; align-items: center; gap: 1rem; }
+    .testi-av { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: var(--m200); }
+    .testi-av img { width: 100%; height: 100%; object-fit: cover; }
+    .testi-name { font-size: 0.8rem; font-weight: 600; color: var(--m900); }
+    .testi-meta { font-size: 0.7rem; color: var(--schiefer); }
+
+    /* ---- PMU PARTNER ---- */
+    .partner { background: var(--m200); padding: 7rem 4rem; }
+    .partner-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
+    .partner-left {}
+    .partner-main-img { width: 100%; aspect-ratio: 3/4; overflow: hidden; position: relative; margin-bottom: 1.5rem; }
+    .partner-main-img img { width: 100%; height: 100%; object-fit: cover; }
+    .partner-main-img::before { content: ''; position: absolute; inset: -1.5rem; border: 1px solid var(--m400); z-index: -1; }
+    .partner-results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+    .partner-result { aspect-ratio: 1; overflow: hidden; }
+    .partner-result img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.45s var(--ease); }
+    .partner-result:hover img { transform: scale(1.05); }
+    .partner-content {}
+    .partner-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.63rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.4rem 0.9rem; background: var(--white); color: var(--m700); border-radius: 2px; margin-bottom: 1.5rem; }
+    .partner-h2 { font-family: var(--display); font-size: 2.6rem; font-weight: 400; color: var(--m900); line-height: 1.2; margin-bottom: 0.5rem; }
+    .partner-who { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--m500); margin-bottom: 1.5rem; }
+    .partner-p { font-size: 0.96rem; line-height: 1.8; color: var(--schiefer); margin-bottom: 2rem; }
+    .partner-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+    .ptag { font-size: 0.63rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.38rem 0.85rem; border: 1px solid var(--m400); color: var(--m700); }
+
+    /* ---- BLOG ---- */
+    .blog { background: var(--white); border-top: 1px solid var(--m200); }
+    .blog-head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 4rem; }
+    .blog-all { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--m700); text-decoration: none; transition: color 0.3s; }
+    .blog-all:hover { color: var(--m500); }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .blog-card { text-decoration: none; display: flex; flex-direction: column; border: 1px solid var(--m200); transition: transform 0.4s var(--ease), box-shadow 0.4s, border-color 0.4s; overflow: hidden; }
+    .blog-card:hover { transform: translateY(-5px); box-shadow: 0 20px 60px rgba(46,32,40,0.08); border-color: var(--m300); }
+    .blog-card-img { aspect-ratio: 16/9; overflow: hidden; }
+    .blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--ease); }
+    .blog-card:hover .blog-card-img img { transform: scale(1.05); }
+    .blog-card-body { padding: 2rem; flex: 1; }
+    .blog-card-cat { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--m500); margin-bottom: 0.75rem; }
+    .blog-card-title { font-family: var(--display); font-size: 1.35rem; font-weight: 500; color: var(--m900); line-height: 1.3; margin-bottom: 0.75rem; }
+    .blog-card-read { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--m700); display: flex; align-items: center; gap: 0.5rem; margin-top: auto; }
+    .blog-card-read svg { transition: transform 0.3s; }
+    .blog-card:hover .blog-card-read svg { transform: translateX(4px); }
+
+    /* ---- B2B STRIP ---- */
+    .b2b { background: var(--alabaster); border-top: 1px solid var(--m200); border-bottom: 1px solid var(--m200); padding: 4rem; }
+    .b2b-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 4rem; }
+    .b2b-lbl { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m500); white-space: nowrap; flex-shrink: 0; }
+    .b2b-sep { width: 1px; height: 50px; background: var(--m200); flex-shrink: 0; }
+    .b2b-h3 { font-family: var(--display); font-size: 1.9rem; font-weight: 400; color: var(--m900); flex: 1; }
+    .b2b-p { font-size: 0.9rem; line-height: 1.75; color: var(--schiefer); flex: 1; }
+    .b2b-cta { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.9rem 1.75rem; border: 1px solid var(--m400); color: var(--m700); text-decoration: none; border-radius: 2px; white-space: nowrap; flex-shrink: 0; transition: background 0.3s, border-color 0.3s, color 0.3s; }
+    .b2b-cta:hover { background: var(--m700); border-color: var(--m700); color: var(--white); }
+
+    /* ---- CTA ---- */
+    .cta-sec { background: var(--m500); padding: 9rem 4rem; text-align: center; position: relative; overflow: hidden; }
+    .cta-sec::before { content: ''; position: absolute; top: -55%; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; border-radius: 50%; background: rgba(255,255,255,0.045); pointer-events: none; }
+    .cta-inner { position: relative; z-index: 1; }
+    .cta-ey { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.68); margin-bottom: 1.5rem; }
+    .cta-h2 { font-family: var(--display); font-size: clamp(2.5rem, 5vw, 4.75rem); font-weight: 400; line-height: 1.1; color: var(--white); margin-bottom: 1.5rem; }
+    .cta-h2 em { font-style: italic; }
+    .cta-p { font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.72); max-width: 520px; margin: 0 auto 3rem; }
+    .cta-btns { display: flex; gap: 1.5rem; justify-content: center; align-items: center; }
+
+    /* ---- FOOTER ---- */
+    .footer { background: var(--m900); padding: 5.5rem 4rem 3rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; padding-bottom: 4rem; border-bottom: 1px solid rgba(181,129,140,0.14); }
+    .footer-brand { font-family: var(--display); font-size: 1.55rem; font-weight: 500; color: var(--white); margin-bottom: 1rem; }
+    .footer-tagline { font-size: 0.82rem; line-height: 1.7; color: rgba(255,255,255,0.4); max-width: 255px; margin-bottom: 2rem; }
+    .footer-socials { display: flex; gap: 1rem; }
+    .footer-sc { width: 36px; height: 36px; border: 1px solid rgba(181,129,140,0.28); display: flex; align-items: center; justify-content: center; color: var(--m400); text-decoration: none; transition: background 0.3s, border-color 0.3s, color 0.3s; }
+    .footer-sc:hover { background: var(--m500); border-color: var(--m500); color: var(--white); }
+    .footer-col-h { font-size: 0.63rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--m500); margin-bottom: 1.5rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+    .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.3s; }
+    .footer-links a:hover { color: var(--m300); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.28); }
+    .footer-legal { display: flex; gap: 2rem; list-style: none; }
+    .footer-legal a { font-size: 0.75rem; color: rgba(255,255,255,0.28); text-decoration: none; transition: color 0.3s; }
+    .footer-legal a:hover { color: var(--m400); }
+
+    /* ---- STUDIO VIDEO ---- */
+    .studio-vid { position: relative; height: 88vh; min-height: 560px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: var(--m900); }
+    .studio-vid video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.55; }
+    .studio-vid-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(46,32,40,0.72) 0%, rgba(46,32,40,0.35) 55%, rgba(46,32,40,0.15) 100%); }
+    .studio-vid-content { position: relative; z-index: 2; max-width: 1200px; width: 100%; padding: 0 4rem; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; }
+    .studio-vid-text .eyebrow { color: var(--m400); }
+    .studio-vid-text .eyebrow::before { background: var(--m400); }
+    .studio-vid-h2 { font-family: var(--display); font-size: clamp(1.9rem, 3vw, 3rem); font-weight: 400; line-height: 1.15; color: var(--white); margin-bottom: 1.25rem; }
+    .studio-vid-h2 em { font-style: italic; color: var(--m400); }
+    .studio-vid-p { font-size: 0.96rem; line-height: 1.8; color: rgba(255,255,255,0.6); margin-bottom: 2.5rem; max-width: 440px; }
+    .studio-vid-actions { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+    /* Play button (centre) */
+    .studio-play-wrap { display: flex; align-items: center; justify-content: center; }
+    .studio-play-btn { width: 88px; height: 88px; border-radius: 50%; background: rgba(255,255,255,0.12); border: 1.5px solid rgba(255,255,255,0.45); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.35s, transform 0.35s; backdrop-filter: blur(6px); }
+    .studio-play-btn:hover { background: rgba(181,129,140,0.35); transform: scale(1.07); }
+    .studio-play-btn svg { color: var(--white); transition: transform 0.3s; }
+    .studio-play-btn .icon-play  { display: block; margin-left: 4px; }
+    .studio-play-btn .icon-pause { display: none; }
+    .studio-play-btn.playing .icon-play  { display: none; }
+    .studio-play-btn.playing .icon-pause { display: block; }
+    /* Progress bar */
+    .studio-progress { position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: rgba(255,255,255,0.12); z-index: 3; }
+    .studio-progress-bar { height: 100%; background: var(--m500); width: 0%; transition: width 0.25s linear; }
+    @media (max-width: 1024px) { .studio-vid-content { grid-template-columns: 1fr; } .studio-play-wrap { display: none; } }
+    @media (max-width: 768px) { .studio-vid { height: 70vh; } .studio-vid-content { padding: 0 1.75rem; } }
+
+    /* ---- COOKIE BANNER ---- */
+    .cookie-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 9000; background: var(--m900); border-top: 1px solid rgba(181,129,140,0.2); padding: 1.5rem 4rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; transform: translateY(100%); transition: transform 0.55s var(--ease); }
+    .cookie-bar.show { transform: translateY(0); }
+    .cookie-bar p { font-size: 0.82rem; line-height: 1.6; color: rgba(255,255,255,0.65); max-width: 680px; }
+    .cookie-bar p a { color: var(--m400); text-decoration: underline; }
+    .cookie-btns { display: flex; gap: 0.75rem; flex-shrink: 0; }
+    .cookie-accept { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.75rem 1.5rem; background: var(--m500); color: var(--white); border: none; border-radius: 2px; cursor: pointer; transition: background 0.3s; white-space: nowrap; }
+    .cookie-accept:hover { background: var(--m700); }
+    .cookie-decline { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.75rem 1.5rem; background: transparent; color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.2); border-radius: 2px; cursor: pointer; transition: border-color 0.3s, color 0.3s; white-space: nowrap; }
+    .cookie-decline:hover { border-color: rgba(255,255,255,0.5); color: var(--white); }
+    @media (max-width: 768px) { .cookie-bar { flex-direction: column; padding: 1.5rem 1.75rem; align-items: flex-start; } }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 1024px) {
+      .hero-photo { width: 40%; }
+      .hero-stat { right: 42%; }
+      .services-head { grid-template-columns: 1fr; }
+      .treat-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .treat-img-wrap { position: static; }
+      .purv-inner { grid-template-columns: 1fr; gap: 4rem; }
+      .courses-grid { grid-template-columns: 1fr 1fr; }
+      .testi-grid { grid-template-columns: 1fr 1fr; }
+      .partner-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 3rem; }
+      .b2b-inner { flex-wrap: wrap; gap: 2rem; }
+      .b2b-sep { display: none; }
+    }
+    @media (max-width: 768px) {
+      .nav { padding: 1.25rem 1.75rem; }
+      .nav-logo img { height: 36px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-btn { font-size: 0.6rem; padding: 0.6rem 1rem; }
+      .nav-gift { display: none; }
+      .topbar { padding: 0.55rem 1.75rem; }
+      .hero-photo { display: none; }
+      .hero-stat { display: none; }
+      .hero-blobs { width: 260px; height: 260px; right: -30px; top: -40px; }
+      .blob-1 { width: 180px; height: 200px; }
+      .blob-2 { width: 140px; height: 160px; }
+      .hero-content { padding: 4rem 1.75rem 0; }
+      .hero-h1 { font-size: clamp(2rem, 9vw, 3.2rem); max-width: 100%; }
+      .hero-sub { font-size: 0.85rem; margin-bottom: 2rem; }
+      .hero-actions { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .btn-primary { width: 100%; justify-content: center; }
+      .sec { padding: 4rem 1.75rem; }
+      .treat { padding: 4rem 1.75rem; }
+      .purv { padding: 5rem 1.75rem; }
+      .partner { padding: 4rem 1.75rem; }
+      .b2b { padding: 3rem 1.75rem; }
+      .cta-sec { padding: 5rem 1.75rem; }
+      .footer { padding: 4rem 1.75rem 2.5rem; }
+      .trust { flex-wrap: wrap; padding: 2rem 1.75rem; gap: 1.5rem; }
+      .trust-div { display: none; }
+      .trust-n { font-size: 2rem; }
+      .services-grid { grid-template-columns: 1fr; gap: 1px; }
+      .svc { padding: 2.5rem 1.75rem; }
+      .courses-grid { grid-template-columns: 1fr; }
+      .courses-grid .course { grid-column: auto; max-width: none; }
+      .course { padding: 2.5rem 1.75rem; }
+      .purv-products { grid-template-columns: repeat(3,1fr); gap: 0.75rem; }
+      .purv-prod:nth-child(2), .purv-prod:nth-child(3) { margin-top: 0; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .partner-results { grid-template-columns: repeat(3,1fr); }
+      .blog-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+      .footer-legal { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .studio-vid { height: 60vh; min-height: 400px; }
+      .studio-vid-content { padding: 0 1.75rem; }
+      .studio-vid-h2 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+      .studio-vid-actions .btn-outline { width: 100%; justify-content: center; }
+      .b2b-inner { flex-direction: column; gap: 1.5rem; }
+      .b2b-h3 { font-size: 1.5rem; }
+      .mission { padding: 6rem 1.75rem; }
+      .purv-pillars { grid-template-columns: 1fr; }
+      .treat-badge { width: 110px; height: 110px; right: -1rem; bottom: -1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cur-dot" id="curDot"></div>
+  <div class="cur-ring" id="curRing"></div>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <span class="topbar-icon">🎁</span>
+    <span class="topbar-text">Gutscheine verschenken —</span>
+    <a href="https://kristin-schnoedt-kosmetik.belbo.com/gutscheine" class="topbar-link" target="_blank" rel="noopener">Jetzt online kaufen</a>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-logo">
+      <img class="logo-dark" src="Logo%20und%20Farbcodes/Logo_Alabaster_Tiefpflaume.png" alt="Kristin Schnödt">
+      <img class="logo-light" src="Logo%20und%20Farbcodes/Logo_Tiefpflaume_Alabaster.png" alt="Kristin Schnödt">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#behandlungen">Behandlungen</a></li>
+      <li><a href="#kurse">Online-Kurse</a></li>
+      <li><a href="#purvidual">PURVIDUAL</a></li>
+      <li><a href="#schulungen">Schulungen</a></li>
+      <li><a href="#studio">Studio</a></li>
+      <li><a href="kristin-schnoedt.html">Über mich</a></li>
+    </ul>
+    <a href="https://kristin-schnoedt-kosmetik.belbo.com/gutscheine" class="nav-gift" target="_blank" rel="noopener">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+      Gutschein
+    </a>
+    <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="nav-btn" target="_blank" rel="noopener">Termin buchen</a>
+    <button class="nav-hamburger" aria-label="Menü" id="navToggle"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-aurora"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="hero-photo">
+      <img src="Bilder/Kristin/Gro%C3%9F%20(DSC_4711)!.jpeg" alt="Kristin Schnödt">
+    </div>
+    <div class="hero-vline"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Spezialistin für natürliche Hautverjüngung</div>
+      <h1 class="hero-h1">Ich bin gegen Botox,<br>und ich zeig dir, <em>was wirklich funktioniert.</em></h1>
+      <p class="hero-sub">Behandlungen, Face Yoga, Cupping und Clean Beauty — für Frauen, die ihre natürliche Strahlkraft zurückwollen. Ohne Eingriffe, ohne Kompromisse.</p>
+      <div class="hero-actions">
+        <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="btn-primary" target="_blank" rel="noopener">
+          <span>Jetzt Termin buchen</span>
+          <svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+        </a>
+        <a href="#kurse" class="btn-ghost">
+          Kurse entdecken
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-n">18+</div>
+      <div class="hero-stat-l">Jahre<br>Erfahrung</div>
+    </div>
+    <div class="hero-scroll">
+      <span class="hero-scroll-t">Entdecken</span>
+      <div class="hero-scroll-l"></div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust">
+    <div class="trust-item"><div class="trust-n" data-count="18" data-suffix="+">18+</div><div class="trust-l">Jahre Erfahrung</div></div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><div class="trust-n" data-count="500" data-suffix="+">500+</div><div class="trust-l">Zufriedene Kundinnen</div></div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><div class="trust-n" data-count="9">9</div><div class="trust-l">Premium Treatments</div></div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><div class="trust-n" data-count="0">0</div><div class="trust-l">Invasive Eingriffe</div></div>
+  </div>
+
+  <!-- MISSION -->
+  <section class="mission">
+    <div class="mission-inner">
+      <p class="mission-quote rv">„Dein Gesicht soll wieder widerspiegeln,<br>wie <strong>jung und lebendig</strong> du dich<br>innerlich fühlst."</p>
+      <div class="mission-rule rv d1"></div>
+      <p class="mission-by rv d2">Kristin Schnödt · Spezialistin für natürliche Hautverjüngung</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec services" id="behandlungen">
+    <div class="sec-inner">
+      <div class="services-head">
+        <div>
+          <div class="eyebrow rv">Was ich für dich tue</div>
+          <h2 class="sec-h2 rv d1">Vier Wege zu deiner<br><em>strahlendsten Version</em></h2>
+        </div>
+        <p class="services-intro rv">Alle Bereiche meiner Arbeit verbindet eine Überzeugung: Echte Schönheit braucht keine Eingriffe. Sie braucht das richtige Wissen, die richtigen Techniken — und eine Frau, die bereit ist, sich selbst etwas Gutes zu tun.</p>
+      </div>
+      <div class="services-grid">
+        <div class="svc rv">
+          <div class="svc-num">01</div>
+          <div class="svc-title">Kosmetik­studio</div>
+          <div class="svc-tag">Auerbach i.d.Opf. · Vor-Ort</div>
+          <p class="svc-desc">Premium-Treatments für sichtbare Ergebnisse: Buccale Massage, Gua Sha, Skulpturmassage, Mikrodermabrasion, Bio-Microneedling, Celluma LED und Cupping. Jede Behandlung ein gezielter Schritt zu deiner natürlichen Verjüngung.</p>
+          <a href="#studio" class="svc-link">Behandlungen entdecken <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+        </div>
+        <div class="svc rv d1">
+          <div class="svc-num">02</div>
+          <div class="svc-title">Göttinnen-Haut</div>
+          <div class="svc-tag">Online-Programme · Face Yoga</div>
+          <p class="svc-desc">Face Yoga, Cupping, Gua Sha — als flexibler Self-Learning-Kurs oder als intensives 12-Wochen-Begleitprogramm. Für Frauen, die ihre Haut von zu Hause aus transformieren wollen.</p>
+          <a href="#kurse" class="svc-link">Kurse entdecken <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+        </div>
+        <div class="svc rv d2">
+          <div class="svc-num">03</div>
+          <div class="svc-title">PURVIDUAL</div>
+          <div class="svc-tag">Eigene Kosmetikmarke · Clean Beauty</div>
+          <p class="svc-desc">Hochwertige Pflegeprodukte — individuell abgestimmt, clean beauty und fester Bestandteil aller meiner Programme. Entwickelt aus über 15 Jahren Praxiserfahrung, nicht aus dem Labor.</p>
+          <a href="https://purvidual.de" class="svc-link" target="_blank" rel="noopener">Shop besuchen <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+        </div>
+        <div class="svc rv d3">
+          <div class="svc-num">04</div>
+          <div class="svc-title">Schulungen</div>
+          <div class="svc-tag">Für Kolleginnen · B2B</div>
+          <p class="svc-desc">Cupping &amp; Gua Sha Schulungen für Kosmetikerinnen, Auszubildende und Face Yoga Lehrerinnen. Fundiertes Wissen, praxisnah vermittelt — auf deinem Niveau.</p>
+          <a href="#schulungen" class="svc-link">Mehr erfahren <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TREATMENTS -->
+  <section class="treat" id="studio">
+    <div class="treat-inner">
+      <div class="treat-img-wrap rv">
+        <div class="treat-img">
+          <img src="Bilder/Treatments/Allgemein.jpg" alt="Kosmetikbehandlung Kristin Schnödt">
+        </div>
+        <div class="treat-badge"><div class="treat-badge-n">9</div><div class="treat-badge-l">Signature<br>Treatments</div></div>
+      </div>
+      <div>
+        <div class="eyebrow rv">Studio Auerbach i.d.Opf.</div>
+        <h2 class="sec-h2 rv d1">Treatments, die<br><em>Ergebnisse zeigen</em></h2>
+        <p class="sec-sub rv d2">Jede Behandlung ist mehr als Kosmetik — sie ist ein Ritual der Selbstfürsorge. Klicke auf eine Behandlung, um mehr zu erfahren.</p>
+        <ul class="treat-list rv d2">
+          <li class="treat-item">
+            <div class="treat-item-row" onclick="toggleTreat(this)">
+              <span class="treat-item-name">Buccale Massage</span>
+              <div class="treat-item-right"><span class="treat-item-tag">Signature</span><svg class="treat-chevron" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l5 5 5-5"/></svg></div>
+            </div>
+            <div class="treat-panel"><div class="treat-panel-inner"><div class="treat-panel-img"><img src="Bilder/Treatments/Buccale.jpg" alt="Buccale Massage"></div><div class="treat-panel-desc">Intraoral-Massage, die Kieferspannungen löst und Gesichtskonturen sichtbar modelliert. Sichtbare Lifting-Wirkung bereits nach der ersten Behandlung — wie ein natürliches Face-Lifting.</div></div></div>
+          </li>
+          <li class="treat-item">
+            <div class="treat-item-row" onclick="toggleTreat(this)">
+              <span class="treat-item-name">Gua Sha TCM</span>
+              <div class="treat-item-right"><span class="treat-item-tag">Klassiker</span><svg class="treat-chevron" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l5 5 5-5"/></svg></div>
+            </div>
+            <div class="treat-panel"><div class="treat-panel-inner"><div class="treat-panel-img"><img src="Bilder/Treatments/Gua_Sha.jpg" alt="Gua Sha TCM"></div><div class="treat-panel-desc">Traditionelle TCM-Technik mit Rosenquarzstein. Fördert die Lymphdrainage, reduziert Schwellungen und bringt natürliches Glow — sanft, entspannend, hochwirksam.</div></div></div>
+          </li>
+          <li class="treat-item">
+            <div class="treat-item-row" onclick="toggleTreat(this)">
+              <span class="treat-item-name">Skulpturmassage</span>
+              <div class="treat-item-right"><span class="treat-item-tag">Lifting</span><svg class="treat-chevron" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l5 5 5-5"/></svg></div>
+            </div>
+            <div class="treat-panel"><div class="treat-panel-inner"><div class="treat-panel-img"><img src="Bilder/Treatments/Allgemein.jpg" alt="Skulpturmassage"></div><div class="treat-panel-desc">Intensive Faszienmassage für ein sichtbar strafferes Gesichtsoval. Modelliert Wangenknochen, definiert das Kinn und wirkt Schwerkraftzeichen entgegen.</div></div></div>
+          </li>
+          <li class="treat-item">
+            <div class="treat-item-row" onclick="toggleTreat(this)">
+              <span class="treat-item-name">Bio-Microneedling</span>
+              <div class="treat-item-right"><span class="treat-item-tag">Intensiv</span><svg class="treat-chevron" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l5 5 5-5"/></svg></div>
+            </div>
+            <div class="treat-panel"><div class="treat-panel-inner"><div class="treat-panel-img"><img src="Bilder/Treatments/Allgemein.jpg" alt="Bio-Microneedling"></div><div class="treat-panel-desc">Natürliche Kollagenstimulation ohne Chemikalien. Verfeinert Poren, glättet feine Linien und erneuert das Hautbild — für sichtbar jüngere, straffere Haut.</div></div></div>
+          </li>
+          <li class="treat-item">
+            <div class="treat-item-row" onclick="toggleTreat(this)">
+              <span class="treat-item-name">Mikrodermabrasion</span>
+              <div class="treat-item-right"><span class="treat-item-tag">Renewal</span><svg class="treat-chevron" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l5 5 5-5"/></svg></div>
+            </div>
+            <div class="treat-panel"><div class="treat-panel-inner"><div class="treat-panel-img"><img src="Bilder/Treatments/Microdermabrasion.jpg" alt="Mikrodermabrasion"></div><div class="treat-panel-desc">Schonende Tiefenreinigung und Peeling in einem. Entfernt abgestorbene Hautzellen, verfeinert das Hautbild und bringt sofortige Strahlkraft.</div></div></div>
+          </li>
+          <li class="treat-item">
+            <div class="treat-item-row" onclick="toggleTreat(this)">
+              <span class="treat-item-name">Celluma LED Lichttherapie</span>
+              <div class="treat-item-right"><span class="treat-item-tag">Anti-Aging</span><svg class="treat-chevron" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l5 5 5-5"/></svg></div>
+            </div>
+            <div class="treat-panel"><div class="treat-panel-inner"><div class="treat-panel-img"><img src="Bilder/Treatments/Celluma.jpg" alt="Celluma LED Lichttherapie"></div><div class="treat-panel-desc">Klinisch getestete Rotlicht-Therapie zur Kollagenstimulation und Zellregeneration. Sanft, völlig schmerzfrei und hochwirksam — ideal als Ergänzung zu anderen Treatments.</div></div></div>
+          </li>
+          <li class="treat-item">
+            <div class="treat-item-row" onclick="toggleTreat(this)">
+              <span class="treat-item-name">Facial Cupping</span>
+              <div class="treat-item-right"><span class="treat-item-tag">Drainage</span><svg class="treat-chevron" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l5 5 5-5"/></svg></div>
+            </div>
+            <div class="treat-panel"><div class="treat-panel-inner"><div class="treat-panel-img"><img src="Bilder/Treatments/Cupping.jpg" alt="Facial Cupping"></div><div class="treat-panel-desc">Traditionelles Schröpfen für das Gesicht. Intensive Durchblutungsförderung und Lymphfluss, entspannt tiefe Muskeln und bringt frisches, natürliches Glow.</div></div></div>
+          </li>
+          <li class="treat-item">
+            <div class="treat-item-row" onclick="toggleTreat(this)">
+              <span class="treat-item-name">Klassische Behandlung</span>
+              <div class="treat-item-right"><span class="treat-item-tag">Basis</span><svg class="treat-chevron" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l5 5 5-5"/></svg></div>
+            </div>
+            <div class="treat-panel"><div class="treat-panel-inner"><div class="treat-panel-img"><img src="Bilder/Treatments/Allgemein.jpg" alt="Klassische Behandlung"></div><div class="treat-panel-desc">Tiefenreinigung, Peeling, Extraktion, Maske und Pflege — abgestimmt auf deinen Hauttyp und deine aktuellen Bedürfnisse. Die perfekte Grundlage für jede weiterführende Behandlung.</div></div></div>
+          </li>
+          <li class="treat-item">
+            <div class="treat-item-row" onclick="toggleTreat(this)">
+              <span class="treat-item-name">Exklusive Kennenlernbehandlung</span>
+              <div class="treat-item-right"><span class="treat-item-tag">120 min</span><svg class="treat-chevron" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7l5 5 5-5"/></svg></div>
+            </div>
+            <div class="treat-panel"><div class="treat-panel-inner"><div class="treat-panel-img"><img src="Bilder/Treatments/Allgemein.jpg" alt="Kennenlernbehandlung"></div><div class="treat-panel-desc">120 Minuten ganz für dich: Ich nehme mir die Zeit, dich, deine Haut und deren Bedürfnisse umfassend kennenzulernen. Du erhältst deine erste Effektbehandlung — gezielt, persönlich und nachhaltig wirkend.</div></div></div>
+          </li>
+        </ul>
+        <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="btn-primary rv d3" style="margin-top:2.5rem;display:inline-flex;align-items:center;gap:.8rem;" target="_blank" rel="noopener">
+          <span>Termin buchen</span><svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO VIDEO -->
+  <section class="studio-vid" id="studio-video">
+    <video id="studioVideo" autoplay muted loop playsinline preload="auto">
+      <source src="Bilder/Studio/Studio.mp4" type="video/mp4">
+    </video>
+    <div class="studio-vid-overlay"></div>
+    <div class="studio-vid-content">
+      <div class="studio-vid-text">
+        <div class="eyebrow rv">Kosmetikstudio · Auerbach i.d.Opf.</div>
+        <h2 class="studio-vid-h2 rv d1">Dein Wohlfühlort<br>für <em>natürliche Schönheit</em></h2>
+        <p class="studio-vid-p rv d2">Ein Studio, das so ist wie meine Arbeit — ruhig, hochwertig und ganz auf dich ausgerichtet. Hier entstehen Ergebnisse, die bleiben.</p>
+        <div class="studio-vid-actions rv d3">
+          <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="btn-outline" target="_blank" rel="noopener">
+            Termin buchen <svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="studio-play-wrap rv d2">
+        <button class="studio-play-btn" id="studioPlayBtn" aria-label="Play/Pause">
+          <svg class="icon-play"  width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <svg class="icon-pause" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="studio-progress"><div class="studio-progress-bar" id="studioProgressBar"></div></div>
+  </section>
+
+  <!-- ONLINE COURSES -->
+  <section class="sec courses" id="kurse">
+    <div class="sec-inner">
+      <div class="courses-head">
+        <div class="eyebrow rv" style="justify-content:center;">Online-Programme</div>
+        <h2 class="sec-h2 rv d1" style="text-align:center;max-width:640px;margin:0 auto 1.25rem;">Deine <em>Transformation</em> beginnt zu Hause</h2>
+        <p class="sec-sub rv d2" style="text-align:center;margin:0 auto;">Vier Programme — vom ersten Einstieg bis zur intensiven Komplettransformation.</p>
+      </div>
+      <div class="courses-grid">
+        <div class="course rv">
+          <div class="course-badge starter">✦ Einstieg · 29 €</div>
+          <h3 class="course-h3">Face Yoga Schnupperkurs</h3>
+          <p class="course-tag">Reinschnuppern &amp; erste Ergebnisse erleben</p>
+          <p class="course-desc">Dein erster Schritt in die Welt des Face Yoga — kompakt, geführt und sofort umsetzbar. Lerne die Basics in 3–5 kurzen Workouts und spüre, was natürliche Gesichtsgymnastik bewirkt.</p>
+          <ul class="course-feats">
+            <li class="course-feat">3–5 kurze Face Yoga Workouts</li>
+            <li class="course-feat">Schritt-für-Schritt Videoanleitung</li>
+            <li class="course-feat">Sofort anwendbar, für Einsteiger</li>
+            <li class="course-feat">Lebenslanger Zugang</li>
+          </ul>
+          <div class="course-foot">
+            <div class="course-price-row"><span class="course-price">29 €</span><span class="course-dur">Mini-Kurs · Einstieg</span></div>
+            <a href="https://alfima.com/kristin_schnoedt/face-yoga-schnupperkurs" class="course-cta" target="_blank" rel="noopener">Jetzt starten</a>
+          </div>
+        </div>
+        <div class="course rv d1">
+          <div class="course-badge">✦ Spezialkurs</div>
+          <h3 class="course-h3">Cupping Kurs</h3>
+          <p class="course-tag">Inkl. Cupping-Set</p>
+          <p class="course-desc">Lerne Facial Cupping von Grund auf — mit deinem eigenen Cupping-Set, das direkt im Kurs enthalten ist. Intensive Durchblutung, Lymphdrainage und sofort sichtbares Glow.</p>
+          <ul class="course-feats">
+            <li class="course-feat">Cupping-Set inklusive</li>
+            <li class="course-feat">Schritt-für-Schritt Videoanleitung</li>
+            <li class="course-feat">Lymphdrainage &amp; Lifting-Techniken</li>
+            <li class="course-feat">Lebenslanger Zugang</li>
+          </ul>
+          <div class="course-foot">
+            <div class="course-price-row"><span class="course-price">179 €</span><span class="course-dur">Inkl. Cupping-Set · Selbststudium</span></div>
+            <a href="https://www.purvidual.de/products/cupping-kurs-inkl-cups-ol?variant=54138103333190" class="course-cta" target="_blank" rel="noopener">Kurs ansehen</a>
+          </div>
+        </div>
+        <div class="course rv d2">
+          <div class="course-badge">✦ Transformation</div>
+          <h3 class="course-h3">Göttinnen-Glow</h3>
+          <p class="course-tag">Sichtbare Ergebnisse in 6 Wochen</p>
+          <p class="course-desc">Über 60 Einzelübungen, Schritt-für-Schritt angeleitet. Verschiedene Workouts, Meditationen, Informationen zur Hautpflege, Tipps und vieles mehr. Für Ergebnisse, die nach 6 Wochen sichtbar sind — und durch weiteres Training bleiben.</p>
+          <ul class="course-feats">
+            <li class="course-feat">60+ Übungen &amp; verschiedene Workouts</li>
+            <li class="course-feat">Meditationen &amp; Hautpflege-Wissen</li>
+            <li class="course-feat">Bei bis zu 6 Live Calls dabei sein</li>
+            <li class="course-feat">PURVIDUAL Skincare Integration</li>
+            <li class="course-feat">Lebenslanger Zugang</li>
+          </ul>
+          <div class="course-foot">
+            <div class="course-price-row"><span class="course-price">299 €</span><span class="course-dur">6 Wochen · Self-Learning</span></div>
+            <a href="https://alfima.com/kristin_schnoedt" class="course-cta" target="_blank" rel="noopener">Kurs starten</a>
+          </div>
+        </div>
+        <div class="course rv d3" style="align-items:center;text-align:center;">
+          <div class="course-badge prem" style="align-self:center;">✦ Premium · All-in-One</div>
+          <h3 class="course-h3">Göttinnen-Booster</h3>
+          <p class="course-tag">Das komplette Transformation-Paket</p>
+          <p class="course-desc">Alles was im Göttinnen-Glow enthalten ist — plus Cupping Kurs, Gua Sha Kurs, Beauty Taping Kurs, Fortgeschrittenen-Übungen, persönliche Hautanalyse, ein physisches Journal und PURVIDUAL Produkte im Wert von 500 €.</p>
+          <ul class="course-feats">
+            <li class="course-feat">Göttinnen-Glow + Cupping + Gua Sha Kurs</li>
+            <li class="course-feat">Beauty Taping &amp; Fortgeschrittenen-Übungen</li>
+            <li class="course-feat">Persönliche Hautanalyse durch Kristin</li>
+            <li class="course-feat">Physisches Journal + PURVIDUAL Paket (500 €)</li>
+          </ul>
+          <div class="course-foot">
+            <div class="course-price-row"><span class="course-price">998 €</span><span class="course-dur">Komplettpaket · Lebenslanger Zugang</span></div>
+            <a href="https://wa.me/4915757202153" class="course-cta" target="_blank" rel="noopener">Anfragen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PURVIDUAL -->
+  <section class="purv" id="purvidual">
+    <div class="purv-inner">
+      <div>
+        <div class="purv-tag rv">Eigene Kosmetikmarke</div>
+        <h2 class="purv-h2 rv d1">Pflege, so <em>individuell</em><br>wie deine Haut.</h2>
+        <p class="purv-p rv d2">PURVIDUAL ist mehr als eine Kosmetiklinie — es ist das Ergebnis von über 15 Jahren Praxiserfahrung, destilliert in hochwertige Pflegeprodukte. Clean Beauty, die wirklich wirkt.</p>
+        <div class="purv-pillars rv d3">
+          <div class="purv-pill"><div class="purv-pill-t">Clean Beauty</div><div class="purv-pill-d">Keine schädlichen Inhaltsstoffe. Nur das, was deiner Haut wirklich gut tut.</div></div>
+          <div class="purv-pill"><div class="purv-pill-t">Individuell</div><div class="purv-pill-d">Abgestimmt auf deine Bedürfnisse — nicht für die Masse, sondern für dich.</div></div>
+          <div class="purv-pill"><div class="purv-pill-t">Wirksam</div><div class="purv-pill-d">Aus Behandlungserfahrung entwickelt — nicht aus dem Labor, sondern aus der Praxis.</div></div>
+          <div class="purv-pill"><div class="purv-pill-t">Integriert</div><div class="purv-pill-d">Fester Bestandteil aller Programme und Studio-Behandlungen.</div></div>
+        </div>
+        <a href="https://purvidual.de" class="btn-outline rv d4" target="_blank" rel="noopener">Shop besuchen <svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+      </div>
+      <div class="purv-products rv d2">
+        <div class="purv-prod"><img src="Bilder/Purvidual/Gro%C3%9F%20(DSC_4474).jpeg" alt="PURVIDUAL Produkt"></div>
+        <div class="purv-prod"><img src="Bilder/Purvidual/Gro%C3%9F%20(DSC_4592).jpeg" alt="PURVIDUAL Produkt"></div>
+        <div class="purv-prod"><img src="Bilder/Purvidual/Gro%C3%9F%20(DSC_4663)!.jpeg" alt="PURVIDUAL Produkt"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="sec testi">
+    <div class="sec-inner">
+      <div class="testi-head">
+        <div class="eyebrow rv">Was meine Kundinnen sagen</div>
+        <h2 class="sec-h2 rv d1" style="margin-bottom:0;"><em>Echte Ergebnisse</em>, echte Frauen</h2>
+      </div>
+      <div class="testi-grid">
+        <!-- ── Bewertung 1 ── -->
+        <div class="testi-card rv">
+          <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="testi-q">„Eine klare, parfümfreie Pflegeserie die meiner alternden Haut gut tut, die ich Schmink- und Pflegemuffel einfach anwenden kann ohne großes Prozedere und die ich nicht mehr missen möchte. Ich kann es jedermann nur empfehlen!"</p>
+          <div class="testi-auth">
+            <div class="testi-av"><img src="Bilder/Kundinnen/Angelika.W.png" alt="Angelika W."></div>
+            <div><div class="testi-name">Angelika W.</div><div class="testi-meta">Studio-Kundin</div></div>
+          </div>
+        </div>
+        <!-- ── Bewertung 2 ── -->
+        <div class="testi-card rv d1">
+          <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="testi-q">„Ich bin von Anfang an begeistert von Purvidual. Ich nehme die Produkte seit Oktober 2022 und mein Hautbild hat sich um 100 % verbessert."</p>
+          <div class="testi-auth">
+            <div class="testi-av"><img src="Bilder/Kundinnen/Monika.R.png" alt="Monika R."></div>
+            <div><div class="testi-name">Monika R.</div><div class="testi-meta">PURVIDUAL Kundin</div></div>
+          </div>
+        </div>
+        <!-- ── Bewertung 3 ── -->
+        <div class="testi-card rv d2">
+          <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="testi-q">„Kristin hat mich total begeistert mit ihrem Programm. Sie hat mir gezeigt, wie ich mit wenig Zeitaufwand aber sehr effektiv kleine Übungen machen kann, um meine Haut zu straffen."</p>
+          <div class="testi-auth">
+            <div class="testi-av"><img src="Bilder/Kundinnen/Manu.D.png" alt="Manu D."></div>
+            <div><div class="testi-name">Manu D.</div><div class="testi-meta">Online-Kurs Teilnehmerin</div></div>
+          </div>
+        </div>
+        <!-- ── Neue Bewertung hier einfügen ──
+        <div class="testi-card rv d3">
+          <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <p class="testi-q">„Zitat hier einfügen."</p>
+          <div class="testi-auth">
+            <div class="testi-av"><img src="Bilder/Kundinnen/DATEINAME.png" alt="Name"></div>
+            <div><div class="testi-name">Vorname N.</div><div class="testi-meta">Beschreibung</div></div>
+          </div>
+        </div>
+        ── -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PMU PARTNER -->
+  <section class="partner" id="permanent-makeup">
+    <div class="partner-inner">
+      <div class="partner-left rv">
+        <div class="partner-main-img">
+          <img src="Bilder/Permantent%20Make-Up/IMG_7153.JPG" alt="Xuefei Lindner – PMU Spezialistin">
+        </div>
+      </div>
+      <div class="partner-content">
+        <div class="partner-tag rv">Kooperation im Studio</div>
+        <h2 class="partner-h2 rv d1">Permanent Make-Up<br>für deinen perfekten Rahmen</h2>
+        <p class="partner-who rv d1">Xuefei Lindner · PMU-Spezialistin</p>
+        <p class="partner-p rv d2">Meine langjährige Kooperationspartnerin Xuefei Lindner kommt regelmäßig in mein Studio. Die perfekte Ergänzung zu natürlicher Hautverjüngung, für Frauen, die das Beste aus beiden Welten wollen.</p>
+        <div class="partner-tags rv d3">
+          <span class="ptag">Augenbrauen PMU</span><span class="ptag">Lippen PMU</span><span class="ptag">Eyeliner PMU</span>
+        </div>
+        <a href="https://wa.me/4915757202153" class="btn-primary rv d4" style="display:inline-flex;align-items:center;gap:.8rem;" target="_blank" rel="noopener">
+          <span>PMU Termin anfragen</span><svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+        </a>
+        <div class="partner-results rv d5" style="margin-top:2rem;">
+          <div class="partner-result"><img src="Bilder/Permantent%20Make-Up/7dd3cf47-7913-41cd-9124-f0ef6db33aca.JPG" alt="PMU Ergebnis"></div>
+          <div class="partner-result"><img src="Bilder/Permantent%20Make-Up/8939af03-d73b-440a-9bef-b2269a5fcd78.JPG" alt="PMU Ergebnis"></div>
+          <div class="partner-result"><img src="Bilder/Permantent%20Make-Up/91d70c4d-3b07-4524-ba55-45a8d35c448c.JPG" alt="PMU Ergebnis"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="sec blog" id="blog">
+    <div class="sec-inner">
+      <div class="blog-head">
+        <div>
+          <div class="eyebrow rv">Beauty News</div>
+          <h2 class="sec-h2 rv d1">Wissen, das <em>deine Haut liebt</em></h2>
+        </div>
+        <a href="beauty-news.html" class="blog-all rv" target="_blank" rel="noopener">Alle Beiträge →</a>
+      </div>
+      <div class="blog-grid">
+        <a href="beauty-news.html" class="blog-card rv" target="_blank" rel="noopener">
+          <div class="blog-card-img"><img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4531).jpeg" alt="Face Yoga Tipps"></div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Face Yoga</div>
+            <h3 class="blog-card-title">Face Yoga: Dein tägliches Ritual für straffe Haut</h3>
+            <div class="blog-card-read">Weiterlesen <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></div>
+          </div>
+        </a>
+        <a href="beauty-news.html" class="blog-card rv d1" target="_blank" rel="noopener">
+          <div class="blog-card-img"><img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4542).jpeg" alt="Gua Sha Tipps"></div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Gua Sha</div>
+            <h3 class="blog-card-title">Gua Sha: Warum dieser TCM-Stein deine Haut verändert</h3>
+            <div class="blog-card-read">Weiterlesen <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></div>
+          </div>
+        </a>
+        <a href="beauty-news.html" class="blog-card rv d2" target="_blank" rel="noopener">
+          <div class="blog-card-img"><img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4549).jpeg" alt="Hautpflege Tipps"></div>
+          <div class="blog-card-body">
+            <div class="blog-card-cat">Clean Beauty</div>
+            <h3 class="blog-card-title">Warum PURVIDUAL anders ist als alle anderen Kosmetiklinien</h3>
+            <div class="blog-card-read">Weiterlesen <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B -->
+  <div class="b2b" id="schulungen">
+    <div class="b2b-inner">
+      <div class="b2b-lbl rv">Für Kolleginnen</div>
+      <div class="b2b-sep"></div>
+      <h3 class="b2b-h3 rv d1">Cupping &amp; Gua Sha Schulungen</h3>
+      <p class="b2b-p rv d2">Ich gebe mein Wissen weiter — an Kosmetikerinnen, Auszubildende und Face Yoga Lehrerinnen. Praxisnah, fundiert, auf dein Level zugeschnitten.</p>
+      <a href="https://wa.me/4915757202153" class="b2b-cta rv d3" target="_blank" rel="noopener">Schulung anfragen</a>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-sec" id="termin">
+    <div class="cta-inner">
+      <div class="cta-ey rv">Dein erster Schritt</div>
+      <h2 class="cta-h2 rv d1">Bereit, wieder mit Freude<br><em>in den Spiegel zu schauen?</em></h2>
+      <p class="cta-p rv d2">Buche jetzt deinen Termin direkt online — schnell, unkompliziert und jederzeit. Ich freue mich auf dich.</p>
+      <div class="cta-btns rv d3">
+        <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="btn-white" target="_blank" rel="noopener">
+          Termin buchen <svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">Kristin Schnödt</div>
+          <p class="footer-tagline">Spezialistin für natürliche Hautverjüngung — Göttinnen-Haut · PURVIDUAL · Kosmetikstudio Auerbach i.d.Opf.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/kristin.schnoedt/" class="footer-sc" aria-label="Instagram" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/profile.php?id=61562529171301" class="footer-sc" aria-label="Facebook" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.youtube.com/@kristinschnoedt" class="footer-sc" aria-label="YouTube" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.96 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-h">Angebote</div>
+          <ul class="footer-links">
+            <li><a href="#studio">Kosmetikstudio</a></li>
+            <li><a href="#kurse">Göttinnen-Glow</a></li>
+            <li><a href="#kurse">Göttinnen-Booster</a></li>
+            <li><a href="https://purvidual.de" target="_blank" rel="noopener">PURVIDUAL Shop</a></li>
+            <li><a href="#schulungen">B2B Schulungen</a></li>
+            <li><a href="beauty-news.html">Beauty News</a></li>
+            <li><a href="https://kristin-schnoedt-kosmetik.belbo.com/gutscheine" target="_blank" rel="noopener">🎁 Gutscheine</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-h">Studio</div>
+          <ul class="footer-links">
+            <li><a href="#studio">Auerbach i.d.Opf.</a></li>
+            <li><a href="#termin">Termin buchen</a></li>
+            <li><a href="#permanent-makeup">Permanent Make-Up</a></li>
+            <li><a href="beauty-news.html">Beauty News</a></li>
+            <li><a href="kristin-schnoedt.html">Über mich</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-h">Kontakt</div>
+          <ul class="footer-links">
+            <li><a href="https://kristin-schnoedt-kosmetik.belbo.com/login" target="_blank" rel="noopener">Termin buchen</a></li>
+            <li><a href="mailto:info@kristin-kosmetik.de">E-Mail schreiben</a></li>
+            <li><a href="https://kristin-kosmetik.de">kristin-kosmetik.de</a></li>
+            <li><a href="https://purvidual.de" target="_blank" rel="noopener">purvidual.de</a></li>
+            <li><a href="hallo-ki.html">Hallo KI</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Kristin Schnödt. Alle Rechte vorbehalten.</p>
+        <ul class="footer-legal">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="agb.html">AGB</a></li>
+          <li><a href="widerruf.html">Widerruf</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-bar" id="cookieBar" role="dialog" aria-label="Cookie-Hinweis">
+    <p>Diese Website verwendet Cookies und ähnliche Technologien, um dir das beste Erlebnis zu bieten. Mit „Akzeptieren" stimmst du der Nutzung zu. Mehr Infos in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    <div class="cookie-btns">
+      <button class="cookie-decline" id="cookieDecline">Ablehnen</button>
+      <button class="cookie-accept" id="cookieAccept">Akzeptieren</button>
+    </div>
+  </div>
+
+  <script>
+    /* CURSOR */
+    const dot=document.getElementById('curDot'), ring=document.getElementById('curRing');
+    let mx=0,my=0,rx=0,ry=0;
+    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.cssText=`left:${mx-5}px;top:${my-5}px`;});
+    (function tick(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.cssText=`left:${rx-19}px;top:${ry-19}px`;requestAnimationFrame(tick);})();
+    document.querySelectorAll('a,button,.svc,.course,.testi-card,.treat-item-row,.blog-card').forEach(el=>{
+      el.addEventListener('mouseenter',()=>{dot.style.transform='scale(2.2)';ring.style.transform='scale(1.5)';ring.style.borderColor='rgba(181,129,140,0.9)';});
+      el.addEventListener('mouseleave',()=>{dot.style.transform='scale(1)';ring.style.transform='scale(1)';ring.style.borderColor='rgba(181,129,140,0.55)';});
+    });
+
+    /* NAV */
+    const nav=document.getElementById('nav');
+    window.addEventListener('scroll',()=>nav.classList.toggle('stuck',window.scrollY>60),{passive:true});
+    document.getElementById('navToggle').addEventListener('click',function(){
+      const ul=document.querySelector('.nav-links');
+      const open=ul.style.display==='flex';
+      ul.style.display=open?'none':'flex';
+      ul.style.flexDirection=open?'':'column';
+      ul.style.position=open?'':'absolute';
+      ul.style.top=open?'':'100%';
+      ul.style.left=open?'':'0';
+      ul.style.right=open?'':'0';
+      ul.style.background=open?'':'rgba(248,243,245,0.97)';
+      ul.style.padding=open?'':'1rem 1.75rem 1.5rem';
+      ul.style.gap=open?'':'1.25rem';
+    });
+
+    /* SCROLL REVEAL */
+    const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on');}),{threshold:0.1,rootMargin:'0px 0px -48px 0px'});
+    document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+    /* COUNTER */
+    function animCount(el,target,suffix){let n=0;const step=target/55;const t=setInterval(()=>{n=Math.min(n+step,target);el.textContent=Math.round(n)+(suffix||'');if(n>=target)clearInterval(t);},18);}
+    const cntObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){const el=e.target;animCount(el,+el.dataset.count,el.dataset.suffix||'');cntObs.unobserve(el);}}),{threshold:0.7});
+    document.querySelectorAll('[data-count]').forEach(el=>cntObs.observe(el));
+
+    /* TREATMENT DROPDOWN */
+    function toggleTreat(rowEl) {
+      const item = rowEl.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.treat-item.open').forEach(i=>i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    }
+
+    /* SMOOTH SCROLL */
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});
+    });
+
+    /* STUDIO VIDEO */
+    (function(){
+      const vid = document.getElementById('studioVideo');
+      const playBtn = document.getElementById('studioPlayBtn');
+      const progressBar = document.getElementById('studioProgressBar');
+      if(!vid || !playBtn) return;
+
+      function updateIcon(){
+        playBtn.classList.toggle('playing', !vid.paused);
+      }
+
+      // Sync icon once video metadata is ready (covers autoplay)
+      vid.addEventListener('loadedmetadata', updateIcon);
+      vid.addEventListener('play',  updateIcon);
+      vid.addEventListener('pause', updateIcon);
+
+      playBtn.addEventListener('click', function(){
+        if(vid.paused){ vid.play().catch(function(){}); }
+        else { vid.pause(); }
+      });
+
+      vid.addEventListener('timeupdate', function(){
+        if(vid.duration) progressBar.style.width = (vid.currentTime / vid.duration * 100) + '%';
+      });
+    })();
+
+    /* COOKIE BANNER */
+    const cookieBar=document.getElementById('cookieBar');
+    if(!localStorage.getItem('cookie_consent')){
+      setTimeout(()=>cookieBar.classList.add('show'),1200);
+    }
+    document.getElementById('cookieAccept').addEventListener('click',()=>{
+      localStorage.setItem('cookie_consent','accepted');
+      cookieBar.classList.remove('show');
+    });
+    document.getElementById('cookieDecline').addEventListener('click',()=>{
+      localStorage.setItem('cookie_consent','declined');
+      cookieBar.classList.remove('show');
+    });
+  </script>
+</body>
+</html>
