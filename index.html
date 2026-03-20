@@ -247,19 +247,29 @@
     .purv-prod:nth-child(3) { margin-top: 5rem; }
 
     /* ---- TESTIMONIALS ---- */
-    .testi { background: var(--alabaster); }
-    .testi-head { margin-bottom: 4rem; }
-    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-    .testi-card { background: var(--white); padding: 3rem; border: 1px solid var(--m200); transition: transform 0.45s var(--ease), box-shadow 0.45s, border-color 0.45s; }
-    .testi-card:hover { transform: translateY(-5px); box-shadow: 0 22px 60px rgba(46,32,40,0.09); border-color: var(--m300); }
-    .testi-stars { display: flex; gap: 0.2rem; margin-bottom: 1.5rem; }
-    .star { color: var(--m500); font-size: 0.9rem; }
-    .testi-q { font-family: var(--display); font-size: 1.12rem; font-weight: 400; font-style: italic; line-height: 1.6; color: var(--m900); margin-bottom: 2rem; }
-    .testi-auth { display: flex; align-items: center; gap: 1rem; }
-    .testi-av { width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0; background: var(--m200); }
-    .testi-av img { width: 100%; height: 100%; object-fit: cover; }
-    .testi-name { font-size: 0.8rem; font-weight: 600; color: var(--m900); }
-    .testi-meta { font-size: 0.7rem; color: var(--schiefer); }
+    .testi{background:var(--alabaster);padding:7rem 4rem;}
+    .testi-head{text-align:center;margin-bottom:4rem;}
+    .testi-slider-outer{position:relative;overflow:hidden;}
+    .testi-track{display:flex;transition:transform 0.55s cubic-bezier(0.77,0,0.175,1);will-change:transform;}
+    .testi-card{flex:0 0 calc(33.333% - 1.34rem);margin:0 0.67rem;background:var(--white);padding:2.5rem;display:flex;flex-direction:column;gap:1.25rem;min-height:320px;}
+    .testi-stars{display:flex;gap:3px;color:var(--m500);font-size:1rem;}
+    .testi-q{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;line-height:1.55;color:var(--m900);font-style:italic;flex:1;}
+    .testi-auth{display:flex;align-items:center;gap:1rem;margin-top:auto;padding-top:1.25rem;border-top:1px solid var(--m200);}
+    .testi-av{width:44px;height:44px;border-radius:50%;overflow:hidden;background:var(--m200);flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+    .testi-av img{width:100%;height:100%;object-fit:cover;}
+    .testi-av-init{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--m500);}
+    .testi-name{font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m900);}
+    .testi-meta{font-size:0.68rem;color:var(--schiefer);letter-spacing:0.04em;margin-top:0.2rem;}
+    .testi-sl-btn{position:absolute;top:50%;transform:translateY(-50%);background:var(--white);border:1px solid var(--m200);width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;transition:background 0.3s,border-color 0.3s;}
+    .testi-sl-btn:hover{background:var(--m500);border-color:var(--m500);}
+    .testi-sl-btn:hover svg{stroke:var(--white);}
+    .testi-sl-btn svg{stroke:var(--m700);}
+    .testi-sl-prev{left:0;}
+    .testi-sl-next{right:0;}
+    .testi-sl-dots{display:flex;justify-content:center;gap:0.5rem;margin-top:2rem;}
+    .testi-sl-dot{width:6px;height:6px;border-radius:50%;background:var(--m200);border:none;cursor:pointer;padding:0;transition:background 0.3s,transform 0.3s;}
+    .testi-sl-dot.active{background:var(--m500);transform:scale(1.35);}
+    @media(max-width:900px){.testi{padding:5rem 1.75rem;}.testi-card{flex:0 0 calc(100% - 1.34rem);}}
 
     /* ---- PMU PARTNER ---- */
     .partner { background: var(--m200); padding: 7rem 4rem; }
@@ -269,7 +279,7 @@
     .partner-main-img img { width: 100%; height: 100%; object-fit: cover; }
     .partner-main-img::before { content: ''; position: absolute; inset: -1.5rem; border: 1px solid var(--m400); z-index: -1; }
     .partner-results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
-    .partner-result { aspect-ratio: 1; overflow: hidden; }
+    .partner-result { aspect-ratio: 4/3; overflow: hidden; }
     .partner-result img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.45s var(--ease); }
     .partner-result:hover img { transform: scale(1.05); }
     .partner-content {}
@@ -444,6 +454,9 @@
       .treat-badge { width: 110px; height: 110px; right: -1rem; bottom: -1rem; }
     }
   </style>
+  <!-- MailerLite Universal -->
+  <script>(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account','1097175');</script>
+  <!-- End MailerLite Universal -->
 </head>
 <body>
 
@@ -465,7 +478,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#behandlungen">Behandlungen</a></li>
-      <li><a href="#kurse">Online-Kurse</a></li>
+      <li><a href="face-yoga.html">Online-Kurse</a></li>
       <li><a href="#purvidual">PURVIDUAL</a></li>
       <li><a href="#schulungen">Schulungen</a></li>
       <li><a href="#studio">Studio</a></li>
@@ -513,6 +526,24 @@
     <div class="hero-scroll">
       <span class="hero-scroll-t">Entdecken</span>
       <div class="hero-scroll-l"></div>
+    </div>
+  </section>
+
+  <!-- FRÜHJAHRS BANNER -->
+  <section style="background:var(--m200);padding:2.5rem 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:1.5rem;">
+      <span style="font-size:1.5rem;">🌿</span>
+      <div>
+        <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--m700);margin-bottom:0.3rem;">Frühjahrs-Start 2026</div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--m900);line-height:1.3;margin:0;">Der perfekte Moment, neu anzufangen — <em>passend in jede Morgenroutine.</em></p>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
+      <span style="font-size:0.68rem;color:var(--schiefer);letter-spacing:0.06em;">Angebot gültig bis 30. April 2026</span>
+      <a href="https://alfima.com/kristin_schnoedt/face-yoga-schnupperkurs" class="btn-primary" style="white-space:nowrap;" target="_blank" rel="noopener">
+        <span>Jetzt Schnupperkurs starten</span>
+        <svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+      </a>
     </div>
   </section>
 
@@ -698,45 +729,31 @@
         <div class="eyebrow rv" style="justify-content:center;">Online-Programme</div>
         <h2 class="sec-h2 rv d1" style="text-align:center;max-width:640px;margin:0 auto 1.25rem;">Deine <em>Transformation</em> beginnt zu Hause</h2>
         <p class="sec-sub rv d2" style="text-align:center;margin:0 auto;">Vier Programme — vom ersten Einstieg bis zur intensiven Komplettransformation.</p>
+        <a href="face-yoga.html" style="font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--m500);text-decoration:none;border-bottom:1px solid var(--m400);padding-bottom:1px;display:inline-block;margin-top:0.5rem;" >Alle Kurse auf der Face-Yoga-Seite →</a>
       </div>
       <div class="courses-grid">
-        <div class="course rv">
-          <div class="course-badge starter">✦ Einstieg · 29 €</div>
-          <h3 class="course-h3">Face Yoga Schnupperkurs</h3>
-          <p class="course-tag">Reinschnuppern &amp; erste Ergebnisse erleben</p>
-          <p class="course-desc">Dein erster Schritt in die Welt des Face Yoga — kompakt, geführt und sofort umsetzbar. Lerne die Basics in 3–5 kurzen Workouts und spüre, was natürliche Gesichtsgymnastik bewirkt.</p>
+        <!-- Booster zuerst (Preis-Verankerung) -->
+        <div class="course rv d3">
+          <div class="course-badge prem">✦ Premium · All-in-One</div>
+          <h3 class="course-h3">Göttinnen-Booster</h3>
+          <p class="course-tag">Das komplette Transformation-Paket</p>
+          <p class="course-desc">Alles was im Göttinnen-Glow enthalten ist, plus Cupping Kurs, Gua Sha Kurs, Beauty Taping Kurs, Fortgeschrittenen-Übungen, persönliche Hautanalyse, ein physisches Journal und PURVIDUAL Produkte im Wert von 500 €.</p>
           <ul class="course-feats">
-            <li class="course-feat">3–5 kurze Face Yoga Workouts</li>
-            <li class="course-feat">Schritt-für-Schritt Videoanleitung</li>
-            <li class="course-feat">Sofort anwendbar, für Einsteiger</li>
-            <li class="course-feat">Lebenslanger Zugang</li>
+            <li class="course-feat">Göttinnen-Glow + Cupping + Gua Sha Kurs</li>
+            <li class="course-feat">Beauty Taping &amp; Fortgeschrittenen-Übungen</li>
+            <li class="course-feat">Persönliche Hautanalyse durch Kristin</li>
+            <li class="course-feat">Physisches Journal + PURVIDUAL Paket (500 €)</li>
           </ul>
           <div class="course-foot">
-            <div class="course-price-row"><span class="course-price">29 €</span><span class="course-dur">Mini-Kurs · Einstieg</span></div>
-            <a href="https://alfima.com/kristin_schnoedt/face-yoga-schnupperkurs" class="course-cta" target="_blank" rel="noopener">Jetzt starten</a>
-          </div>
-        </div>
-        <div class="course rv d1">
-          <div class="course-badge">✦ Spezialkurs</div>
-          <h3 class="course-h3">Cupping Kurs</h3>
-          <p class="course-tag">Inkl. Cupping-Set</p>
-          <p class="course-desc">Lerne Facial Cupping von Grund auf — mit deinem eigenen Cupping-Set, das direkt im Kurs enthalten ist. Intensive Durchblutung, Lymphdrainage und sofort sichtbares Glow.</p>
-          <ul class="course-feats">
-            <li class="course-feat">Cupping-Set inklusive</li>
-            <li class="course-feat">Schritt-für-Schritt Videoanleitung</li>
-            <li class="course-feat">Lymphdrainage &amp; Lifting-Techniken</li>
-            <li class="course-feat">Lebenslanger Zugang</li>
-          </ul>
-          <div class="course-foot">
-            <div class="course-price-row"><span class="course-price">179 €</span><span class="course-dur">Inkl. Cupping-Set · Selbststudium</span></div>
-            <a href="https://www.purvidual.de/products/cupping-kurs-inkl-cups-ol?variant=54138103333190" class="course-cta" target="_blank" rel="noopener">Kurs ansehen</a>
+            <div class="course-price-row"><span class="course-price">998 €</span><span class="course-dur">Komplettpaket · Lebenslanger Zugang</span></div>
+            <a href="https://wa.me/4915757202153" class="course-cta" target="_blank" rel="noopener">Persönlich anfragen</a>
           </div>
         </div>
         <div class="course rv d2">
           <div class="course-badge">✦ Transformation</div>
           <h3 class="course-h3">Göttinnen-Glow</h3>
           <p class="course-tag">Sichtbare Ergebnisse in 6 Wochen</p>
-          <p class="course-desc">Über 60 Einzelübungen, Schritt-für-Schritt angeleitet. Verschiedene Workouts, Meditationen, Informationen zur Hautpflege, Tipps und vieles mehr. Für Ergebnisse, die nach 6 Wochen sichtbar sind — und durch weiteres Training bleiben.</p>
+          <p class="course-desc">Über 60 Einzelübungen, Schritt-für-Schritt angeleitet. Verschiedene Workouts, Meditationen, Informationen zur Hautpflege, Tipps und vieles mehr. Für Ergebnisse, die nach 6 Wochen sichtbar sind und durch weiteres Training bleiben.</p>
           <ul class="course-feats">
             <li class="course-feat">60+ Übungen &amp; verschiedene Workouts</li>
             <li class="course-feat">Meditationen &amp; Hautpflege-Wissen</li>
@@ -749,22 +766,42 @@
             <a href="https://alfima.com/kristin_schnoedt" class="course-cta" target="_blank" rel="noopener">Kurs starten</a>
           </div>
         </div>
-        <div class="course rv d3" style="align-items:center;text-align:center;">
-          <div class="course-badge prem" style="align-self:center;">✦ Premium · All-in-One</div>
-          <h3 class="course-h3">Göttinnen-Booster</h3>
-          <p class="course-tag">Das komplette Transformation-Paket</p>
-          <p class="course-desc">Alles was im Göttinnen-Glow enthalten ist — plus Cupping Kurs, Gua Sha Kurs, Beauty Taping Kurs, Fortgeschrittenen-Übungen, persönliche Hautanalyse, ein physisches Journal und PURVIDUAL Produkte im Wert von 500 €.</p>
+        <div class="course rv d1">
+          <div class="course-badge">✦ Spezialkurs</div>
+          <h3 class="course-h3">Cupping Kurs</h3>
+          <p class="course-tag">Inkl. Cupping-Set</p>
+          <p class="course-desc">Lerne Facial Cupping von Grund auf, mit deinem eigenen Cupping-Set, das direkt im Kurs enthalten ist. Intensive Durchblutung, Lymphdrainage und sofort sichtbares Glow.</p>
           <ul class="course-feats">
-            <li class="course-feat">Göttinnen-Glow + Cupping + Gua Sha Kurs</li>
-            <li class="course-feat">Beauty Taping &amp; Fortgeschrittenen-Übungen</li>
-            <li class="course-feat">Persönliche Hautanalyse durch Kristin</li>
-            <li class="course-feat">Physisches Journal + PURVIDUAL Paket (500 €)</li>
+            <li class="course-feat">Cupping-Set inklusive</li>
+            <li class="course-feat">Schritt-für-Schritt Videoanleitung</li>
+            <li class="course-feat">Lymphdrainage &amp; Lifting-Techniken</li>
+            <li class="course-feat">Lebenslanger Zugang</li>
           </ul>
           <div class="course-foot">
-            <div class="course-price-row"><span class="course-price">998 €</span><span class="course-dur">Komplettpaket · Lebenslanger Zugang</span></div>
-            <a href="https://wa.me/4915757202153" class="course-cta" target="_blank" rel="noopener">Anfragen</a>
+            <div class="course-price-row"><span class="course-price">179 €</span><span class="course-dur">Inkl. Cupping-Set · Selbststudium</span></div>
+            <a href="https://www.purvidual.de/products/cupping-kurs-inkl-cups-ol?variant=54138103333190" class="course-cta" target="_blank" rel="noopener">Kurs ansehen</a>
           </div>
         </div>
+        <div class="course rv">
+          <div class="course-badge starter">✦ Einstieg · 29 €</div>
+          <h3 class="course-h3">Face Yoga Schnupperkurs</h3>
+          <p class="course-tag">Reinschnuppern &amp; erste Ergebnisse erleben</p>
+          <p class="course-desc">Dein erster Schritt in die Welt des Face Yoga, kompakt, geführt und sofort umsetzbar. Lerne die Basics in 3 bis 5 kurzen Workouts und spüre, was natürliche Gesichtsgymnastik bewirkt.</p>
+          <ul class="course-feats">
+            <li class="course-feat">3–5 kurze Face Yoga Workouts</li>
+            <li class="course-feat">Schritt-für-Schritt Videoanleitung</li>
+            <li class="course-feat">Sofort anwendbar, für Einsteiger</li>
+            <li class="course-feat">Lebenslanger Zugang</li>
+          </ul>
+          <div class="course-foot">
+            <div class="course-price-row"><span class="course-price">29 €</span><span class="course-dur">Mini-Kurs · Einstieg</span></div>
+            <a href="https://alfima.com/kristin_schnoedt/face-yoga-schnupperkurs" class="course-cta" target="_blank" rel="noopener">Jetzt starten</a>
+          </div>
+        </div>
+      </div>
+      <div class="rv d3" style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--m200);">
+        <p style="font-size:0.82rem;color:var(--schiefer);line-height:1.75;margin-bottom:1rem;">Noch unsicher? <strong style="color:var(--m700);">Starte mit dem Gratis-Video</strong> — 6 Minuten, keine Anmeldung, sofort spürbar.</p>
+        <a href="#lead-magnet" style="font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--m500);text-decoration:none;border-bottom:1px solid var(--m400);padding-bottom:1px;">→ Zum Gratis-Lifting-Video scrollen</a>
       </div>
     </div>
   </section>
@@ -792,6 +829,19 @@
     </div>
   </section>
 
+  <!-- PULL QUOTE -->
+  <section style="background:#EDE0E7;border-top:1px solid var(--m200);padding:7rem 4rem;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;border:1px solid rgba(122,74,88,0.1);pointer-events:none;"></div>
+    <div style="position:relative;z-index:1;max-width:800px;margin:0 auto;">
+      <div class="eyebrow rv" style="margin-bottom:2rem;color:var(--m700);">Meine Überzeugung</div>
+      <blockquote style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.5rem);font-weight:300;line-height:1.25;color:var(--m900);margin:0 0 2rem;font-style:italic;" class="rv d1">
+        „Ich glaube nicht an Nadeln.<br>Ich glaube an dein Gesicht."
+      </blockquote>
+      <p style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--m500);" class="rv d2">— Kristin Schnödt</p>
+      <p style="font-size:0.88rem;line-height:1.75;color:var(--schiefer);max-width:520px;margin:2rem auto 0;" class="rv d3">Botox pausiert. Meine Methode verändert. Wer sein Gesicht täglich trainiert, gewinnt langfristig, sichtbar, natürlich und dauerhaft.</p>
+    </div>
+  </section>
+
   <!-- TESTIMONIALS -->
   <section class="sec testi">
     <div class="sec-inner">
@@ -799,44 +849,77 @@
         <div class="eyebrow rv">Was meine Kundinnen sagen</div>
         <h2 class="sec-h2 rv d1" style="margin-bottom:0;"><em>Echte Ergebnisse</em>, echte Frauen</h2>
       </div>
-      <div class="testi-grid">
-        <!-- ── Bewertung 1 ── -->
-        <div class="testi-card rv">
-          <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-          <p class="testi-q">„Eine klare, parfümfreie Pflegeserie die meiner alternden Haut gut tut, die ich Schmink- und Pflegemuffel einfach anwenden kann ohne großes Prozedere und die ich nicht mehr missen möchte. Ich kann es jedermann nur empfehlen!"</p>
-          <div class="testi-auth">
-            <div class="testi-av"><img src="Bilder/Kundinnen/Angelika.W.png" alt="Angelika W."></div>
-            <div><div class="testi-name">Angelika W.</div><div class="testi-meta">Studio-Kundin</div></div>
+      <div class="testi-slider-outer">
+        <div class="testi-track" id="testiTrack">
+
+          <!-- 1 Ilona M. -->
+          <div class="testi-card rv d1">
+            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testi-q">„Mein Kiefergelenk ist viel beweglicher geworden. Das massive Spannungsgefühl auf der rechten Seite ist wie weg gezaubert. Und trotz viel Stress habe ich keine Kopfschmerzen mehr — Lieben Dank für diese tolle Behandlung."</p>
+            <div class="testi-auth">
+              <div class="testi-av"><span class="testi-av-init">I</span></div>
+              <div><div class="testi-name">Ilona M.</div><div class="testi-meta">Mutter, 32, berufstätig · Buccale Massage</div></div>
+            </div>
           </div>
-        </div>
-        <!-- ── Bewertung 2 ── -->
-        <div class="testi-card rv d1">
-          <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-          <p class="testi-q">„Ich bin von Anfang an begeistert von Purvidual. Ich nehme die Produkte seit Oktober 2022 und mein Hautbild hat sich um 100 % verbessert."</p>
-          <div class="testi-auth">
-            <div class="testi-av"><img src="Bilder/Kundinnen/Monika.R.png" alt="Monika R."></div>
-            <div><div class="testi-name">Monika R.</div><div class="testi-meta">PURVIDUAL Kundin</div></div>
+
+          <!-- 2 Angelika W. -->
+          <div class="testi-card rv d2">
+            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testi-q">„Eine klare, parfümfreie Pflegeserie die meiner alternden Haut gut tut, die ich Schmink- und Pflegemuffel einfach anwenden kann ohne großes Prozedere und die ich nicht mehr missen möchte. Ich kann es jedermann nur empfehlen!"</p>
+            <div class="testi-auth">
+              <div class="testi-av"><img src="Bilder/Kundinnen/Angelika.W.png" alt="Angelika W."></div>
+              <div><div class="testi-name">Angelika W.</div><div class="testi-meta">60, Vollzeitjob, Pflegemuffel · PURVIDUAL Kundin</div></div>
+            </div>
           </div>
-        </div>
-        <!-- ── Bewertung 3 ── -->
-        <div class="testi-card rv d2">
-          <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-          <p class="testi-q">„Kristin hat mich total begeistert mit ihrem Programm. Sie hat mir gezeigt, wie ich mit wenig Zeitaufwand aber sehr effektiv kleine Übungen machen kann, um meine Haut zu straffen."</p>
-          <div class="testi-auth">
-            <div class="testi-av"><img src="Bilder/Kundinnen/Manu.D.png" alt="Manu D."></div>
-            <div><div class="testi-name">Manu D.</div><div class="testi-meta">Online-Kurs Teilnehmerin</div></div>
+
+          <!-- 3 Monika R. -->
+          <div class="testi-card rv d3">
+            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testi-q">„Ich bin von Anfang an begeistert von Purvidual. Ich nehme die Produkte seit Oktober 2022 und mein Hautbild hat sich um 100 % verbessert."</p>
+            <div class="testi-auth">
+              <div class="testi-av"><img src="Bilder/Kundinnen/Monika.R.png" alt="Monika R."></div>
+              <div><div class="testi-name">Monika R.</div><div class="testi-meta">59, viel beschäftigt, wollte straffere Haut · PURVIDUAL Kundin</div></div>
+            </div>
           </div>
-        </div>
-        <!-- ── Neue Bewertung hier einfügen ──
-        <div class="testi-card rv d3">
-          <div class="testi-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-          <p class="testi-q">„Zitat hier einfügen."</p>
-          <div class="testi-auth">
-            <div class="testi-av"><img src="Bilder/Kundinnen/DATEINAME.png" alt="Name"></div>
-            <div><div class="testi-name">Vorname N.</div><div class="testi-meta">Beschreibung</div></div>
+
+          <!-- 4 Manu D. -->
+          <div class="testi-card">
+            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testi-q">„Kristin hat mich total begeistert mit ihrem Programm. Sie hat mir gezeigt, wie ich mit wenig Zeitaufwand aber sehr effektiv kleine Übungen machen kann, um meine Haut zu straffen."</p>
+            <div class="testi-auth">
+              <div class="testi-av"><img src="Bilder/Kundinnen/Manu.D.png" alt="Manu D."></div>
+              <div><div class="testi-name">Manu D.</div><div class="testi-meta">Mutter und Oma, 61, neigt zu roter Haut · Online-Kurs</div></div>
+            </div>
           </div>
+
+          <!-- 5 Max L. -->
+          <div class="testi-card">
+            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testi-q">„Kristins fachkundige Beratung und die Wirksamkeit der Produkte haben mich absolut überzeugt. Ihre Expertise hat mir nicht nur wertvolle Einsichten verschafft, sondern auch zu Produkten geführt, die meine Erwartungen übertroffen haben."</p>
+            <div class="testi-auth">
+              <div class="testi-av"><img src="Bilder/Kundinnen/Max.L.png" alt="Max L."></div>
+              <div><div class="testi-name">Max L.</div><div class="testi-meta">35, Pflegebewusst · PURVIDUAL Kunde</div></div>
+            </div>
+          </div>
+
+          <!-- 6 Tanja W. -->
+          <div class="testi-card">
+            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testi-q">„Auf meinem Kurmädelstreffen bekam ich von allen Seiten zu hören: Wow, Tanja, du siehst 10 Jahre jünger aus! Die haben mich ein Jahr nicht gesehen. Das habe ich dir zu verdanken."</p>
+            <div class="testi-auth">
+              <div class="testi-av"><span class="testi-av-init">T</span></div>
+              <div><div class="testi-name">Tanja W.</div><div class="testi-meta">55, wollte wieder strahlender aussehen · Face Yoga</div></div>
+            </div>
+          </div>
+
         </div>
-        ── -->
+        <button class="testi-sl-btn testi-sl-prev" id="testiPrev" aria-label="Zurück">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="testi-sl-btn testi-sl-next" id="testiNext" aria-label="Weiter">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div class="testi-sl-dots" id="testiDots"></div>
       </div>
     </div>
   </section>
@@ -853,7 +936,7 @@
         <div class="partner-tag rv">Kooperation im Studio</div>
         <h2 class="partner-h2 rv d1">Permanent Make-Up<br>für deinen perfekten Rahmen</h2>
         <p class="partner-who rv d1">Xuefei Lindner · PMU-Spezialistin</p>
-        <p class="partner-p rv d2">Meine langjährige Kooperationspartnerin Xuefei Lindner kommt regelmäßig in mein Studio. Die perfekte Ergänzung zu natürlicher Hautverjüngung, für Frauen, die das Beste aus beiden Welten wollen.</p>
+        <p class="partner-p rv d2">Xuefei Lindner ist meine langjährige Kooperationspartnerin und kommt regelmäßig in mein Studio in Auerbach. Ihre Arbeit ergänzt mein Angebot auf wunderbare Weise: Für Frauen, die natürliche Hautverjüngung und einen perfekt gerahmten Blick miteinander verbinden möchten.</p>
         <div class="partner-tags rv d3">
           <span class="ptag">Augenbrauen PMU</span><span class="ptag">Lippen PMU</span><span class="ptag">Eyeliner PMU</span>
         </div>
@@ -861,9 +944,9 @@
           <span>PMU Termin anfragen</span><svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
         </a>
         <div class="partner-results rv d5" style="margin-top:2rem;">
-          <div class="partner-result"><img src="Bilder/Permantent%20Make-Up/7dd3cf47-7913-41cd-9124-f0ef6db33aca.JPG" alt="PMU Ergebnis"></div>
-          <div class="partner-result"><img src="Bilder/Permantent%20Make-Up/8939af03-d73b-440a-9bef-b2269a5fcd78.JPG" alt="PMU Ergebnis"></div>
-          <div class="partner-result"><img src="Bilder/Permantent%20Make-Up/91d70c4d-3b07-4524-ba55-45a8d35c448c.JPG" alt="PMU Ergebnis"></div>
+          <div class="partner-result"><img src="Bilder/Permantent%20Make-Up/Lid_PMU.JPG" alt="Lid PMU"></div>
+          <div class="partner-result"><img src="Bilder/Permantent%20Make-Up/Augenbrauen_PMU.JPG" alt="Augenbrauen PMU"></div>
+          <div class="partner-result"><img src="Bilder/Permantent%20Make-Up/Lippen_PMU.JPG" alt="Lippen PMU"></div>
         </div>
       </div>
     </div>
@@ -880,11 +963,11 @@
         <a href="beauty-news.html" class="blog-all rv" target="_blank" rel="noopener">Alle Beiträge →</a>
       </div>
       <div class="blog-grid">
-        <a href="beauty-news.html" class="blog-card rv" target="_blank" rel="noopener">
-          <div class="blog-card-img"><img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4531).jpeg" alt="Face Yoga Tipps"></div>
+        <a href="blog-face-yoga-5-uebungen.html" class="blog-card rv">
+          <div class="blog-card-img"><img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4549).jpeg" alt="5 Face Yoga Übungen"></div>
           <div class="blog-card-body">
             <div class="blog-card-cat">Face Yoga</div>
-            <h3 class="blog-card-title">Face Yoga: Dein tägliches Ritual für straffe Haut</h3>
+            <h3 class="blog-card-title">5 Face Yoga Übungen, die sofort wirken</h3>
             <div class="blog-card-read">Weiterlesen <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></div>
           </div>
         </a>
@@ -896,11 +979,11 @@
             <div class="blog-card-read">Weiterlesen <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></div>
           </div>
         </a>
-        <a href="beauty-news.html" class="blog-card rv d2" target="_blank" rel="noopener">
-          <div class="blog-card-img"><img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4549).jpeg" alt="Hautpflege Tipps"></div>
+        <a href="blog-purvidual.html" class="blog-card rv d2">
+          <div class="blog-card-img"><img src="Bilder/Purvidual/Gro%C3%9F%20(DSC_4474).jpeg" alt="PURVIDUAL Pflege"></div>
           <div class="blog-card-body">
-            <div class="blog-card-cat">Clean Beauty</div>
-            <h3 class="blog-card-title">Warum PURVIDUAL anders ist als alle anderen Kosmetiklinien</h3>
+            <div class="blog-card-cat">PURVIDUAL</div>
+            <h3 class="blog-card-title">Was PURVIDUAL bedeutet — und warum es so heißt</h3>
             <div class="blog-card-read">Weiterlesen <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></div>
           </div>
         </a>
@@ -932,6 +1015,45 @@
       </div>
     </div>
   </section>
+
+  <!-- LEAD MAGNET -->
+  <section id="lead-magnet" style="background:var(--m900);padding:7rem 4rem;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;border:1px solid rgba(181,129,140,0.08);pointer-events:none;"></div>
+    <div style="position:relative;z-index:1;max-width:640px;margin:0 auto;">
+      <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--m400);margin-bottom:1.5rem;">Gratis für dich</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.2;color:var(--white);margin-bottom:1rem;">6-Minuten Lifting-Workout<br><em>sofort ausprobieren</em></h2>
+      <p style="font-size:0.88rem;line-height:1.75;color:rgba(255,255,255,0.55);margin-bottom:2.5rem;">Trag deine E-Mail ein und ich schicke dir das Video direkt zu. Keine Vorkenntnisse nötig — nur 6 Minuten für sichtbare Frische.</p>
+      <div class="ml-embedded" data-form="QXPpcZ"></div>
+      <p style="font-size:0.65rem;color:rgba(255,255,255,0.25);margin-top:1.5rem;line-height:1.6;">Kein Spam. Keine Weitergabe. Jederzeit abmeldbar.</p>
+    </div>
+  </section>
+
+  <!-- TRANSPARENZ -->
+<section style="background:var(--white);padding:6rem 4rem;border-top:1px solid var(--m200);">
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+    <div>
+      <div class="eyebrow rv" style="margin-bottom:1.5rem;">Vertrauen durch Ehrlichkeit</div>
+      <h2 class="sec-h2 rv d1" style="margin-bottom:1.5rem;">So arbeite ich —<br><em>und warum das wichtig ist</em></h2>
+      <p style="font-size:0.88rem;line-height:1.85;color:var(--schiefer);" class="rv d2">Ich zeige dir alles, was ich tue — und warum. Keine versteckten Methoden, keine Versprechen die ich selbst nicht halten kann, keine Behandlungen die ich nicht selbst nutzen würde. Was du auf dieser Seite siehst, ist echt: echte Frauen, echte Ergebnisse, ehrliche Kommunikation.</p>
+      <p style="font-size:0.88rem;line-height:1.85;color:var(--schiefer);margin-top:1rem;" class="rv d3">Sichtbare Veränderung entsteht nach 2 bis 6 Wochen bei regelmäßiger Anwendung — das sage ich dir direkt, damit du weißt, worauf du dich einlässt.</p>
+      <a href="kristin-schnoedt.html" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--m500);text-decoration:none;border-bottom:1px solid var(--m400);padding-bottom:1px;margin-top:1.75rem;" class="rv d4">Mehr über mich und meinen Ansatz →</a>
+    </div>
+    <div class="rv d2" style="display:flex;flex-direction:column;gap:1.25rem;">
+      <div style="padding:1.5rem 2rem;background:var(--alabaster);border-left:3px solid var(--m500);">
+        <p style="font-size:0.8rem;font-weight:700;color:var(--m900);letter-spacing:0.04em;margin-bottom:0.35rem;">Keine Retouche-Versprechen</p>
+        <p style="font-size:0.8rem;color:var(--schiefer);line-height:1.65;">Alle Bilder auf dieser Seite sind unbearbeitet. Echte Haut, echte Frauen, echte Ergebnisse.</p>
+      </div>
+      <div style="padding:1.5rem 2rem;background:var(--alabaster);border-left:3px solid var(--m500);">
+        <p style="font-size:0.8rem;font-weight:700;color:var(--m900);letter-spacing:0.04em;margin-bottom:0.35rem;">Klare Zeitangaben</p>
+        <p style="font-size:0.8rem;color:var(--schiefer);line-height:1.65;">Ich sage dir genau, was du wann erwarten kannst — und was nicht. Kein Versprechen ohne Grundlage.</p>
+      </div>
+      <div style="padding:1.5rem 2rem;background:var(--alabaster);border-left:3px solid var(--m500);">
+        <p style="font-size:0.8rem;font-weight:700;color:var(--m900);letter-spacing:0.04em;margin-bottom:0.35rem;">18 Jahre Erfahrung, keine Abkürzungen</p>
+        <p style="font-size:0.8rem;color:var(--schiefer);line-height:1.65;">Natürliche Hautverjüngung braucht Zeit und Disziplin. Wer das versteht, ist bei mir richtig.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -1089,6 +1211,43 @@
       localStorage.setItem('cookie_consent','declined');
       cookieBar.classList.remove('show');
     });
+
+    // Testimonial slider
+    (function(){
+      const track = document.getElementById('testiTrack');
+      const dotsEl = document.getElementById('testiDots');
+      const prevBtn = document.getElementById('testiPrev');
+      const nextBtn = document.getElementById('testiNext');
+      if(!track) return;
+      const cards = track.querySelectorAll('.testi-card');
+      const total = cards.length;
+      let visibleCount = window.innerWidth <= 900 ? 1 : 3;
+      let current = 0;
+      const maxPos = total - visibleCount;
+
+      // Build dots
+      for(let i = 0; i <= maxPos; i++){
+        const d = document.createElement('button');
+        d.className = 'testi-sl-dot' + (i===0?' active':'');
+        d.addEventListener('click', function(){ goTo(i); });
+        dotsEl.appendChild(d);
+      }
+
+      function goTo(n){
+        current = Math.max(0, Math.min(n, maxPos));
+        const cardWidth = track.querySelector('.testi-card').offsetWidth + 13.4; // width + gap(0.67rem*2=~13.4px)
+        track.style.transform = 'translateX(-'+(current * cardWidth)+'px)';
+        dotsEl.querySelectorAll('.testi-sl-dot').forEach(function(d,i){ d.classList.toggle('active', i===current); });
+      }
+
+      prevBtn.addEventListener('click', function(){ goTo(current-1); });
+      nextBtn.addEventListener('click', function(){ goTo(current+1); });
+
+      window.addEventListener('resize', function(){
+        visibleCount = window.innerWidth <= 900 ? 1 : 3;
+        goTo(0);
+      });
+    })();
   </script>
 </body>
 </html>
