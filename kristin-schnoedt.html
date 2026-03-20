@@ -59,7 +59,7 @@
     .ks-hero-content::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 80% 90%,rgba(181,129,140,0.15) 0%,transparent 60%);}
     .ks-eyebrow{font-size:0.65rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--m400);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;position:relative;z-index:1;}
     .ks-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--m500);}
-    .ks-h1{font-family:var(--display);font-size:clamp(2.2rem,3.8vw,4rem);font-weight:300;color:var(--white);line-height:1.06;position:relative;z-index:1;}
+    .ks-h1{font-family:var(--display);font-size:clamp(1.6rem,2vw,2.65rem);font-weight:300;color:var(--white);line-height:1.08;position:relative;z-index:1;}
     .ks-h1 em{font-style:italic;color:var(--m400);}
     .ks-hero-tagline{font-size:0.93rem;line-height:1.85;color:rgba(255,255,255,0.62);max-width:420px;margin-top:1.5rem;position:relative;z-index:1;}
     .ks-hero-quote{font-family:var(--display);font-size:1.45rem;font-style:italic;font-weight:400;color:var(--m300);line-height:1.5;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(181,129,140,0.25);position:relative;z-index:1;}
@@ -128,11 +128,12 @@
     .ks-tl-desc{font-size:0.82rem;line-height:1.7;color:var(--schiefer);}
 
     /* ── GALERIE SLIDER ── */
-    .ks-gallery{background:var(--m900);padding:0;}
+    .ks-gallery{background:var(--m900);padding:3rem 0;}
     .ks-gallery-wrap{position:relative;overflow:hidden;}
     .ks-sl-viewport{overflow:hidden;width:100%;}
     .ks-sl-track{display:flex;transition:transform 0.65s var(--ease);}
-    .ks-sl-track img{flex:0 0 100%;width:100%;height:88vh;max-height:640px;object-fit:contain;object-position:center;display:block;background:var(--m900);}
+    .ks-sl-slide{flex:0 0 100%;width:100%;display:flex;align-items:center;justify-content:center;padding:1.5rem 5rem;min-height:420px;background:var(--m900);}
+    .ks-sl-slide img{height:clamp(280px,48vh,480px);width:auto;max-width:100%;object-fit:contain;display:block;border-radius:2px;}
     .ks-sl-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(248,243,245,0.85);border:none;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.3s;backdrop-filter:blur(8px);}
     .ks-sl-btn:hover{background:var(--white);}
     .ks-sl-btn svg{stroke:var(--m700);fill:none;stroke-width:1.5;}
@@ -199,7 +200,8 @@
       .ks-weg-grid{grid-template-columns:1fr;gap:3rem;}
       .ks-weg-img img{height:380px;}
 
-      .ks-sl-track img{height:60vh;max-height:440px;}
+      .ks-sl-slide{padding:1rem 3.5rem;min-height:300px;}
+      .ks-sl-slide img{height:clamp(220px,42vh,360px);}
 
       .ks-brand-grid{grid-template-columns:1fr;gap:2.5rem;}
       .ks-brand-logo-inline{height:38px;}
@@ -371,9 +373,9 @@
               <div class="ks-tl-line"></div>
             </div>
             <div>
-              <div class="ks-tl-year">Gründung</div>
-              <div class="ks-tl-title">PURVIDUAL — meine eigene Pflegelinie</div>
-              <div class="ks-tl-desc">Weil ich nicht mehr auf Kompromisse eingehen wollte: Pflege, die wirklich zur Haut passt.</div>
+              <div class="ks-tl-year">Weiterbildung</div>
+              <div class="ks-tl-title">Face Yoga &amp; Gesichtscupping</div>
+              <div class="ks-tl-desc">Die Entdeckung, dass Bewegung und manuelle Techniken mehr bewirken können als jedes Produkt.</div>
             </div>
           </div>
           <div class="ks-tl-item">
@@ -382,9 +384,9 @@
               <div class="ks-tl-line"></div>
             </div>
             <div>
-              <div class="ks-tl-year">Weiterbildung</div>
-              <div class="ks-tl-title">Face Yoga &amp; Gesichtscupping</div>
-              <div class="ks-tl-desc">Die Entdeckung, dass Bewegung und manuelle Techniken mehr bewirken können als jedes Produkt.</div>
+              <div class="ks-tl-year">Gründung</div>
+              <div class="ks-tl-title">PURVIDUAL — meine eigene Pflegelinie</div>
+              <div class="ks-tl-desc">Weil ich nicht mehr auf Kompromisse eingehen wollte: Pflege, die wirklich zur Haut passt.</div>
             </div>
           </div>
           <div class="ks-tl-item">
@@ -411,10 +413,10 @@
     <div class="ks-gallery-wrap">
       <div class="ks-sl-viewport">
         <div class="ks-sl-track" id="ksTrack">
-          <img src="Bilder/Kristin/Gro%C3%9F%20(DSC_4600).jpeg" alt="Kristin Schnödt">
-          <img src="Bilder/Kristin/Gro%C3%9F%20(DSC_4700).jpeg" alt="Kristin Schnödt">
-          <img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4531).jpeg" alt="Face Yoga">
-          <img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4563).jpeg" alt="Face Yoga">
+          <div class="ks-sl-slide"><img src="Bilder/Kristin/Gro%C3%9F%20(DSC_4600).jpeg" alt="Kristin Schnödt"></div>
+          <div class="ks-sl-slide"><img src="Bilder/Kristin/Gro%C3%9F%20(DSC_4700).jpeg" alt="Kristin Schnödt"></div>
+          <div class="ks-sl-slide"><img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4531).jpeg" alt="Face Yoga"></div>
+          <div class="ks-sl-slide"><img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4563).jpeg" alt="Face Yoga"></div>
         </div>
       </div>
       <button class="ks-sl-btn ks-sl-prev" id="ksPrev" aria-label="Zurück">
@@ -445,6 +447,31 @@
     </div>
   </section>
 
+  <!-- SO ARBEITE ICH -->
+<section class="sec" style="background:var(--alabaster);">
+  <div class="sec-inner" style="max-width:920px;">
+    <div class="sec-eyebrow rv">Mein Versprechen</div>
+    <h2 class="sec-h2 rv d1" style="margin-bottom:3rem;">So arbeite ich —<br><em>und warum das zählt</em></h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;" class="rv d2">
+      <div style="padding:2rem;background:var(--white);border-top:3px solid var(--m500);">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--m400);margin-bottom:1rem;line-height:1;">01</div>
+        <h3 style="font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m900);margin-bottom:0.75rem;">Keine leeren Versprechen</h3>
+        <p style="font-size:0.82rem;line-height:1.75;color:var(--schiefer);">Ich sage dir genau was du erwarten kannst — und was nicht. Sichtbare Ergebnisse entstehen nach 2 bis 6 Wochen bei regelmäßiger Anwendung.</p>
+      </div>
+      <div style="padding:2rem;background:var(--white);border-top:3px solid var(--m500);">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--m400);margin-bottom:1rem;line-height:1;">02</div>
+        <h3 style="font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m900);margin-bottom:0.75rem;">Nur was ich selbst nutze</h3>
+        <p style="font-size:0.82rem;line-height:1.75;color:var(--schiefer);">Jede Methode und jedes Produkt das ich empfehle, nutze ich selbst. Keine Empfehlung ohne eigene Überzeugung.</p>
+      </div>
+      <div style="padding:2rem;background:var(--white);border-top:3px solid var(--m500);">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--m400);margin-bottom:1rem;line-height:1;">03</div>
+        <h3 style="font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m900);margin-bottom:0.75rem;">Echte Haut, echte Ergebnisse</h3>
+        <p style="font-size:0.82rem;line-height:1.75;color:var(--schiefer);">Alle Bilder auf dieser Seite sind unbearbeitet. Echte Frauen, echte Haut — keine Retusche, keine Filterversprechen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- ── CTA ── -->
   <section class="ks-cta">
     <h2 class="rv d1">Bereit, mich <em>persönlich kennenzulernen?</em></h2>
@@ -452,6 +479,20 @@
     <div class="ks-cta-btns rv d3">
       <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="ks-cta-btn" target="_blank" rel="noopener">Termin buchen</a>
       <a href="face-yoga.html" class="ks-cta-btn outline">Face Yoga entdecken</a>
+    </div>
+    <p style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-top:2rem;line-height:1.75;">Noch nicht sicher? <a href="face-yoga.html" style="color:rgba(255,255,255,0.65);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.3);">Starte mit dem kostenlosen Schnupperkurs</a> — keine Vorkenntnisse nötig.</p>
+  </section>
+
+  <!-- ── WHATSAPP KONTAKT ── -->
+  <section style="background:var(--m200);padding:3.5rem 4rem;text-align:center;">
+    <div style="max-width:580px;margin:0 auto;" class="rv">
+      <p style="font-size:0.64rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--m500);margin-bottom:0.75rem;">Direkter Kontakt</p>
+      <p style="font-family:var(--display);font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:400;color:var(--m900);line-height:1.2;margin-bottom:0.6rem;">Lieber persönlich schreiben?</p>
+      <p style="font-size:0.88rem;line-height:1.8;color:var(--schiefer);margin-bottom:1.75rem;">Ich bin auf WhatsApp erreichbar und antworte in der Regel innerhalb weniger Stunden. Kein Formular, keine Warteschleife.</p>
+      <a href="https://wa.me/4915757202153" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.75rem;font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:1rem 2.25rem;background:var(--m700);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;" onmouseover="this.style.background='var(--m500)'" onmouseout="this.style.background='var(--m700)'">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+        Auf WhatsApp schreiben
+      </a>
     </div>
   </section>
 

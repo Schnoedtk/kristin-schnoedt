@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Behandlungen – Kristin Schnödt Kosmetikstudio Auerbach</title>
+  <meta name="description" content="Professionelle Gesichtsbehandlungen im Kosmetikstudio Auerbach: Klassische Behandlung, Gua Sha, Celluma Light Therapy, Microdermabrasion, Biomicroneedling. Individuell auf deine Haut abgestimmt.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/Profil_tiefpflaume.png">
+  <!-- MailerLite Universal -->
+  <script>(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account','1097175');</script>
+  <!-- End MailerLite Universal -->
+  <style>
+    :root{--m200:#ECDDE1;--m400:#C49EAA;--m500:#B5818C;--m700:#7A4A58;--m900:#2E2028;--alabaster:#F8F3F5;--schiefer:#696E6B;--white:#fff;--display:'Cormorant Garamond',serif;--ease:cubic-bezier(0.77,0,0.175,1);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--m900);-webkit-font-smoothing:antialiased;}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;transition:padding 0.5s var(--ease),background 0.5s,box-shadow 0.5s;}
+    .nav.stuck{padding:1rem 4rem;background:rgba(248,243,245,0.96);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(46,32,40,0.07);}
+    .nav.stuck .nav-links a{color:var(--m900)!important;}
+    .nav-links{display:flex;gap:2.5rem;}
+    .nav-links a:hover{color:var(--m500)!important;}
+
+    /* HERO */
+    .hero{position:relative;height:70vh;min-height:560px;background:var(--m900);display:flex;align-items:center;overflow:hidden;}
+    .hero-bg{position:absolute;inset:0;z-index:0;}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.38;}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(46,32,40,0.88) 0%,rgba(46,32,40,0.55) 60%,rgba(46,32,40,0.25) 100%);z-index:1;}
+    .hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:5rem 4rem 0;width:100%;}
+    .hero-eyebrow{font-size:0.65rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:riseUp 0.85s 0.25s var(--ease) forwards;}
+    .hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--m400);flex-shrink:0;}
+    .hero-h1{font-family:var(--display);font-size:clamp(2.2rem,4.5vw,4.5rem);font-weight:300;line-height:1.1;color:var(--white);margin-bottom:1.5rem;max-width:680px;opacity:0;animation:riseUp 0.9s 0.45s var(--ease) forwards;}
+    .hero-h1 em{font-style:italic;color:var(--m400);}
+    .hero-sub{font-size:0.92rem;font-weight:400;line-height:1.8;color:rgba(255,255,255,0.6);max-width:540px;opacity:0;animation:riseUp 0.9s 0.65s var(--ease) forwards;}
+    .hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:0.6rem;opacity:0;animation:fadeIn 1s 1.2s ease forwards;}
+    .hero-scroll-t{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.35);}
+    .hero-scroll-l{width:1px;height:42px;background:linear-gradient(to bottom,rgba(181,129,140,0.7),transparent);animation:pulse 2s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{opacity:.4;transform:scaleY(1);}50%{opacity:1;transform:scaleY(1.08);}}
+    @keyframes riseUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+    /* SECTIONS */
+    .sec{padding:7rem 4rem;}
+    .sec-inner{max-width:1200px;margin:0 auto;}
+    .sec-white{background:var(--white);}
+    .sec-alabaster{background:var(--alabaster);}
+    .sec-dark{background:var(--m900);}
+
+    /* SHARED */
+    .eyebrow{font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--m500);margin-bottom:1.25rem;display:flex;align-items:center;gap:1rem;}
+    .eyebrow::before{content:'';width:28px;height:1px;background:var(--m500);}
+    .eyebrow-light{color:var(--m400);}
+    .eyebrow-light::before{background:var(--m400);}
+    .sec-h2{font-family:var(--display);font-size:clamp(2rem,4vw,3.5rem);font-weight:300;line-height:1.15;color:var(--m900);margin-bottom:1.5rem;}
+    .sec-h2 em{font-style:italic;color:var(--m500);}
+    .sec-h2-light{color:var(--white);}
+    .sec-h2-light em{color:var(--m400);}
+    .sec-lead{font-size:0.92rem;line-height:1.8;color:var(--schiefer);max-width:640px;margin-bottom:3.5rem;}
+
+    /* SCROLL REVEAL */
+    .rv{opacity:0;transform:translateY(28px);transition:opacity 0.75s var(--ease),transform 0.75s var(--ease);}
+    .rv.on{opacity:1;transform:none;}
+    .d1{transition-delay:0.1s;}.d2{transition-delay:0.2s;}.d3{transition-delay:0.3s;}.d4{transition-delay:0.4s;}
+
+    /* TREATMENT CARDS */
+    .treat-grid-single{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:1rem;}
+    .treat-card{background:var(--white);border:1px solid var(--m200);padding:2.75rem;position:relative;overflow:hidden;transition:box-shadow 0.4s,transform 0.4s var(--ease);}
+    .treat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--m500);transform:scaleX(0);transform-origin:left;transition:transform 0.5s var(--ease);}
+    .treat-card:hover{box-shadow:0 24px 60px rgba(46,32,40,0.1);transform:translateY(-4px);}
+    .treat-card:hover::before{transform:scaleX(1);}
+    .treat-card.featured{border-color:var(--m400);background:linear-gradient(135deg,#fdf8fa 0%,var(--white) 100%);}
+    .treat-card.featured::before{transform:scaleX(1);background:var(--m400);}
+    .treat-badge-pill{display:inline-flex;align-items:center;font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:2px;margin-bottom:1.5rem;}
+    .treat-badge-pill.basis{background:var(--m200);color:var(--m700);}
+    .treat-badge-pill.empfohlen{background:var(--m700);color:var(--white);}
+    .treat-card-name{font-family:var(--display);font-size:1.8rem;font-weight:400;color:var(--m900);margin-bottom:0.75rem;line-height:1.15;}
+    .treat-card-meta{display:flex;align-items:center;gap:1.5rem;margin-bottom:1.25rem;flex-wrap:wrap;}
+    .treat-card-price{font-family:var(--display);font-size:2.2rem;font-weight:300;color:var(--m700);line-height:1;}
+    .treat-card-dur{font-size:0.72rem;font-weight:500;letter-spacing:0.08em;color:var(--schiefer);background:var(--alabaster);padding:0.3rem 0.75rem;border-radius:2px;}
+    .treat-card-desc{font-size:0.88rem;line-height:1.75;color:var(--schiefer);}
+
+    /* 3-COLUMN GRID */
+    .treat-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:1rem;}
+    .treat-note{font-size:0.78rem;font-style:italic;color:var(--schiefer);margin-top:0.75rem;padding-left:0.5rem;border-left:2px solid var(--m400);}
+
+    /* CELLUMA SINGLE */
+    .celluma-wrap{max-width:680px;}
+    .celluma-card{background:var(--m200);padding:3rem;position:relative;overflow:hidden;}
+    .celluma-card::after{content:'Celluma';position:absolute;bottom:-2rem;right:-1rem;font-family:var(--display);font-size:8rem;font-weight:300;color:rgba(181,129,140,0.12);line-height:1;pointer-events:none;white-space:nowrap;}
+
+    /* COMBINATION TABLE */
+    .combo-title{font-family:var(--display);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;color:var(--white);margin-bottom:2.5rem;line-height:1.2;}
+    .combo-title em{font-style:italic;color:var(--m400);}
+    .combo-table{width:100%;border-collapse:collapse;}
+    .combo-table th{font-size:0.6rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--m400);padding:0.75rem 1.25rem;text-align:left;border-bottom:1px solid rgba(181,129,140,0.25);}
+    .combo-table td{padding:1.1rem 1.25rem;font-size:0.87rem;color:rgba(255,255,255,0.7);border-bottom:1px solid rgba(255,255,255,0.06);vertical-align:middle;}
+    .combo-table tr:last-child td{border-bottom:none;}
+    .combo-table tr:hover td{background:rgba(255,255,255,0.03);}
+    .combo-table td:first-child{font-weight:500;color:rgba(255,255,255,0.88);}
+    .combo-yes{color:#8cc89a;font-weight:600;display:flex;align-items:center;gap:0.5rem;}
+    .combo-yes::before{content:'✓';font-size:1.1rem;}
+    .combo-no{color:rgba(255,255,255,0.3);font-weight:500;display:flex;align-items:center;gap:0.5rem;}
+    .combo-no::before{content:'✗';font-size:1.1rem;}
+
+    /* CTA SECTION */
+    .cta-sec{background:var(--m500);padding:7rem 4rem;text-align:center;position:relative;overflow:hidden;}
+    .cta-sec::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none;}
+    .cta-inner{position:relative;z-index:1;}
+    .cta-eyebrow{font-size:0.65rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:1.25rem;}
+    .cta-h2{font-family:var(--display);font-size:clamp(2.2rem,4.5vw,4rem);font-weight:300;line-height:1.1;color:var(--white);margin-bottom:1.25rem;}
+    .cta-p{font-size:0.92rem;line-height:1.8;color:rgba(255,255,255,0.75);max-width:500px;margin:0 auto 2.5rem;}
+
+    /* BUTTONS */
+    .btn-primary{display:inline-flex;align-items:center;gap:0.8rem;font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:1rem 2.25rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;}
+    .btn-primary:hover{background:var(--m700);}
+    .btn-white{display:inline-flex;align-items:center;gap:0.8rem;font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:1rem 2.25rem;background:var(--white);color:var(--m700);text-decoration:none;border-radius:2px;transition:background 0.3s,color 0.3s;}
+    .btn-white:hover{background:var(--m900);color:var(--white);}
+
+    /* FOOTER */
+    .footer{background:var(--m900);padding:5.5rem 4rem 3rem;}
+    .footer-inner{max-width:1200px;margin:0 auto;}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(181,129,140,0.14);}
+    .footer-brand{font-family:var(--display);font-size:1.55rem;font-weight:500;color:var(--white);margin-bottom:1rem;}
+    .footer-tagline{font-size:0.82rem;line-height:1.7;color:rgba(255,255,255,0.4);max-width:255px;margin-bottom:2rem;}
+    .footer-socials{display:flex;gap:1rem;}
+    .footer-sc{width:36px;height:36px;border:1px solid rgba(181,129,140,0.28);display:flex;align-items:center;justify-content:center;color:var(--m400);text-decoration:none;transition:background 0.3s,border-color 0.3s,color 0.3s;}
+    .footer-sc:hover{background:var(--m500);border-color:var(--m500);color:var(--white);}
+    .footer-col-h{font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--m500);margin-bottom:1.5rem;}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:0.8rem;}
+    .footer-links a{font-size:0.85rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.3s;}
+    .footer-links a:hover{color:var(--m300);}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;}
+    .footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.28);}
+    .footer-legal{display:flex;gap:2rem;list-style:none;}
+    .footer-legal a{font-size:0.75rem;color:rgba(255,255,255,0.28);text-decoration:none;transition:color 0.3s;}
+    .footer-legal a:hover{color:var(--m400);}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .treat-grid-3{grid-template-columns:1fr 1fr;}
+      .footer-top{grid-template-columns:1fr 1fr;gap:3rem;}
+    }
+    @media(max-width:768px){
+      .nav{padding:1.25rem 1.75rem;}
+      .nav-links{display:none;}
+      .sec{padding:5rem 1.75rem;}
+      .hero-content{padding:4rem 1.75rem 0;}
+      .treat-grid-single{grid-template-columns:1fr;}
+      .treat-grid-3{grid-template-columns:1fr;}
+      .cta-sec{padding:5rem 1.75rem;}
+      .footer{padding:4rem 1.75rem 2.5rem;}
+      .footer-top{grid-template-columns:1fr;gap:2.5rem;}
+      .footer-bottom{flex-direction:column;gap:1rem;text-align:center;}
+      .footer-legal{flex-wrap:wrap;justify-content:center;gap:1rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo"><img src="Logo%20und%20Farbcodes/KS_Logo_komplett_weiss.png" alt="Kristin Schnödt" style="height:38px;"></a>
+    <div class="nav-links">
+      <a href="behandlungen.html" style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;">Behandlungen</a>
+      <a href="face-yoga.html" style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;">Face Yoga</a>
+      <a href="kristin-schnoedt.html" style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;">Über mich</a>
+      <a href="beauty-news.html" style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;">Beauty News</a>
+    </div>
+    <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="nav-btn" style="font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.7rem 1.4rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;" target="_blank" rel="noopener">Termin buchen</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="Bilder/Kristin_Cupping/Gro%C3%9F%20(DSC_4649).jpeg" alt="Behandlungen im Kosmetikstudio">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Studio · Auerbach</div>
+      <h1 class="hero-h1">Behandlungen,<br><em>die deine Haut verändern</em></h1>
+      <p class="hero-sub">Jede Behandlung beginnt mit denselben Grundschritten: Abreinigen, Augenbrauenkorrektur, Peeling und Maske. Was danach kommt, ist individuell — auf dich zugeschnitten.</p>
+    </div>
+    <div class="hero-scroll">
+      <span class="hero-scroll-t">Entdecken</span>
+      <span class="hero-scroll-l"></span>
+    </div>
+  </section>
+
+  <!-- SECTION 1: GRUNDLEGENDE BEHANDLUNG -->
+  <section class="sec sec-white" id="basis">
+    <div class="sec-inner">
+      <div class="eyebrow rv">Die Basis</div>
+      <h2 class="sec-h2 rv d1">Klassische Gesichtsbehandlung —<br><em>der perfekte Einstieg</em></h2>
+      <p class="sec-lead rv d2">Die Grundlage jeder individuellen Behandlung. Alle essentiellen Schritte — professionell durchgeführt, auf deine Haut abgestimmt.</p>
+      <div class="treat-grid-single">
+
+        <!-- Klassische Behandlung -->
+        <div class="treat-card rv d2">
+          <div class="treat-badge-pill basis">Basisbehandlung</div>
+          <h3 class="treat-card-name">Klassische Gesichtsbehandlung</h3>
+          <div class="treat-card-meta">
+            <span class="treat-card-price">99 €</span>
+            <span class="treat-card-dur">60 Minuten</span>
+          </div>
+          <p class="treat-card-desc">Unsere Basisbehandlung mit allen klassischen Schritten. Ideal für regelmäßige Pflege und als Einstieg in die Welt der professionellen Kosmetik. Enthält: Abreinigen, Augenbrauenkorrektur, Peeling, Maske — plus individuelle Pflege.</p>
+        </div>
+
+        <!-- Kennenlern-Behandlung -->
+        <div class="treat-card featured rv d3">
+          <div class="treat-badge-pill empfohlen">Empfohlen für Neukunden</div>
+          <h3 class="treat-card-name">Kennenlern-Behandlung</h3>
+          <div class="treat-card-meta">
+            <span class="treat-card-price">ab 189 €</span>
+            <span class="treat-card-dur">120 Minuten</span>
+          </div>
+          <p class="treat-card-desc">Für Neukunden und alle, die ihre Haut wirklich kennenlernen möchten. Ausführliche Hautanalyse, Beratung und eine individuelle Behandlung — alles in einer umfassenden Sitzung.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: KOMBINATIONSBEHANDLUNGEN -->
+  <section class="sec sec-alabaster" id="kombinationen">
+    <div class="sec-inner">
+      <div class="eyebrow rv">Aufwertungen</div>
+      <h2 class="sec-h2 rv d1">Kombinationen,<br><em>die mehr bewirken</em></h2>
+      <p class="sec-lead rv d2">Alle folgenden Behandlungen können mit der Klassischen Gesichtsbehandlung kombiniert werden — für individuelle Ergebnisse in einer Sitzung.</p>
+      <div class="treat-grid-3">
+
+        <!-- Gua Sha + Celluma -->
+        <div class="treat-card rv d1">
+          <div class="treat-badge-pill basis">Gua Sha + Celluma</div>
+          <h3 class="treat-card-name">Gua Sha mit Celluma</h3>
+          <div class="treat-card-meta">
+            <span class="treat-card-price">139 €</span>
+            <span class="treat-card-dur">75 Minuten</span>
+          </div>
+          <p class="treat-card-desc">Die perfekte Kombination für tief entspannte Gesichtsmuskeln und aktivierte Zellen. Gua Sha löst Verspannungen, Celluma regt die Zellaktivität von innen an.</p>
+        </div>
+
+        <!-- Microdermabrasion + Gua Sha -->
+        <div class="treat-card rv d2">
+          <div class="treat-badge-pill basis">Gua Sha + Dermabrasion</div>
+          <h3 class="treat-card-name">Microdermabrasion mit Gua Sha</h3>
+          <div class="treat-card-meta">
+            <span class="treat-card-price">149 €</span>
+            <span class="treat-card-dur">75 Minuten</span>
+          </div>
+          <p class="treat-card-desc">Tiefenreinigung trifft auf Entspannung. Die Microdermabrasion glättet und verfeinert, Gua Sha aktiviert Durchblutung und Lymphfluss.</p>
+        </div>
+
+        <!-- Biomicroneedling -->
+        <div class="treat-card rv d3">
+          <div class="treat-badge-pill empfohlen" style="background:var(--m500);">Spezialbehandlung</div>
+          <h3 class="treat-card-name">Biomicroneedling</h3>
+          <div class="treat-card-meta">
+            <span class="treat-card-price">169 €</span>
+            <span class="treat-card-dur">60 Minuten</span>
+          </div>
+          <p class="treat-card-desc">Modernste Methode zur Kollagenstimulation — ohne Blut, ohne Verletzung. Mikrofeine Impulse regen die natürliche Zellregeneration an. Nicht kombinierbar mit anderen Behandlungen.</p>
+          <p class="treat-note">Nicht mit anderen Behandlungen kombinierbar.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CELLUMA EINZELBEHANDLUNG -->
+  <section class="sec sec-white" id="celluma">
+    <div class="sec-inner">
+      <div class="eyebrow rv">Zellaktivierung</div>
+      <h2 class="sec-h2 rv d1">Celluma Light Therapy —<br><em>Licht, das von innen wirkt</em></h2>
+      <div class="celluma-wrap rv d2">
+        <div class="celluma-card">
+          <div class="treat-badge-pill basis" style="margin-bottom:1.25rem;">Celluma Einzelbehandlung</div>
+          <h3 class="treat-card-name">Celluma Einzelbehandlung</h3>
+          <div class="treat-card-meta">
+            <span class="treat-card-price">auf Anfrage</span>
+            <span class="treat-card-dur">45 Minuten</span>
+          </div>
+          <p class="treat-card-desc">Celluma nutzt photobiomodulative Lichtenergie zur Anregung der Zellaktivität. Die Behandlung reduziert Entzündungen, fördert die Kollagenproduktion und verbessert das Hautbild — ohne Eingriff, ohne Ausfallzeit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: KOMBINATIONSÜBERSICHT -->
+  <section class="sec sec-dark" id="uebersicht">
+    <div class="sec-inner">
+      <div class="eyebrow rv eyebrow-light">Übersicht</div>
+      <h2 class="combo-title rv d1">Was du <em>kombinieren kannst</em></h2>
+      <div class="rv d2" style="overflow-x:auto;">
+        <table class="combo-table">
+          <thead>
+            <tr>
+              <th>Behandlung</th>
+              <th>Kombinierbarkeit</th>
+              <th>Hinweis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gua Sha mit Celluma</td>
+              <td><span class="combo-yes">Mit Klassischer Behandlung</span></td>
+              <td style="font-size:0.8rem;color:rgba(255,255,255,0.45);">75 Min. gesamt</td>
+            </tr>
+            <tr>
+              <td>Microdermabrasion mit Gua Sha</td>
+              <td><span class="combo-yes">Mit Klassischer Behandlung</span></td>
+              <td style="font-size:0.8rem;color:rgba(255,255,255,0.45);">75 Min. gesamt</td>
+            </tr>
+            <tr>
+              <td>Celluma Einzelbehandlung</td>
+              <td><span class="combo-yes">Mit Klassischer Behandlung</span></td>
+              <td style="font-size:0.8rem;color:rgba(255,255,255,0.45);">Auf Anfrage</td>
+            </tr>
+            <tr>
+              <td>Biomicroneedling</td>
+              <td><span class="combo-no">Einzelbehandlung</span></td>
+              <td style="font-size:0.8rem;color:rgba(255,255,255,0.45);">Nur separat buchbar</td>
+            </tr>
+            <tr>
+              <td>Kennenlern-Behandlung</td>
+              <td><span class="combo-no">Einzelbehandlung</span></td>
+              <td style="font-size:0.8rem;color:rgba(255,255,255,0.45);">Komplettsitzung für Neukunden</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec">
+    <div class="cta-inner">
+      <div class="cta-eyebrow rv">Dein nächster Schritt</div>
+      <h2 class="cta-h2 rv d1">Dein nächster Termin</h2>
+      <p class="cta-p rv d2">Nicht sicher, welche Behandlung zu dir passt? Beim Erstgespräch analysieren wir gemeinsam deine Haut — und finden das Richtige für dich.</p>
+      <div class="rv d3">
+        <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="btn-white" target="_blank" rel="noopener">
+          Termin buchen
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">Kristin Schnödt</div>
+          <p class="footer-tagline">Spezialistin für natürliche Hautverjüngung — Göttinnen-Haut · PURVIDUAL · Kosmetikstudio Auerbach i.d.Opf.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/kristin.schnoedt/" class="footer-sc" aria-label="Instagram" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/profile.php?id=61562529171301" class="footer-sc" aria-label="Facebook" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.youtube.com/@kristinschnoedt" class="footer-sc" aria-label="YouTube" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.96 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-h">Angebote</div>
+          <ul class="footer-links">
+            <li><a href="behandlungen.html">Behandlungen</a></li>
+            <li><a href="face-yoga.html">Göttinnen-Glow</a></li>
+            <li><a href="face-yoga.html">Göttinnen-Booster</a></li>
+            <li><a href="https://purvidual.de" target="_blank" rel="noopener">PURVIDUAL Shop</a></li>
+            <li><a href="schulungen.html">B2B Schulungen</a></li>
+            <li><a href="beauty-news.html">Beauty News</a></li>
+            <li><a href="https://kristin-schnoedt-kosmetik.belbo.com/gutscheine" target="_blank" rel="noopener">Gutscheine</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-h">Studio</div>
+          <ul class="footer-links">
+            <li><a href="index.html#studio">Auerbach i.d.Opf.</a></li>
+            <li><a href="https://kristin-schnoedt-kosmetik.belbo.com/login" target="_blank" rel="noopener">Termin buchen</a></li>
+            <li><a href="index.html#permanent-makeup">Permanent Make-Up</a></li>
+            <li><a href="kristin-schnoedt.html">Über mich</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-h">Kontakt</div>
+          <ul class="footer-links">
+            <li><a href="https://kristin-schnoedt-kosmetik.belbo.com/login" target="_blank" rel="noopener">Termin buchen</a></li>
+            <li><a href="mailto:info@kristin-kosmetik.de">E-Mail schreiben</a></li>
+            <li><a href="https://wa.me/4915757202153" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://purvidual.de" target="_blank" rel="noopener">purvidual.de</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Kristin Schnödt. Alle Rechte vorbehalten.</p>
+        <ul class="footer-legal">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="agb.html">AGB</a></li>
+          <li><a href="widerruf.html">Widerruf</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* SCROLL REVEAL */
+    const rvEls = document.querySelectorAll('.rv');
+    const rvObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); rvObs.unobserve(e.target); } });
+    }, {threshold:0.12});
+    rvEls.forEach(el => rvObs.observe(el));
+
+    /* NAV STICKY */
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('stuck', window.scrollY > 60));
+
+    /* SMOOTH SCROLL */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
+      });
+    });
+  </script>
+
+</body>
+</html>
