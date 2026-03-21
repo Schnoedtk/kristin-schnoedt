@@ -4,11 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impressum – Kristin Schnödt</title>
-  <meta name="robots" content="noindex">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <meta name="robots" content="noindex">  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/LogoNeu_2026_final_OH.png">
   <style>
     :root{--alabaster:#F8F3F5;--m100:#F8F3F5;--m200:#ECDDE1;--m300:#D9C0C8;--m400:#C49EAA;--m500:#B5818C;--m700:#7A4A58;--m900:#2E2028;--schiefer:#696E6B;--white:#FFFFFF;--display:'Cormorant Garamond',Georgia,serif;--body:'Montserrat',system-ui,sans-serif;--ease:cubic-bezier(0.25,1,0.5,1);}
@@ -46,7 +42,6 @@
     .legal-body a{color:var(--m700);text-decoration:underline;}
     .legal-body a:hover{color:var(--m500);}
     .legal-body strong,.legal-body b{font-weight:600;color:var(--m900);}
-    .legal-body br+br{display:none;}
     /* FOOTER */
     .footer{background:var(--m900);padding:4rem 4rem 2.5rem;}
     .footer-inner{max-width:1200px;margin:0 auto;}
@@ -95,8 +90,8 @@
 
     <h2>Angaben gemäß § 5 TMG</h2>
     <p>
+      Kristin Schnödt Kosmetik<br>
       Kristin Schnödt<br>
-      PURVIDUAL<br>
       Dr.-Heinrich-Stromer-Str. 27<br>
       91275 Auerbach<br>
       Deutschland
@@ -104,7 +99,7 @@
 
     <h2>Kontakt</h2>
     <p>Telefon: <a href="tel:+4915757202153">015757202153</a></p>
-    <p>E-Mail: <a href="mailto:kontak@purvidual.de">kontak@purvidual.de</a></p>
+    <p>E-Mail: <a href="mailto:kristin@kristin-kosmetik.de">kristin@kristin-kosmetik.de</a></p>
 
     <h2>Umsatzsteuer</h2>
     <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br>
@@ -126,7 +121,8 @@
           <li><a href="datenschutz.html">Datenschutz</a></li>
           <li><a href="agb.html">AGB</a></li>
           <li><a href="widerruf.html">Widerruf</a></li>
-        </ul>
+          <li><a href="#" onclick="localStorage.removeItem('cookie_consent');window.location.href='index.html';return false;">Cookie-Einstellungen</a></li>
+          </ul>
       </div>
     </div>
   </footer>
