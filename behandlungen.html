@@ -48,10 +48,10 @@
     @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
     .hero-blobs{position:absolute;top:0;right:0;width:480px;height:480px;z-index:2;pointer-events:none;}
     .hero-blob{position:absolute;filter:blur(1px);}
-    .hero-blob-1{width:320px;height:380px;top:20px;right:40px;background:radial-gradient(ellipse at 40% 40%,rgba(181,129,140,0.22) 0%,rgba(181,129,140,0.08) 70%,transparent 100%);border:2px solid rgba(181,129,140,0.45);border-radius:58% 42% 65% 35%/45% 55% 45% 55%;animation:blob1 10s ease-in-out infinite;}
-    .hero-blob-2{width:240px;height:280px;top:100px;right:5px;background:radial-gradient(ellipse at 60% 60%,rgba(122,74,88,0.16) 0%,rgba(122,74,88,0.05) 70%,transparent 100%);border:2px solid rgba(122,74,88,0.35);border-radius:42% 58% 35% 65%/55% 45% 55% 45%;animation:blob2 12s ease-in-out infinite;}
-    @keyframes blob1{0%,100%{border-radius:58% 42% 65% 35%/45% 55% 45% 55%;transform:translateY(0) rotate(0deg);}33%{border-radius:42% 58% 35% 65%/55% 45% 55% 45%;transform:translateY(-16px) rotate(4deg);}66%{border-radius:65% 35% 42% 58%/35% 65% 45% 55%;transform:translateY(10px) rotate(-3deg);}}
-    @keyframes blob2{0%,100%{border-radius:42% 58% 35% 65%/55% 45% 55% 45%;transform:translateY(0);}33%{border-radius:58% 42% 65% 35%/45% 55% 45% 55%;transform:translateY(14px) rotate(-5deg);}66%{border-radius:35% 65% 58% 42%/65% 35% 55% 45%;transform:translateY(-8px) rotate(3deg);}}
+    .hero-blob-1{width:320px;height:320px;top:30px;right:60px;background:radial-gradient(ellipse at 40% 40%,rgba(181,129,140,0.22) 0%,rgba(181,129,140,0.08) 70%,transparent 100%);border:2px solid rgba(181,129,140,0.45);border-radius:50%;animation:blobCircle1 8s ease-in-out infinite;}
+    .hero-blob-2{width:180px;height:180px;top:180px;right:40px;background:radial-gradient(ellipse at 50% 50%,rgba(122,74,88,0.16) 0%,rgba(122,74,88,0.05) 70%,transparent 100%);border:2px solid rgba(122,74,88,0.35);border-radius:50%;animation:blobCircle2 11s ease-in-out infinite;}
+    @keyframes blobCircle1{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-18px) scale(1.04);}}
+    @keyframes blobCircle2{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(14px) scale(0.96);}}
 
     /* SECTIONS */
     .sec{padding:7rem 4rem;}
@@ -288,7 +288,7 @@
 
         <div class="combo-card rv d3">
           <div class="combo-badge">Tiefenwirkung</div>
-          <img src="Bilder/Treatments/Buccale.jpg" alt="Buccale Massage mit Celluma" class="combo-img" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:0.75rem;">
+          <img src="Bilder/Treatments/Buccale.jpg" alt="Buccale Massage mit Celluma" class="combo-img" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:0.25rem;">
           <h3 class="combo-title">Buccale Massage<br>mit Celluma</h3>
           <p class="combo-meta">90 Minuten</p>
           <p class="combo-desc">Die tiefste Entspannung für Gesicht und Kiefer — kombiniert mit regenerativer Lichttherapie. Buccale Massage löst innermuskuläre Verspannungen, Celluma aktiviert die Zellregeneration für sichtbare Frische.</p>
@@ -328,7 +328,7 @@
       <h2 class="combo-title rv d1">Was du <em>kombinieren kannst</em></h2>
       <div class="rv d2">
         <div style="max-width:800px;margin:0 auto;">
-  <p style="font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.75;margin-bottom:2.5rem;text-align:center;">Kombinationen sind viele möglich. Alle Erweiterungen können mit der Klassischen Behandlung kombiniert werden.</p>
+  <p style="font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.75;margin-bottom:2.5rem;text-align:center;">Jede Behandlung ist einzigartig — und das Schöne ist: vieles lässt sich miteinander kombinieren. Es gibt unzählige Varianten einer Gesichtsbehandlung, abgestimmt auf dich und deine Haut.</p>
   <div style="display:grid;grid-template-columns:1fr auto auto;gap:0;border:1px solid rgba(181,129,140,0.2);">
     <div style="padding:0.75rem 1.25rem;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--m400);border-bottom:1px solid rgba(181,129,140,0.15);">Behandlung / Erweiterung</div>
     <div style="padding:0.75rem 1.25rem;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--m400);border-bottom:1px solid rgba(181,129,140,0.15);text-align:center;">Aufpreis</div>
