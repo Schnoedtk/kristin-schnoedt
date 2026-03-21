@@ -398,6 +398,9 @@
       .b2b-inner { flex-wrap: wrap; gap: 2rem; }
       .b2b-sep { display: none; }
     }
+    .philosophy-sec { background: var(--white); padding: 6rem 4rem; border-top: 1px solid var(--m200); }
+    .philosophy-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+
     @media (max-width: 768px) {
       .nav { padding: 1.25rem 1.75rem; }
       .nav-logo img { height: 36px; }
@@ -442,6 +445,8 @@
       .cta-btns { flex-direction: column; align-items: center; }
       .studio-vid { height: 60vh; min-height: 400px; }
       .studio-vid-content { padding: 0 1.75rem; }
+      .philosophy-sec { padding: 3.5rem 1.75rem; }
+      .philosophy-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .studio-vid-h2 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
       .studio-vid-actions .btn-outline { width: 100%; justify-content: center; }
       .b2b-inner { flex-direction: column; gap: 1.5rem; }
@@ -1037,8 +1042,8 @@
   </section>
 
   <!-- TRANSPARENZ -->
-<section style="background:var(--white);padding:6rem 4rem;border-top:1px solid var(--m200);">
-  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+<section class="philosophy-sec">
+  <div class="philosophy-grid">
     <div>
       <div class="eyebrow rv" style="margin-bottom:1.5rem;">Vertrauen durch Ehrlichkeit</div>
       <h2 class="sec-h2 rv d1" style="margin-bottom:1.5rem;">So arbeite ich —<br><em>und warum das wichtig ist</em></h2>
