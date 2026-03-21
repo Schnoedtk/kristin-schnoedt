@@ -176,8 +176,14 @@
       .treat-grid-3{grid-template-columns:1fr 1fr;}
       .footer-top{grid-template-columns:1fr 1fr;gap:3rem;}
     }
+    .extras-sec{background:var(--alabaster);padding:7rem 4rem;}
+    .extras-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;}
+    .combo-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+
     @media(max-width:768px){
       .nav{padding:1.25rem 1.75rem;}
+      .extras-sec{padding:4rem 1.75rem;}
+      .extras-grid{grid-template-columns:1fr;}
       .nav-links{display:none;}
       .nav-hamburger{display:flex;}
       .nav-btn{font-size:0.6rem;padding:0.6rem 1rem;}
@@ -349,7 +355,7 @@
       <div class="rv d2">
         <div style="max-width:800px;margin:0 auto;">
   <p style="font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.75;margin-bottom:2.5rem;text-align:center;">Jede Behandlung ist einzigartig — und das Schöne ist: vieles lässt sich miteinander kombinieren. Es gibt unzählige Varianten einer Gesichtsbehandlung, abgestimmt auf dich und deine Haut.</p>
-  <div style="display:grid;grid-template-columns:1fr auto auto;gap:0;border:1px solid rgba(181,129,140,0.2);">
+  <div class="combo-table-wrap"><div style="display:grid;grid-template-columns:1fr auto auto;gap:0;border:1px solid rgba(181,129,140,0.2);min-width:480px;">
     <div style="padding:0.75rem 1.25rem;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--m400);border-bottom:1px solid rgba(181,129,140,0.15);">Behandlung / Erweiterung</div>
     <div style="padding:0.75rem 1.25rem;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--m400);border-bottom:1px solid rgba(181,129,140,0.15);text-align:center;">Aufpreis</div>
     <div style="padding:0.75rem 1.25rem;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--m400);border-bottom:1px solid rgba(181,129,140,0.15);text-align:center;">Kombinierbar</div>
@@ -393,19 +399,19 @@
     <div style="padding:0.85rem 1.25rem;font-size:0.82rem;color:rgba(255,255,255,0.75);">Kennenlern-Behandlung</div>
     <div style="padding:0.85rem 1.25rem;font-size:0.82rem;color:var(--m400);text-align:center;">ab 189 €</div>
     <div style="padding:0.85rem 1.25rem;font-size:1rem;color:rgba(255,255,255,0.3);text-align:center;">✗ Einzeln</div>
-  </div>
+  </div></div>
 </div>
       </div>
     </div>
   </section>
 
   <!-- ADD-ONS & WIMPERNLIFTING -->
-<section style="background:var(--alabaster);padding:7rem 4rem;">
+<section class="extras-sec">
   <div style="max-width:1100px;margin:0 auto;">
     <div class="eyebrow rv" style="margin-bottom:1.5rem;">Ergänzungen</div>
     <h2 class="sec-h2 rv d1" style="margin-bottom:1rem;">Erweiterungen und <em>Schönheitsextras</em></h2>
     <p style="font-size:0.88rem;line-height:1.75;color:var(--schiefer);margin-bottom:3.5rem;max-width:620px;" class="rv d2">Ergänze deine Behandlung mit einem dieser Extras — oder buche sie eigenständig.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="rv d2">
+    <div class="extras-grid rv d2">
       <div>
         <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--m900);margin-bottom:1.5rem;">Einzelne Extras</h3>
         <div style="display:flex;flex-direction:column;gap:0;">
