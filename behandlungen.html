@@ -24,6 +24,10 @@
     .nav.stuck .nav-links a{color:var(--m900)!important;}
     .nav-links{display:flex;gap:2.5rem;}
     .nav-links a:hover{color:var(--m500)!important;}
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo .logo-light { display: none; }
+    .nav.stuck .nav-logo .logo-dark { display: none; }
+    .nav.stuck .nav-logo .logo-light { display: block; }
 
     /* HERO */
     .hero{position:relative;height:70vh;min-height:560px;background:var(--m900);display:flex;align-items:center;overflow:hidden;}
@@ -44,8 +48,8 @@
     @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
     .hero-blobs{position:absolute;top:0;right:0;width:480px;height:480px;z-index:2;pointer-events:none;}
     .hero-blob{position:absolute;filter:blur(1px);}
-    .hero-blob-1{width:300px;height:340px;top:30px;right:60px;background:radial-gradient(ellipse at 40% 40%,rgba(181,129,140,0.14) 0%,rgba(181,129,140,0.04) 70%,transparent 100%);border:1.5px solid rgba(181,129,140,0.28);border-radius:58% 42% 65% 35%/45% 55% 45% 55%;animation:blob1 10s ease-in-out infinite;}
-    .hero-blob-2{width:220px;height:260px;top:120px;right:10px;background:radial-gradient(ellipse at 60% 60%,rgba(122,74,88,0.1) 0%,rgba(122,74,88,0.03) 70%,transparent 100%);border:1.5px solid rgba(122,74,88,0.22);border-radius:42% 58% 35% 65%/55% 45% 55% 45%;animation:blob2 12s ease-in-out infinite;}
+    .hero-blob-1{width:320px;height:380px;top:20px;right:40px;background:radial-gradient(ellipse at 40% 40%,rgba(181,129,140,0.22) 0%,rgba(181,129,140,0.08) 70%,transparent 100%);border:2px solid rgba(181,129,140,0.45);border-radius:58% 42% 65% 35%/45% 55% 45% 55%;animation:blob1 10s ease-in-out infinite;}
+    .hero-blob-2{width:240px;height:280px;top:100px;right:5px;background:radial-gradient(ellipse at 60% 60%,rgba(122,74,88,0.16) 0%,rgba(122,74,88,0.05) 70%,transparent 100%);border:2px solid rgba(122,74,88,0.35);border-radius:42% 58% 35% 65%/55% 45% 55% 45%;animation:blob2 12s ease-in-out infinite;}
     @keyframes blob1{0%,100%{border-radius:58% 42% 65% 35%/45% 55% 45% 55%;transform:translateY(0) rotate(0deg);}33%{border-radius:42% 58% 35% 65%/55% 45% 55% 45%;transform:translateY(-16px) rotate(4deg);}66%{border-radius:65% 35% 42% 58%/35% 65% 45% 55%;transform:translateY(10px) rotate(-3deg);}}
     @keyframes blob2{0%,100%{border-radius:42% 58% 35% 65%/55% 45% 55% 45%;transform:translateY(0);}33%{border-radius:58% 42% 65% 35%/45% 55% 45% 55%;transform:translateY(14px) rotate(-5deg);}66%{border-radius:35% 65% 58% 42%/65% 35% 55% 45%;transform:translateY(-8px) rotate(3deg);}}
 
@@ -182,7 +186,10 @@
 
   <!-- NAV -->
   <nav class="nav" id="mainNav">
-    <a href="index.html" class="nav-logo"><img src="Logo%20und%20Farbcodes/KS_Logo_komplett_weiss.png" alt="Kristin Schnödt" style="height:38px;"></a>
+    <a href="index.html" class="nav-logo">
+  <img class="logo-dark" src="Logo%20und%20Farbcodes/Logo_Alabaster_Tiefpflaume.png" alt="Kristin Schnödt" style="height:38px;width:auto;">
+  <img class="logo-light" src="Logo%20und%20Farbcodes/Logo_Tiefpflaume_Alabaster.png" alt="Kristin Schnödt" style="height:38px;width:auto;display:none;">
+</a>
     <div class="nav-links">
       <a href="behandlungen.html" style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;">Behandlungen</a>
       <a href="face-yoga.html" style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;">Face Yoga</a>
@@ -263,7 +270,7 @@
             <span class="treat-card-price">139 €</span>
             <span class="treat-card-dur">75 Minuten</span>
           </div>
-          <p class="treat-card-desc">Gua Sha löst Verspannungen und aktiviert die Durchblutung. Celluma regt die Zellaktivität an.</p>
+          <p class="treat-card-desc">Die Kombination für spürbare Tiefenwirkung: Gua Sha löst Muskelverspannungen, fördert den Lymphabfluss und bringt sofortige Frische ins Gesicht. Celluma regt parallel die Zellaktivität an, stimuliert die Kollagenproduktion und unterstützt die natürliche Regeneration. Das Ergebnis: ein entspannteres, strahlendes Gesicht — ohne Eingriff, ohne Ausfallzeit.</p>
         </div>
 
         <!-- Biomicroneedling -->
@@ -281,7 +288,7 @@
 
         <div class="combo-card rv d3">
           <div class="combo-badge">Tiefenwirkung</div>
-          <img src="Bilder/Treatments/Buccale.jpg" alt="Buccale Massage mit Celluma" class="combo-img" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:1.5rem;">
+          <img src="Bilder/Treatments/Buccale.jpg" alt="Buccale Massage mit Celluma" class="combo-img" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:0.75rem;">
           <h3 class="combo-title">Buccale Massage<br>mit Celluma</h3>
           <p class="combo-meta">90 Minuten</p>
           <p class="combo-desc">Die tiefste Entspannung für Gesicht und Kiefer — kombiniert mit regenerativer Lichttherapie. Buccale Massage löst innermuskuläre Verspannungen, Celluma aktiviert die Zellregeneration für sichtbare Frische.</p>
@@ -321,9 +328,9 @@
       <h2 class="combo-title rv d1">Was du <em>kombinieren kannst</em></h2>
       <div class="rv d2">
         <div style="max-width:800px;margin:0 auto;">
-  <p style="font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.75;margin-bottom:2.5rem;text-align:center;">Kombinationen sind viele möglich. Alle Add-ons können mit der Klassischen Behandlung kombiniert werden.</p>
+  <p style="font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.75;margin-bottom:2.5rem;text-align:center;">Kombinationen sind viele möglich. Alle Erweiterungen können mit der Klassischen Behandlung kombiniert werden.</p>
   <div style="display:grid;grid-template-columns:1fr auto auto;gap:0;border:1px solid rgba(181,129,140,0.2);">
-    <div style="padding:0.75rem 1.25rem;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--m400);border-bottom:1px solid rgba(181,129,140,0.15);">Behandlung / Add-on</div>
+    <div style="padding:0.75rem 1.25rem;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--m400);border-bottom:1px solid rgba(181,129,140,0.15);">Behandlung / Erweiterung</div>
     <div style="padding:0.75rem 1.25rem;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--m400);border-bottom:1px solid rgba(181,129,140,0.15);text-align:center;">Aufpreis</div>
     <div style="padding:0.75rem 1.25rem;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--m400);border-bottom:1px solid rgba(181,129,140,0.15);text-align:center;">Kombinierbar</div>
 
@@ -376,7 +383,7 @@
 <section style="background:var(--alabaster);padding:7rem 4rem;">
   <div style="max-width:1100px;margin:0 auto;">
     <div class="eyebrow rv" style="margin-bottom:1.5rem;">Ergänzungen</div>
-    <h2 class="sec-h2 rv d1" style="margin-bottom:1rem;">Add-ons und <em>Schönheitsextras</em></h2>
+    <h2 class="sec-h2 rv d1" style="margin-bottom:1rem;">Erweiterungen und <em>Schönheitsextras</em></h2>
     <p style="font-size:0.88rem;line-height:1.75;color:var(--schiefer);margin-bottom:3.5rem;max-width:620px;" class="rv d2">Ergänze deine Behandlung mit einem dieser Extras — oder buche sie eigenständig.</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="rv d2">
       <div>

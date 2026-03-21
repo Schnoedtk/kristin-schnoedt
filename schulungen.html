@@ -24,6 +24,10 @@
     .nav.stuck .nav-links a{color:var(--m900)!important;}
     .nav-links{display:flex;gap:2.5rem;}
     .nav-links a:hover{color:var(--m500)!important;}
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo .logo-light { display: none; }
+    .nav.stuck .nav-logo .logo-dark { display: none; }
+    .nav.stuck .nav-logo .logo-light { display: block; }
 
     /* HERO */
     .hero{position:relative;height:75vh;min-height:600px;background:var(--m900);display:flex;align-items:center;overflow:hidden;}
@@ -45,8 +49,8 @@
     @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
     .hero-blobs{position:absolute;top:0;right:0;width:480px;height:480px;z-index:2;pointer-events:none;}
     .hero-blob{position:absolute;filter:blur(1px);}
-    .hero-blob-1{width:300px;height:340px;top:30px;right:60px;background:radial-gradient(ellipse at 40% 40%,rgba(181,129,140,0.14) 0%,rgba(181,129,140,0.04) 70%,transparent 100%);border:1.5px solid rgba(181,129,140,0.28);border-radius:58% 42% 65% 35%/45% 55% 45% 55%;animation:blob1 10s ease-in-out infinite;}
-    .hero-blob-2{width:220px;height:260px;top:120px;right:10px;background:radial-gradient(ellipse at 60% 60%,rgba(122,74,88,0.1) 0%,rgba(122,74,88,0.03) 70%,transparent 100%);border:1.5px solid rgba(122,74,88,0.22);border-radius:42% 58% 35% 65%/55% 45% 55% 45%;animation:blob2 12s ease-in-out infinite;}
+    .hero-blob-1{width:320px;height:380px;top:20px;right:40px;background:radial-gradient(ellipse at 40% 40%,rgba(181,129,140,0.22) 0%,rgba(181,129,140,0.08) 70%,transparent 100%);border:2px solid rgba(181,129,140,0.45);border-radius:58% 42% 65% 35%/45% 55% 45% 55%;animation:blob1 10s ease-in-out infinite;}
+    .hero-blob-2{width:240px;height:280px;top:100px;right:5px;background:radial-gradient(ellipse at 60% 60%,rgba(122,74,88,0.16) 0%,rgba(122,74,88,0.05) 70%,transparent 100%);border:2px solid rgba(122,74,88,0.35);border-radius:42% 58% 35% 65%/55% 45% 55% 45%;animation:blob2 12s ease-in-out infinite;}
     @keyframes blob1{0%,100%{border-radius:58% 42% 65% 35%/45% 55% 45% 55%;transform:translateY(0) rotate(0deg);}33%{border-radius:42% 58% 35% 65%/55% 45% 55% 45%;transform:translateY(-16px) rotate(4deg);}66%{border-radius:65% 35% 42% 58%/35% 65% 45% 55%;transform:translateY(10px) rotate(-3deg);}}
     @keyframes blob2{0%,100%{border-radius:42% 58% 35% 65%/55% 45% 55% 45%;transform:translateY(0);}33%{border-radius:58% 42% 65% 35%/45% 55% 45% 55%;transform:translateY(14px) rotate(-5deg);}66%{border-radius:35% 65% 58% 42%/65% 35% 55% 45%;transform:translateY(-8px) rotate(3deg);}}
 
@@ -201,7 +205,10 @@
 
   <!-- NAV -->
   <nav class="nav" id="mainNav">
-    <a href="index.html" class="nav-logo"><img src="Logo%20und%20Farbcodes/KS_Logo_komplett_weiss.png" alt="Kristin Schnödt" style="height:38px;"></a>
+    <a href="index.html" class="nav-logo">
+  <img class="logo-dark" src="Logo%20und%20Farbcodes/Logo_Alabaster_Tiefpflaume.png" alt="Kristin Schnödt" style="height:38px;width:auto;">
+  <img class="logo-light" src="Logo%20und%20Farbcodes/Logo_Tiefpflaume_Alabaster.png" alt="Kristin Schnödt" style="height:38px;width:auto;display:none;">
+</a>
     <div class="nav-links">
       <a href="behandlungen.html" style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;">Behandlungen</a>
       <a href="face-yoga.html" style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;">Face Yoga</a>
@@ -237,7 +244,7 @@
   <section class="sec sec-white" id="angebot">
     <div class="sec-inner">
       <div class="eyebrow rv">Mein Angebot</div>
-      <h2 class="sec-h2 rv d1">Zwei Bereiche,<br><em>ein Ziel: dein Erfolg</em></h2>
+      <h2 class="sec-h2 rv d1">Zwei Bereiche, <em>ein Ziel: dein Erfolg</em></h2>
       <div class="overview-grid">
         <div class="overview-box rv d2">
           <div class="overview-icon">✦</div>
@@ -259,6 +266,14 @@
       <div class="eyebrow rv">Schulungen für Kolleginnen</div>
       <h2 class="sec-h2 rv d1">Wissen, das du sofort<br><em>in deiner Praxis anwenden kannst</em></h2>
       <p class="sec-lead rv d2">Ich gebe mein Wissen aus 18 Jahren täglicher Arbeit mit Gesichtshaut weiter — praxisnah, ehrlich und ohne theoretischen Überbau.</p>
+
+      <div class="rv d1" style="background:var(--m700);color:var(--white);padding:1.5rem 2rem;border-radius:2px;margin-bottom:3rem;display:flex;align-items:center;gap:1.5rem;">
+  <span style="font-size:1.8rem;flex-shrink:0;">💻</span>
+  <div>
+    <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--m400);margin-bottom:0.3rem;">Meine Priorität: Online-Schulungen</p>
+    <p style="font-size:0.88rem;line-height:1.65;color:rgba(255,255,255,0.85);">Alle Schulungen sind <strong>auch online verfügbar</strong> — keine Fahrtkosten, kein Hotel, flexible Terminwahl. Wir arbeiten live per Video: du siehst alles, ich sehe alles. Genau so effektiv wie vor Ort.</p>
+  </div>
+</div>
 
       <div class="workshops-grid">
 
