@@ -42,6 +42,12 @@
     @keyframes pulse{0%,100%{opacity:.4;transform:scaleY(1);}50%{opacity:1;transform:scaleY(1.08);}}
     @keyframes riseUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
     @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+    .hero-blobs{position:absolute;top:0;right:0;width:480px;height:480px;z-index:2;pointer-events:none;}
+    .hero-blob{position:absolute;filter:blur(1px);}
+    .hero-blob-1{width:300px;height:340px;top:30px;right:60px;background:radial-gradient(ellipse at 40% 40%,rgba(181,129,140,0.14) 0%,rgba(181,129,140,0.04) 70%,transparent 100%);border:1.5px solid rgba(181,129,140,0.28);border-radius:58% 42% 65% 35%/45% 55% 45% 55%;animation:blob1 10s ease-in-out infinite;}
+    .hero-blob-2{width:220px;height:260px;top:120px;right:10px;background:radial-gradient(ellipse at 60% 60%,rgba(122,74,88,0.1) 0%,rgba(122,74,88,0.03) 70%,transparent 100%);border:1.5px solid rgba(122,74,88,0.22);border-radius:42% 58% 35% 65%/55% 45% 55% 45%;animation:blob2 12s ease-in-out infinite;}
+    @keyframes blob1{0%,100%{border-radius:58% 42% 65% 35%/45% 55% 45% 55%;transform:translateY(0) rotate(0deg);}33%{border-radius:42% 58% 35% 65%/55% 45% 55% 45%;transform:translateY(-16px) rotate(4deg);}66%{border-radius:65% 35% 42% 58%/35% 65% 45% 55%;transform:translateY(10px) rotate(-3deg);}}
+    @keyframes blob2{0%,100%{border-radius:42% 58% 35% 65%/55% 45% 55% 45%;transform:translateY(0);}33%{border-radius:58% 42% 65% 35%/45% 55% 45% 55%;transform:translateY(14px) rotate(-5deg);}66%{border-radius:35% 65% 58% 42%/65% 35% 55% 45%;transform:translateY(-8px) rotate(3deg);}}
 
     /* SECTIONS */
     .sec{padding:7rem 4rem;}
@@ -86,6 +92,19 @@
     /* 3-COLUMN GRID */
     .treat-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:1rem;}
     .treat-note{font-size:0.78rem;font-style:italic;color:var(--schiefer);margin-top:0.75rem;padding-left:0.5rem;border-left:2px solid var(--m400);}
+
+    /* COMBO CARDS */
+    .combo-card{background:var(--white);border:1px solid var(--m200);padding:2.5rem;position:relative;overflow:hidden;transition:box-shadow 0.4s,transform 0.4s var(--ease);display:flex;flex-direction:column;}
+    .combo-card:hover{box-shadow:0 24px 60px rgba(46,32,40,0.1);transform:translateY(-4px);}
+    .combo-badge{display:inline-flex;align-items:center;font-size:0.6rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:2px;margin-bottom:1.25rem;background:var(--m200);color:var(--m700);}
+    .combo-img{display:block;}
+    .combo-title{font-family:var(--display);font-size:1.5rem;font-weight:400;color:var(--m900);margin-bottom:0.5rem;line-height:1.2;}
+    .combo-meta{font-size:0.72rem;font-weight:500;letter-spacing:0.08em;color:var(--schiefer);margin-bottom:1rem;}
+    .combo-desc{font-size:0.85rem;line-height:1.7;color:var(--schiefer);flex:1;margin-bottom:1.5rem;}
+    .combo-foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:auto;}
+    .combo-price{font-family:var(--display);font-size:1.75rem;font-weight:300;color:var(--m700);}
+    .combo-btn{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.75rem 1.4rem;background:var(--m500);color:#fff;text-decoration:none;border-radius:2px;transition:background 0.3s;}
+    .combo-btn:hover{background:var(--m700);}
 
     /* CELLUMA SINGLE */
     .celluma-wrap{max-width:680px;}
@@ -175,6 +194,10 @@
 
   <!-- HERO -->
   <section class="hero">
+    <div class="hero-blobs">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+    </div>
     <div class="hero-bg">
       <img src="Bilder/Treatments/Allgemein.jpg" alt="Behandlungen im Kosmetikstudio" style="object-position:center center;">
     </div>
@@ -252,7 +275,20 @@
             <span class="treat-card-dur">60 Minuten</span>
           </div>
           <p class="treat-card-desc">Modernste Methode zur Kollagenstimulation — ohne Blut, ohne Verletzung. Mikrofeine Impulse regen die natürliche Zellregeneration an. Nicht kombinierbar mit anderen Behandlungen.</p>
-          <p class="treat-note">Nicht mit anderen Behandlungen kombinierbar.</p>
+          <p style="font-size:0.75rem;font-style:italic;color:var(--m500);margin-top:0.75rem;">✦ Celluma Lichttherapie als Ergänzung möglich — Kombination auf Anfrage.</p>
+          <p class="treat-note">Kann mit Celluma Lichttherapie kombiniert werden.</p>
+        </div>
+
+        <div class="combo-card rv d3">
+          <div class="combo-badge">Tiefenwirkung</div>
+          <img src="Bilder/Treatments/Buccale.jpg" alt="Buccale Massage mit Celluma" class="combo-img" style="width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:1.5rem;">
+          <h3 class="combo-title">Buccale Massage<br>mit Celluma</h3>
+          <p class="combo-meta">90 Minuten</p>
+          <p class="combo-desc">Die tiefste Entspannung für Gesicht und Kiefer — kombiniert mit regenerativer Lichttherapie. Buccale Massage löst innermuskuläre Verspannungen, Celluma aktiviert die Zellregeneration für sichtbare Frische.</p>
+          <div class="combo-foot">
+            <div class="combo-price">179 €</div>
+            <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="combo-btn" target="_blank" rel="noopener">Termin buchen</a>
+          </div>
         </div>
 
       </div>
@@ -262,8 +298,8 @@
   <!-- SECTION 3: CELLUMA EINZELBEHANDLUNG -->
   <section class="sec sec-white" id="celluma">
     <div class="sec-inner">
-      <div class="eyebrow rv">Zellaktivierung</div>
-      <h2 class="sec-h2 rv d1">Celluma Light Therapy —<br><em>Licht, das von innen wirkt</em></h2>
+      <div class="eyebrow rv">Lichttherapie</div>
+      <h2 class="sec-h2 rv d1">Celluma Lichttherapie, <em>Licht das von innen wirkt</em></h2>
       <div class="celluma-wrap rv d2">
         <div class="celluma-card">
           <div class="treat-badge-pill basis" style="margin-bottom:1.25rem;">Celluma Einzelbehandlung</div>
@@ -340,7 +376,7 @@
 <section style="background:var(--alabaster);padding:7rem 4rem;">
   <div style="max-width:1100px;margin:0 auto;">
     <div class="eyebrow rv" style="margin-bottom:1.5rem;">Ergänzungen</div>
-    <h2 class="sec-h2 rv d1" style="margin-bottom:1rem;">Add-ons und<br><em>Schönheitsextras</em></h2>
+    <h2 class="sec-h2 rv d1" style="margin-bottom:1rem;">Add-ons und <em>Schönheitsextras</em></h2>
     <p style="font-size:0.88rem;line-height:1.75;color:var(--schiefer);margin-bottom:3.5rem;max-width:620px;" class="rv d2">Ergänze deine Behandlung mit einem dieser Extras — oder buche sie eigenständig.</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;" class="rv d2">
       <div>
@@ -348,15 +384,15 @@
         <div style="display:flex;flex-direction:column;gap:0;">
           <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 0;border-bottom:1px solid var(--m200);">
             <span style="font-size:0.85rem;color:var(--m900);">Augenbrauen färben</span>
-            <span style="font-size:0.85rem;font-weight:600;color:var(--m700);">auf Anfrage</span>
+            <span style="font-size:0.85rem;font-weight:600;color:var(--m700);">11 €</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 0;border-bottom:1px solid var(--m200);">
             <span style="font-size:0.85rem;color:var(--m900);">Wimpern färben</span>
-            <span style="font-size:0.85rem;font-weight:600;color:var(--m700);">auf Anfrage</span>
+            <span style="font-size:0.85rem;font-weight:600;color:var(--m700);">17 €</span>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 0;border-bottom:1px solid var(--m200);">
             <span style="font-size:0.85rem;color:var(--m900);">Gesichtsenthaarung</span>
-            <span style="font-size:0.85rem;font-weight:600;color:var(--m700);">auf Anfrage</span>
+            <span style="font-size:0.85rem;font-weight:600;color:var(--m700);">ab 9 €</span>
           </div>
         </div>
       </div>
@@ -364,7 +400,7 @@
         <div style="position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;border:1px solid rgba(181,129,140,0.12);pointer-events:none;"></div>
         <span style="font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--m400);display:block;margin-bottom:1rem;">Highlight</span>
         <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--white);line-height:1.2;margin-bottom:1rem;">Koreanisches<br><em>Wimpernlifting</em></h3>
-        <img src="Bilder/Koreanische/Wimpernlifting.jpg" alt="Koreanisches Wimpernlifting" style="width:100%;aspect-ratio:16/9;object-fit:cover;margin:1rem 0;display:block;">
+        <img src="Bilder/Koreanische/Wimpernlifting.jpg" alt="Koreanisches Wimpernlifting" style="width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 30%;margin:1rem 0;display:block;">
         <p style="font-size:0.82rem;line-height:1.75;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;">Natürlicher Schwung, mehr Volumen, ein offenerer Blick — inklusive Wimpernfärben. Das Ergebnis hält 6 bis 8 Wochen.</p>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:1rem 0;border-top:1px solid rgba(181,129,140,0.2);border-bottom:1px solid rgba(181,129,140,0.2);margin-bottom:1.5rem;">
           <span style="font-size:0.78rem;color:rgba(255,255,255,0.5);">Inkl. Wimpernfärben · ca. 60 Min.</span>
