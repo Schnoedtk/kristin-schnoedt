@@ -160,6 +160,9 @@
     .ks-cta-btn.outline{background:transparent;border:1px solid rgba(255,255,255,0.5);color:var(--white);}
     .ks-cta-btn.outline:hover{background:rgba(255,255,255,0.12);}
 
+    /* ── PROMISE GRID ── */
+    .ks-promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+
     /* ── FOOTER ── */
     .footer{background:var(--m900);padding:4rem 4rem 2.5rem;}
     .footer-inner{max-width:1200px;margin:0 auto;}
@@ -199,10 +202,11 @@
       .ks-sl-slide{padding:1rem 3.5rem;min-height:300px;}
       .ks-sl-slide img{height:clamp(220px,42vh,360px);}
 
+      .ks-promise-grid{grid-template-columns:1fr;}
       .ks-brand-grid{grid-template-columns:1fr;gap:2.5rem;}
       .ks-brand-logo-inline{height:38px;}
-
       .ks-cta{padding:4rem 1.75rem;}
+
 
       .footer{padding:3rem 1.75rem 2rem;}
       .footer-bottom{flex-direction:column;gap:1rem;text-align:center;}
@@ -451,7 +455,7 @@
   <div class="sec-inner" style="max-width:920px;">
     <div class="sec-eyebrow rv">Mein Versprechen</div>
     <h2 class="sec-h2 rv d1" style="margin-bottom:3rem;">So arbeite ich —<br><em>und warum das zählt</em></h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;" class="rv d2">
+    <div class="ks-promise-grid rv d2">
       <div style="padding:2rem;background:var(--white);border-top:3px solid var(--m500);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--m400);margin-bottom:1rem;line-height:1;">01</div>
         <h3 style="font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m900);margin-bottom:0.75rem;">Keine leeren Versprechen</h3>
