@@ -19,12 +19,24 @@
     .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;transition:padding 0.5s var(--ease),background 0.5s,box-shadow 0.5s;}
     .nav.stuck{padding:1rem 4rem;background:rgba(248,243,245,0.96);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(46,32,40,0.07);}
     .nav.stuck .nav-links a{color:var(--m900)!important;}
-    .nav-links{display:flex;gap:2.5rem;}
+    .nav-links{display:flex;gap:2.5rem;list-style:none;}
     .nav-links a:hover{color:var(--m500)!important;}
     .nav-logo { text-decoration: none; display: flex; align-items: center; }
     .nav-logo .logo-light { display: none; }
     .nav.stuck .nav-logo .logo-dark { display: none; }
     .nav.stuck .nav-logo .logo-light { display: block; }
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .nav-hamburger span{display:block;width:24px;height:1.5px;background:var(--white);transition:background 0.3s;}
+    .nav.stuck .nav-hamburger span{background:var(--m900);}
+    .nav-links a{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,0.75);transition:color 0.3s;}
+    .nav.stuck .nav-links a{color:var(--schiefer);}
+    .nav-btn{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.75rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;}
+    .nav-btn:hover{background:var(--m700);}
+    .nav-gift{font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 1.25rem;border:1px solid rgba(181,129,140,0.5);color:var(--m400);text-decoration:none;border-radius:2px;transition:background 0.3s,color 0.3s,border-color 0.3s;display:flex;align-items:center;gap:0.5rem;}
+    .nav.stuck .nav-gift{border-color:var(--m300);color:var(--m700);}
+    .nav-gift:hover{background:var(--m500);border-color:var(--m500);color:var(--white);}
+    .nav-links-gift-item{display:none;}
+    .nav-links-gift-item a{color:var(--m500)!important;border-top:1px solid var(--m200);padding-top:0.75rem;margin-top:0.25rem;}
 
     /* HERO */
     .hero{position:relative;height:70vh;min-height:560px;background:var(--m900);display:flex;align-items:center;overflow:hidden;}
@@ -167,6 +179,10 @@
     @media(max-width:768px){
       .nav{padding:1.25rem 1.75rem;}
       .nav-links{display:none;}
+      .nav-hamburger{display:flex;}
+      .nav-btn{font-size:0.6rem;padding:0.6rem 1rem;}
+      .nav-gift{display:none;}
+      .nav-links-gift-item{display:list-item;}
       .sec{padding:5rem 1.75rem;}
       .hero-content{padding:4rem 1.75rem 0;}
       .treat-grid-single{grid-template-columns:1fr;}
@@ -183,18 +199,25 @@
 
   <!-- NAV -->
   <nav class="nav" id="mainNav">
-    <a href="index.html" class="nav-logo">
-  <img class="logo-dark" src="Logo%20und%20Farbcodes/Logo_Alabaster_Tiefpflaume.png" alt="Kristin Schnödt" style="height:38px;width:auto;">
-  <img class="logo-light" src="Logo%20und%20Farbcodes/Logo_Tiefpflaume_Alabaster.png" alt="Kristin Schnödt" style="height:38px;width:auto;">
-</a>
-    <div class="nav-links">
-      <a href="behandlungen.html" style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;">Behandlungen</a>
-      <a href="face-yoga.html" style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;">Face Yoga</a>
-      <a href="kristin-schnoedt.html" style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;">Über mich</a>
-      <a href="beauty-news.html" style="font-size:0.68rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.75);text-decoration:none;">Beauty News</a>
-    </div>
-    <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="nav-btn" style="font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.7rem 1.4rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;" target="_blank" rel="noopener">Termin buchen</a>
-  </nav>
+  <a href="index.html" class="nav-logo">
+    <img class="logo-dark" src="Logo%20und%20Farbcodes/Logo_Alabaster_Tiefpflaume.png" alt="Kristin Schnödt" style="height:38px;width:auto;">
+    <img class="logo-light" src="Logo%20und%20Farbcodes/Logo_Tiefpflaume_Alabaster.png" alt="Kristin Schnödt" style="height:38px;width:auto;">
+  </a>
+  <ul class="nav-links">
+    <li><a href="behandlungen.html">Behandlungen</a></li>
+    <li><a href="face-yoga.html">Online-Kurse</a></li>
+    <li><a href="schulungen.html">Schulungen</a></li>
+    <li><a href="kristin-schnoedt.html">Über mich</a></li>
+    <li><a href="beauty-news.html">Beauty News</a></li>
+    <li class="nav-links-gift-item"><a href="https://kristin-schnoedt-kosmetik.belbo.com/gutscheine" target="_blank" rel="noopener">🎁 Gutscheine verschenken</a></li>
+  </ul>
+  <a href="https://kristin-schnoedt-kosmetik.belbo.com/gutscheine" class="nav-gift" target="_blank" rel="noopener">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+    Gutschein
+  </a>
+  <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="nav-btn" target="_blank" rel="noopener">Termin buchen</a>
+  <button class="nav-hamburger" aria-label="Menü" id="navToggle"><span></span><span></span><span></span></button>
+</nav>
 
   <!-- HERO -->
   <section class="hero">
@@ -498,9 +521,22 @@
     }, {threshold:0.12});
     rvEls.forEach(el => rvObs.observe(el));
 
-    /* NAV STICKY */
-    const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => nav.classList.toggle('stuck', window.scrollY > 60));
+    /* NAV STICKY + HAMBURGER */
+    const nav=document.getElementById('mainNav');
+    window.addEventListener('scroll',()=>nav.classList.toggle('stuck',window.scrollY>60),{passive:true});
+    document.getElementById('navToggle').addEventListener('click',function(){
+      const ul=document.querySelector('.nav-links');
+      const open=ul.style.display==='flex';
+      ul.style.display=open?'none':'flex';
+      ul.style.flexDirection=open?'':'column';
+      ul.style.position=open?'':'absolute';
+      ul.style.top=open?'':'100%';
+      ul.style.left=open?'':'0';
+      ul.style.right=open?'':'0';
+      ul.style.background=open?'':'rgba(248,243,245,0.97)';
+      ul.style.padding=open?'':'1rem 1.75rem 1.5rem';
+      ul.style.gap=open?'':'1.25rem';
+    });
 
     /* SMOOTH SCROLL */
     document.querySelectorAll('a[href^="#"]').forEach(a => {
