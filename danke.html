@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vielen Dank – Kristin Schnödt</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/Profil_tiefpflaume.png">
+  <style>
+    :root{--m200:#ECDDE1;--m400:#C49EAA;--m500:#B5818C;--m700:#7A4A58;--m900:#2E2028;--alabaster:#F8F3F5;--schiefer:#696E6B;--white:#fff;--display:'Cormorant Garamond',serif;--ease:cubic-bezier(0.77,0,0.175,1);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Montserrat',sans-serif;background:var(--alabaster);color:var(--m900);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;}
+
+    /* ── HEADER ── */
+    .page-header{padding:2rem 4rem;background:var(--white);border-bottom:1px solid var(--m200);display:flex;justify-content:center;}
+    .page-logo img{height:44px;display:block;}
+
+    /* ── MAIN ── */
+    .main{flex:1;display:flex;align-items:center;justify-content:center;padding:5rem 2rem;}
+    .card{background:var(--white);max-width:860px;width:100%;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--m200);overflow:hidden;}
+
+    /* ── LEFT: TEXT ── */
+    .card-text{padding:4rem;}
+    .check{width:48px;height:48px;border-radius:50%;background:var(--m200);display:flex;align-items:center;justify-content:center;margin-bottom:2rem;}
+    .check svg{width:22px;height:22px;stroke:var(--m700);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+    .eyebrow{font-size:0.62rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--m500);margin-bottom:1.25rem;}
+    .card-h1{font-family:var(--display);font-size:2.4rem;font-weight:300;line-height:1.15;color:var(--m900);margin-bottom:1.5rem;}
+    .card-h1 em{font-style:italic;color:var(--m500);}
+    .card-p{font-size:0.88rem;line-height:1.85;color:var(--schiefer);margin-bottom:2.5rem;}
+
+    /* ── STEPS ── */
+    .steps{display:flex;flex-direction:column;gap:1rem;margin-bottom:2.5rem;}
+    .step{display:flex;align-items:flex-start;gap:1rem;}
+    .step-num{width:28px;height:28px;border-radius:50%;background:var(--m200);display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;color:var(--m700);flex-shrink:0;margin-top:1px;}
+    .step-text{font-size:0.82rem;line-height:1.65;color:var(--schiefer);}
+    .step-text strong{display:block;font-weight:600;color:var(--m900);margin-bottom:0.15rem;font-size:0.8rem;}
+
+    /* ── CTA ── */
+    .card-link{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--m700);text-decoration:none;transition:color 0.3s;}
+    .card-link:hover{color:var(--m500);}
+    .card-link svg{transition:transform 0.3s;}
+    .card-link:hover svg{transform:translateX(4px);}
+
+    /* ── RIGHT: PHOTO ── */
+    .card-photo{position:relative;overflow:hidden;}
+    .card-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+    .card-photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(46,32,40,0.65) 0%,transparent 55%);}
+    .card-quote{position:absolute;bottom:0;left:0;right:0;padding:2rem;}
+    .card-quote-text{font-family:var(--display);font-size:1.2rem;font-weight:300;font-style:italic;color:var(--white);line-height:1.4;margin-bottom:0.5rem;}
+    .card-quote-name{font-size:0.65rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--m400);}
+
+    /* ── FOOTER ── */
+    .page-footer{padding:1.5rem 4rem;background:var(--white);border-top:1px solid var(--m200);display:flex;align-items:center;justify-content:center;gap:2.5rem;}
+    .page-footer a{font-size:0.72rem;color:var(--schiefer);text-decoration:none;transition:color 0.3s;}
+    .page-footer a:hover{color:var(--m700);}
+    .footer-dot{width:3px;height:3px;border-radius:50%;background:var(--m400);}
+
+    /* ── ANIMATIONS ── */
+    @keyframes riseUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+    .card{animation:riseUp 0.8s 0.1s var(--ease) both;}
+
+    /* ── MOBILE ── */
+    @media(max-width:768px){
+      .page-header{padding:1.5rem 1.75rem;}
+      .page-logo img{height:36px;}
+      .main{padding:2.5rem 1.25rem;}
+      .card{grid-template-columns:1fr;}
+      .card-photo{height:280px;order:-1;}
+      .card-text{padding:2.5rem 1.75rem;}
+      .card-h1{font-size:1.9rem;}
+      .page-footer{padding:1.5rem 1.75rem;flex-wrap:wrap;gap:1.25rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <a href="index.html" class="page-logo">
+      <img src="Logo%20und%20Farbcodes/Logo_Tiefpflaume_Alabaster.png" alt="Kristin Schnödt">
+    </a>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+    <div class="card">
+
+      <!-- TEXT -->
+      <div class="card-text">
+        <div class="check">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="eyebrow">Deine Buchung ist eingegangen</div>
+        <h1 class="card-h1">Es hat geklappt —<br><em>schön, dass du dabei bist.</em></h1>
+        <p class="card-p">Ich freue mich sehr, dich auf diesem Weg begleiten zu dürfen. Schau gleich in dein E-Mail-Postfach — dort findest du alle weiteren Informationen.</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <strong>Bestätigungs-E-Mail prüfen</strong>
+              Du erhältst in Kürze eine E-Mail mit deinem Zugang. Bitte auch den Spam-Ordner checken.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <strong>Kurs starten</strong>
+              Über den Link in der E-Mail gelangst du direkt zu deinem Kurs — jederzeit und in deinem eigenen Tempo.
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-text">
+              <strong>Fragen? Ich bin da.</strong>
+              Melde dich gerne per E-Mail oder direkt über WhatsApp — ich antworte persönlich.
+            </div>
+          </div>
+        </div>
+
+        <a href="index.html" class="card-link">
+          Zurück zur Website
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+        </a>
+      </div>
+
+      <!-- PHOTO -->
+      <div class="card-photo">
+        <img src="Bilder/Kristin/Gro%C3%9F%20(DSC_4711)!.jpeg" alt="Kristin Schnödt">
+        <div class="card-photo-overlay"></div>
+        <div class="card-quote">
+          <p class="card-quote-text">„Deine Haut wird sich verändern —<br>ich begleite dich dabei."</p>
+          <p class="card-quote-name">Kristin Schnödt</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <a href="impressum.html">Impressum</a>
+    <div class="footer-dot"></div>
+    <a href="datenschutz.html">Datenschutz</a>
+    <div class="footer-dot"></div>
+    <a href="mailto:info@kristin-schnoedt.de">info@kristin-schnoedt.de</a>
+  </footer>
+
+</body>
+</html>
