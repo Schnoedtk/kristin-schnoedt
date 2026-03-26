@@ -112,6 +112,8 @@
 
     /* 3-COLUMN GRID */
     .treat-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:1rem;}
+    /* 2x2 GRID */
+    .treat-grid-4{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:1rem;}
     .treat-note{font-size:0.78rem;font-style:italic;color:var(--schiefer);margin-top:0.75rem;padding-left:0.5rem;border-left:2px solid var(--m400);}
 
     /* COMBO CARDS */
@@ -204,6 +206,7 @@
       .hero-content{padding:4rem 1.75rem 0;}
       .treat-grid-single{grid-template-columns:1fr;}
       .treat-grid-3{grid-template-columns:1fr;}
+      .treat-grid-4{grid-template-columns:1fr;}
       .cta-sec{padding:5rem 1.75rem;}
       .footer{padding:4rem 1.75rem 2.5rem;}
       .footer-top{grid-template-columns:1fr;gap:2.5rem;}
@@ -300,41 +303,47 @@
     <div class="sec-inner">
       <div class="eyebrow rv">Aufwertungen</div>
       <h2 class="sec-h2 rv d1">Aufwertungen, <em>die mehr bewirken</em></h2>
-      <p class="sec-lead rv d2">Alle folgenden Behandlungen können mit der Klassischen Gesichtsbehandlung kombiniert werden — für individuelle Ergebnisse in einer Sitzung.</p>
-      <div class="treat-grid-3">
+      <p class="sec-lead rv d2">Kombiniere bewährte Techniken für ein Ergebnis, das du spürst — individuell abgestimmt auf deine Haut in einer Sitzung.</p>
+      <div class="treat-grid-4">
 
-        <!-- Gua Sha + Celluma -->
         <div class="treat-card rv d1">
-          <div class="treat-badge-pill basis">Gua Sha + Celluma</div>
-          <h3 class="treat-card-name">Gua Sha mit Celluma</h3>
+          <div class="treat-badge-pill basis">Kombination</div>
+          <h3 class="treat-card-name">Microdermabrasion &amp; Gua Sha oder Buccale Massage</h3>
           <div class="treat-card-meta">
-            <span class="treat-card-price">139 €</span>
+            <span class="treat-card-price">159 €</span>
             <span class="treat-card-dur">75 Minuten</span>
           </div>
-          <p class="treat-card-desc">Die Kombination für spürbare Tiefenwirkung: Gua Sha löst Muskelverspannungen, fördert den Lymphabfluss und bringt sofortige Frische ins Gesicht. Celluma regt parallel die Zellaktivität an, stimuliert die Kollagenproduktion und unterstützt die natürliche Regeneration. Das Ergebnis: ein entspannteres, strahlendes Gesicht — ohne Eingriff, ohne Ausfallzeit.</p>
+          <p class="treat-card-desc">Tiefe Reinigung durch Microdermabrasion trifft auf die entspannende Wirkung von Gua Sha oder Buccaler Massage — für ein gleichmäßigeres Hautbild und spürbare Leichtigkeit im Gesicht.</p>
         </div>
 
-        <!-- Biomicroneedling -->
-        <div class="treat-card rv d3">
+        <div class="treat-card rv d2">
           <div class="treat-badge-pill empfohlen" style="background:var(--m500);">Spezialbehandlung</div>
-          <h3 class="treat-card-name">Biomicroneedling</h3>
+          <h3 class="treat-card-name">Bio-Microneedling</h3>
           <div class="treat-card-meta">
             <span class="treat-card-price">169 €</span>
             <span class="treat-card-dur">60 Minuten</span>
           </div>
           <p class="treat-card-desc">Modernste Methode zur Kollagenstimulation — ohne Blut, ohne Verletzung. Mikrofeine Impulse regen die natürliche Zellregeneration an. Nicht kombinierbar mit anderen Behandlungen.</p>
-          <p style="font-size:0.75rem;font-style:italic;color:var(--m500);margin-top:0.75rem;">✦ Celluma Lichttherapie als Ergänzung möglich — Kombination auf Anfrage.</p>
-          <p class="treat-note">Kann mit Celluma Lichttherapie kombiniert werden.</p>
         </div>
 
         <div class="treat-card rv d3">
-          <div class="treat-badge-pill empfohlen" style="background:var(--m500);">Tiefenwirkung</div>
-          <h3 class="treat-card-name">Buccale Massage mit Celluma</h3>
+          <div class="treat-badge-pill basis">Kombination</div>
+          <h3 class="treat-card-name">Klassische Behandlung &amp; Gua Sha oder Buccale Massage</h3>
           <div class="treat-card-meta">
-            <span class="treat-card-price">179 €</span>
-            <span class="treat-card-dur">90 Minuten</span>
+            <span class="treat-card-price">148 €</span>
+            <span class="treat-card-dur">75 Minuten</span>
           </div>
-          <p class="treat-card-desc">Die tiefste Entspannung für Gesicht und Kiefer — kombiniert mit regenerativer Lichttherapie. Buccale Massage löst innermuskuläre Verspannungen, Celluma aktiviert die Zellregeneration für sichtbare Frische.</p>
+          <p class="treat-card-desc">Die vollständige klassische Gesichtsbehandlung ergänzt um Gua Sha oder Buccale Massage — für tiefe Entspannung, verbesserten Lymphabfluss und sichtbar frischeres Aussehen.</p>
+        </div>
+
+        <div class="treat-card rv d4">
+          <div class="treat-badge-pill basis">Kombination</div>
+          <h3 class="treat-card-name">Klassische Behandlung &amp; Cupping</h3>
+          <div class="treat-card-meta">
+            <span class="treat-card-price">114 €</span>
+            <span class="treat-card-dur">60 Minuten</span>
+          </div>
+          <p class="treat-card-desc">Facial Cupping aktiviert die Durchblutung, löst Stagnation und schenkt dem Gesicht sofortige Frische — eingebettet in die klassische Behandlung als ganzheitliche Pflegesitzung.</p>
         </div>
 
       </div>
@@ -346,16 +355,49 @@
     <div class="sec-inner">
       <div class="eyebrow rv">Lichttherapie</div>
       <h2 class="sec-h2 rv d1">Celluma Lichttherapie, <em>Licht das von innen wirkt</em></h2>
-      <div class="celluma-wrap rv d2">
-        <div class="celluma-card">
-          <div class="treat-badge-pill basis" style="margin-bottom:1.25rem;">Celluma Einzelbehandlung</div>
+      <p class="sec-lead rv d2">Celluma nutzt photobiomodulative Lichtenergie zur Anregung der Zellaktivität — reduziert Entzündungen, fördert Kollagen und verbessert das Hautbild. Pur oder als kraftvolle Ergänzung.</p>
+      <div class="treat-grid-4">
+
+        <div class="treat-card rv d1">
+          <div class="treat-badge-pill empfohlen" style="background:var(--m500);">Tiefenwirkung</div>
+          <h3 class="treat-card-name">Buccale Massage &amp; Celluma</h3>
+          <div class="treat-card-meta">
+            <span class="treat-card-price">169 €</span>
+            <span class="treat-card-dur">75 Minuten</span>
+          </div>
+          <p class="treat-card-desc">Die tiefste Entspannung für Gesicht und Kiefer — kombiniert mit regenerativer Lichttherapie. Buccale Massage löst innermuskuläre Verspannungen, Celluma aktiviert die Zellregeneration für sichtbare Frische.</p>
+        </div>
+
+        <div class="treat-card rv d2">
+          <div class="treat-badge-pill basis">Kombination</div>
+          <h3 class="treat-card-name">Gua Sha &amp; Celluma</h3>
+          <div class="treat-card-meta">
+            <span class="treat-card-price">169 €</span>
+            <span class="treat-card-dur">75 Minuten</span>
+          </div>
+          <p class="treat-card-desc">Gua Sha löst Muskelverspannungen und fördert den Lymphabfluss — Celluma verstärkt die Wirkung durch gezielte Lichtreize. Ein sofort sichtbares, entspanntes und strahlendes Ergebnis.</p>
+        </div>
+
+        <div class="treat-card rv d3">
+          <div class="treat-badge-pill empfohlen" style="background:var(--m500);">Premium</div>
+          <h3 class="treat-card-name">Microdermabrasion, Gua Sha oder Buccale Massage &amp; Celluma</h3>
+          <div class="treat-card-meta">
+            <span class="treat-card-price">179 €</span>
+            <span class="treat-card-dur">90 Minuten</span>
+          </div>
+          <p class="treat-card-desc">Das umfassendste Behandlungspaket: Microdermabrasion verfeinert die Hautstruktur, Gua Sha oder Buccale Massage löst Spannungen — und Celluma versiegelt das Ergebnis mit regenerativem Licht.</p>
+        </div>
+
+        <div class="treat-card rv d4">
+          <div class="treat-badge-pill basis">Einzelbehandlung</div>
           <h3 class="treat-card-name">Celluma Einzelbehandlung</h3>
           <div class="treat-card-meta">
             <span class="treat-card-price">59 €</span>
             <span class="treat-card-dur">45 Minuten</span>
           </div>
-          <p class="treat-card-desc">Celluma nutzt photobiomodulative Lichtenergie zur Anregung der Zellaktivität. Die Behandlung reduziert Entzündungen, fördert die Kollagenproduktion und verbessert das Hautbild — ohne Eingriff, ohne Ausfallzeit.</p>
+          <p class="treat-card-desc">Pur und fokussiert: Celluma-Licht pur — für gezielte Regeneration, Entzündungshemmung und Kollagenaufbau ohne weitere Behandlungsschritte.</p>
         </div>
+
       </div>
     </div>
   </section>
@@ -450,7 +492,7 @@
         <p style="font-size:0.82rem;line-height:1.75;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;">Natürlicher Schwung, mehr Volumen, ein offenerer Blick — inklusive Wimpernfärben. Das Ergebnis hält 6 bis 8 Wochen.</p>
         <div style="display:flex;justify-content:space-between;align-items:center;padding:1rem 0;border-top:1px solid rgba(181,129,140,0.2);border-bottom:1px solid rgba(181,129,140,0.2);margin-bottom:1.5rem;">
           <span style="font-size:0.78rem;color:rgba(255,255,255,0.5);">Inkl. Wimpernfärben · ca. 60 Min.</span>
-          <span style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--white);">75 €</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--white);white-space:nowrap;">75 €</span>
         </div>
         <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" style="display:block;text-align:center;font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.9rem 1.5rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;" target="_blank" rel="noopener">Termin buchen</a>
         <a href="blog-koreanisches-wimpernlifting.html" style="display:block;text-align:center;font-size:0.68rem;color:var(--m400);text-decoration:none;margin-top:0.75rem;letter-spacing:0.06em;">Mehr erfahren →</a>
