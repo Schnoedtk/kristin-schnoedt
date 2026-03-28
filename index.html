@@ -115,6 +115,19 @@
     .btn-ghost:hover { color: var(--white); }
     .btn-ghost svg { transition: transform 0.3s; }
     .btn-ghost:hover svg { transform: translateX(5px); }
+
+    /* ---- LEAD MODAL ---- */
+    .lead-modal-overlay { position: fixed; inset: 0; background: rgba(46,32,40,0.88); backdrop-filter: blur(8px); z-index: 9000; display: flex; align-items: center; justify-content: center; padding: 2rem; opacity: 0; visibility: hidden; transition: opacity 0.35s var(--ease), visibility 0.35s; }
+    .lead-modal-overlay.open { opacity: 1; visibility: visible; }
+    .lead-modal { background: var(--m900); border: 1px solid rgba(181,129,140,0.22); max-width: 460px; width: 100%; padding: 3rem 2.5rem 2.5rem; position: relative; transform: translateY(28px); transition: transform 0.4s var(--ease); }
+    .lead-modal-overlay.open .lead-modal { transform: translateY(0); }
+    .lead-modal-close { position: absolute; top: 1.1rem; right: 1.25rem; background: none; border: none; cursor: pointer; color: rgba(255,255,255,0.35); font-size: 1.3rem; line-height: 1; padding: 0.25rem; transition: color 0.3s; }
+    .lead-modal-close:hover { color: var(--white); }
+    .lead-modal-eyebrow { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--m400); margin-bottom: 1rem; }
+    .lead-modal-h { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.7rem, 4vw, 2.3rem); font-weight: 300; line-height: 1.2; color: var(--white); margin-bottom: 0.75rem; }
+    .lead-modal-h em { font-style: italic; color: var(--m400); }
+    .lead-modal-sub { font-size: 0.82rem; line-height: 1.72; color: rgba(255,255,255,0.5); margin-bottom: 2rem; }
+    .lead-modal-note { font-size: 0.62rem; color: rgba(255,255,255,0.22); margin-top: 1.25rem; line-height: 1.6; text-align: center; }
     .btn-outline { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; padding: 1.1rem 2.4rem; border: 1px solid rgba(181,129,140,0.4); color: var(--m300); text-decoration: none; border-radius: 2px; transition: background 0.4s, border-color 0.4s, color 0.4s; }
     .btn-outline:hover { background: var(--m500); border-color: var(--m500); color: var(--white); }
     .btn-white { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 1.1rem 2.5rem; background: var(--white); color: var(--m700); text-decoration: none; border-radius: 2px; transition: background 0.4s, color 0.4s; }
@@ -406,6 +419,13 @@
     .philosophy-sec { background: var(--white); padding: 6rem 4rem; border-top: 1px solid var(--m200); }
     .philosophy-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 
+    /* ---- PAIN POINTS ---- */
+    .pain-sec { background: var(--white); padding: 5rem 4rem; border-top: 1px solid var(--m200); }
+    .pain-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+    .pain-list { max-width: 620px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.1rem; }
+    .pain-item { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; line-height: 1.7; color: var(--m900); text-align: left; padding: 1rem 1.5rem; border-left: 2px solid var(--m400); background: var(--alabaster); }
+    .pain-close { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 500; color: var(--m700); margin-top: 2.5rem; }
+
     @media (max-width: 768px) {
       .nav { padding: 1rem 1.75rem !important; background: rgba(248,243,245,0.97) !important; backdrop-filter: blur(14px) !important; box-shadow: 0 1px 0 rgba(46,32,40,0.07) !important; }
       .nav-logo .logo-dark { display: none !important; }
@@ -464,6 +484,9 @@
       .purv-pillars { grid-template-columns: 1fr; }
       .treat-badge { width: 110px; height: 110px; right: -1rem; bottom: -1rem; }
       .partner-h2 { font-size: clamp(1.75rem, 7.5vw, 2.6rem); }
+      .pain-sec { padding: 3.5rem 1.75rem; }
+      .pain-item { font-size: 1.05rem; padding: 0.85rem 1.1rem; }
+      .pain-close { font-size: 1.6rem; margin-top: 2rem; }
     }
   </style>
 </head>
@@ -516,14 +539,14 @@
     <div class="hero-content">
       <div class="hero-eyebrow">Spezialistin für natürliche Hautverjüngung</div>
       <h1 class="hero-h1">Ich bin gegen Botox<br>und zeige dir, <em>was wirklich wirkt.</em></h1>
-      <p class="hero-sub">Behandlungen, Face Yoga, Cupping und Clean Beauty — für Frauen, die ihre natürliche Strahlkraft zurückwollen. Ohne Eingriffe, ohne Kompromisse.</p>
+      <p class="hero-sub">Für Frauen ab 35, die ihrem Gesicht vertrauen — statt es zu verändern. Behandlungen, Face Yoga, Cupping und Clean Beauty, die wirklich wirken.</p>
       <div class="hero-actions">
-        <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="btn-primary" target="_blank" rel="noopener">
-          <span>Jetzt Termin buchen</span>
+        <button class="btn-primary" style="background:var(--m500);border:none;cursor:pointer;" onclick="openLeadModal()">
+          <span>Gratis Lifting-Video holen</span>
           <svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
-        </a>
-        <a href="#kurse" class="btn-ghost">
-          Kurse entdecken
+        </button>
+        <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="btn-ghost" target="_blank" rel="noopener">
+          Termin buchen
           <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
         </a>
       </div>
@@ -538,24 +561,6 @@
     </div>
   </section>
 
-  <!-- FRÜHJAHRS BANNER -->
-  <section style="background:var(--m200);padding:2.5rem 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
-    <div style="display:flex;align-items:center;gap:1.5rem;">
-      <span style="font-size:1.5rem;">🌿</span>
-      <div>
-        <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--m700);margin-bottom:0.3rem;">Frühjahrs-Start 2026</div>
-        <p style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--m900);line-height:1.3;margin:0;">Der perfekte Moment, neu anzufangen — <em>passend für jede Morgenroutine.</em></p>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
-      <span style="font-size:0.68rem;color:var(--schiefer);letter-spacing:0.06em;">Angebot gültig bis 30. April 2026</span>
-      <a href="https://alfima.com/kristin_schnoedt/face-yoga-schnupperkurs" class="btn-primary" style="white-space:nowrap;justify-content:center;" target="_blank" rel="noopener">
-        <span>Schnupperkurs starten</span>
-        <svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
-      </a>
-    </div>
-  </section>
-
   <!-- TRUST BAR -->
   <div class="trust">
     <div class="trust-item"><div class="trust-n" data-count="18" data-suffix="+">18+</div><div class="trust-l">Jahre Erfahrung</div></div>
@@ -565,6 +570,8 @@
     <div class="trust-item"><div class="trust-n" data-count="10">10</div><div class="trust-l">Premium Treatments</div></div>
     <div class="trust-div"></div>
     <div class="trust-item"><div class="trust-n" data-count="0">0</div><div class="trust-l">Invasive Eingriffe</div></div>
+    <div class="trust-div"></div>
+    <div class="trust-item"><div class="trust-n" style="font-size:2rem;">4,9★</div><div class="trust-l">Google<br>Bewertung</div></div>
   </div>
 
   <!-- MISSION -->
@@ -576,15 +583,29 @@
     </div>
   </section>
 
+  <!-- PAIN POINTS -->
+  <section class="pain-sec">
+    <div class="pain-inner">
+      <div class="eyebrow rv" style="justify-content:center;margin-bottom:2rem;">Erkennst du dich wieder?</div>
+      <div class="pain-list rv d1">
+        <p class="pain-item">→ Du investierst in Pflege — und siehst kaum Unterschied.</p>
+        <p class="pain-item">→ Du wirkst auf Fotos müder als du dich fühlst.</p>
+        <p class="pain-item">→ Du überlegst, ob Botox vielleicht doch eine Option wäre — aber eigentlich willst du das nicht.</p>
+        <p class="pain-item">→ Du weißt, dass da mehr geht. Du weißt nur nicht wie.</p>
+      </div>
+      <p class="pain-close rv d2">Dann bist du hier richtig.</p>
+    </div>
+  </section>
+
   <!-- SERVICES -->
   <section class="sec services" id="behandlungen">
     <div class="sec-inner">
       <div class="services-head">
         <div>
-          <div class="eyebrow rv">Was ich für dich tue</div>
+          <div class="eyebrow rv">Das tue ich für dich</div>
           <h2 class="sec-h2 rv d1">Vier Wege zu deiner<br><em>strahlendsten Version</em></h2>
         </div>
-        <p class="services-intro rv">Alle Bereiche meiner Arbeit verbindet eine Überzeugung: Echte Schönheit braucht keine Eingriffe. Sie braucht das richtige Wissen, die richtigen Techniken — und eine Frau, die bereit ist, sich selbst etwas Gutes zu tun.</p>
+        <p class="services-intro rv">Du fühlst dich innen jung und lebendig — aber dein Spiegelbild hält nicht mehr Schritt. Du hast Produkte ausprobiert, Tipps befolgt, und trotzdem fragst du dich: Was wirkt wirklich, ohne Eingriffe, ohne Kompromisse? Genau dafür habe ich in 18 Jahren vier Wege entwickelt — für Frauen, die natürliche Ergebnisse wollen, die bleiben.</p>
       </div>
       <div class="services-grid">
         <div class="svc rv">
@@ -739,7 +760,7 @@
   </section>
 
   <!-- ONLINE COURSES -->
-  <section class="sec courses" id="kurse">
+  <section class="sec courses" id="kurse" style="padding-bottom:3rem;">
     <div class="sec-inner">
       <div class="courses-head">
         <div class="eyebrow rv" style="justify-content:center;">Online-Programme</div>
@@ -816,9 +837,27 @@
         </div>
       </div>
       <div class="rv d3" style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--m200);">
-        <p style="font-size:0.82rem;color:var(--schiefer);line-height:1.75;margin-bottom:1rem;">Noch unsicher? <strong style="color:var(--m700);">Starte mit dem Gratis-Video</strong> — 6 Minuten, keine Anmeldung, sofort spürbar.</p>
-        <a href="#lead-magnet" style="font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--m500);text-decoration:none;border-bottom:1px solid var(--m400);padding-bottom:1px;">→ Zum Gratis-Lifting-Video scrollen</a>
+        <p style="font-size:0.82rem;color:var(--schiefer);line-height:1.75;margin-bottom:1rem;">Noch unsicher? <strong style="color:var(--m700);">Starte mit dem Gratis-Video</strong> — 6 Minuten, keine Vorkenntnisse, sofort spürbar.</p>
+        <button onclick="openLeadModal()" style="font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--m500);background:none;border:none;border-bottom:1px solid var(--m400);padding-bottom:1px;cursor:pointer;">→ Gratis Lifting-Video holen</button>
       </div>
+    </div>
+  </section>
+
+  <!-- FRÜHJAHRS BANNER -->
+  <section style="background:var(--m200);padding:2.5rem 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:1.5rem;">
+      <span style="font-size:1.5rem;">🌿</span>
+      <div>
+        <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--m700);margin-bottom:0.3rem;">Frühjahrs-Start 2026</div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--m900);line-height:1.3;margin:0;">Der perfekte Moment, neu anzufangen — <em>passend für jede Morgenroutine.</em></p>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
+      <span style="font-size:0.68rem;color:var(--schiefer);letter-spacing:0.06em;">Angebot gültig bis 30. April 2026</span>
+      <a href="https://alfima.com/kristin_schnoedt/face-yoga-schnupperkurs" class="btn-primary" style="white-space:nowrap;justify-content:center;" target="_blank" rel="noopener">
+        <span>Schnupperkurs starten</span>
+        <svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+      </a>
     </div>
   </section>
 
@@ -1066,7 +1105,10 @@
       <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--m400);margin-bottom:1.5rem;">Gratis für dich</div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.2;color:var(--white);margin-bottom:1rem;">6-Minuten Lifting-Workout<br><em>sofort ausprobieren</em></h2>
       <p style="font-size:0.88rem;line-height:1.75;color:rgba(255,255,255,0.55);margin-bottom:2.5rem;">Trag deine E-Mail ein und ich schicke dir das Video direkt zu. Keine Vorkenntnisse nötig — nur 6 Minuten für sichtbare Frische.</p>
-      <div class="ml-embedded" data-form="QXPpcZ"></div>
+      <button class="btn-primary" style="display:inline-flex;align-items:center;gap:.8rem;" onclick="openLeadModal()">
+        <span>Jetzt Video holen</span>
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+      </button>
       <p style="font-size:0.65rem;color:rgba(255,255,255,0.25);margin-top:1.5rem;line-height:1.6;">Kein Spam. Keine Weitergabe. Jederzeit abmeldbar.</p>
     </div>
   </section>
@@ -1318,6 +1360,33 @@
         goTo(0);
       });
     })();
+    /* LEAD MODAL */
+    function openLeadModal() {
+      document.getElementById('leadModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLeadModal() {
+      document.getElementById('leadModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('leadModal').addEventListener('click', function(e) {
+      if (e.target === this) closeLeadModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLeadModal();
+    });
   </script>
+
+  <!-- LEAD MAGNET MODAL -->
+  <div class="lead-modal-overlay" id="leadModal" role="dialog" aria-modal="true" aria-label="Gratis Lifting-Video">
+    <div class="lead-modal">
+      <button class="lead-modal-close" onclick="closeLeadModal()" aria-label="Schließen">✕</button>
+      <div class="lead-modal-eyebrow">Gratis für dich</div>
+      <h2 class="lead-modal-h">6-Minuten<br><em>Lifting-Workout</em></h2>
+      <p class="lead-modal-sub">Trag deinen Namen und deine E-Mail ein — ich schicke dir das Video direkt zu. Keine Vorkenntnisse nötig, nur 6 Minuten für sichtbare Frische.</p>
+      <div class="ml-embedded" data-form="QXPpcZ"></div>
+      <p class="lead-modal-note">Kein Spam. Keine Weitergabe. Jederzeit abmeldbar.</p>
+    </div>
+  </div>
 </body>
 </html>
