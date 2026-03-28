@@ -231,6 +231,19 @@
     @media(max-width:480px){
       .fy-kurse-grid{grid-template-columns:1fr;}
     }
+
+    /* ── LEAD MODAL ── */
+    .lead-modal-overlay{position:fixed;inset:0;background:rgba(46,32,40,0.88);backdrop-filter:blur(8px);z-index:9000;display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;visibility:hidden;transition:opacity 0.35s var(--ease),visibility 0.35s;}
+    .lead-modal-overlay.open{opacity:1;visibility:visible;}
+    .lead-modal{background:var(--m900);border:1px solid rgba(181,129,140,0.22);max-width:460px;width:100%;padding:3rem 2.5rem 2.5rem;position:relative;transform:translateY(28px);transition:transform 0.4s var(--ease);}
+    .lead-modal-overlay.open .lead-modal{transform:translateY(0);}
+    .lead-modal-close{position:absolute;top:1.1rem;right:1.25rem;background:none;border:none;cursor:pointer;color:rgba(255,255,255,0.35);font-size:1.3rem;line-height:1;padding:0.25rem;transition:color 0.3s;}
+    .lead-modal-close:hover{color:var(--white);}
+    .lead-modal-eyebrow{font-size:0.6rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--m400);margin-bottom:1rem;}
+    .lead-modal-h{font-family:var(--display);font-size:clamp(1.7rem,4vw,2.3rem);font-weight:300;line-height:1.2;color:var(--white);margin-bottom:0.75rem;}
+    .lead-modal-h em{font-style:italic;color:var(--m400);}
+    .lead-modal-sub{font-size:0.82rem;line-height:1.72;color:rgba(255,255,255,0.5);margin-bottom:2rem;}
+    .lead-modal-note{font-size:0.62rem;color:rgba(255,255,255,0.22);margin-top:1.25rem;line-height:1.6;text-align:center;}
   </style>
   <!-- MailerLite Universal -->
   <script>(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account','1097175');</script>
@@ -262,10 +275,10 @@
       <img src="Bilder/Online-Programme/4-Beauties.jpeg" alt="Face Yoga mit Kristin Schnödt">
     </div>
     <div class="fy-hero-content">
-      <div class="fy-eyebrow rv d1">Natürliche Gesichtsverjüngung</div>
-      <h1 class="fy-h1 rv d2">Dein Gesicht kann mehr,<br><em>als du denkst.</em></h1>
-      <p class="fy-hero-sub rv d3">Dein Gesicht verändert sich täglich. Die Frage ist nur: in welche Richtung. Face Yoga und Cupping sind die wirksamste Methode, um Falten auf natürlichem Weg zu reduzieren, Konturen zu straffen und dauerhaftes Strahlen zu entwickeln — ohne Nadeln, ohne Botox.</p>
-      <a href="#kurse" class="fy-hero-cta rv d4">Jetzt Schnupperkurs starten</a>
+      <div class="fy-eyebrow rv d1">Face Yoga &amp; Cupping · Online-Kurse</div>
+      <h1 class="fy-h1 rv d2">Falten reduzieren. Konturen straffen.<br><em>Ohne Botox.</em></h1>
+      <p class="fy-hero-sub rv d3">In 10 Minuten täglich zu sichtbarer Veränderung — mit Face Yoga und Cupping, entwickelt von einer Kosmetikerin mit 18 Jahren Praxis. Keine Vorkenntnisse nötig. Erste Ergebnisse bereits nach der ersten Einheit spürbar.</p>
+      <a href="#kurse" class="fy-hero-cta rv d4">Jetzt Schnupperkurs starten — ab 29 €</a>
     </div>
   </section>
 
@@ -415,19 +428,19 @@
         <div class="fy-kurs-card rv d1">
           <span class="fy-kurs-badge">Premium</span>
           <h3 class="fy-kurs-title">Göttinnen-<br>Booster</h3>
-          <p class="fy-kurs-desc">Die intensive 1:1-Begleitung für maximale Transformation. Individuell, persönlich, ganz auf dich zugeschnitten.</p>
+          <p class="fy-kurs-desc">Deine persönliche Transformation mit Kristin — individueller Trainingsplan, direktes Feedback auf deine Technik und eine Begleitung, die sich ganz nach deiner Haut und deinen Zielen richtet.</p>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-top:auto;">
-            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Persönliche 1:1-Begleitung</li>
-            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Individueller Trainingsplan</li>
-            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Direkter Zugang zu Kristin</li>
-            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Maximale Ergebnisse</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>1:1-Video-Sessions direkt mit Kristin</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Trainingsplan für deine Haut & Ziele</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Direktes Feedback auf Technik & Routine</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Begleitung bis zu deinem Ergebnis</li>
           </ul>
           <div class="fy-kurs-foot">
             <div class="fy-kurs-price-row">
               <span class="fy-kurs-price">998 €</span>
               <span class="fy-kurs-dur">einmalig</span>
             </div>
-            <a href="https://wa.me/4915757202153" class="fy-kurs-btn" target="_blank" rel="noopener">Persönlich anfragen</a>
+            <a href="goettinnen-booster.html" class="fy-kurs-btn">Alle Details ansehen</a>
           </div>
         </div>
 
@@ -435,11 +448,11 @@
         <div class="fy-kurs-card rv d2">
           <span class="fy-kurs-badge highlight">Beliebt</span>
           <h3 class="fy-kurs-title">Göttinnen-<br>Glow</h3>
-          <p class="fy-kurs-desc">Das vollständige Programm für deine Transformation. Face Yoga, Cupping, Ernährung, Live Calls — alles in einem.</p>
+          <p class="fy-kurs-desc">Das vollständige Programm für straffe Konturen, weniger Falten und dauerhafte Frische — Face Yoga, Cupping, Ernährung und Live-Begleitung in einem.</p>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-top:auto;">
-            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Bei bis zu 6 Live Calls dabei sein</li>
-            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Community und Austausch</li>
-            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Ganzheitliches Programm</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>6 Live Calls mit Kristin</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Face Yoga, Cupping & Ernährung</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Community & Austausch mit anderen Frauen</li>
             <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Lebenslanger Zugriff</li>
           </ul>
           <div class="fy-kurs-foot">
@@ -455,11 +468,11 @@
         <div class="fy-kurs-card rv d3">
           <span class="fy-kurs-badge">Technik-Kurs</span>
           <h3 class="fy-kurs-title">Cupping<br>Kurs</h3>
-          <p class="fy-kurs-desc">Gesichtscupping für straffe Konturen, Lymphdrainage und sichtbare Frische — lerne die Technik von Grund auf.</p>
+          <p class="fy-kurs-desc">Lerne Gesichtscupping von Grund auf — straffe Konturen, aktivierte Lymphdrainage und sichtbare Frische bereits nach der ersten Anwendung.</p>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-top:auto;">
-            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Schritt-für-Schritt Anleitung</li>
-            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Professionelle Cupping-Technik</li>
-            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Sofortige Ergebnisse sichtbar</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Schritt-für-Schritt Videoanleitung</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Lymphdrainage & Konturenstraffung</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Ergebnisse ab der ersten Einheit sichtbar</li>
             <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Lebenslanger Zugriff</li>
           </ul>
           <div class="fy-kurs-foot">
@@ -475,11 +488,11 @@
         <div class="fy-kurs-card rv d4">
           <span class="fy-kurs-badge">Einstieg</span>
           <h3 class="fy-kurs-title">Face Yoga<br>Schnupperkurs</h3>
-          <p class="fy-kurs-desc">Dein erster Schritt — die wichtigsten Übungen, sofort anwendbar. Spürbar nach der ersten Einheit.</p>
+          <p class="fy-kurs-desc">Erlebe in einer Einheit, was Face Yoga kann — die wirkungsvollsten Übungen für sofort spürbare Frische. Keine Vorkenntnisse nötig.</p>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-top:auto;">
-            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Sofortiger Online-Zugang</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Sofortiger Online-Zugang nach Kauf</li>
             <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Video-geführte Übungsroutine</li>
-            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Für absolute Einsteigerinnen</li>
+            <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Keine Vorkenntnisse nötig</li>
             <li style="font-size:0.78rem;color:var(--schiefer);display:flex;gap:0.5rem;align-items:flex-start;"><span style="color:var(--m500);flex-shrink:0;">·</span>Lebenslanger Zugriff</li>
           </ul>
           <div class="fy-kurs-foot">
@@ -494,6 +507,18 @@
       </div>
     </div>
   </section>
+
+  <!-- ── GRATIS VIDEO BRIDGE ── -->
+  <div style="background:var(--m200);padding:3.5rem 4rem;text-align:center;position:relative;overflow:hidden;">
+    <div style="position:relative;z-index:1;">
+      <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--m700);margin-bottom:0.85rem;">Noch nicht sicher?</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:300;color:var(--m900);line-height:1.3;margin-bottom:1.5rem;">Starte mit dem <em style="font-style:italic;color:var(--m700);">Gratis-Video</em> — 6 Minuten, sofort spürbar.</p>
+      <button onclick="openLeadModal()" style="display:inline-flex;align-items:center;gap:0.7rem;font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.9rem 2rem;background:var(--m500);color:var(--white);border:none;border-radius:2px;cursor:pointer;transition:background 0.3s;">
+        Gratis Lifting-Video holen
+        <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+      </button>
+    </div>
+  </div>
 
   <!-- ── OFFLINE KURSE ── -->
   <section class="fy-offline sec" id="offline-kurse">
@@ -545,7 +570,7 @@
       <div class="fy-testi-intro">
         <div class="sec-eyebrow rv d1">Erfahrungen</div>
         <h2 class="sec-h2 rv d2">Was Frauen über ihre<br><em>Ergebnisse sagen</em></h2>
-        <p class="sec-lead rv d3" style="margin:0 auto;text-align:center;">Echte Stimmen von Frauen, die Face Yoga<br>täglich in ihr Leben integriert haben.</p>
+        <p class="sec-lead rv d3" style="margin:0 auto;text-align:center;">Echte Ergebnisse. Echte Frauen.<br>Was sie nach wenigen Wochen berichten.</p>
       </div>
       <div class="fy-testi-grid">
 
@@ -557,8 +582,8 @@
             <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p class="fy-testi-quote">„Ich fühle mich bei ihr nie unter Druck gesetzt."</p>
-          <p class="fy-testi-text">Ich habe das starke Gefühl, hier wirklich nachhaltige und wertvolle Dinge für meine tägliche und zukünftige Gesichtspflege zu lernen – weit über eine kurze Begleitung hinaus. Besonders schätze ich Kristins optimistische und lustige Art. Ich fühle mich bei ihr nie unter Druck gesetzt, nie als würde ich etwas falsch machen oder müsste schon weiter oder besser sein.</p>
+          <p class="fy-testi-quote">„Hier lerne ich wirklich nachhaltige Dinge für meine Gesichtspflege — weit über eine kurze Begleitung hinaus."</p>
+          <p class="fy-testi-text">Besonders schätze ich Kristins optimistische und lustige Art. Ich fühle mich bei ihr nie unter Druck gesetzt, nie als würde ich etwas falsch machen oder müsste schon weiter oder besser sein. Ein Gefühl, das mich motiviert dranzubleiben.</p>
           <div class="fy-testi-author">
             <img class="fy-testi-photo" src="Bilder/Kundinnen/Stephanie.H.png" alt="Stephanie H.">
             <div>
@@ -576,8 +601,8 @@
             <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p class="fy-testi-quote">„Das Beste: Es kostet keine Zeit. Ich mache es beim Kaffee — und mein Gesicht sieht frischer aus als seit Jahren."</p>
-          <p class="fy-testi-text">Kristin erklärt so verständlich, warum jede Übung wirkt. Das hat mir geholfen, am Ball zu bleiben. Keine Magie — einfach Konsequenz. Meine Lider wirken weniger schwer und das Oval ist deutlich straffer.</p>
+          <p class="fy-testi-quote">„Meine Lider wirken weniger schwer und das Oval ist deutlich straffer."</p>
+          <p class="fy-testi-text">Das Beste: Es kostet keine Zeit. Ich mache es beim Kaffee — und mein Gesicht sieht frischer aus als seit Jahren. Kristin erklärt so verständlich, warum jede Übung wirkt. Das hat mir geholfen, am Ball zu bleiben. Keine Magie — einfach Konsequenz.</p>
           <div class="fy-testi-author">
             <img class="fy-testi-photo" src="Bilder/Kundinnen/Manu.D.png" alt="Manu D.">
             <div>
@@ -595,8 +620,8 @@
             <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <svg class="fy-testi-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
-          <p class="fy-testi-quote">„Ich bin absolut begeistert und unfassbar zufrieden."</p>
-          <p class="fy-testi-text">Mein Ziel war es, wieder mehr Frische, Festigkeit und ein strahlendes Aussehen für mein Gesicht zu bekommen. Ich kann nur sagen: Ich bin absolut begeistert und unfassbar zufrieden mit den Inhalten, die Kristin in ihrem Programm liefert! Es ist wirklich unglaublich, wie viel Wissen und wertvolle Tools man hier an die Hand bekommt.</p>
+          <p class="fy-testi-quote">„Ich wollte Frische, Festigkeit und ein strahlendes Aussehen zurück. Ich kann nur sagen: absolut begeistert."</p>
+          <p class="fy-testi-text">Es ist wirklich unglaublich, wie viel Wissen und wertvolle Tools man hier an die Hand bekommt. Kristin liefert in ihrem Programm weit mehr, als ich erwartet hatte — und ich bin unfassbar zufrieden mit dem, was ich gelernt habe und täglich anwenden kann.</p>
           <div class="fy-testi-author">
             <img class="fy-testi-photo" src="Bilder/Kundinnen/Miriam.L.png" alt="Miriam L.">
             <div>
@@ -617,22 +642,6 @@
     <a href="https://alfima.com/kristin_schnoedt/face-yoga-schnupperkurs" class="fy-strip-btn rv d3" target="_blank" rel="noopener">Zum Schnupperkurs</a>
   </section>
 
-  <!-- LEAD MAGNET: Gratis-Video gegen E-Mail -->
-  <section style="background:var(--m900);padding:7rem 4rem;text-align:center;position:relative;overflow:hidden;">
-    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;border:1px solid rgba(181,129,140,0.08);pointer-events:none;"></div>
-    <div style="position:relative;z-index:1;max-width:600px;margin:0 auto;">
-      <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--m400);margin-bottom:1.5rem;">Gratis für dich</div>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.2;color:var(--white);margin-bottom:1rem;">6-Minuten Lifting-Workout<br><em>sofort ausprobieren</em></h2>
-      <p style="font-size:0.88rem;line-height:1.75;color:rgba(255,255,255,0.55);margin-bottom:2.5rem;">Trag deine E-Mail ein und ich schicke dir das Video direkt zu. Keine Vorkenntnisse nötig — nur 6 Minuten für sichtbare Frische.</p>
-
-      <!-- MailerLite Embedded Form -->
-      <div style="max-width:480px;margin:0 auto;">
-        <div class="ml-embedded" data-form="QXPpcZ"></div>
-      </div>
-
-      <p style="font-size:0.65rem;color:rgba(255,255,255,0.25);margin-top:1.5rem;line-height:1.6;">Kein Spam. Keine Weitergabe. Jederzeit abmeldbar. · <a href="#" style="color:rgba(255,255,255,0.35);text-decoration:none;">Datenschutz</a></p>
-    </div>
-  </section>
 
   <!-- ── FOOTER ── -->
   <footer class="footer">
@@ -731,6 +740,35 @@
       // Start auto-play
       resetTimer();
     })();
+  </script>
+
+  <!-- ── LEAD MODAL ── -->
+  <div class="lead-modal-overlay" id="leadModal" role="dialog" aria-modal="true" aria-label="Gratis Lifting-Video">
+    <div class="lead-modal">
+      <button class="lead-modal-close" onclick="closeLeadModal()" aria-label="Schließen">✕</button>
+      <div class="lead-modal-eyebrow">Gratis für dich</div>
+      <h2 class="lead-modal-h">6-Minuten<br><em>Lifting-Workout</em></h2>
+      <p class="lead-modal-sub">Trag deinen Namen und deine E-Mail ein — ich schicke dir das Video direkt zu. Keine Vorkenntnisse nötig, nur 6 Minuten für sichtbare Frische.</p>
+      <div class="ml-embedded" data-form="QXPpcZ"></div>
+      <p class="lead-modal-note">Kein Spam. Keine Weitergabe. Jederzeit abmeldbar.</p>
+    </div>
+  </div>
+
+  <script>
+    function openLeadModal() {
+      document.getElementById('leadModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLeadModal() {
+      document.getElementById('leadModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('leadModal').addEventListener('click', function(e) {
+      if (e.target === this) closeLeadModal();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLeadModal();
+    });
   </script>
 </body>
 </html>
