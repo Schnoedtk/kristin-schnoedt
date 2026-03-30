@@ -216,15 +216,15 @@
     /* ---- PROOF STRIP ---- */
     .proof-strip{padding:3rem 4rem;background:var(--alabaster);border-top:1px solid var(--m200);}
     .proof-strip-head{display:flex;align-items:center;gap:1.25rem;margin-bottom:2rem;}
-    .proof-strip-label{font-size:0.62rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--m500);white-space:nowrap;}
-    .proof-strip-rule{flex:1;height:1px;background:var(--m200);}
+    .proof-strip-label{font-size:0.62rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--proof-label-color,var(--m500));white-space:nowrap;}
+    .proof-strip-rule{flex:1;height:1px;background:var(--proof-rule-color,var(--m200));}
     .proof-mini-grid{display:grid;gap:1rem;}
     .proof-mini-grid.g3{grid-template-columns:repeat(3,1fr);}
-    .proof-mini-card{background:var(--white);padding:1.5rem;display:flex;flex-direction:column;gap:0.6rem;}
-    .proof-mini-stars{color:var(--m500);font-size:0.8rem;letter-spacing:2px;}
-    .proof-mini-q{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;line-height:1.6;color:var(--m900);font-style:italic;flex:1;}
-    .proof-mini-name{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m700);}
-    .proof-mini-context{font-size:0.63rem;color:var(--schiefer);}
+    .proof-mini-card{background:var(--proof-card-bg,var(--white));border:1px solid var(--proof-card-border,transparent);padding:1.5rem;display:flex;flex-direction:column;gap:0.6rem;}
+    .proof-mini-stars{color:var(--proof-stars-color,var(--m500));font-size:0.8rem;letter-spacing:2px;}
+    .proof-mini-q{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;line-height:1.6;color:var(--proof-q-color,var(--m900));font-style:italic;flex:1;}
+    .proof-mini-name{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--proof-name-color,var(--m700));}
+    .proof-mini-context{font-size:0.63rem;color:var(--proof-ctx-color,var(--schiefer));}
     @media(max-width:768px){.proof-strip{padding:2.5rem 1.75rem;}.proof-mini-grid.g3{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -410,7 +410,7 @@
   </section>
 
   <!-- PROOF STRIP: PURVIDUAL -->
-  <div class="proof-strip">
+  <div class="proof-strip" style="background:var(--m800);border-top:none;--proof-label-color:#c9b8a8;--proof-rule-color:rgba(255,255,255,0.12);--proof-card-bg:rgba(255,255,255,0.06);--proof-card-border:rgba(255,255,255,0.1);--proof-q-color:#e8ddd4;--proof-name-color:#d4c5b5;--proof-ctx-color:#a89888;--proof-stars-color:#c9a96e;">
     <div style="max-width:1200px;margin:0 auto;">
       <div class="proof-strip-head">
         <span class="proof-strip-label">Was Kundinnen über PURVIDUAL sagen</span>
