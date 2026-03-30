@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Schulungen & Websites für Kosmetikerinnen – Kristin Schnödt</title>
-  <meta name="description" content="Face Yoga, Cupping und PURVIDUAL Schulungen für Kosmetikerinnen. Außerdem: professionelle Website-Erstellung für Kosmetikstudios. Kristin Schnödt — 18 Jahre Erfahrung, Inhaberin PURVIDUAL.">  <link rel="stylesheet" href="fonts/fonts.css">
+  <meta name="description" content="Face Yoga, Cupping und PURVIDUAL Schulungen für Kosmetikerinnen. Außerdem: professionelle Website-Erstellung für Kosmetikstudios. Kristin Schnödt, 18 Jahre Erfahrung, Inhaberin PURVIDUAL.">  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/LogoNeu_2026_final_OH.png">
   <!-- MailerLite Universal -->
   <script>(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account','1097175');</script>
@@ -128,6 +128,25 @@
 
     /* WORKSHOPS FOOTER NOTE */
     .workshops-note{margin-top:2.5rem;padding:1.5rem 2rem;background:var(--white);border-left:3px solid var(--m400);font-size:0.83rem;line-height:1.7;color:var(--schiefer);}
+
+    /* CUPPING 4-COLUMN GRID */
+    .cupping-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
+    .cupping-grid .workshop-card.highlight{border-color:var(--m500);background:rgba(181,129,140,0.04);}
+    .cupping-grid .workshop-card.highlight::before{transform:scaleX(1);background:var(--m700);}
+    @media(max-width:1200px){.cupping-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:768px){.cupping-grid{grid-template-columns:1fr;}}
+
+    /* SECONDARY WORKSHOPS 2-COL */
+    .workshops-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:1rem;}
+    @media(max-width:768px){.workshops-grid-2{grid-template-columns:1fr;}}
+
+    /* SCHULUNG FEATURES 3-COL */
+    .schulung-features{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3rem;}
+    @media(max-width:768px){.schulung-features{grid-template-columns:1fr;}}
+
+    /* PURVIDUAL TEASER GRID */
+    .purvidual-teaser-grid{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;}
+    @media(max-width:768px){.purvidual-teaser-grid{grid-template-columns:1fr;gap:2rem;}.purvidual-teaser-grid a{width:100%;justify-content:center;}}
 
     /* QUOTE BOX */
     .quote-box{background:var(--m200);padding:3rem;position:relative;overflow:hidden;max-width:760px;margin:0 auto;}
@@ -264,8 +283,8 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-eyebrow">Für Kolleginnen</div>
-      <h1 class="hero-h1">Was 18 Jahre Praxis mich lehrten,<br><em>gebe ich weiter.</em></h1>
-      <p class="hero-sub">Schulungen, Workshops und digitale Unterstützung für Kosmetikerinnen, die ihr Business auf das nächste Level bringen möchten.</p>
+      <h1 class="hero-h1">Biete Cupping in deinem Studio an.<br><em>Professionell. Zertifiziert. Sofort.</em></h1>
+      <p class="hero-sub">Schulungspakete, Face Yoga Ausbildung und Website-Erstellung für Kosmetikerinnen, die ihr Angebot gezielt erweitern wollen.</p>
       <div class="hero-intro">Kristin Schnödt · 18 Jahre Erfahrung · Inhaberin PURVIDUAL</div>
     </div>
     <div class="hero-scroll">
@@ -283,12 +302,12 @@
         <div class="overview-box rv d2">
           <div class="overview-icon">✦</div>
           <h3 class="overview-title">Schulungen &amp; Workshops</h3>
-          <p class="overview-desc">Fachliches Wissen weitergeben — an Kolleginnen, die ihre Behandlungsangebote erweitern und vertiefen möchten. Praxisnah, ehrlich und ohne theoretischen Überbau.</p>
+          <p class="overview-desc">Fachliches Wissen weitergeben an Kolleginnen, die ihre Behandlungsangebote erweitern und vertiefen möchten. Praxisnah, ehrlich und ohne theoretischen Überbau.</p>
         </div>
         <div class="overview-box rv d3">
           <div class="overview-icon">◈</div>
           <h3 class="overview-title">Website-Erstellung</h3>
-          <p class="overview-desc">Professionelle Online-Präsenz für Kosmetikerinnen — so wie diese Website hier. Individuell gestaltet, ohne monatliche Kosten, ohne technisches Vorwissen deinerseits.</p>
+          <p class="overview-desc">Professionelle Online-Präsenz für Kosmetikerinnen, so wie diese Website hier. Individuell gestaltet, ohne monatliche Kosten und ohne technisches Vorwissen deinerseits.</p>
         </div>
       </div>
     </div>
@@ -299,90 +318,129 @@
     <div class="sec-inner">
       <div class="eyebrow rv">Schulungen für Kolleginnen</div>
       <h2 class="sec-h2 rv d1">Wissen, das du sofort<br><em>in deiner Praxis anwenden kannst</em></h2>
-      <p class="sec-lead rv d2">Ich gebe mein Wissen aus 18 Jahren täglicher Arbeit mit Gesichtshaut weiter — praxisnah, ehrlich und ohne theoretischen Überbau.</p>
+      <p class="sec-lead rv d2">Ich gebe mein Wissen aus 18 Jahren täglicher Arbeit mit Gesichtshaut weiter: praxisnah, ehrlich und ohne theoretischen Überbau.</p>
 
-      <div class="rv d1" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3rem;">
+      <div class="schulung-features rv d1">
   <div style="padding:2rem;background:var(--white);border:1px solid var(--m200);border-top:3px solid var(--m500);">
     <div style="display:flex;align-items:center;gap:0.65rem;margin-bottom:0.6rem;">
       <span style="font-size:1.3rem;line-height:1;">💻</span>
       <h4 style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--m900);margin:0;">Bundesweit buchbar</h4>
     </div>
-    <p style="font-size:0.8rem;line-height:1.65;color:var(--schiefer);">Egal wo du bist — die Schulung kommt zu dir. Keine Reisekosten, kein Zeitverlust, keine Organisation.</p>
+    <p style="font-size:0.8rem;line-height:1.65;color:var(--schiefer);">Egal wo du bist: Die Schulung kommt zu dir. Keine Reisekosten, kein Zeitverlust, keine Organisation.</p>
   </div>
   <div style="padding:2rem;background:var(--white);border:1px solid var(--m200);border-top:3px solid var(--m500);">
     <div style="display:flex;align-items:center;gap:0.65rem;margin-bottom:0.6rem;">
       <span style="font-size:1.3rem;line-height:1;">🎯</span>
       <h4 style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--m900);margin:0;">Live und interaktiv</h4>
     </div>
-    <p style="font-size:0.8rem;line-height:1.65;color:var(--schiefer);">Wir arbeiten live per Video. Du siehst alles, ich sehe alles. Fragen direkt — genau wie vor Ort.</p>
+    <p style="font-size:0.8rem;line-height:1.65;color:var(--schiefer);">Wir arbeiten live per Video. Du siehst alles, ich sehe alles. Fragen stellen genau wie vor Ort.</p>
   </div>
   <div style="padding:2rem;background:var(--white);border:1px solid var(--m200);border-top:3px solid var(--m500);">
     <div style="display:flex;align-items:center;gap:0.65rem;margin-bottom:0.6rem;">
       <span style="font-size:1.3rem;line-height:1;">🕐</span>
       <h4 style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--m900);margin:0;">Flexible Terminwahl</h4>
     </div>
-    <p style="font-size:0.8rem;line-height:1.65;color:var(--schiefer);">Abend, Wochenende, kurzfristig — wir finden einen Termin, der zu deinem Alltag passt.</p>
+    <p style="font-size:0.8rem;line-height:1.65;color:var(--schiefer);">Abend, Wochenende, kurzfristig: Wir finden einen Termin, der zu deinem Alltag passt.</p>
   </div>
 </div>
 
-      <div class="workshops-grid">
+      <!-- CUPPING PAKETE -->
+      <div style="margin-top:4rem;">
+        <div class="eyebrow rv" style="margin-bottom:1rem;">Cupping Schulungspakete</div>
+        <h3 class="rv d1" style="font-family:var(--display);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:var(--m900);line-height:1.2;margin-bottom:1rem;">Wähle das Paket, <em style="font-style:italic;color:var(--m500);">das zu deinem Studio passt</em></h3>
+        <p class="rv d2" style="font-size:0.88rem;line-height:1.8;color:var(--schiefer);max-width:680px;margin-bottom:2.5rem;">Facial Cupping ist eine der wirkungsvollsten natürlichen Anti-Aging-Methoden und gleichzeitig eines der meistgefragten Angebote, das Kosmetikerinnen noch viel zu selten im Studio anbieten. Alle Pakete enthalten ein Zertifikat sowie digitale Unterlagen. Alle Preise netto zzgl. MwSt.</p>
 
-        <div class="workshop-card rv d1">
-          <div class="workshop-icon">✦</div>
-          <h3 class="workshop-title">Face Yoga Ausbildung</h3>
-          <p class="workshop-sub">Zertifizierte Grundausbildung</p>
-          <p class="workshop-desc">Lerne Face Yoga von Grund auf — Anatomie, Übungen, Routinen und wie du es in dein Angebot integrierst. Nach der Ausbildung kannst du Face Yoga als zertifiziertes Angebot in deinem Studio anbieten.</p>
-          <div class="workshop-details">
-            <span>1 Tag · ca. 8 Stunden</span>
-            <span>Max. 4 Teilnehmerinnen</span>
-            <span>Auerbach · Präsenz</span>
+        <div class="cupping-grid">
+
+          <div class="workshop-card rv d1">
+            <div class="workshop-sub">Paket 1</div>
+            <h4 class="workshop-title">Basis</h4>
+            <p class="workshop-desc">Du willst einsteigen und direkt loslegen, in deinem eigenen Tempo und ohne fixen Live-Termin.</p>
+            <ul class="workshop-list">
+              <li>Theorie PDF Workbook</li>
+              <li>Prüfung und Zertifikat (gedruckt)</li>
+              <li>Praxisablauf-Kärtchen A6 (digital)</li>
+              <li>Infomaterial für Kundinnen A6 (digital)</li>
+            </ul>
+            <div class="workshop-price">399 € <small style="font-size:0.72rem;color:var(--schiefer);font-family:'Montserrat',sans-serif;">netto</small></div>
+            <a href="https://wa.me/4915757202153" class="workshop-btn" target="_blank" rel="noopener">Jetzt buchen</a>
           </div>
-          <a href="https://wa.me/4915757202153" class="workshop-btn" target="_blank" rel="noopener">Jetzt anfragen</a>
+
+          <div class="workshop-card rv d2">
+            <div class="workshop-sub">Paket 2</div>
+            <h4 class="workshop-title">Premium</h4>
+            <p class="workshop-desc">Du willst Cupping richtig lernen, live mit mir üben und von Anfang an professionell auftreten.</p>
+            <ul class="workshop-list">
+              <li><strong>Live Schulung Praxis via Zoom</strong></li>
+              <li><strong>Live Schulung Theorie via Zoom</strong></li>
+              <li>Theorie PDF Workbook</li>
+              <li>Prüfung und Zertifikat (gedruckt)</li>
+              <li>Praxisablauf-Kärtchen A6, 100x gedruckt mit Logo</li>
+              <li>Als Kooperationspartnerin gelistet</li>
+            </ul>
+            <div class="workshop-price">499 € <small style="font-size:0.72rem;color:var(--schiefer);font-family:'Montserrat',sans-serif;">netto</small></div>
+            <a href="https://wa.me/4915757202153" class="workshop-btn" target="_blank" rel="noopener">Jetzt buchen</a>
+          </div>
+
+          <div class="workshop-card rv d3">
+            <div class="workshop-sub">Paket 3</div>
+            <h4 class="workshop-title">All Inklusive</h4>
+            <p class="workshop-desc">Du willst das Rundum-Sorglos-Paket mit Live-Schulung, fertigen Werbematerialien mit deinem Logo und sofort startklar sein.</p>
+            <ul class="workshop-list">
+              <li>Alles aus Premium</li>
+              <li>Infomaterial A6 Klappkarte, 100x gedruckt</li>
+              <li>Werbeposter A1, 3 Stück gedruckt</li>
+              <li>Aktionsflyer mit Marketingkonzept</li>
+              <li>Tipps zur Behandlungsintegration</li>
+              <li>1x PURVIDUAL Set gratis (Wert 83 €)</li>
+            </ul>
+            <div class="workshop-price">599 € <small style="font-size:0.72rem;color:var(--schiefer);font-family:'Montserrat',sans-serif;">netto</small></div>
+            <a href="https://wa.me/4915757202153" class="workshop-btn" target="_blank" rel="noopener">Jetzt buchen</a>
+          </div>
+
+          <div class="workshop-card highlight rv d4">
+            <div class="workshop-sub" style="color:var(--m700);">Paket 4 · Empfohlen ✦</div>
+            <h4 class="workshop-title">Partner</h4>
+            <p class="workshop-desc">Du willst Cupping anbieten und zusätzlich passiv an deinen Kundinnen mitverdienen. Dein Einstieg in ein zweites Standbein.</p>
+            <ul class="workshop-list">
+              <li>Alles aus All Inklusive</li>
+              <li>Werbeposter A1, 5 Stück gedruckt</li>
+              <li><strong>Affiliate-Lizenz Facial Cupping Kurs</strong></li>
+              <li><strong>Persönlicher Affiliate-Link</strong></li>
+              <li>50% Provision je Verkauf, ca. 39,50 € pro Kurs</li>
+              <li>Automatische Abwicklung, kein Aufwand</li>
+            </ul>
+            <div class="workshop-price">799 € <small style="font-size:0.72rem;color:var(--schiefer);font-family:'Montserrat',sans-serif;">netto</small></div>
+            <a href="https://wa.me/4915757202153" class="workshop-btn" target="_blank" rel="noopener">Jetzt buchen</a>
+          </div>
+
         </div>
 
-        <div class="workshop-card rv d2">
-          <div class="workshop-icon">✦</div>
-          <h3 class="workshop-title">Cupping Ausbildung</h3>
-          <p class="workshop-sub">Technik, Sicherheit, Praxis</p>
-          <p class="workshop-desc">Gesichtscupping professionell anwenden — von der Grundtechnik bis zur Lymphdrainage. Kontraindikationen, Materialien, Behandlungsabläufe. Du gehst mit allem raus, was du brauchst um sofort loszulegen.</p>
-          <div class="workshop-details">
-            <span>1 Tag · ca. 6 Stunden</span>
-            <span>Max. 4 Teilnehmerinnen</span>
-            <span>Auerbach · Präsenz</span>
-          </div>
-          <a href="https://wa.me/4915757202153" class="workshop-btn" target="_blank" rel="noopener">Jetzt anfragen</a>
+        <div class="workshops-note rv" style="margin-top:2rem;">
+          <strong>Studio mit Team?</strong> Ab 2 Mitarbeiterinnen gelten Staffelpreise: Die erste Person zahlt den vollen Paketpreis, jede weitere nur einen reduzierten Aufpreis (ca. 45% Ersparnis gegenüber Einzelbuchung). Sprich mich einfach an.
         </div>
+      </div>
 
-        <div class="workshop-card rv d3">
-          <div class="workshop-icon">✦</div>
-          <h3 class="workshop-title">PURVIDUAL Produktschulung</h3>
-          <p class="workshop-sub">Präsenz oder Online</p>
-          <p class="workshop-desc">Lerne die PURVIDUAL Produktwelt kennen — Inhaltsstoffe, Wirkweise, Hauttypen und Beratungsgespräche. Diese Schulung öffnet außerdem die Möglichkeit, PURVIDUAL Studio zu werden: die Produkte in deinem Kosmetikstudio zu verkaufen und deinen Kunden echte Clean Beauty anzubieten.</p>
-          <div class="workshop-details">
-            <span>ca. 3 Stunden</span>
-            <span>Max. 6 Teilnehmerinnen</span>
-            <span>Präsenz oder Online</span>
+      <!-- PURVIDUAL TEASER -->
+      <div class="rv" style="margin-top:5rem;padding-top:4rem;border-top:1px solid var(--m200);">
+        <div style="background:var(--m900);padding:4rem;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-60px;right:-60px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(181,129,140,0.12) 0%,transparent 70%);pointer-events:none;"></div>
+          <div class="purvidual-teaser-grid" style="position:relative;z-index:1;">
+            <div>
+              <div style="font-size:0.6rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--m400);margin-bottom:1rem;display:flex;align-items:center;gap:0.75rem;"><span style="display:inline-block;width:20px;height:1px;background:var(--m400);"></span>PURVIDUAL Partnerstudio</div>
+              <h3 style="font-family:var(--display);font-size:clamp(1.6rem,3vw,2.6rem);font-weight:300;line-height:1.15;color:var(--white);margin-bottom:1rem;">Biete PURVIDUAL in deinem<br><em style="font-style:italic;color:var(--m400);">Studio an. Und verdiene mit.</em></h3>
+              <p style="font-size:0.88rem;line-height:1.8;color:rgba(255,255,255,0.55);max-width:520px;">Als PURVIDUAL Partnerstudio erhältst du exklusiven Zugang zur Produktlinie, Marketingmaterialien mit deinem Branding und wirst auf kristin-schnoedt.de gelistet. Ein zweites Standbein, das für dich arbeitet.</p>
+            </div>
+            <div style="flex-shrink:0;">
+              <a href="purvidual-partner.html" style="display:inline-flex;align-items:center;gap:0.75rem;font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:1rem 2rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;white-space:nowrap;" onmouseover="this.style.background='var(--m700)'" onmouseout="this.style.background='var(--m500)'">
+                Mehr erfahren
+                <svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+              </a>
+            </div>
           </div>
-          <a href="https://wa.me/4915757202153" class="workshop-btn" target="_blank" rel="noopener">Jetzt anfragen</a>
         </div>
-
       </div>
 
-      <div class="workshops-note rv d4">
-        Individuelle Schulungen und eigene Themen sind auf Anfrage möglich. Alle Schulungen finden in Auerbach statt.
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 3: PREISFRAGE / QUOTE -->
-  <section class="sec sec-white" id="preise" style="padding-top:5rem;padding-bottom:5rem;">
-    <div class="sec-inner" style="text-align:center;">
-      <div class="quote-box rv">
-        <blockquote>
-          „Zu Preisen für Schulungen berate ich persönlich — jede Gruppe und jedes Thema ist anders. Schreib mir einfach, was du dir vorstellst."
-          <cite>— Kristin Schnödt</cite>
-        </blockquote>
-      </div>
     </div>
   </section>
 
@@ -391,7 +449,7 @@
     <div class="sec-inner">
       <div class="eyebrow rv eyebrow-light">Digitale Präsenz</div>
       <h2 class="sec-h2 sec-h2-light rv d1">Deine Website, <em>so wie diese hier</em></h2>
-      <p class="sec-lead sec-lead-light rv d2">Du möchtest eine professionelle Website für dein Kosmetikstudio, die genauso aussieht wie diese? Ich erstelle sie gemeinsam mit dir — auf deine Marke zugeschnitten, ohne monatliche Kosten, ohne technisches Vorwissen deinerseits.</p>
+      <p class="sec-lead sec-lead-light rv d2">Du möchtest eine professionelle Website für dein Kosmetikstudio, die genauso aussieht wie diese? Ich erstelle sie gemeinsam mit dir, auf deine Marke zugeschnitten, ohne monatliche Kosten und ohne technisches Vorwissen deinerseits.</p>
 
       <div class="packages-grid">
 
@@ -408,7 +466,7 @@
             <li>Buchungslink-Integration</li>
             <li>Hosting-Anleitung</li>
           </ul>
-          <div class="pkg-price">auf Anfrage</div>
+          <div class="pkg-price">ab 890 € <small style="font-size:0.72rem;font-family:'Montserrat',sans-serif;color:rgba(255,255,255,0.35);">netto</small></div>
           <a href="https://wa.me/4915757202153" class="pkg-btn" target="_blank" rel="noopener">
             Jetzt anfragen
             <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
@@ -429,7 +487,7 @@
             <li>Social Media Links</li>
             <li>MailerLite Integration</li>
           </ul>
-          <div class="pkg-price">auf Anfrage</div>
+          <div class="pkg-price">ab 1.900 € <small style="font-size:0.72rem;font-family:'Montserrat',sans-serif;color:rgba(255,255,255,0.35);">netto</small></div>
           <a href="https://wa.me/4915757202153" class="pkg-btn" target="_blank" rel="noopener">
             Jetzt anfragen
             <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
@@ -449,7 +507,7 @@
             <li>Bildoptimierung</li>
             <li>2 Stunden persönliche Einweisung</li>
           </ul>
-          <div class="pkg-price">auf Anfrage</div>
+          <div class="pkg-price">ab 3.500 € <small style="font-size:0.72rem;font-family:'Montserrat',sans-serif;color:rgba(255,255,255,0.35);">netto</small></div>
           <a href="https://wa.me/4915757202153" class="pkg-btn" target="_blank" rel="noopener">
             Jetzt anfragen
             <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
@@ -471,19 +529,19 @@
         <div class="trust-box rv d1">
           <div class="trust-box-num">18</div>
           <div class="trust-box-title">Jahre Erfahrung</div>
-          <p class="trust-box-desc">Ich weiß, was Kunden suchen und wie man es kommuniziert. Nicht aus Büchern — aus dem Alltag mit echten Kunden und echter Haut.</p>
+          <p class="trust-box-desc">Ich weiß, was Kunden suchen und wie man es kommuniziert. Nicht aus Büchern, sondern aus dem Alltag mit echten Kunden und echter Haut.</p>
         </div>
 
         <div class="trust-box rv d2">
           <div class="trust-box-icon">◈</div>
           <div class="trust-box-title">Selbst gebaut</div>
-          <p class="trust-box-desc">Diese Website habe ich selbst entwickelt. Was du siehst, ist was du bekommst — kein Werbeversprechen, sondern ein konkretes Ergebnis.</p>
+          <p class="trust-box-desc">Diese Website habe ich selbst entwickelt. Was du siehst, ist was du bekommst: kein Werbeversprechen, sondern ein konkretes Ergebnis.</p>
         </div>
 
         <div class="trust-box rv d3">
           <div class="trust-box-icon">✦</div>
           <div class="trust-box-title">Persönlich</div>
-          <p class="trust-box-desc">Keine Agentur, keine Mittelsmänner. Du arbeitest direkt mit mir — von der ersten Idee bis zur fertigen Website.</p>
+          <p class="trust-box-desc">Keine Agentur, keine Mittelsmänner. Du arbeitest direkt mit mir, von der ersten Idee bis zur fertigen Website.</p>
         </div>
 
       </div>
@@ -495,7 +553,7 @@
     <div class="cta-inner">
       <div class="cta-eyebrow rv">Jetzt loslegen</div>
       <h2 class="cta-h2 rv d1">Lass uns sprechen</h2>
-      <p class="cta-p rv d2">Ob Schulung oder Website — schreib mir einfach, was du dir vorstellst. Ich melde mich innerhalb von 24 Stunden.</p>
+      <p class="cta-p rv d2">Ob Schulung oder Website: Schreib mir einfach, was du dir vorstellst. Ich melde mich innerhalb von 24 Stunden.</p>
       <div class="rv d3">
         <a href="https://wa.me/4915757202153" class="btn-white" target="_blank" rel="noopener">
           Jetzt anfragen
@@ -511,7 +569,7 @@
       <div class="footer-top">
         <div>
           <div class="footer-brand">Kristin Schnödt</div>
-          <p class="footer-tagline">Spezialistin für natürliche Hautverjüngung — Göttinnen-Haut · PURVIDUAL · Kosmetikstudio Auerbach i.d.Opf.</p>
+          <p class="footer-tagline">Spezialistin für natürliche Hautverjüngung · Göttinnen-Haut · PURVIDUAL · Kosmetikstudio Auerbach i.d.Opf.</p>
           <div class="footer-socials">
             <a href="https://www.instagram.com/kristin.schnoedt/" class="footer-sc" aria-label="Instagram" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
             <a href="https://www.facebook.com/profile.php?id=61562529171301" class="footer-sc" aria-label="Facebook" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>

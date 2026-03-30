@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PURVIDUAL Partnerstudio werden – Kristin Schnödt</title>
+  <meta name="description" content="Werde PURVIDUAL Partnerstudio: exklusive Naturkosmetik in deinem Kosmetikstudio anbieten, gelistet werden und ein zweites Standbein aufbauen. Jetzt anfragen.">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/LogoNeu_2026_final_OH.png">
+  <style>
+    :root{--m200:#ECDDE1;--m400:#C49EAA;--m500:#B5818C;--m700:#7A4A58;--m900:#2E2028;--alabaster:#F8F3F5;--schiefer:#696E6B;--white:#fff;--display:'Cormorant Garamond',serif;--ease:cubic-bezier(0.77,0,0.175,1);}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--m900);-webkit-font-smoothing:antialiased;}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.5rem 4rem;transition:padding 0.5s var(--ease),background 0.5s,box-shadow 0.5s;}
+    .nav.stuck{padding:1rem 4rem;background:rgba(248,243,245,0.96);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(46,32,40,0.07);}
+    .nav-links{display:flex;gap:2.5rem;list-style:none;}
+    .nav-links a:hover{color:var(--m500)!important;}
+    .nav-logo{text-decoration:none;display:flex;align-items:center;}
+    .nav-logo .logo-light{display:none;}
+    .nav.stuck .nav-logo .logo-dark{display:none;}
+    .nav.stuck .nav-logo .logo-light{display:block;}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .nav-hamburger span{display:block;width:24px;height:1.5px;background:var(--white);transition:background 0.3s;}
+    .nav.stuck .nav-hamburger span{background:var(--m900);}
+    .nav-links a{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,0.75);transition:color 0.3s;}
+    .nav.stuck .nav-links a{color:var(--schiefer);}
+    .nav-btn{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.75rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;}
+    .nav-btn:hover{background:var(--m700);}
+    .nav-gift{font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 1.25rem;border:1px solid rgba(181,129,140,0.5);color:var(--m400);text-decoration:none;border-radius:2px;transition:background 0.3s,color 0.3s,border-color 0.3s;display:flex;align-items:center;gap:0.5rem;}
+    .nav.stuck .nav-gift{border-color:var(--m300);color:var(--m700);}
+    .nav-gift:hover{background:var(--m500);border-color:var(--m500);color:var(--white);}
+    .nav-links-gift-item{display:none;}
+    .nav-links[style*="position: absolute"] a{color:var(--m900)!important;}
+    .nav-links[style*="position: absolute"] .nav-links-gift-item a{color:var(--m500)!important;}
+    .nav-links-gift-item a{color:var(--m500)!important;border-top:1px solid var(--m200);padding-top:0.75rem;margin-top:0.25rem;}
+
+    /* HERO */
+    .hero{position:relative;height:85vh;min-height:640px;background:var(--m900);display:flex;align-items:center;overflow:hidden;}
+    .hero-bg{position:absolute;inset:0;z-index:0;}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:0.28;}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(46,32,40,0.95) 0%,rgba(46,32,40,0.65) 55%,rgba(46,32,40,0.25) 100%);z-index:1;}
+    .hero-content{position:relative;z-index:4;max-width:1200px;margin:0 auto;padding:5rem 4rem 0;width:100%;}
+    .hero-eyebrow{font-size:0.65rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;opacity:0;animation:riseUp 0.85s 0.25s var(--ease) forwards;}
+    .hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--m400);flex-shrink:0;}
+    .hero-h1{font-family:var(--display);font-size:clamp(2rem,4vw,4rem);font-weight:300;line-height:1.1;color:var(--white);margin-bottom:1.5rem;max-width:760px;opacity:0;animation:riseUp 0.9s 0.45s var(--ease) forwards;}
+    .hero-h1 em{font-style:italic;color:var(--m400);}
+    .hero-sub{font-size:0.92rem;font-weight:400;line-height:1.8;color:rgba(255,255,255,0.6);max-width:520px;margin-bottom:2.25rem;opacity:0;animation:riseUp 0.9s 0.65s var(--ease) forwards;}
+    .hero-cta{opacity:0;animation:riseUp 0.9s 0.85s var(--ease) forwards;}
+    .hero-aurora{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse 80% 70% at 10% 90%,rgba(181,129,140,0.22) 0%,transparent 55%),radial-gradient(ellipse 55% 75% at 85% 15%,rgba(122,74,88,0.18) 0%,transparent 55%);animation:auroraShift 9s ease-in-out infinite alternate;pointer-events:none;}
+    @keyframes auroraShift{0%{opacity:.7;transform:scale(1);}100%{opacity:1;transform:scale(1.06) rotate(1.5deg);}}
+    .hero-grain{position:absolute;inset:0;z-index:2;opacity:0.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;pointer-events:none;}
+    .hero-blobs{position:absolute;top:-80px;right:-60px;width:580px;height:580px;z-index:3;pointer-events:none;}
+    .blob{position:absolute;filter:blur(1px);}
+    .blob-1{width:360px;height:400px;top:30px;right:80px;background:radial-gradient(ellipse at 40% 40%,rgba(181,129,140,0.18) 0%,rgba(181,129,140,0.05) 70%,transparent 100%);border:1.5px solid rgba(181,129,140,0.38);border-radius:58% 42% 65% 35%/45% 55% 45% 55%;animation:blob1 10s ease-in-out infinite;}
+    .blob-2{width:300px;height:340px;top:130px;right:20px;background:radial-gradient(ellipse at 60% 60%,rgba(122,74,88,0.15) 0%,rgba(122,74,88,0.04) 70%,transparent 100%);border:1.5px solid rgba(122,74,88,0.32);border-radius:42% 58% 35% 65%/55% 45% 55% 45%;animation:blob2 12s ease-in-out infinite;}
+    @keyframes blob1{0%,100%{border-radius:58% 42% 65% 35%/45% 55% 45% 55%;transform:translateY(0) rotate(0deg);}33%{border-radius:42% 58% 35% 65%/55% 45% 55% 45%;transform:translateY(-18px) rotate(4deg);}66%{border-radius:65% 35% 42% 58%/35% 65% 45% 55%;transform:translateY(10px) rotate(-3deg);}}
+    @keyframes blob2{0%,100%{border-radius:42% 58% 35% 65%/55% 45% 55% 45%;transform:translateY(0) rotate(0deg);}33%{border-radius:58% 42% 65% 35%/45% 55% 45% 55%;transform:translateY(15px) rotate(-5deg);}66%{border-radius:35% 65% 58% 42%/65% 35% 55% 45%;transform:translateY(-8px) rotate(3deg);}}
+    @keyframes riseUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+    /* BUTTONS */
+    .btn-primary{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:1rem 2.25rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s,transform 0.3s;cursor:pointer;border:none;}
+    .btn-primary:hover{background:var(--m700);transform:translateY(-2px);}
+    .btn-ghost{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.7rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:1rem 2.25rem;background:transparent;color:var(--white);text-decoration:none;border-radius:2px;border:1px solid rgba(255,255,255,0.3);transition:background 0.3s,border-color 0.3s;}
+    .btn-ghost:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.6);}
+
+    /* SECTIONS */
+    .sec{padding:7rem 4rem;}
+    .sec-inner{max-width:1200px;margin:0 auto;}
+    .sec-white{background:var(--white);}
+    .sec-alabaster{background:var(--alabaster);}
+    .sec-dark{background:var(--m900);}
+
+    /* TYPOGRAPHY */
+    .eyebrow{font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--m500);margin-bottom:1.25rem;display:flex;align-items:center;gap:1rem;}
+    .eyebrow::before{content:'';width:28px;height:1px;background:var(--m500);}
+    .eyebrow-light{color:var(--m400);}
+    .eyebrow-light::before{background:var(--m400);}
+    .sec-h2{font-family:var(--display);font-size:clamp(2rem,4vw,3.5rem);font-weight:300;line-height:1.15;color:var(--m900);margin-bottom:1.5rem;}
+    .sec-h2 em{font-style:italic;color:var(--m500);}
+    .sec-h2-light{color:var(--white);}
+    .sec-h2-light em{color:var(--m400);}
+    .sec-lead{font-size:0.92rem;line-height:1.8;color:var(--schiefer);max-width:640px;margin-bottom:3.5rem;}
+    .sec-lead-light{color:rgba(255,255,255,0.6);}
+
+    /* SCROLL REVEAL */
+    .rv{opacity:0;transform:translateY(28px);transition:opacity 0.75s var(--ease),transform 0.75s var(--ease);}
+    .rv.on{opacity:1;transform:none;}
+    .d1{transition-delay:0.1s;}.d2{transition-delay:0.2s;}.d3{transition-delay:0.3s;}.d4{transition-delay:0.4s;}
+
+    /* PROBLEM STRIP */
+    .problem-strip{background:var(--m200);padding:5rem 4rem;}
+    .problem-strip-inner{max-width:1200px;margin:0 auto;}
+    .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;}
+    .problem-item{padding:2.5rem;background:var(--white);border-left:3px solid var(--m500);}
+    .problem-q{font-family:var(--display);font-size:1.25rem;font-weight:400;color:var(--m900);margin-bottom:0.75rem;line-height:1.3;}
+    .problem-a{font-size:0.83rem;line-height:1.7;color:var(--schiefer);}
+
+    /* BENEFIT CARDS */
+    .benefit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;margin-top:1rem;}
+    .benefit-card{padding:3rem;border:1px solid var(--m200);position:relative;overflow:hidden;transition:box-shadow 0.4s,border-color 0.4s;}
+    .benefit-card:hover{box-shadow:0 20px 50px rgba(46,32,40,0.08);border-color:var(--m400);}
+    .benefit-num{font-family:var(--display);font-size:4rem;font-weight:300;color:var(--m200);line-height:1;margin-bottom:1rem;}
+    .benefit-title{font-family:var(--display);font-size:1.5rem;font-weight:400;color:var(--m900);margin-bottom:0.75rem;}
+    .benefit-desc{font-size:0.85rem;line-height:1.75;color:var(--schiefer);}
+
+    /* WHAT YOU GET */
+    .get-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1rem;}
+    .get-card{padding:2.5rem;background:rgba(181,129,140,0.07);border:1px solid rgba(181,129,140,0.2);transition:border-color 0.4s,box-shadow 0.4s;}
+    .get-card:hover{border-color:var(--m500);box-shadow:0 16px 40px rgba(46,32,40,0.12);}
+    .get-icon{font-size:1.75rem;margin-bottom:1.25rem;line-height:1;}
+    .get-title{font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--m400);margin-bottom:0.85rem;}
+    .get-list{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+    .get-list li{font-size:0.82rem;line-height:1.55;color:rgba(255,255,255,0.6);display:flex;align-items:flex-start;gap:0.6rem;}
+    .get-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--m500);flex-shrink:0;margin-top:0.42rem;}
+
+    /* STEPS */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:3rem;position:relative;}
+    .steps::before{content:'';position:absolute;top:2rem;left:calc(100%/6);right:calc(100%/6);height:1px;background:linear-gradient(to right,transparent,var(--m400),transparent);z-index:0;}
+    .step{padding:2.5rem;text-align:center;position:relative;z-index:1;}
+    .step-num{width:4rem;height:4rem;border-radius:50%;background:var(--m500);color:var(--white);font-family:var(--display);font-size:1.5rem;font-weight:400;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;}
+    .step-title{font-family:var(--display);font-size:1.3rem;font-weight:400;color:var(--m900);margin-bottom:0.75rem;}
+    .step-desc{font-size:0.83rem;line-height:1.7;color:var(--schiefer);}
+
+    /* TESTIMONIAL */
+    .testimonial-block{background:var(--m900);padding:5rem 4rem;text-align:center;}
+    .testimonial-inner{max-width:800px;margin:0 auto;}
+    .testimonial-q{font-family:var(--display);font-size:clamp(1.3rem,2.5vw,2rem);font-weight:300;font-style:italic;line-height:1.6;color:var(--white);margin-bottom:2rem;}
+    .testimonial-author{font-size:0.65rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--m400);}
+
+    /* FOR WHO */
+    .forwho-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:1rem;}
+    .forwho-col h3{font-family:var(--display);font-size:1.4rem;font-weight:400;color:var(--m900);margin-bottom:1.5rem;}
+    .forwho-list{list-style:none;display:flex;flex-direction:column;gap:0.75rem;}
+    .forwho-list li{font-size:0.85rem;line-height:1.6;color:var(--schiefer);display:flex;align-items:flex-start;gap:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid var(--m200);}
+    .forwho-list li:last-child{border-bottom:none;}
+    .forwho-list li::before{content:'✓';color:var(--m500);font-weight:700;flex-shrink:0;margin-top:0.05rem;}
+    .forwho-list.no li::before{content:'✕';color:var(--schiefer);}
+
+    /* CTA */
+    .cta-sec{background:var(--m500);padding:7rem 4rem;text-align:center;position:relative;overflow:hidden;}
+    .cta-sec::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:rgba(255,255,255,0.05);pointer-events:none;}
+    .cta-inner{position:relative;z-index:1;}
+    .cta-eyebrow{font-size:0.65rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.7);margin-bottom:1.25rem;}
+    .cta-h2{font-family:var(--display);font-size:clamp(2.2rem,4.5vw,4rem);font-weight:300;line-height:1.1;color:var(--white);margin-bottom:1.25rem;}
+    .cta-p{font-size:0.92rem;line-height:1.8;color:rgba(255,255,255,0.75);max-width:500px;margin:0 auto 2.5rem;}
+    .btn-white{display:inline-flex;align-items:center;gap:0.8rem;font-size:0.7rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:1rem 2.25rem;background:var(--white);color:var(--m700);text-decoration:none;border-radius:2px;transition:background 0.3s,color 0.3s;}
+    .btn-white:hover{background:var(--m900);color:var(--white);}
+
+    /* FOOTER */
+    .footer{background:var(--m900);padding:5.5rem 4rem 3rem;}
+    .footer-inner{max-width:1200px;margin:0 auto;}
+    .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(181,129,140,0.14);}
+    .footer-brand{font-family:var(--display);font-size:1.55rem;font-weight:500;color:var(--white);margin-bottom:1rem;}
+    .footer-tagline{font-size:0.82rem;line-height:1.7;color:rgba(255,255,255,0.4);max-width:255px;margin-bottom:2rem;}
+    .footer-socials{display:flex;gap:1rem;}
+    .footer-sc{width:36px;height:36px;border:1px solid rgba(181,129,140,0.28);display:flex;align-items:center;justify-content:center;color:var(--m400);text-decoration:none;transition:background 0.3s,border-color 0.3s,color 0.3s;}
+    .footer-sc:hover{background:var(--m500);border-color:var(--m500);color:var(--white);}
+    .footer-col-h{font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--m500);margin-bottom:1.5rem;}
+    .footer-links{list-style:none;display:flex;flex-direction:column;gap:0.8rem;}
+    .footer-links a{font-size:0.85rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.3s;}
+    .footer-links a:hover{color:var(--m300);}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;}
+    .footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.28);}
+    .footer-legal{display:flex;gap:2rem;list-style:none;}
+    .footer-legal a{font-size:0.75rem;color:rgba(255,255,255,0.28);text-decoration:none;transition:color 0.3s;}
+    .footer-legal a:hover{color:var(--m400);}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .benefit-grid{grid-template-columns:1fr;}
+      .get-grid{grid-template-columns:1fr 1fr;}
+      .steps{grid-template-columns:1fr;}
+      .steps::before{display:none;}
+      .problem-grid{grid-template-columns:1fr;}
+      .forwho-grid{grid-template-columns:1fr;}
+      .footer-top{grid-template-columns:1fr 1fr;gap:3rem;}
+    }
+    @media(max-width:768px){
+      .nav{padding:1rem 1.75rem!important;background:rgba(248,243,245,0.97)!important;backdrop-filter:blur(14px)!important;box-shadow:0 1px 0 rgba(46,32,40,0.07)!important;}
+      .nav-logo .logo-dark{display:none!important;}
+      .nav-logo .logo-light{display:block!important;height:36px;max-width:150px;}
+      .nav-hamburger span{background:var(--m900)!important;}
+      .nav-links{display:none;}
+      .nav-hamburger{display:flex;}
+      .nav-btn{font-size:0.6rem;padding:0.6rem 1rem;white-space:nowrap;}
+      .nav-gift{display:none;}
+      .nav-links-gift-item{display:list-item;}
+      .sec{padding:5rem 1.75rem;}
+      .hero-content{padding:4rem 1.75rem 0;}
+      .hero-blobs{width:260px;height:260px;right:-30px;top:-40px;}
+      .blob-1{width:180px;height:200px;}
+      .blob-2{width:140px;height:160px;}
+      .hero-sub{max-width:100%;}
+      .get-grid{grid-template-columns:1fr;}
+      .get-card{padding:2rem;}
+      .benefit-card{padding:2rem;}
+      .benefit-num{font-size:3rem;}
+      .problem-strip{padding:4rem 1.75rem;}
+      .problem-item{padding:1.5rem;}
+      .step{padding:1.5rem 1rem;}
+      .step-num{width:3.25rem;height:3.25rem;font-size:1.25rem;}
+      .forwho-col h3{font-size:1.2rem;}
+      .testimonial-block{padding:4rem 1.75rem;}
+      .cta-sec{padding:5rem 1.75rem;}
+      .footer{padding:4rem 1.75rem 2.5rem;}
+      .footer-top{grid-template-columns:1fr;gap:2.5rem;}
+      .footer-bottom{flex-direction:column;gap:1rem;text-align:center;}
+      .footer-legal{flex-wrap:wrap;justify-content:center;gap:1rem;}
+      .btn-primary,.btn-white{width:100%;justify-content:center;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">
+      <img class="logo-dark" src="Logo%20und%20Farbcodes/04_Dunkelpflaume_Alabaster.png" alt="Kristin Schnödt" style="height:38px;width:auto;">
+      <img class="logo-light" src="Logo%20und%20Farbcodes/04_Alabaster_Dunkelpflaume.png?v=2" alt="Kristin Schnödt" style="height:38px;width:auto;">
+    </a>
+    <ul class="nav-links">
+      <li><a href="behandlungen.html">Behandlungen</a></li>
+      <li><a href="face-yoga.html">Online-Kurse</a></li>
+      <li><a href="index.html#purvidual">PURVIDUAL</a></li>
+      <li><a href="schulungen.html">Schulungen</a></li>
+      <li><a href="kristin-schnoedt.html">Über mich</a></li>
+      <li><a href="beauty-news.html">Beauty News</a></li>
+      <li class="nav-links-gift-item"><a href="https://kristin-schnoedt-kosmetik.belbo.com/gutscheine" target="_blank" rel="noopener">🎁 Gutscheine verschenken</a></li>
+    </ul>
+    <a href="https://kristin-schnoedt-kosmetik.belbo.com/gutscheine" class="nav-gift" target="_blank" rel="noopener">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+      Gutschein
+    </a>
+    <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="nav-btn" target="_blank" rel="noopener">Termin buchen</a>
+    <button class="nav-hamburger" aria-label="Menü" id="navToggle"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-aurora"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="hero-bg">
+      <img src="Bilder/Kristin/Gro%C3%9F%20(DSC_4726).jpeg" alt="PURVIDUAL Partnerstudio werden">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Für Kosmetikerinnen</div>
+      <h1 class="hero-h1">Werde PURVIDUAL<br><em>Partnerstudio.</em></h1>
+      <p class="hero-sub">Biete exklusive Naturkosmetik in deinem Studio an, werde gelistet und baue ein zweites Standbein auf, das für dich arbeitet.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/4915757202153" class="btn-primary" target="_blank" rel="noopener">
+          Jetzt anfragen
+          <svg width="13" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM-AGITATION -->
+  <section class="problem-strip">
+    <div class="problem-strip-inner">
+      <div class="eyebrow rv">Klingt das bekannt?</div>
+      <h2 class="sec-h2 rv d1" style="max-width:680px;">Du bist gut in deinem Job.<br><em>Aber dein Studio könnte mehr verdienen.</em></h2>
+      <div class="problem-grid">
+        <div class="problem-item rv d1">
+          <p class="problem-q">"Meine Kundinnen fragen nach Pflegeprodukten, aber ich habe kein passendes Sortiment."</p>
+          <p class="problem-a">Jede Empfehlung, die du gibst, landet beim Drogeriemarkt oder bei Amazon. Der Umsatz bleibt nicht bei dir.</p>
+        </div>
+        <div class="problem-item rv d2">
+          <p class="problem-q">"Ich will keine riesige Investition in Produkte, die ich vielleicht nicht loswerde."</p>
+          <p class="problem-a">Als PURVIDUAL Partnerstudio startest du mit einem überschaubaren Einstiegsset, ohne Mindestabnahmemengen.</p>
+        </div>
+        <div class="problem-item rv d3">
+          <p class="problem-q">"Ich will mich nicht um Marketing kümmern müssen."</p>
+          <p class="problem-a">Du bekommst fertige Materialien, wirst auf meiner Website gelistet und hast sofort einen Vertrauensvorschuss bei deinen Kundinnen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WARUM PURVIDUAL -->
+  <section class="sec sec-white" id="warum">
+    <div class="sec-inner">
+      <div class="eyebrow rv">Warum PURVIDUAL</div>
+      <h2 class="sec-h2 rv d1">Nicht irgendeine Produktlinie.<br><em>Eine, die ich selbst täglich einsetze.</em></h2>
+      <p class="sec-lead rv d2">PURVIDUAL ist meine eigene Marke, entwickelt aus 18 Jahren Praxiserfahrung. Jedes Produkt kenne ich in- und auswendig, weil ich es selbst formuliert und getestet habe. Wenn du es deinen Kundinnen empfiehlst, stehst du hinter etwas, das funktioniert.</p>
+      <div class="benefit-grid">
+        <div class="benefit-card rv d1">
+          <div class="benefit-num">01</div>
+          <h3 class="benefit-title">Formuliert für Wirkung, nicht für das Etikett</h3>
+          <p class="benefit-desc">Keine Handelsmarke, keine Massenproduktion. PURVIDUAL setzt auf das, was wirklich wirkt: natürliche Rohstoffe dort, wo sie brillieren, und hautidentische Wirkstoffe aus der Forschung dort, wo die Natur an ihre Grenzen kommt. Ergebnis statt Versprechen. Das überzeugt auch deine Kundinnen.</p>
+        </div>
+        <div class="benefit-card rv d2">
+          <div class="benefit-num">02</div>
+          <h3 class="benefit-title">Du verdienst an jeder Weiterempfehlung</h3>
+          <p class="benefit-desc">Als Partnerstudio erhältst du Produkte zu attraktiven Einkaufskonditionen und verkaufst sie zu deinem eigenen Preis weiter. Dein Beratungsgespräch bringt dir ab sofort echten Umsatz, nicht nur Goodwill.</p>
+        </div>
+        <div class="benefit-card rv d3">
+          <div class="benefit-num">03</div>
+          <h3 class="benefit-title">Sichtbarkeit, die du nicht selbst aufbauen musst</h3>
+          <p class="benefit-desc">Du wirst als offizielles PURVIDUAL Partnerstudio auf kristin-schnoedt.de gelistet. Kundinnen, die nach PURVIDUAL suchen, finden deinen Standort, deinen Namen, dein Studio. Neue Reichweite, ohne Social-Media-Aufwand.</p>
+        </div>
+        <div class="benefit-card rv d4">
+          <div class="benefit-num">04</div>
+          <h3 class="benefit-title">Fertige Materialien, direkt einsetzbar</h3>
+          <p class="benefit-desc">Du bekommst Marketingmaterialien mit deinem Branding: Produktbeschreibungen, Kundeninformationen, Social-Media-Vorlagen. Du musst nichts selbst erstellen, nur einsetzen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAS DU BEKOMMST -->
+  <section class="sec sec-dark" id="leistungen">
+    <div class="sec-inner">
+      <div class="eyebrow rv eyebrow-light">Was du bekommst</div>
+      <h2 class="sec-h2 sec-h2-light rv d1">Alles, was du brauchst,<br><em>um direkt loszulegen.</em></h2>
+      <p class="sec-lead sec-lead-light rv d2">Die Partnerschaft ist so gestaltet, dass du keine Vorarbeit leisten musst. Du bekommst das Produkt, das Wissen und die Materialien, ich übernehme den Rest.</p>
+      <div class="get-grid">
+
+        <div class="get-card rv d1">
+          <div class="get-icon">📦</div>
+          <div class="get-title">Produktzugang</div>
+          <ul class="get-list">
+            <li>Einstiegsset PURVIDUAL Kernprodukte</li>
+            <li>Einkaufskonditionen als Partnerstudio</li>
+            <li>Nachbestellung jederzeit möglich</li>
+            <li>Keine Mindestabnahmemenge</li>
+          </ul>
+        </div>
+
+        <div class="get-card rv d2">
+          <div class="get-icon">🎓</div>
+          <div class="get-title">Produktschulung</div>
+          <ul class="get-list">
+            <li>Live-Schulung: Inhaltsstoffe und Wirkweise</li>
+            <li>Hauttypen und Beratungsgespräch</li>
+            <li>Behandlungsintegration PURVIDUAL</li>
+            <li>Digitale Unterlagen zum Nachlesen</li>
+          </ul>
+        </div>
+
+        <div class="get-card rv d3">
+          <div class="get-icon">📍</div>
+          <div class="get-title">Listing und Sichtbarkeit</div>
+          <ul class="get-list">
+            <li>Gelistet auf kristin-schnoedt.de</li>
+            <li>Name, Ort und Kontaktdaten sichtbar</li>
+            <li>Verlinkung zu deinem Studio</li>
+            <li>Empfehlung bei Kundinnenanfragen</li>
+          </ul>
+        </div>
+
+        <div class="get-card rv d1">
+          <div class="get-icon">📣</div>
+          <div class="get-title">Marketing-Materialien</div>
+          <ul class="get-list">
+            <li>Produkttexte und Beschreibungen</li>
+            <li>Kundeninformationsblätter (digital)</li>
+            <li>Social-Media-Vorlagen</li>
+            <li>Preisschilder und Displaymaterial</li>
+          </ul>
+        </div>
+
+        <div class="get-card rv d2">
+          <div class="get-icon">💬</div>
+          <div class="get-title">Persönliche Begleitung</div>
+          <ul class="get-list">
+            <li>Direkter Kontakt zu mir</li>
+            <li>Fragen jederzeit per WhatsApp</li>
+            <li>Produktberatung für deine Kundinnen</li>
+            <li>Keine Vermittler, kein Support-Ticket</li>
+          </ul>
+        </div>
+
+        <div class="get-card rv d3">
+          <div class="get-icon">✦</div>
+          <div class="get-title">Partnerschaft auf Augenhöhe</div>
+          <ul class="get-list">
+            <li>Kein Franchise, keine starren Vorgaben</li>
+            <li>Kein monatlicher Beitrag</li>
+            <li>Dein Studio bleibt dein Studio</li>
+            <li>Langfristig gedacht, kurzfristig kündbar</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SO LÄUFT ES AB -->
+  <section class="sec sec-alabaster" id="ablauf">
+    <div class="sec-inner">
+      <div class="eyebrow rv">So läuft es ab</div>
+      <h2 class="sec-h2 rv d1">In drei Schritten<br><em>zum Partnerstudio.</em></h2>
+      <div class="steps">
+        <div class="step rv d1">
+          <div class="step-num">1</div>
+          <h3 class="step-title">Erstes Gespräch</h3>
+          <p class="step-desc">Du schreibst mir eine kurze Nachricht, ich melde mich innerhalb von 24 Stunden. Wir sprechen über dein Studio, deine Kundinnen und ob die Partnerschaft für dich passt. Kein Druck, keine Verpflichtung.</p>
+        </div>
+        <div class="step rv d2">
+          <div class="step-num">2</div>
+          <h3 class="step-title">Produktschulung</h3>
+          <p class="step-desc">Du bekommst deine persönliche Produktschulung: Was steckt in den Produkten, wie setzt du sie ein, wie führst du das Beratungsgespräch. Live, per Video oder Präsenz. Ca. 2 bis 3 Stunden.</p>
+        </div>
+        <div class="step rv d3">
+          <div class="step-num">3</div>
+          <h3 class="step-title">Sofort loslegen</h3>
+          <p class="step-desc">Dein Einstiegsset kommt zu dir, du wirst auf meiner Website gelistet und erhältst alle Materialien. Ab diesem Moment bist du offizielles PURVIDUAL Partnerstudio und kannst direkt verkaufen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FÜR WEN / NICHT FÜR WEN -->
+  <section class="sec sec-white" id="zielgruppe">
+    <div class="sec-inner">
+      <div class="eyebrow rv">Passt das zu dir?</div>
+      <h2 class="sec-h2 rv d1">Für wen diese Partnerschaft<br><em>wirklich passt.</em></h2>
+      <div class="forwho-grid rv d2">
+        <div class="forwho-col">
+          <h3>Das passt für dich, wenn...</h3>
+          <ul class="forwho-list">
+            <li>du ein eigenes Kosmetikstudio betreibst oder als mobile Kosmetikerin arbeitest</li>
+            <li>du deinen Kundinnen nach der Behandlung gerne etwas mitgibst, das wirklich wirkt</li>
+            <li>du einen zusätzlichen Umsatzkanal willst, ohne mehr Zeit zu investieren</li>
+            <li>du hinter dem stehst, was du verkaufst, und Qualität wichtiger ist als Marge</li>
+            <li>du langfristig denkst und eine echte Partnerschaft suchst, kein Strohfeuer</li>
+          </ul>
+        </div>
+        <div class="forwho-col">
+          <h3>Das passt nicht, wenn...</h3>
+          <ul class="forwho-list no">
+            <li>du hauptsächlich im Preiskampf mit Discountern konkurrieren willst</li>
+            <li>du kein eigenes Studio hast und noch keine Kundinnen betreust</li>
+            <li>du ein Produkt suchst, das sich von selbst verkauft, ohne jede Beratung</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-sec" id="kontakt">
+    <div class="cta-inner">
+      <div class="cta-eyebrow rv">Jetzt starten</div>
+      <h2 class="cta-h2 rv d1">Bereit für dein<br>zweites Standbein?</h2>
+      <p class="cta-p rv d2">Schreib mir kurz, was du dir vorstellst. Wir schauen gemeinsam, ob die Partnerschaft für dich und dein Studio passt.</p>
+      <div class="rv d3">
+        <a href="https://wa.me/4915757202153" class="btn-white" target="_blank" rel="noopener">
+          Jetzt anfragen
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">Kristin Schnödt</div>
+          <p class="footer-tagline">Spezialistin für natürliche Hautverjüngung · Göttinnen-Haut · PURVIDUAL · Kosmetikstudio Auerbach i.d.Opf.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/kristin.schnoedt/" class="footer-sc" aria-label="Instagram" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/profile.php?id=61562529171301" class="footer-sc" aria-label="Facebook" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.youtube.com/@kristinschnoedt" class="footer-sc" aria-label="YouTube" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.96 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-h">Angebote</div>
+          <ul class="footer-links">
+            <li><a href="behandlungen.html">Behandlungen</a></li>
+            <li><a href="face-yoga.html">Göttinnen-Glow</a></li>
+            <li><a href="index.html#purvidual">PURVIDUAL Shop</a></li>
+            <li><a href="schulungen.html">B2B Schulungen</a></li>
+            <li><a href="purvidual-partner.html">PURVIDUAL Partner</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-h">Info</div>
+          <ul class="footer-links">
+            <li><a href="kristin-schnoedt.html">Über mich</a></li>
+            <li><a href="beauty-news.html">Beauty News</a></li>
+            <li><a href="https://kristin-schnoedt-kosmetik.belbo.com/gutscheine" target="_blank" rel="noopener">Gutscheine</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-h">Kontakt</div>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/4915757202153" target="_blank" rel="noopener">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/kristin.schnoedt/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://kristin-schnoedt-kosmetik.belbo.com/login" target="_blank" rel="noopener">Termin buchen</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Kristin Schnödt · Auerbach i.d.Opf.</p>
+        <ul class="footer-legal">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav sticky
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('stuck', window.scrollY > 60);
+    }, { passive: true });
+
+    // Mobile menu
+    const toggle = document.getElementById('navToggle');
+    const links = nav.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.style.display === 'flex';
+      links.style.cssText = open ? '' : 'display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--white);padding:1.5rem 1.75rem 2rem;box-shadow:0 8px 24px rgba(46,32,40,0.1);gap:1.25rem;';
+    });
+
+    // Scroll reveal
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
