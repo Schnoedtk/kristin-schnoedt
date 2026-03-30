@@ -426,6 +426,31 @@
     .pain-item { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 400; line-height: 1.7; color: var(--m900); text-align: left; padding: 1rem 1.5rem; border-left: 2px solid var(--m400); background: var(--alabaster); }
     .pain-close { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 500; color: var(--m700); margin-top: 2.5rem; }
 
+    /* ---- SOLUTION CARDS ---- */
+    .sol-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; margin-top: 3rem; }
+    .sol-card { padding: 1.75rem; border: 1px solid var(--m200); background: var(--white); text-decoration: none; transition: border-color 0.35s, transform 0.35s var(--ease), box-shadow 0.35s; display: flex; flex-direction: column; gap: 0.6rem; }
+    .sol-card:hover { border-color: var(--m400); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(46,32,40,0.08); }
+    .sol-card-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: var(--m200); line-height: 1; }
+    .sol-card-h { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 500; color: var(--m900); line-height: 1.3; }
+    .sol-card-sub { font-size: 0.63rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--m500); }
+    .sol-card-arrow { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--m700); margin-top: auto; padding-top: 1rem; display: flex; align-items: center; gap: 0.4rem; transition: color 0.3s; }
+    .sol-card:hover .sol-card-arrow { color: var(--m500); }
+
+    /* ---- PROOF STRIPS ---- */
+    .proof-strip { padding: 3rem 4rem; background: var(--white); border-top: 1px solid var(--m200); }
+    .proof-strip-head { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 2rem; }
+    .proof-strip-label { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--m500); white-space: nowrap; }
+    .proof-strip-rule { flex: 1; height: 1px; background: var(--m200); }
+    .proof-mini-grid { display: grid; gap: 1rem; }
+    .proof-mini-grid.g2 { grid-template-columns: 1fr 1fr; }
+    .proof-mini-grid.g3 { grid-template-columns: repeat(3,1fr); }
+    .proof-mini-grid.g4 { grid-template-columns: repeat(4,1fr); }
+    .proof-mini-card { background: var(--alabaster); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+    .proof-mini-stars { color: var(--m500); font-size: 0.8rem; letter-spacing: 2px; }
+    .proof-mini-q { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 400; line-height: 1.6; color: var(--m900); font-style: italic; flex: 1; }
+    .proof-mini-name { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--m700); }
+    .proof-mini-context { font-size: 0.63rem; color: var(--schiefer); }
+
     @media (max-width: 768px) {
       .nav { padding: 1rem 1.75rem !important; background: rgba(248,243,245,0.97) !important; backdrop-filter: blur(14px) !important; box-shadow: 0 1px 0 rgba(46,32,40,0.07) !important; }
       .nav-logo .logo-dark { display: none !important; }
@@ -487,6 +512,10 @@
       .pain-sec { padding: 3.5rem 1.75rem; }
       .pain-item { font-size: 1.05rem; padding: 0.85rem 1.1rem; }
       .pain-close { font-size: 1.6rem; margin-top: 2rem; }
+      .sol-grid { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .sol-card { padding: 1.25rem; }
+      .proof-strip { padding: 2.5rem 1.75rem; }
+      .proof-mini-grid.g2, .proof-mini-grid.g3, .proof-mini-grid.g4 { grid-template-columns: 1fr; }
       .fruehjahrsbanner { padding: 1.75rem !important; flex-direction: column; align-items: flex-start; gap: 1.25rem; }
       .fruehjahrsbanner-btn { width: 100%; justify-content: center; }
     }
@@ -541,7 +570,7 @@
     <div class="hero-content">
       <div class="hero-eyebrow">Spezialistin für natürliche Hautverjüngung</div>
       <h1 class="hero-h1">Ich bin gegen Botox<br>und zeige dir, <em>was wirklich wirkt.</em></h1>
-      <p class="hero-sub">Für Frauen ab 35, die ihrem Gesicht vertrauen — statt es zu verändern. Behandlungen, Face Yoga, Cupping und Clean Beauty, die wirklich wirken.</p>
+      <p class="hero-sub">Ohne Botox. Ohne Geräte-Zirkus. Für Frauen ab 35, die ihr Gesicht sichtbar straffen, frischen und definieren wollen — mit Treatments, Face Yoga und Hautpflege, die wirklich wirkt.</p>
       <div class="hero-actions">
         <button class="btn-primary" style="background:var(--m500);border:none;cursor:pointer;" onclick="openLeadModal()">
           <span>Gratis Lifting-Video holen</span>
@@ -604,39 +633,39 @@
     <div class="sec-inner">
       <div class="services-head">
         <div>
-          <div class="eyebrow rv">Das tue ich für dich</div>
-          <h2 class="sec-h2 rv d1">Vier Wege zu deiner<br><em>strahlendsten Version</em></h2>
+          <div class="eyebrow rv">Was bringt dich heute hierher?</div>
+          <h2 class="sec-h2 rv d1">Dein Ziel.<br><em>Mein Weg.</em></h2>
         </div>
-        <p class="services-intro rv">Du fühlst dich innen jung und lebendig — aber dein Spiegelbild hält nicht mehr Schritt. Du hast Produkte ausprobiert, Tipps befolgt, und trotzdem fragst du dich: Was wirkt wirklich, ohne Eingriffe, ohne Kompromisse? Genau dafür habe ich in 18 Jahren vier Wege entwickelt — für Frauen, die natürliche Ergebnisse wollen, die bleiben.</p>
+        <p class="services-intro rv">Keine zwei Gesichter sind gleich — und keine zwei Wege zu deiner besten Haut. Ob du schnell sichtbare Ergebnisse willst, von zu Hause aus starten möchtest, die richtige Pflege suchst oder als Kosmetikerin wachsen willst: Hier findest du deinen Weg.</p>
       </div>
       <div class="services-grid">
         <div class="svc rv">
           <div class="svc-num">01</div>
-          <div class="svc-title">Kosmetik­studio</div>
-          <div class="svc-tag">Vor Ort · Auerbach i.d.Opf.</div>
-          <p class="svc-desc">Premium-Treatments für sichtbare Ergebnisse: Buccale Massage, Gua Sha, Skulpturmassage, Mikrodermabrasion, Bio-Microneedling, Celluma LED und Cupping. Jede Behandlung ein gezielter Schritt zu deiner natürlichen Verjüngung.</p>
-          <a href="#studio" class="svc-link">Behandlungen entdecken <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+          <div class="svc-title">Schnell sichtbare Ergebnisse</div>
+          <div class="svc-tag">Vor Ort · Kosmetikstudio Auerbach</div>
+          <p class="svc-desc">Buccale Massage, Gua Sha, Skulpturmassage, Mikrodermabrasion, Bio-Microneedling, Celluma LED und Cupping. Jede Behandlung ein gezielter Schritt zu deiner natürlichen Verjüngung.</p>
+          <a href="#studio" class="svc-link">Treatments entdecken <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
         </div>
         <div class="svc rv d1">
           <div class="svc-num">02</div>
-          <div class="svc-title">Göttinnen-Haut</div>
-          <div class="svc-tag">Online-Programme · Face Yoga</div>
-          <p class="svc-desc">Face Yoga, Cupping, Gua Sha — als flexibler Self-Learning-Kurs oder als intensives 12-Wochen-Begleitprogramm. Für Frauen, die ihre Haut von zu Hause aus transformieren wollen.</p>
+          <div class="svc-title">Von zu Hause starten</div>
+          <div class="svc-tag">Online · Face Yoga &amp; Cupping</div>
+          <p class="svc-desc">Face Yoga, Cupping, Gua Sha — als flexibler Self-Learning-Kurs oder intensives 12-Wochen-Programm. Für Frauen, die ihre Haut von zu Hause aus transformieren wollen.</p>
           <a href="#kurse" class="svc-link">Kurse entdecken <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
         </div>
         <div class="svc rv d2">
           <div class="svc-num">03</div>
-          <div class="svc-title">PURVIDUAL</div>
-          <div class="svc-tag">Eigene Kosmetikmarke · Clean Beauty</div>
-          <p class="svc-desc">Hochwertige Pflegeprodukte — individuell abgestimmt, clean beauty und fester Bestandteil aller meiner Programme. Entwickelt aus über 15 Jahren Praxiserfahrung, nicht aus dem Labor.</p>
-          <a href="https://purvidual.de" class="svc-link" target="_blank" rel="noopener">Shop besuchen <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+          <div class="svc-title">Die richtige Pflege finden</div>
+          <div class="svc-tag">Produkte · PURVIDUAL Clean Beauty</div>
+          <p class="svc-desc">Hochwertige Pflegeprodukte, individuell abgestimmt und clean. Entwickelt aus über 15 Jahren Praxiserfahrung — nicht aus dem Labor, sondern aus der Behandlung heraus.</p>
+          <a href="#purvidual" class="svc-link">Produkte entdecken <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
         </div>
         <div class="svc rv d3">
           <div class="svc-num">04</div>
-          <div class="svc-title">Schulungen</div>
-          <div class="svc-tag">Für Kolleginnen · Bundesweit</div>
-          <p class="svc-desc">Face Yoga Ausbildung, Cupping-Schulung, PURVIDUAL Produktschulung — und Website-Erstellung für dein Studio. Praxiswissen aus 18 Jahren, live und interaktiv weitergegeben.</p>
-          <a href="schulungen.html" class="svc-link">Mehr erfahren <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
+          <div class="svc-title">Als Kosmetikerin wachsen</div>
+          <div class="svc-tag">Schulungen · Bundesweit</div>
+          <p class="svc-desc">Face Yoga Ausbildung, Cupping-Schulung, PURVIDUAL Produktschulung. Praxiswissen aus 18 Jahren, live und interaktiv weitergegeben — für Kolleginnen, die mehr wollen.</p>
+          <a href="schulungen.html" class="svc-link">Schulungen ansehen <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
         </div>
       </div>
     </div>
@@ -733,6 +762,42 @@
       </div>
     </div>
   </section>
+
+  <!-- PROOF BLOCK 1: STUDIO / TREATMENTS -->
+  <div class="proof-strip" style="background:var(--alabaster);">
+    <div class="proof-strip-inner" style="max-width:1200px;margin:0 auto;">
+      <div class="proof-strip-head">
+        <span class="proof-strip-label">Was Studio-Kundinnen erleben</span>
+        <div class="proof-strip-rule"></div>
+      </div>
+      <div class="proof-mini-grid g4">
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Mein Kiefergelenk ist viel beweglicher geworden. Das massive Spannungsgefühl ist wie weg gezaubert. Und trotz viel Stress habe ich keine Kopfschmerzen mehr."</p>
+          <div class="proof-mini-name">Ilona M.</div>
+          <div class="proof-mini-context">Mutter, 32 · Buccale Massage</div>
+        </div>
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Absolut empfehlenswert! Die Kombination aus Professionalität, angenehmer Atmosphäre und der Zeit, die sich Kristin nimmt, ist einzigartig."</p>
+          <div class="proof-mini-name">Otylia</div>
+          <div class="proof-mini-context">Mutter, berufstätig · Gesichtsbehandlung</div>
+        </div>
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Ich hatte eine umfassende Gesichtsbehandlung — die unreine Haut ist viel schöner und glatter. Tolles Ergebnis in einer sehr entspannten Atmosphäre."</p>
+          <div class="proof-mini-name">Sigrid A.</div>
+          <div class="proof-mini-context">Selbstständig, wenig Zeit · Gesichtsbehandlung</div>
+        </div>
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Jede Behandlung fühlt sich an wie eine kleine Auszeit. Die ganzheitliche Betrachtung und die kompetente Beratung von Kristin sind super!"</p>
+          <div class="proof-mini-name">Verena S.</div>
+          <div class="proof-mini-context">30, Vollzeitjob · Behandlung</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- STUDIO VIDEO -->
   <section class="studio-vid" id="studio-video">
@@ -845,6 +910,30 @@
     </div>
   </section>
 
+  <!-- PROOF BLOCK 2: ONLINE-KURSE / FACE YOGA -->
+  <div class="proof-strip" style="background:var(--white);border-top:1px solid var(--m200);">
+    <div class="proof-strip-inner" style="max-width:1200px;margin:0 auto;">
+      <div class="proof-strip-head">
+        <span class="proof-strip-label">Was Kursteilnehmerinnen sagen</span>
+        <div class="proof-strip-rule"></div>
+      </div>
+      <div class="proof-mini-grid g2">
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Auf meinem Kurmädelstreffen bekam ich von allen Seiten zu hören: Wow, Tanja, du siehst 10 Jahre jünger aus! Die haben mich ein Jahr nicht gesehen. Das habe ich dir zu verdanken."</p>
+          <div class="proof-mini-name">Tanja W.</div>
+          <div class="proof-mini-context">55, wollte wieder strahlender aussehen · Face Yoga</div>
+        </div>
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Kristin hat mir gezeigt, wie ich mit wenig Zeitaufwand aber sehr effektiv kleine Übungen machen kann, um meine Haut zu straffen. Absolut begeistert!"</p>
+          <div class="proof-mini-name">Manu D.</div>
+          <div class="proof-mini-context">Mutter und Oma, 61 · Online-Kurs</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FRÜHJAHRS BANNER -->
   <section class="fruehjahrsbanner" style="background:var(--m200);padding:2.5rem 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
     <div>
@@ -880,6 +969,36 @@
     </div>
   </section>
 
+  <!-- PROOF BLOCK 3: PURVIDUAL -->
+  <div class="proof-strip" style="background:var(--alabaster);">
+    <div class="proof-strip-inner" style="max-width:1200px;margin:0 auto;">
+      <div class="proof-strip-head">
+        <span class="proof-strip-label">Was PURVIDUAL-Kundinnen sagen</span>
+        <div class="proof-strip-rule"></div>
+      </div>
+      <div class="proof-mini-grid g3">
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Eine klare, parfümfreie Pflegeserie, die meiner alternden Haut gut tut. Einfach anzuwenden, ohne großes Prozedere — und die ich nicht mehr missen möchte."</p>
+          <div class="proof-mini-name">Angelika W.</div>
+          <div class="proof-mini-context">60, Vollzeitjob, Pflegemuffel · PURVIDUAL</div>
+        </div>
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Ich nehme die Produkte seit Oktober 2022 und mein Hautbild hat sich um 100 % verbessert. Von Anfang an begeistert."</p>
+          <div class="proof-mini-name">Monika R.</div>
+          <div class="proof-mini-context">59, wollte straffere Haut · PURVIDUAL</div>
+        </div>
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Kristins fachkundige Beratung und die Wirksamkeit der Produkte haben mich absolut überzeugt. Produkte, die meine Erwartungen übertroffen haben."</p>
+          <div class="proof-mini-name">Max L.</div>
+          <div class="proof-mini-context">35, pflegebewusst · PURVIDUAL</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- PULL QUOTE -->
   <section style="background:#EDE0E7;border-top:1px solid var(--m200);padding:7rem 4rem;text-align:center;position:relative;overflow:hidden;">
     <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;border:1px solid rgba(122,74,88,0.1);pointer-events:none;"></div>
@@ -890,115 +1009,6 @@
       </blockquote>
       <p style="font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--m500);" class="rv d2">— Kristin Schnödt</p>
       <p style="font-size:0.88rem;line-height:1.75;color:var(--schiefer);max-width:520px;margin:2rem auto 0;" class="rv d3">Botox pausiert. Meine Methode verändert. Wer sein Gesicht täglich trainiert, gewinnt langfristig, sichtbar, natürlich und dauerhaft.</p>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="sec testi">
-    <div class="sec-inner">
-      <div class="testi-head">
-        <div class="eyebrow rv">Was meine Kundinnen sagen</div>
-        <h2 class="sec-h2 rv d1" style="margin-bottom:0;"><em>Echte Ergebnisse</em>, echte Frauen</h2>
-      </div>
-      <div class="testi-slider-outer">
-        <div class="testi-track" id="testiTrack">
-
-          <!-- 1 Ilona M. -->
-          <div class="testi-card rv d1">
-            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <p class="testi-q">„Mein Kiefergelenk ist viel beweglicher geworden. Das massive Spannungsgefühl auf der rechten Seite ist wie weg gezaubert. Und trotz viel Stress habe ich keine Kopfschmerzen mehr — Lieben Dank für diese tolle Behandlung."</p>
-            <div class="testi-auth">
-              <div class="testi-av"><span class="testi-av-init">I</span></div>
-              <div><div class="testi-name">Ilona M.</div><div class="testi-meta">Mutter, 32, berufstätig · Buccale Massage</div></div>
-            </div>
-          </div>
-
-          <!-- 2 Angelika W. -->
-          <div class="testi-card rv d2">
-            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <p class="testi-q">„Eine klare, parfümfreie Pflegeserie die meiner alternden Haut gut tut, die ich Schmink- und Pflegemuffel einfach anwenden kann ohne großes Prozedere und die ich nicht mehr missen möchte. Ich kann es jedermann nur empfehlen!"</p>
-            <div class="testi-auth">
-              <div class="testi-av"><img src="Bilder/Kundinnen/Angelika.W.png" alt="Angelika W."></div>
-              <div><div class="testi-name">Angelika W.</div><div class="testi-meta">60, Vollzeitjob, Pflegemuffel · PURVIDUAL Kundin</div></div>
-            </div>
-          </div>
-
-          <!-- 3 Monika R. -->
-          <div class="testi-card rv d3">
-            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <p class="testi-q">„Ich bin von Anfang an begeistert von Purvidual. Ich nehme die Produkte seit Oktober 2022 und mein Hautbild hat sich um 100 % verbessert."</p>
-            <div class="testi-auth">
-              <div class="testi-av"><img src="Bilder/Kundinnen/Monika.R.png" alt="Monika R."></div>
-              <div><div class="testi-name">Monika R.</div><div class="testi-meta">59, viel beschäftigt, wollte straffere Haut · PURVIDUAL Kundin</div></div>
-            </div>
-          </div>
-
-          <!-- 4 Manu D. -->
-          <div class="testi-card">
-            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <p class="testi-q">„Kristin hat mich total begeistert mit ihrem Programm. Sie hat mir gezeigt, wie ich mit wenig Zeitaufwand aber sehr effektiv kleine Übungen machen kann, um meine Haut zu straffen."</p>
-            <div class="testi-auth">
-              <div class="testi-av"><img src="Bilder/Kundinnen/Manu.D.png" alt="Manu D."></div>
-              <div><div class="testi-name">Manu D.</div><div class="testi-meta">Mutter und Oma, 61, neigt zu roter Haut · Online-Kurs</div></div>
-            </div>
-          </div>
-
-          <!-- 5 Max L. -->
-          <div class="testi-card">
-            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <p class="testi-q">„Kristins fachkundige Beratung und die Wirksamkeit der Produkte haben mich absolut überzeugt. Ihre Expertise hat mir nicht nur wertvolle Einsichten verschafft, sondern auch zu Produkten geführt, die meine Erwartungen übertroffen haben."</p>
-            <div class="testi-auth">
-              <div class="testi-av"><img src="Bilder/Kundinnen/Max.L.png" alt="Max L."></div>
-              <div><div class="testi-name">Max L.</div><div class="testi-meta">35, Pflegebewusst · PURVIDUAL Kunde</div></div>
-            </div>
-          </div>
-
-          <!-- 6 Tanja W. -->
-          <div class="testi-card">
-            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <p class="testi-q">„Auf meinem Kurmädelstreffen bekam ich von allen Seiten zu hören: Wow, Tanja, du siehst 10 Jahre jünger aus! Die haben mich ein Jahr nicht gesehen. Das habe ich dir zu verdanken."</p>
-            <div class="testi-auth">
-              <div class="testi-av"><span class="testi-av-init">T</span></div>
-              <div><div class="testi-name">Tanja W.</div><div class="testi-meta">55, wollte wieder strahlender aussehen · Face Yoga</div></div>
-            </div>
-          </div>
-
-          <div class="testi-card">
-            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <p class="testi-q">„Absolut empfehlenswert! Die Kombination aus Professionalität, einer angenehmen Atmosphäre und der Zeit, die sich Kristin für die Kunden nimmt, ist ein großartiges Merkmal, das es lohnenswert macht, anderen davon zu erzählen."</p>
-            <div class="testi-auth">
-              <div class="testi-av"><span class="testi-av-init">O</span></div>
-              <div><div class="testi-name">Otylia</div><div class="testi-meta">Mutter, berufstätig · Gesichtsbehandlung</div></div>
-            </div>
-          </div>
-
-          <div class="testi-card">
-            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <p class="testi-q">„Ich hatte eine umfassende Gesichtsbehandlung und bin damit sehr zufrieden. Die unreine Haut ist viel schöner und glatter. Ganz tolles Ergebnis und das alles in einer sehr entspannten Art und Umgebung."</p>
-            <div class="testi-auth">
-              <div class="testi-av"><span class="testi-av-init">S</span></div>
-              <div><div class="testi-name">Sigrid A.</div><div class="testi-meta">Selbstständig, wenig Zeit · Gesichtsbehandlung</div></div>
-            </div>
-          </div>
-
-          <div class="testi-card">
-            <div class="testi-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <p class="testi-q">„Jede Behandlung fühlt sich an wie eine kleine Auszeit vom stressigen Alltag. Die ganzheitliche Betrachtung des Körpers und des Geistes sowie die kompetente Beratung von Kristin sind super!"</p>
-            <div class="testi-auth">
-              <div class="testi-av"><span class="testi-av-init">V</span></div>
-              <div><div class="testi-name">Verena S.</div><div class="testi-meta">30, Vollzeitjob · Behandlung</div></div>
-            </div>
-          </div>
-
-        </div>
-        <button class="testi-sl-btn testi-sl-prev" id="testiPrev" aria-label="Zurück">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <button class="testi-sl-btn testi-sl-next" id="testiNext" aria-label="Weiter">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-        <div class="testi-sl-dots" id="testiDots"></div>
-      </div>
     </div>
   </section>
 
