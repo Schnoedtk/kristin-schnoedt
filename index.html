@@ -487,6 +487,8 @@
       .pain-sec { padding: 3.5rem 1.75rem; }
       .pain-item { font-size: 1.05rem; padding: 0.85rem 1.1rem; }
       .pain-close { font-size: 1.6rem; margin-top: 2rem; }
+      .fruehjahrsbanner { padding: 1.75rem !important; flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+      .fruehjahrsbanner-btn { width: 100%; justify-content: center; }
     }
   </style>
 </head>
@@ -844,21 +846,15 @@
   </section>
 
   <!-- FRÜHJAHRS BANNER -->
-  <section style="background:var(--m200);padding:2.5rem 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
-    <div style="display:flex;align-items:center;gap:1.5rem;">
-      <span style="font-size:1.5rem;">🌿</span>
-      <div>
-        <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--m700);margin-bottom:0.3rem;">Frühjahrs-Start 2026</div>
-        <p style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--m900);line-height:1.3;margin:0;">Der perfekte Moment, neu anzufangen — <em>passend für jede Morgenroutine.</em></p>
-      </div>
+  <section class="fruehjahrsbanner" style="background:var(--m200);padding:2.5rem 4rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+    <div>
+      <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--m700);margin-bottom:0.3rem;">Frühjahrs-Start 2026 · Gültig bis 30. April</div>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--m900);line-height:1.3;margin:0;">Der perfekte Moment, neu anzufangen, <em>passend für jede Morgenroutine.</em></p>
     </div>
-    <div style="display:flex;align-items:center;gap:2rem;flex-wrap:wrap;">
-      <span style="font-size:0.68rem;color:var(--schiefer);letter-spacing:0.06em;">Angebot gültig bis 30. April 2026</span>
-      <a href="https://alfima.com/kristin_schnoedt/face-yoga-schnupperkurs" class="btn-primary" style="white-space:nowrap;justify-content:center;" target="_blank" rel="noopener">
-        <span>Schnupperkurs starten</span>
-        <svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
-      </a>
-    </div>
+    <a href="https://alfima.com/kristin_schnoedt/face-yoga-schnupperkurs" class="btn-primary fruehjahrsbanner-btn" style="white-space:nowrap;justify-content:center;" target="_blank" rel="noopener">
+      <span>Schnupperkurs starten</span>
+      <svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+    </a>
   </section>
 
   <!-- PURVIDUAL -->
