@@ -213,6 +213,19 @@
       .footer-legal{flex-wrap:wrap;justify-content:center;gap:1rem;}
       .btn-primary,.btn-white{width:100%;justify-content:center;}
     }
+    /* ---- PROOF STRIP ---- */
+    .proof-strip{padding:3rem 4rem;background:var(--alabaster);border-top:1px solid var(--m200);}
+    .proof-strip-head{display:flex;align-items:center;gap:1.25rem;margin-bottom:2rem;}
+    .proof-strip-label{font-size:0.62rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--m500);white-space:nowrap;}
+    .proof-strip-rule{flex:1;height:1px;background:var(--m200);}
+    .proof-mini-grid{display:grid;gap:1rem;}
+    .proof-mini-grid.g3{grid-template-columns:repeat(3,1fr);}
+    .proof-mini-card{background:var(--white);padding:1.5rem;display:flex;flex-direction:column;gap:0.6rem;}
+    .proof-mini-stars{color:var(--m500);font-size:0.8rem;letter-spacing:2px;}
+    .proof-mini-q{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;line-height:1.6;color:var(--m900);font-style:italic;flex:1;}
+    .proof-mini-name{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m700);}
+    .proof-mini-context{font-size:0.63rem;color:var(--schiefer);}
+    @media(max-width:768px){.proof-strip{padding:2.5rem 1.75rem;}.proof-mini-grid.g3{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -448,6 +461,36 @@
       </div>
     </div>
   </section>
+
+  <!-- PROOF STRIP: PURVIDUAL -->
+  <div class="proof-strip">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="proof-strip-head">
+        <span class="proof-strip-label">Was Kundinnen über PURVIDUAL sagen</span>
+        <div class="proof-strip-rule"></div>
+      </div>
+      <div class="proof-mini-grid g3">
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Eine klare, parfümfreie Pflegeserie, die meiner alternden Haut gut tut. Einfach anzuwenden, ohne großes Prozedere — und die ich nicht mehr missen möchte."</p>
+          <div class="proof-mini-name">Angelika W.</div>
+          <div class="proof-mini-context">60, Vollzeitjob, Pflegemuffel · PURVIDUAL</div>
+        </div>
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Ich nehme die Produkte seit Oktober 2022 und mein Hautbild hat sich um 100 % verbessert. Von Anfang an begeistert."</p>
+          <div class="proof-mini-name">Monika R.</div>
+          <div class="proof-mini-context">59, wollte straffere Haut · PURVIDUAL</div>
+        </div>
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Kristins fachkundige Beratung und die Wirksamkeit der Produkte haben mich absolut überzeugt. Produkte, die meine Erwartungen übertroffen haben."</p>
+          <div class="proof-mini-name">Max L.</div>
+          <div class="proof-mini-context">35, pflegebewusst · PURVIDUAL</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- CTA -->
   <section class="cta-sec" id="kontakt">

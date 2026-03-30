@@ -250,6 +250,19 @@
     .lead-modal-h em{font-style:italic;color:var(--m400);}
     .lead-modal-sub{font-size:0.82rem;line-height:1.72;color:rgba(255,255,255,0.5);margin-bottom:2rem;}
     .lead-modal-note{font-size:0.62rem;color:rgba(255,255,255,0.22);margin-top:1.25rem;line-height:1.6;text-align:center;}
+    /* ---- PROOF STRIP ---- */
+    .proof-strip{padding:3rem 4rem;background:var(--white);border-top:1px solid var(--m200);}
+    .proof-strip-head{display:flex;align-items:center;gap:1.25rem;margin-bottom:2rem;}
+    .proof-strip-label{font-size:0.62rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--m500);white-space:nowrap;}
+    .proof-strip-rule{flex:1;height:1px;background:var(--m200);}
+    .proof-mini-grid{display:grid;gap:1rem;}
+    .proof-mini-grid.g2{grid-template-columns:1fr 1fr;}
+    .proof-mini-card{background:var(--alabaster);padding:1.5rem;display:flex;flex-direction:column;gap:0.6rem;}
+    .proof-mini-stars{color:var(--m500);font-size:0.8rem;letter-spacing:2px;}
+    .proof-mini-q{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;line-height:1.6;color:var(--m900);font-style:italic;flex:1;}
+    .proof-mini-name{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m700);}
+    .proof-mini-context{font-size:0.63rem;color:var(--schiefer);}
+    @media(max-width:768px){.proof-strip{padding:2.5rem 1.75rem;}.proof-mini-grid.g2{grid-template-columns:1fr;}}
   </style>
   <!-- MailerLite Universal -->
   <script>(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');ml('account','1097175');</script>
@@ -637,6 +650,30 @@
       </div>
     </div>
   </section>
+
+  <!-- PROOF STRIP: KURSE -->
+  <div class="proof-strip">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="proof-strip-head">
+        <span class="proof-strip-label">Was Kursteilnehmerinnen sagen</span>
+        <div class="proof-strip-rule"></div>
+      </div>
+      <div class="proof-mini-grid g2">
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Auf meinem Kurmädelstreffen bekam ich von allen Seiten zu hören: Wow, Tanja, du siehst 10 Jahre jünger aus! Die haben mich ein Jahr nicht gesehen. Das habe ich dir zu verdanken."</p>
+          <div class="proof-mini-name">Tanja W.</div>
+          <div class="proof-mini-context">55, wollte wieder strahlender aussehen · Face Yoga</div>
+        </div>
+        <div class="proof-mini-card">
+          <div class="proof-mini-stars">★★★★★</div>
+          <p class="proof-mini-q">„Kristin hat mir gezeigt, wie ich mit wenig Zeitaufwand aber sehr effektiv kleine Übungen machen kann, um meine Haut zu straffen. Absolut begeistert!"</p>
+          <div class="proof-mini-name">Manu D.</div>
+          <div class="proof-mini-context">Mutter und Oma, 61 · Online-Kurs</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ── CLOSING STRIP ── -->
   <section class="fy-strip">
