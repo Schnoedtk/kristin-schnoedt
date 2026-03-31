@@ -190,7 +190,7 @@
     .treat-img-wrap { position: relative; position: sticky; top: 140px; }
     .treat-img { width: 100%; aspect-ratio: 4/5; overflow: hidden; }
     .treat-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
-    .treat-img-wrap:hover img { transform: scale(1.03); }
+    .treat-img:hover img { transform: scale(1.03); }
     .treat-badge { position: absolute; bottom: -1.75rem; right: -1.75rem; width: 140px; height: 140px; border-radius: 50%; background: var(--m500); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; z-index: 2; }
     .treat-badge-n { font-family: var(--display); font-size: 2.75rem; font-weight: 400; color: var(--white); line-height: 1; }
     .treat-badge-l { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.78); line-height: 1.4; }
@@ -675,9 +675,11 @@
   <!-- TREATMENTS -->
   <section class="treat" id="studio">
     <div class="treat-inner">
-      <div class="treat-img-wrap">
-        <div class="treat-img rv">
-          <img src="Bilder/Treatments/Allgemein.jpg" alt="Kosmetikbehandlung Kristin Schnödt">
+      <div style="position:relative;">
+        <div class="treat-img-wrap rv">
+          <div class="treat-img">
+            <img src="Bilder/Treatments/Allgemein.jpg" alt="Kosmetikbehandlung Kristin Schnödt">
+          </div>
         </div>
         <div class="treat-badge"><div class="treat-badge-n">10</div><div class="treat-badge-l">Signature<br>Treatments</div></div>
       </div>
