@@ -191,7 +191,7 @@
     .treat-img { width: 100%; aspect-ratio: 4/5; overflow: hidden; }
     .treat-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
     .treat-img:hover img { transform: scale(1.03); }
-    .treat-badge { position: absolute; bottom: -1.75rem; right: -1.75rem; width: 140px; height: 140px; border-radius: 50%; background: var(--m500); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+    .treat-badge { position: absolute; bottom: -1.75rem; right: -1.75rem; width: 140px; height: 140px; border-radius: 50%; background: var(--m500); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; z-index: 2; }
     .treat-badge-n { font-family: var(--display); font-size: 2.75rem; font-weight: 400; color: var(--white); line-height: 1; }
     .treat-badge-l { font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.78); line-height: 1.4; }
 
@@ -406,7 +406,7 @@
       .hero-stat { right: 42%; }
       .services-head { grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 2.5rem; }
       .treat-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .treat-img-wrap { position: static; }
+      .treat-img-wrap { position: relative; }
       .purv-inner { grid-template-columns: 1fr; gap: 4rem; }
       .courses-grid { grid-template-columns: 1fr 1fr; }
       .testi-grid { grid-template-columns: 1fr 1fr; }
@@ -1137,7 +1137,7 @@
   <div class="philosophy-grid">
     <div>
       <div class="eyebrow rv" style="margin-bottom:1.5rem;">Vertrauen durch Ehrlichkeit</div>
-      <h2 class="sec-h2 rv d1" style="margin-bottom:1.5rem;">So arbeite ich —<br><em>und warum das wichtig ist</em></h2>
+      <h2 class="sec-h2 rv d1" style="margin-bottom:1.5rem;">So arbeite ich und warum das wichtig ist</h2>
       <p style="font-size:0.88rem;line-height:1.85;color:var(--schiefer);" class="rv d2">Ich zeige dir alles, was ich tue — und warum. Keine versteckten Methoden, keine Versprechen die ich selbst nicht halten kann, keine Behandlungen die ich nicht selbst nutzen würde. Was du auf dieser Seite siehst, ist echt: Echte Frauen, echte Ergebnisse, ehrliche Kommunikation.</p>
       <p style="font-size:0.88rem;line-height:1.85;color:var(--schiefer);margin-top:1rem;" class="rv d3">Sichtbare Veränderung entsteht nach 2 bis 6 Wochen bei regelmäßiger Anwendung — das sage ich dir direkt, damit du weißt, worauf du dich einlässt.</p>
       <a href="kristin-schnoedt.html" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--m500);text-decoration:none;border-bottom:1px solid var(--m400);padding-bottom:1px;margin-top:1.75rem;" class="rv d4">Mehr über mich und meinen Ansatz →</a>
