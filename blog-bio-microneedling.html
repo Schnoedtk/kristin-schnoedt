@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5 Face Yoga Übungen, die sofort wirken — Kristin Schnödt</title>
-  <meta name="description" content="Dein Gesicht hat über 40 Muskeln — und die meisten trainieren wir nie. Kristin Schnödt zeigt dir 5 Face Yoga Übungen, die sie selbst jeden Morgen macht.">  <link rel="stylesheet" href="fonts/fonts.css">
+  <title>Bio-Microneedling Auerbach | Natürliches Needling – Kristin Schnödt</title>
+  <meta name="description" content="Bio-Microneedling mit Spongilla Spiculae in Auerbach – natürliche Mikronadeln aus getrocknetem Schwamm statt Metall. 3 Mio. Nadelreize, kein Gerät, keine Ausfallzeit. Kristin Schnödt erklärt die Methode.">
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/LogoNeu_2026_final_OH.png">
 
   <!-- MailerLite Universal -->
@@ -50,20 +51,23 @@
     .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
     .nav-hamburger span { display: block; width: 24px; height: 1.5px; background: var(--m900); }
 
-    .article-hero { position: relative; height: 55vh; min-height: 380px; overflow: hidden; display: flex; align-items: flex-end; background: var(--m900); }
-    .article-hero-bg { position: absolute; inset: 0; background-image: url('Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4549).jpeg'); background-size: cover; background-position: center 35%; opacity: 0.55; }
+    .article-blobs{position:absolute;top:0;left:20px;width:380px;height:380px;z-index:3;pointer-events:none;}
+    .article-blob{position:absolute;filter:blur(1px);}
+    .article-blob-1{width:260px;height:260px;top:20px;left:20px;background:radial-gradient(ellipse at 50% 50%,rgba(181,129,140,0.22) 0%,rgba(181,129,140,0.06) 70%,transparent 100%);border:2px solid rgba(181,129,140,0.42);border-radius:50%;animation:blobCircle1 8s ease-in-out infinite;}
+    .article-blob-2{width:150px;height:150px;top:160px;left:10px;background:radial-gradient(ellipse at 50% 50%,rgba(122,74,88,0.14) 0%,rgba(122,74,88,0.04) 70%,transparent 100%);border:2px solid rgba(122,74,88,0.3);border-radius:50%;animation:blobCircle2 11s ease-in-out infinite;}
+    @keyframes blobCircle1{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-18px) scale(1.04);}}
+    @keyframes blobCircle2{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(14px) scale(0.96);}}
+    .article-hero { position: relative; height: 60vh; min-height: 400px; overflow: hidden; display: flex; align-items: flex-end; background: var(--m900); }
+    .article-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 35%; opacity: 0.55; }
     .article-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(46,32,40,0.88) 0%, rgba(46,32,40,0.4) 55%, rgba(46,32,40,0.15) 100%); }
     .article-hero-content { position: relative; z-index: 2; width: 100%; max-width: 760px; margin: 0 auto; padding: 0 2rem 3.5rem; }
     .article-category { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--m400); margin-bottom: 1rem; }
     .article-category::before { content: ''; display: block; width: 20px; height: 1px; background: var(--m500); }
-    .article-hero h1 { font-family: var(--display); font-size: clamp(2.2rem, 4vw, 3.8rem); font-weight: 400; color: var(--white); line-height: 1.15; margin-bottom: 1.25rem; }
+    .article-hero h1 { font-family: var(--display); font-size: clamp(1.9rem, 3.5vw, 3.2rem); font-weight: 400; color: var(--white); line-height: 1.15; margin-bottom: 1.25rem; }
     .article-hero h1 em { font-style: italic; color: var(--m400); }
     .article-meta { font-size: 0.7rem; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
     .article-meta span { display: flex; align-items: center; gap: 0.35rem; }
     .article-meta .sep { width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,0.3); }
-
-    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--m500); text-decoration: none; padding: 1.25rem 2rem 0; max-width: 720px; margin: 0 auto; display: block; }
-    .back-link:hover { color: var(--m700); }
 
     .article-body { max-width: 720px; margin: 0 auto; padding: 3rem 2rem 5rem; }
     .article-lead { font-size: 1.05rem; line-height: 1.9; color: var(--m900); margin-bottom: 2.5rem; font-weight: 400; }
@@ -74,16 +78,16 @@
     .article-pullquote { margin: 3rem 0; padding: 2rem 2.5rem; border-left: 3px solid var(--m500); background: var(--alabaster); }
     .article-pullquote blockquote { font-family: var(--display); font-size: clamp(1.35rem, 2.5vw, 1.8rem); font-weight: 400; font-style: italic; color: var(--m900); line-height: 1.4; margin-bottom: 0.75rem; }
     .article-pullquote cite { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--m500); font-style: normal; }
-    .article-img-wrap { margin: 2.5rem 0; }
-    .article-img-wrap img { width: 100%; display: block; border-radius: 2px; aspect-ratio: 16/9; object-fit: cover; }
-    .article-img-caption { font-size: 0.72rem; color: var(--m400); letter-spacing: 0.06em; margin-top: 0.75rem; font-style: italic; }
     .article-tip { margin: 2.5rem 0; padding: 1.75rem 2rem; background: var(--alabaster); border-left: 3px solid var(--m500); }
     .article-tip-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--m500); margin-bottom: 0.6rem; }
     .article-tip p { font-size: 0.88rem; line-height: 1.75; color: var(--m900); margin-bottom: 0; }
+    .article-price-box { margin: 2.5rem 0; padding: 1.75rem 2rem; background: var(--alabaster); border-left: 3px solid var(--m500); font-size: 0.95rem; font-weight: 600; color: var(--m900); line-height: 1.7; }
     .article-divider { width: 48px; height: 1px; background: var(--m300); margin: 3rem 0; }
     .article-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--m200); }
     .article-tag { font-size: 0.62rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.38rem 0.85rem; border: 1px solid var(--m300); color: var(--m700); text-decoration: none; transition: background 0.3s, border-color 0.3s, color 0.3s; }
     .article-tag:hover { background: var(--m500); border-color: var(--m500); color: var(--white); }
+    .article-cta { display: inline-flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; padding: 1rem 2.5rem; background: var(--m500); color: var(--white); text-decoration: none; border-radius: 2px; transition: background 0.3s; margin: 1rem 0 2rem; }
+    .article-cta:hover { background: var(--m700); }
 
     .author-box { background: var(--alabaster); border-top: 1px solid var(--m200); border-bottom: 1px solid var(--m200); padding: 3rem 2rem; }
     .author-box-inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; gap: 2rem; }
@@ -201,17 +205,21 @@
   </nav>
 
   <section class="article-hero">
-    <div class="article-hero-bg"></div>
+    <div class="article-blobs">
+      <div class="article-blob article-blob-1"></div>
+      <div class="article-blob article-blob-2"></div>
+    </div>
+    <div class="article-hero-bg" style="background-image: url('Bilder/Treatments/Microdermabrasion.jpg')"></div>
     <div class="article-hero-overlay"></div>
     <div class="article-hero-content">
-      <div class="article-category">Face Yoga</div>
-      <h1>5 Face Yoga Übungen,<br><em>die sofort wirken</em></h1>
+      <div class="article-category">Behandlung</div>
+      <h1>Bio-Microneedling,<br><em>natürlich und wirksam</em></h1>
       <div class="article-meta">
-        <span>20. März 2026</span>
+        <span>1. April 2026</span>
         <span class="sep"></span>
-        <span>6 Min Lesezeit</span>
+        <span>5 Min Lesezeit</span>
         <span class="sep"></span>
-        <span>Autorin: Kristin Schnödt</span>
+        <span>Kristin Schnödt</span>
       </div>
     </div>
   </section>
@@ -221,62 +229,88 @@
     <p style="margin-bottom:1.5rem;"><a href="beauty-news.html" style="font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--m500);text-decoration:none;">← Zurück zu Beauty News</a></p>
 
     <p class="article-lead rv">
-      Dein Gesicht hat über 40 Muskeln — und die meisten davon trainieren wir nie gezielt. Dabei ist genau das der Schlüssel zu strafferen Konturen, weniger Falten und einem frischeren Ausdruck ohne jeden Eingriff.
+      Deine Haut hat alle Fähigkeiten, die sie zur Erneuerung braucht. Sie muss nur den richtigen Anstoß bekommen. Bio-Microneedling gibt ihr genau das — und zwar mit einem der ältesten Naturmaterialien der Welt: einem getrockneten Süßwasserschwamm.
     </p>
 
-    <h2 class="rv">Warum Gesichtsmuskeln Training brauchen</h2>
+    <h2 class="rv">Was steckt hinter Bio-Microneedling?</h2>
 
     <p class="rv">
-      Wir trainieren unsere Beine, unsere Arme, unseren Rücken. Aber das Gesicht? Das lassen wir einfach altern. Dabei folgt es denselben Gesetzen wie jeder andere Muskel: Was nicht benutzt wird, verliert an Spannung, Volumen und Form. Face Yoga arbeitet genau hier an. Nicht mit Druck von außen — sondern mit gezielter Aktivierung von innen.
+      Das Herzstück der Behandlung ist der Süßwasserschwamm <em>Spongilla lacustris</em> — ein Naturprodukt, das nachhaltig gewonnen, 60 Stunden lang gefriergetrocknet und anschließend zu einem feinen Pulver vermahlen wird. Was dabei entsteht, sind winzige nadelartige Siliziumkristalle, sogenannte Spiculae. Für das bloße Auge sehen sie aus wie Puder. Unter dem Mikroskop zeigt sich: Millionen natürlicher Mikronadeln.
+    </p>
+
+    <p class="rv">
+      Diese Spiculae werden in einer sanften Handmassage in die Haut eingearbeitet. In nur wenigen Minuten dringen dabei bis zu drei Millionen dieser feinen Kristallnadeln in die obere Hautschicht ein — ganz ohne Gerät, ganz ohne Metall. Sie verbleiben 48 bis 72 Stunden in der Haut und lösen in dieser Zeit einen natürlichen Reparaturprozess aus: Die Haut erkennt die Mikroreize als Signal zur Erneuerung und beginnt, verstärkt Kollagen und Elastin zu produzieren. Der Hauterneuerungszyklus verkürzt sich dadurch von 28 Tagen auf etwa 7 Tage.
     </p>
 
     <div class="article-pullquote rv">
-      <blockquote>„Nach zwei Wochen täglichem Training kommen meine Kundinnen zurück und sagen: Ich sehe irgendwie frischer aus, aber ich weiß nicht warum. Das ist Face Yoga."</blockquote>
-      <cite>— Kristin Schnödt</cite>
+      <blockquote>„Kein Gerät, keine Metallnadel — nur ein Naturprodukt, das die Haut zur Selbsterneuerung bringt."</blockquote>
     </div>
 
-    <h2 class="rv">Die 5 Übungen, die ich selbst jeden Morgen mache</h2>
+    <h2 class="rv">Die drei Needling-Methoden im Vergleich</h2>
 
     <p class="rv">
-      Diese Übungen dauern zusammen etwa 8 bis 10 Minuten. Du brauchst keine Ausrüstung, keinen besonderen Ort — nur deine Hände und ein paar Minuten Konzentration. Ich empfehle sie morgens, bevor du Tagescreme aufträgst.
+      Nicht jedes Needling ist gleich. Der Begriff umfasst drei grundlegend verschiedene Methoden — mit unterschiedlichen Werkzeugen, Tiefen und Einsatzbereichen.
     </p>
-
-    <div class="article-img-wrap rv">
-      <img src="Bilder/Face-Yoga/Snapshot_83.PNG" alt="Kristin demonstriert eine Face Yoga Übung">
-      <p class="article-img-caption">Kristin Schnödt bei einer ihrer täglichen Face Yoga Morgenübungen.</p>
-    </div>
-
-    <h3 class="rv">1. Das Löwengesicht — für Stirn und Augenpartie</h3>
-    <p class="rv">Mund weit auf, Augen weit auf, Zunge raus und nach unten strecken. Halte 5 Sekunden, dann entspannen. Wiederhole 5-mal. Diese Übung lockert die Stirnmuskulatur und aktiviert die Augenpartie.</p>
-
-    <h3 class="rv">2. Die Wangenpolster-Aktivierung</h3>
-    <p class="rv">Lächle breit, lege beide Zeigefinger leicht auf die Wangenpolster und drücke diese sanft nach oben. Halte 10 Sekunden. Diese Übung stärkt den Musculus zygomaticus major — deinen wichtigsten Liftingmuskel.</p>
-
-    <h3 class="rv">3. Das Kinn-Lifting</h3>
-    <p class="rv">Schiebe das Kinn leicht nach vorne und oben, lege drei Finger flach auf das Dekolleté und ziehe die Haut sanft nach unten. Halte 20 Sekunden. Diese Übung strafft den Halsbereich und das Kinn.</p>
-
-    <h3 class="rv">4. Die Augenring-Entspannung</h3>
-    <p class="rv">Lege Zeige- und Mittelfinger sanft auf den Knochen unter dem Auge. Halte leichten Druck, schau nach oben und blinzle leicht. 8-mal wiederholen. Aktiviert die Lymphdrainage rund ums Auge.</p>
-
-    <h3 class="rv">5. Das Mundwinkel-Lifting</h3>
-    <p class="rv">Lächle mit geschlossenem Mund, lege beide Zeigefinger auf die Mundwinkel und drücke minimal nach außen. Halte 10 Sekunden, dann loslassen. Wiederholen 5-mal. Einer meiner Lieblinge für ein entspannteres Gesicht.</p>
 
     <div class="article-tip rv">
-      <div class="article-tip-label">Mein täglicher Tipp</div>
-      <p>Mach diese Übungen täglich — auch wenn nur 5 Minuten. Regelmäßigkeit ist wichtiger als Intensität. Nach 3 Wochen wirst du einen Unterschied sehen.</p>
+      <div class="article-tip-label">Vergleich</div>
+      <p><strong>Bio-Microneedling (Spongilla Spiculae) — bei Kristin Schnödt:</strong><br>
+      → Natürliche Kristallnadeln aus dem getrockneten Süßwasserschwamm<br>
+      → Einarbeitung per Handmassage, kein Gerät nötig<br>
+      → Spiculae bleiben 48–72 Std. in der Haut und wirken weiter<br>
+      → Kein Blut, keine Ausfallzeit, für alle Hauttypen geeignet<br>
+      → Keine Säuren, keine synthetischen Wirkstoffe<br>
+      → Im Kosmetikstudio anwendbar</p>
+      <p style="margin-top:1rem;"><strong>Kosmetisches Needling (Metallnadel, bis 0,5 mm):</strong><br>
+      → Dermaroller oder Dermapen mit Metallnadeln<br>
+      → Eindringtiefe bis 0,5 mm — im Kosmetikstudio erlaubt<br>
+      → Erzeugt Mikrokanäle für Wirkstoffeinschleusung<br>
+      → Leichte Rötungen möglich, rasche Erholung</p>
+      <p style="margin-top:1rem;"><strong>Medizinisches Needling (Metallnadel, ab 0,5 mm):</strong><br>
+      → Tiefere Eindringtiefe, nur unter ärztlicher Aufsicht<br>
+      → Oft kombiniert mit PRP (Eigenblut) oder synthetischen Wachstumsfaktoren<br>
+      → Deutlichere Rötungen, mögliche Ausfallzeit<br>
+      → Für ausgeprägte Narben oder tiefe Falten</p>
     </div>
 
+    <h2 class="rv">Was passiert bei der Behandlung?</h2>
+
     <p class="rv">
-      Face Yoga funktioniert. Aber wie jedes Training braucht es Zeit und Konsequenz. Wenn du tiefer einsteigen möchtest, findest du in meinem <a href="https://alfima.com/kristin_schnoedt/face-yoga-schnupperkurs" style="color:var(--m700);text-decoration:underline;text-decoration-color:var(--m400);">Schnupperkurs</a> die vollständige Einführung — Schritt für Schritt, videogeführt, sofort anwendbar.
+      Zunächst reinige ich deine Haut gründlich. Dann trage ich das Spiculae-Pulver auf und arbeite es in einer gezielten Massage ein — gleichmäßig, mit Gefühl für die Zonen, die deine Haut gerade braucht. Dieser Schritt dauert nur wenige Minuten, aber die Wirkung setzt unmittelbar ein. Im Anschluss kommen hochwertige natürliche Wirkstoffe auf die Haut, die über die geöffneten Mikrokanäle besonders tief eindringen können.
     </p>
+
+    <p class="rv">
+      In den folgenden 48 bis 72 Stunden arbeiten die Spiculae weiter: Sie lösen den Hautreparaturprozess aus, regen die Kollagenproduktion an und beschleunigen die Zellerneuerung. Danach löst sich die oberste Hautschicht fein ab — ein Zeichen, dass der Erneuerungsprozess aktiv ist. Optional kombiniere ich die Behandlung mit der Celluma LED-Lichttherapie, die diesen Prozess zusätzlich unterstützt und beruhigt.
+    </p>
+
+    <div class="article-price-box rv">
+      Bio-Microneedling: 169 € &nbsp;·&nbsp; 60 Min.<br>
+      Bio-Microneedling &amp; Celluma: 179 € &nbsp;·&nbsp; 90 Min.
+    </div>
+
+    <h2 class="rv">Für wen lohnt es sich?</h2>
+
+    <p class="rv">
+      Bio-Microneedling eignet sich für nahezu alle Hauttypen — auch für empfindliche Haut und Haut mit Unreinheiten. Besonders empfehle ich es Frauen ab 35, die Fältchen, große Poren, fahle Haut, Pigmentflecken oder ein ungleichmäßiges Hautbild ansprechen möchten. Auch bei leichten Aknenarben zeigt die Methode gute Ergebnisse. Da keine Ausfallzeit entsteht, lässt sich die Behandlung gut in den Alltag integrieren — einzig auf direkte Sonneneinstrahlung und aggressive Pflegeprodukte solltest du in den ersten Tagen nach der Behandlung verzichten.
+    </p>
+
+    <div class="article-tip rv">
+      <div class="article-tip-label">Meine Empfehlung</div>
+      <p>Für ein dauerhaftes Ergebnis empfehle ich 2 bis 4 Behandlungen im Abstand von 3 bis 4 Wochen. Weil der Hauterneuerungszyklus auf 7 Tage verkürzt wird, sieht man die Veränderung schneller als bei vielen anderen Methoden — und mit jeder weiteren Behandlung tiefer.</p>
+    </div>
 
     <div class="article-divider rv"></div>
 
+    <p class="rv" style="text-align:center;">
+      <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="article-cta" target="_blank" rel="noopener">Microneedling Termin sichern</a>
+    </p>
+
     <div class="article-tags rv">
-      <a href="beauty-news.html" class="article-tag">Face Yoga</a>
-      <a href="beauty-news.html" class="article-tag">Übungen</a>
-      <a href="beauty-news.html" class="article-tag">Anfänger</a>
-      <a href="beauty-news.html" class="article-tag">Morgenroutine</a>
+      <a href="beauty-news.html" class="article-tag">Microneedling</a>
+      <a href="beauty-news.html" class="article-tag">Behandlung</a>
+      <a href="beauty-news.html" class="article-tag">Anti-Aging</a>
+      <a href="beauty-news.html" class="article-tag">Kollagen</a>
+      <a href="beauty-news.html" class="article-tag">Auerbach</a>
     </div>
 
   </article>
@@ -287,7 +321,7 @@
       <div>
         <div class="author-info-label">Autorin</div>
         <div class="author-info-name">Kristin Schnödt</div>
-        <p class="author-info-bio">Kosmetikerin aus Leidenschaft, Face Yoga Expertin und Gründerin von PURVIDUAL. Seit über 18 Jahren arbeite ich täglich mit Gesichtshaut — und noch immer begeistert mich, was möglich ist, wenn man der Haut wirklich zuhört.</p>
+        <p class="author-info-bio">Kosmetikerin aus Leidenschaft, Face Yoga Expertin und Gründerin von PURVIDUAL. Ihr Studio befindet sich in Auerbach i.d.Opf. — seit über 18 Jahren arbeite ich täglich mit Gesichtshaut und biete individuelle Behandlungen an.</p>
         <a href="kristin-schnoedt.html" class="author-info-link">Mehr über Kristin →</a>
       </div>
     </div>
@@ -297,33 +331,33 @@
     <div class="related-inner">
       <div class="related-label rv">Das könnte dich auch interessieren</div>
       <div class="related-grid">
-        <a href="blog-gesichtscupping.html" class="related-card rv d1">
+        <a href="blog-haut-ab-40.html" class="related-card rv d1">
           <div class="related-card-img">
-            <img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4563).jpeg" alt="Gesichtscupping Artikel">
+            <img src="Bilder/Treatments/Allgemein.jpg" alt="Haut ab 40">
           </div>
           <div class="related-card-body">
-            <div class="related-card-cat">Cupping</div>
+            <div class="related-card-cat">Hautpflege</div>
+            <h3 class="related-card-title">Haut ab 40 — was sich verändert und was wirklich hilft</h3>
+            <div class="related-card-read">Weiterlesen <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></div>
+          </div>
+        </a>
+        <a href="blog-gesichtscupping.html" class="related-card rv d2">
+          <div class="related-card-img">
+            <img src="Bilder/Kristin_Cupping/Gro%C3%9F%20(DSC_4624).jpeg" alt="Gesichtscupping">
+          </div>
+          <div class="related-card-body">
+            <div class="related-card-cat">Behandlung</div>
             <h3 class="related-card-title">Was ist Gesichtscupping</h3>
             <div class="related-card-read">Weiterlesen <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></div>
           </div>
         </a>
-        <a href="blog-botox-vs-face-yoga.html" class="related-card rv d2">
+        <a href="blog-botox-vs-face-yoga.html" class="related-card rv d3">
           <div class="related-card-img">
-            <img src="Bilder/Online-Programme/4_herzlich_lachen.jpeg" alt="Botox oder Face Yoga">
+            <img src="Bilder/Kristin/Gro%C3%9F%20(DSC_4711)!.jpeg" alt="Botox oder Face Yoga">
           </div>
           <div class="related-card-body">
-            <div class="related-card-cat">Face Yoga</div>
+            <div class="related-card-cat">Anti-Aging</div>
             <h3 class="related-card-title">Botox oder Face Yoga</h3>
-            <div class="related-card-read">Weiterlesen <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></div>
-          </div>
-        </a>
-        <a href="blog-haut-ab-40.html" class="related-card rv d3">
-          <div class="related-card-img">
-            <img src="Bilder/Online-Programme/Beauty_blond.jpeg" alt="Haut ab 40">
-          </div>
-          <div class="related-card-body">
-            <div class="related-card-cat">Hautpflege</div>
-            <h3 class="related-card-title">Haut ab 40</h3>
             <div class="related-card-read">Weiterlesen <svg width="12" height="9" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></div>
           </div>
         </a>
@@ -392,7 +426,7 @@
           <li><a href="agb.html">AGB</a></li>
           <li><a href="widerruf.html">Widerruf</a></li>
           <li><a href="#" onclick="localStorage.removeItem('cookie_consent');window.location.href='index.html';return false;">Cookie-Einstellungen</a></li>
-          </ul>
+        </ul>
       </div>
     </div>
   </footer>

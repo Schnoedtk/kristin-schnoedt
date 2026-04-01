@@ -43,6 +43,23 @@
     .lead-magnet{background:var(--m900);padding:7rem 4rem;text-align:center;position:relative;overflow:hidden;}.lead-magnet::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;border:1px solid rgba(181,129,140,0.08);pointer-events:none;}.lead-magnet-inner{position:relative;z-index:1;max-width:640px;margin:0 auto;}.lead-magnet-tag{font-size:0.62rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--m400);margin-bottom:1.5rem;}.lead-magnet h2{font-family:var(--display);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.2;color:var(--white);margin-bottom:1rem;}.lead-magnet h2 em{font-style:italic;color:var(--m400);}.lead-magnet p{font-size:0.88rem;line-height:1.75;color:rgba(255,255,255,0.55);margin-bottom:2.5rem;}.lead-magnet-note{font-size:0.65rem;color:rgba(255,255,255,0.25);margin-top:1.5rem;line-height:1.6;}
     .footer{background:var(--m900);padding:5.5rem 4rem 3rem;}.footer-inner{max-width:1200px;margin:0 auto;}.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;padding-bottom:4rem;border-bottom:1px solid rgba(181,129,140,0.14);}.footer-brand{font-family:var(--display);font-size:1.55rem;font-weight:500;color:var(--white);margin-bottom:1rem;}.footer-tagline{font-size:0.82rem;line-height:1.7;color:rgba(255,255,255,0.4);max-width:255px;margin-bottom:2rem;}.footer-socials{display:flex;gap:1rem;}.footer-sc{width:36px;height:36px;border:1px solid rgba(181,129,140,0.28);display:flex;align-items:center;justify-content:center;color:var(--m400);text-decoration:none;transition:background 0.3s,border-color 0.3s,color 0.3s;}.footer-sc:hover{background:var(--m500);border-color:var(--m500);color:var(--white);}.footer-col-h{font-size:0.63rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--m500);margin-bottom:1.5rem;}.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.8rem;}.footer-links a{font-size:0.85rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.3s;}.footer-links a:hover{color:var(--m300);}.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;}.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.28);}.footer-legal{display:flex;gap:2rem;list-style:none;}.footer-legal a{font-size:0.75rem;color:rgba(255,255,255,0.28);text-decoration:none;transition:color 0.3s;}.footer-legal a:hover{color:var(--m400);}
     @media(max-width:768px){.nav{padding:1rem 1.75rem;}.nav-links{display:none;}.nav-hamburger{display:flex;}.nav-btn{font-size:0.6rem;padding:0.6rem 1rem;}.nav-gift{display:none;}.article-hero-content{padding:0 1.25rem 2.5rem;}.article-body{padding:3rem 1.25rem 4rem;}.author-box{padding:2rem 1.25rem;}.author-box-inner{flex-direction:column;align-items:flex-start;gap:1.25rem;}.related{padding:3.5rem 1.25rem;}.related-grid{grid-template-columns:1fr;}.lead-magnet{padding:4rem 1.25rem;}.footer{padding:4rem 1.75rem 2.5rem;}.footer-top{grid-template-columns:1fr;gap:2rem;}.footer-bottom{flex-direction:column;gap:1rem;text-align:center;}.footer-legal{flex-wrap:wrap;justify-content:center;gap:1rem;}}
+  
+    /* LEAD MODAL */
+    .btn-lead{display:inline-flex;align-items:center;gap:.8rem;font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;padding:1.1rem 2.4rem;background:var(--m500);color:var(--white);text-decoration:none;border:none;border-radius:2px;cursor:pointer;position:relative;overflow:hidden;transition:color .4s;}
+    .btn-lead::before{content:'';position:absolute;inset:0;background:var(--m700);transform:translateX(-101%);transition:transform .45s cubic-bezier(0.25,1,0.5,1);}
+    .btn-lead:hover::before{transform:translateX(0);}
+    .btn-lead>*{position:relative;z-index:1;}
+    .lead-modal-overlay{position:fixed;inset:0;background:rgba(46,32,40,.88);backdrop-filter:blur(8px);z-index:9000;display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;}
+    .lead-modal-overlay.open{opacity:1;visibility:visible;}
+    .lead-modal{background:var(--m900);border:1px solid rgba(181,129,140,.22);max-width:460px;width:100%;padding:3rem 2.5rem 2.5rem;position:relative;transform:translateY(28px);transition:transform .4s cubic-bezier(0.25,1,0.5,1);}
+    .lead-modal-overlay.open .lead-modal{transform:translateY(0);}
+    .lead-modal-close{position:absolute;top:1.1rem;right:1.25rem;background:none;border:none;cursor:pointer;color:rgba(255,255,255,.35);font-size:1.3rem;line-height:1;padding:.25rem;transition:color .3s;}
+    .lead-modal-close:hover{color:#fff;}
+    .lead-modal-eyebrow{font-size:.6rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--m400);margin-bottom:1rem;}
+    .lead-modal-h{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,4vw,2.3rem);font-weight:300;line-height:1.2;color:#fff;margin-bottom:.75rem;}
+    .lead-modal-h em{font-style:italic;color:var(--m400);}
+    .lead-modal-sub{font-size:.82rem;line-height:1.72;color:rgba(255,255,255,.5);margin-bottom:2rem;}
+    .lead-modal-note{font-size:.62rem;color:rgba(255,255,255,.22);margin-top:1.25rem;line-height:1.6;text-align:center;}
   </style>
 </head>
 <body>
@@ -195,7 +212,10 @@
       <div class="lead-magnet-tag">Gratis für dich</div>
       <h2>6-Minuten Lifting-Workout<br><em>sofort ausprobieren</em></h2>
       <p>Trag deine E-Mail ein und ich schicke dir das Video direkt zu. Keine Vorkenntnisse nötig — nur 6 Minuten für sichtbare Frische.</p>
-      <div class="ml-embedded" data-form="QXPpcZ"></div>
+      <button class="btn-lead" onclick="openLeadModal()">
+        <span>Gratis Lifting-Video holen</span>
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+      </button>
       <p class="lead-magnet-note">Kein Spam. Keine Weitergabe. Jederzeit abmeldbar.</p>
     </div>
   </section>
@@ -233,5 +253,17 @@
     var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
     document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
   </script>
+
+  <!-- LEAD MAGNET MODAL -->
+  <div class="lead-modal-overlay" id="leadModal" role="dialog" aria-modal="true" aria-label="Gratis Lifting-Video">
+    <div class="lead-modal">
+      <button class="lead-modal-close" onclick="closeLeadModal()" aria-label="Schließen">✕</button>
+      <div class="lead-modal-eyebrow">Gratis für dich</div>
+      <h2 class="lead-modal-h">6-Minuten<br><em>Lifting-Workout</em></h2>
+      <p class="lead-modal-sub">Trag deinen Namen und deine E-Mail ein — ich schicke dir das Video direkt zu. Keine Vorkenntnisse nötig, nur 6 Minuten für sichtbare Frische.</p>
+      <div class="ml-embedded" data-form="QXPpcZ"></div>
+      <p class="lead-modal-note">Kein Spam. Keine Weitergabe. Jederzeit abmeldbar.</p>
+    </div>
+  </div>
 </body>
 </html>
