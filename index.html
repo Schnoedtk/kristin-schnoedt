@@ -48,11 +48,16 @@
     .nav.stuck .nav-links a { color: var(--schiefer); }
     .nav-links a:hover { color: var(--m500) !important; }
     /* Topbar */
-    .topbar{background:var(--m700);padding:0.55rem 4rem;display:flex;align-items:center;justify-content:center;gap:0.75rem;position:relative;z-index:200;}
+    .topbar{background:var(--m700);padding:0.55rem 0;overflow:hidden;position:relative;z-index:200;}
+    .topbar-track{display:flex;align-items:center;white-space:nowrap;animation:topbar-scroll 28s linear infinite;}
+    .topbar-track:hover{animation-play-state:paused;}
+    .topbar-item{display:inline-flex;align-items:center;gap:0.75rem;padding:0 3rem;}
+    .topbar-sep{color:rgba(255,255,255,0.35);font-size:0.6rem;}
     .topbar-text{font-size:0.65rem;font-weight:500;letter-spacing:0.1em;color:rgba(255,255,255,0.82);}
     .topbar-link{font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--white);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.4);transition:border-color 0.3s;}
     .topbar-link:hover{border-color:var(--white);}
     .topbar-icon{font-size:0.9rem;line-height:1;}
+    @keyframes topbar-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
     .nav-gift{font-size:0.65rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:0.65rem 1.25rem;border:1px solid rgba(181,129,140,0.5);color:var(--m400);text-decoration:none;border-radius:2px;transition:background 0.3s,color 0.3s,border-color 0.3s;display:flex;align-items:center;gap:0.5rem;}
     .nav.stuck .nav-gift{border-color:var(--m300);color:var(--m700);}
     .nav-gift:hover{background:var(--m500);border-color:var(--m500);color:var(--white);}
@@ -536,9 +541,32 @@
 
   <!-- TOPBAR -->
   <div class="topbar">
-    <span class="topbar-icon">🎁</span>
-    <span class="topbar-text">Gutscheine verschenken —</span>
-    <a href="https://kristin-schnoedt-kosmetik.belbo.com/gutscheine" class="topbar-link" target="_blank" rel="noopener">Jetzt online kaufen</a>
+    <div class="topbar-track">
+      <!-- Block 1 -->
+      <span class="topbar-item">
+        <span class="topbar-icon">🎁</span>
+        <span class="topbar-text">Gutscheine verschenken —</span>
+        <a href="https://kristin-schnoedt-kosmetik.belbo.com/gutscheine" class="topbar-link" target="_blank" rel="noopener">Jetzt online kaufen</a>
+      </span>
+      <span class="topbar-sep">✦</span>
+      <span class="topbar-item">
+        <span class="topbar-icon">🌸</span>
+        <span class="topbar-text">Kosmetikstudio vom 22.04. bis 31.05. geschlossen. Ab 01. Juni wieder für dich da. Nutze gerne die Onlinekurse.</span>
+      </span>
+      <span class="topbar-sep">✦</span>
+      <!-- Block 2 (Duplikat für nahtlosen Loop) -->
+      <span class="topbar-item">
+        <span class="topbar-icon">🎁</span>
+        <span class="topbar-text">Gutscheine verschenken —</span>
+        <a href="https://kristin-schnoedt-kosmetik.belbo.com/gutscheine" class="topbar-link" target="_blank" rel="noopener">Jetzt online kaufen</a>
+      </span>
+      <span class="topbar-sep">✦</span>
+      <span class="topbar-item">
+        <span class="topbar-icon">🌸</span>
+        <span class="topbar-text">Kosmetikstudio vom 22.04. bis 31.05. geschlossen. Ab 01. Juni wieder für dich da. Nutze gerne die Onlinekurse.</span>
+      </span>
+      <span class="topbar-sep">✦</span>
+    </div>
   </div>
 
   <!-- NAV -->
