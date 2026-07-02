@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dein Augenöffner · Kristin Schnödt · Göttinnen-Haut</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  /* ===== KRISTIN SCHNÖDT · DEIN AUGENÖFFNER · Sales Page =====
+     Alabaster #F8F3F5 · Mauve-200 #ECDDE1 · Mauve-300 #D9C0C8
+     Mauve-400 #C49EAA · Kühles Mauve #B5818C · Beerenpflaume #7A4A58
+     Tiefpflaume #2E2028 · Display: Cormorant Garamond · Text: Montserrat */
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    background: linear-gradient(160deg, #F8F3F5 0%, #F1E7EB 55%, #ECDDE1 100%);
+    min-height: 100%;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: transparent;
+    color: #574E54;
+    padding: 56px 24px 80px;
+    line-height: 1.65;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; }
+
+  /* ── MODULE TAG ── */
+  .module-tag {
+    display: inline-block; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: #7A4A58; background: #ECDDE1; border: 1px solid #C49EAA;
+    border-radius: 100px; padding: 6px 18px; margin-bottom: 22px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 36px;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  .hero-text { text-align: left; }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3.2rem; font-weight: 600; line-height: 1.05; color: #2E2028;
+  }
+  .hero h1 em { font-style: italic; color: #7A4A58; }
+
+  .hero .sub {
+    font-style: italic; font-weight: 400; font-size: 1.05rem;
+    color: #9A8A90; margin-top: 16px; line-height: 1.55;
+  }
+
+  /* Portrait */
+  .portrait-frame {
+    position: relative;
+    flex-shrink: 0;
+  }
+  .portrait-frame::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 44% 56% 60% 40% / 46% 44% 56% 54%;
+    border: 2px solid rgba(196, 158, 170, 0.45);
+    animation: morph 8s ease-in-out infinite;
+  }
+  .portrait-frame::after {
+    content: '';
+    position: absolute;
+    inset: -16px;
+    border-radius: 40% 60% 55% 45% / 50% 48% 52% 50%;
+    border: 1px solid rgba(181, 129, 140, 0.2);
+    animation: morph 10s ease-in-out infinite reverse;
+  }
+  @keyframes morph {
+    0%, 100% { border-radius: 44% 56% 60% 40% / 46% 44% 56% 54%; }
+    33%       { border-radius: 56% 44% 48% 52% / 54% 40% 60% 46%; }
+    66%       { border-radius: 40% 60% 52% 48% / 44% 56% 44% 56%; }
+  }
+  .portrait-img {
+    width: 100%; aspect-ratio: 3/4;
+    object-fit: cover; object-position: center top;
+    border-radius: 44% 56% 60% 40% / 46% 44% 56% 54%;
+    animation: morph 8s ease-in-out infinite;
+    display: block;
+    box-shadow: 0 12px 48px rgba(122, 74, 88, 0.22);
+  }
+
+  /* ── LABEL ── */
+  .label {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #7A4A58; margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-weight: 500; font-size: 1.5rem; color: #5E4A53; line-height: 1.35;
+    border-left: 3px solid #B5818C; padding: 6px 0 6px 20px; margin: 20px 0;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: #FFFFFF; border: 1.5px solid #ECDDE1;
+    border-radius: 14px; padding: 26px 30px; margin-bottom: 14px;
+  }
+
+  /* ── PROBLEM BLOCK ── */
+  .problem {
+    background: #FFFFFF; border: 1.5px solid #ECDDE1;
+    border-radius: 16px; padding: 32px 36px; margin-bottom: 20px;
+  }
+  .problem .lead {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.7rem; font-weight: 600; color: #2E2028; line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .problem p { font-size: 1rem; color: #574E54; margin-bottom: 12px; }
+  .problem p:last-child { margin-bottom: 0; }
+  .problem b { color: #2E2028; font-weight: 600; }
+
+  /* ── DARK BOX ── */
+  .dark {
+    background: #2E2028; color: #F8F3F5;
+    border-radius: 16px; padding: 34px 38px; margin-bottom: 20px;
+  }
+  .dark .lab {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: #C49EAA; margin-bottom: 14px;
+  }
+  .dark h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2rem; font-weight: 600; color: #F8F3F5; line-height: 1.2; margin-bottom: 18px;
+  }
+  .dark p { font-size: 1rem; color: #E2CCD4; margin-bottom: 10px; line-height: 1.6; }
+  .dark p:last-child { margin-bottom: 0; }
+  .dark b { color: #D9C0C8; font-weight: 600; }
+
+  /* ── SECTION HEADING ── */
+  .section-head { text-align: center; margin: 52px 0 24px; }
+  .section-head h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.4rem; font-weight: 600; color: #2E2028; line-height: 1.15;
+  }
+  .section-head p { font-size: 0.96rem; color: #9A8A90; margin-top: 8px; font-style: italic; }
+
+  /* ── SESSION GRID ── */
+  .session-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .session-item {
+    background: #ECDDE1; border: 1px solid #D9C0C8;
+    border-radius: 12px; padding: 18px 20px; text-align: center;
+  }
+  .session-item .si-val {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.2rem; font-weight: 600; color: #7A4A58; line-height: 1;
+  }
+  .session-item .si-label {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; color: #574E54; margin-top: 6px;
+  }
+
+  /* ── GETS LIST ── */
+  .gets { list-style: none; margin: 0; padding: 0; }
+  .gets li {
+    display: flex; gap: 14px; padding: 12px 0;
+    border-top: 1px solid #F1E7EB; align-items: flex-start;
+  }
+  .gets li:first-child { border-top: none; padding-top: 0; }
+  .gets li .icon {
+    flex-shrink: 0; width: 28px; height: 28px;
+    background: #2E2028; color: #F8F3F5;
+    border-radius: 8px; font-size: 0.8rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  }
+  .gets li b { color: #2E2028; font-weight: 600; display: block; margin-bottom: 2px; }
+  .gets li span { display: block; font-size: 0.9rem; color: #7A8A84; }
+
+  /* ── CHECK LIST ── */
+  .check-list { list-style: none; margin: 4px 0 0; padding: 0; }
+  .check-list li {
+    font-size: 0.98rem; color: #574E54;
+    padding: 8px 0 8px 28px; position: relative;
+    border-top: 1px solid #F1E7EB;
+  }
+  .check-list li:first-child { border-top: none; }
+  .check-list li::before {
+    content: ""; position: absolute; left: 0; top: 16px;
+    width: 14px; height: 14px; border-radius: 50%; background: #B5818C;
+  }
+  .check-list li b { color: #2E2028; }
+
+  .not-for {
+    background: #F6ECEF; border: 1.5px solid #E0C8D0;
+    border-left: 5px solid #B5818C; border-radius: 14px;
+    padding: 20px 26px; margin-top: 14px;
+  }
+  .not-for .label { color: #7A4A58; margin-bottom: 8px; }
+  .not-for p { font-size: 0.92rem; color: #574E54; }
+
+  /* ── DISCLAIMER ── */
+  .disclaimer {
+    background: #F3EEF1; border: 1.5px solid #E0C8D0;
+    border-left: 5px solid #7A4A58; border-radius: 14px;
+    padding: 18px 24px; margin-bottom: 20px;
+  }
+  .disclaimer p { font-size: 0.88rem; color: #574E54; font-style: italic; line-height: 1.6; }
+
+  /* ── IMAGES ── */
+  .img-fancy {
+    width: 100%; display: block;
+    border-radius: 20px;
+    box-shadow: 0 10px 48px rgba(122, 74, 88, 0.18);
+    object-fit: cover;
+    image-orientation: from-image;
+  }
+
+  .img-caption {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #9A8A90; margin-top: 8px; text-align: center;
+  }
+
+  /* Vorher/Nachher grid */
+  .vh-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 24px 0;
+  }
+  .vh-grid .vh-item { position: relative; }
+  .vh-grid .vh-label {
+    position: absolute; top: 12px; left: 12px;
+    font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; background: rgba(46, 32, 40, 0.75);
+    color: #F8F3F5; border-radius: 100px; padding: 4px 12px;
+    backdrop-filter: blur(4px);
+  }
+  .vh-grid .vh-item img {
+    width: 100%; aspect-ratio: 3/4;
+    object-fit: cover; object-position: center;
+    border-radius: 16px;
+    box-shadow: 0 8px 36px rgba(122, 74, 88, 0.2);
+    display: block;
+    image-orientation: from-image;
+  }
+
+  /* Atmospheric full-width image */
+  .img-atmo {
+    width: 100%; aspect-ratio: 16/9;
+    object-fit: cover; object-position: center 40%;
+    border-radius: 20px;
+    box-shadow: 0 10px 48px rgba(122, 74, 88, 0.18);
+    display: block;
+    margin: 24px 0;
+    image-orientation: from-image;
+  }
+
+  /* ── STORY ── */
+  .story {
+    background: #FFFFFF; border: 1.5px solid #ECDDE1;
+    border-radius: 14px; padding: 30px 34px; margin-bottom: 14px;
+  }
+  .story .kicker {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #7A4A58; margin-bottom: 12px;
+  }
+  .story p { font-size: 1rem; color: #574E54; margin-bottom: 12px; line-height: 1.65; }
+  .story p:last-child { margin-bottom: 0; }
+  .story b { color: #2E2028; }
+
+  /* ── TESTIMONIALS ── */
+  .testi {
+    background: #ECDDE1; border: 1px solid #D9C0C8;
+    border-radius: 12px; padding: 18px 20px; margin-bottom: 12px;
+  }
+  .testi .quote {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-weight: 500; font-size: 1.22rem; color: #4A3540; line-height: 1.35;
+  }
+  .testi .who { font-size: 0.8rem; font-weight: 600; color: #7A4A58; margin-top: 10px; }
+
+  /* ── PRICING BOX ── */
+  .pricing {
+    background: #2E2028; color: #F8F3F5;
+    border-radius: 20px; padding: 40px 44px; margin: 44px 0; text-align: center;
+  }
+  .pricing .lab { color: #C49EAA; margin-bottom: 10px; }
+  .pricing h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.4rem; font-weight: 600; color: #F8F3F5; line-height: 1.1; margin-bottom: 28px;
+  }
+  .pricing ul {
+    text-align: left; list-style: none; margin: 0 0 32px;
+    display: inline-block; padding: 0;
+  }
+  .pricing ul li {
+    font-size: 0.96rem; color: #E2CCD4; padding: 7px 0 7px 26px; position: relative;
+  }
+  .pricing ul li::before {
+    content: ""; position: absolute; left: 0; top: 15px;
+    width: 10px; height: 10px; border-radius: 50%; background: #B5818C;
+  }
+  .pricing ul li b { color: #D9C0C8; }
+
+  /* ── CTA BUTTON ── */
+  .cta-wrap { text-align: center; margin: 8px 0; }
+  .cta-btn {
+    display: inline-block; background: #B5818C; color: #F8F3F5;
+    font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 700;
+    letter-spacing: 0.04em; text-decoration: none;
+    border-radius: 100px; padding: 18px 44px;
+    border: none; cursor: pointer; transition: background 0.2s;
+  }
+  .cta-btn:hover { background: #9A6A78; }
+  .cta-note { font-size: 0.82rem; color: #9A8A90; margin-top: 12px; font-style: italic; text-align: center; }
+
+  /* ── PROCESS ── */
+  .process { counter-reset: step; }
+  .process-item {
+    display: flex; gap: 16px; padding: 14px 0;
+    border-top: 1px solid #F1E7EB; align-items: flex-start;
+  }
+  .process-item:first-child { border-top: none; }
+  .process-item::before {
+    counter-increment: step; content: counter(step);
+    flex-shrink: 0; width: 30px; height: 30px;
+    background: #7A4A58; color: #F8F3F5; border-radius: 8px;
+    font-size: 0.82rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; margin-top: 2px;
+  }
+  .process-item .pt { font-size: 0.98rem; color: #574E54; }
+  .process-item .pt b { display: block; color: #2E2028; font-weight: 600; margin-bottom: 2px; }
+
+  /* ── FAQ ── */
+  .faq-item { padding: 16px 0; border-top: 1px solid #ECDDE1; }
+  .faq-item:first-child { border-top: none; padding-top: 0; }
+  .faq-item dt { font-size: 1rem; font-weight: 600; color: #2E2028; margin-bottom: 6px; }
+  .faq-item dd { font-size: 0.96rem; color: #574E54; margin: 0; line-height: 1.6; }
+
+  /* ── FINAL SECTION (portrait image + text side by side) ── */
+  .final-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: end;
+    margin-top: 44px;
+  }
+  .final-section .final-img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 14px 56px rgba(122, 74, 88, 0.22);
+    image-orientation: from-image;
+  }
+  .final-section .final-text {
+    padding-bottom: 4px;
+  }
+  .final-section .final-text p {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-size: 1.9rem; font-weight: 500; color: #2E2028; line-height: 1.25;
+    margin-bottom: 24px;
+  }
+
+  /* ── FOOTER ── */
+  .kbc-footer {
+    margin-top: 64px; padding: 48px 32px 8px; text-align: center;
+    border-top: 1.5px solid rgba(122, 74, 88, 0.15);
+  }
+  .kbc-footer .kbc-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3rem; font-weight: 600; color: #2E2028;
+    letter-spacing: 0.02em; line-height: 1; display: block;
+  }
+  .kbc-footer .kbc-club {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3rem; font-weight: 600; color: #B5818C;
+    letter-spacing: 0.02em; line-height: 1; display: block; margin-top: 2px;
+  }
+  .kbc-footer .kbc-byline {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-size: 1.1rem; color: #9A8A90; margin-top: 14px; display: block;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .hero { grid-template-columns: 1fr; text-align: center; }
+    .hero-text { order: 2; }
+    .portrait-frame { order: 1; max-width: 200px; margin: 0 auto; }
+    .hero h1 { font-size: 2.6rem; }
+    .session-grid { grid-template-columns: 1fr 1fr; }
+    .dark { padding: 26px 22px; }
+    .pricing { padding: 30px 24px; }
+    .card, .story, .problem { padding: 22px 20px; }
+    .vh-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .final-section { grid-template-columns: 1fr; }
+    .final-section .final-text { text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <span class="module-tag">Göttinnen-Haut · Kristin Schnödt</span>
+      <h1>Dein <em>Augenöffner.</em></h1>
+      <div class="sub">60 Minuten. Ganzheitlich. Haut, Stress und Ernährung.<br>Für die Frau, die aufgehört hat zu hoffen – und trotzdem hier ist.</div>
+    </div>
+    <div class="portrait-frame">
+      <img class="portrait-img" src="images/Dasbinich.PNG" alt="Kristin Schnödt – Kosmetikerin mit Neurodermitis-Erfahrung">
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <div class="problem">
+    <div class="lead">Du schaust nicht mehr hin.<br>Und das weißt du selbst.</div>
+    <p>Du cremst und cremst, eine Creme nach der anderen. Wartest auf Arzttermine, bei denen du noch gehofft hast – jetzt hilft es mir. Und dann schickt er dich wieder mit einem Rezept nach Hause. Cortison, das kurzfristig hilft und dann wieder nicht.</p>
+    <p>Irgendwann hörst du auf, nach der nächsten Creme zu suchen. Du redest nicht mehr darüber. Du planst dein Leben um die Haut herum. <b>Nicht weil du es akzeptiert hast, sondern weil du keine Kraft mehr hast, nochmal enttäuscht zu werden.</b></p>
+    <p>Und dann, wenn du dich wieder im Spiegel siehst und ein Event bevorsteht, auf das du dich wirklich freust. Dann kommt dieser Groll – nicht auf die Haut, sondern auf dich selbst.</p>
+    <div class="pull">„Ich kenne den Moment ganz genau, denn ich habe es selbst erlebt."</div>
+    <p>Genau deshalb gibt es deinen Augenöffner. Nicht noch ein Produkt oder noch eine Routine. Sondern jemanden, der deine Haut wirklich ansieht und der weiß, was es bedeutet, an diesem Punkt zu stehen.</p>
+    <p style="margin-top:16px; font-weight:600; color:#2E2028; font-size:1.05rem;">In deinem Augenöffner steht deine Haut im Mittelpunkt. Zum ersten Mal.</p>
+  </div>
+
+  <!-- FIRST CTA -->
+  <div class="cta-wrap" style="margin: 28px 0;">
+    <a class="cta-btn" href="https://alfima.com/kristin_schnoedt/deine-personliche-aufatmen-session">Jetzt deinen Augenöffner buchen</a>
+    <div class="cta-note">60 Minuten · 1:1 mit Kristin · nach Buchung erhältst du alle Details per E-Mail</div>
+  </div>
+
+  <!-- WHAT IS THE SESSION -->
+  <div class="section-head">
+    <h2>Was in deinem Augenöffner passiert</h2>
+  </div>
+
+  <div class="session-grid">
+    <div class="session-item">
+      <div class="si-val">60</div>
+      <div class="si-label">Minuten</div>
+    </div>
+    <div class="session-item">
+      <div class="si-val">1:1</div>
+      <div class="si-label">persönlich mit Kristin</div>
+    </div>
+    <div class="session-item">
+      <div class="si-val">3</div>
+      <div class="si-label">Ebenen: Haut · Psyche · Ernährung</div>
+    </div>
+    <div class="session-item">
+      <div class="si-val">online</div>
+      <div class="si-label">via Video-Call</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="label">Das bekommst du aus deinem Augenöffner</div>
+    <ul class="gets">
+      <li>
+        <span class="icon">1</span>
+        <div>
+          <b>Deine Haut wird wirklich gesehen</b>
+          <span>Wir schauen gemeinsam, was deine Haut dir zeigt – und was dahintersteckt.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">2</span>
+        <div>
+          <b>Deine persönliche Routine – so einfach wie möglich</b>
+          <span>Keine langen Prozeduren. Wenige, milde, reizarme Schritte, die wirklich zu dir passen.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">3</span>
+        <div>
+          <b>Das Dahinter: Stress und Ernährung</b>
+          <span>Wir schauen, was dein Nervensystem und deine Ernährung mit deiner Haut machen – und welche ersten Schritte sofort helfen können.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">4</span>
+        <div>
+          <b>Konkrete nächste Schritte</b>
+          <span>Du gehst mit einem klaren Plan raus. Kein Überblick, der dich überfordert. Sondern das Wichtigste als nächster Schritt.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">5</span>
+        <div>
+          <b>Schriftliche Zusammenfassung danach</b>
+          <span>Alles Besprochene noch einmal kompakt, damit du es in Ruhe nachlesen kannst.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <p>Ich bin Kosmetikerin, keine Ärztin. Was ich teile, ist kosmetische Pflege und persönliche Erfahrung. Es ist keine medizinische Diagnose oder Therapie und ersetzt keinen Arztbesuch.</p>
+  </div>
+
+  <!-- FOR WHOM -->
+  <div class="section-head">
+    <h2>Für wen dein Augenöffner ist</h2>
+  </div>
+
+  <div class="card">
+    <div class="label">Dein Augenöffner ist für dich, wenn …</div>
+    <ul class="check-list">
+      <li>du <b>Neurodermitis-Erfahrung</b> hast oder mit sehr sensibler, gestresster, gereizter Haut lebst</li>
+      <li>du schon vieles probiert hast und das Gefühl hast, <b>nichts hält wirklich</b></li>
+      <li>du spürst, dass Stress, Schlaf oder Ernährung <b>irgendetwas mit deiner Haut machen</b> – aber nicht weißt was</li>
+      <li>du aufgehört hast, dich im Spiegel wohlzufühlen – und das <b>wieder ändern willst</b></li>
+      <li>du bereit bist, nicht nur das nächste Produkt zu kaufen, sondern <b>deine Haut wirklich zu verstehen</b></li>
+    </ul>
+  </div>
+
+  <div class="not-for">
+    <div class="label">Nicht die Richtige für dich, wenn …</div>
+    <p>du eine schnelle Sofort-Lösung suchst, nicht bereit bist, kleine Veränderungen in deinen Alltag zu integrieren, oder eine medizinische Diagnose oder Therapie erwartest. Dann empfehle ich dir offen eine Dermatologin.</p>
+  </div>
+
+  <!-- KRISTIN STORY -->
+  <div class="section-head" style="margin-top: 52px;">
+    <h2>Warum ich das verstehe</h2>
+    <p>Aus eigener Erfahrung, nicht aus dem Lehrbuch</p>
+  </div>
+
+  <div class="story">
+    <div class="kicker">Meine Geschichte</div>
+    <p><b>Sommer 2023, mit 44</b>, tauchten bei mir plötzlich rote Flecken um Hals, Augen und Gesicht auf. Ich bin Kosmetikerin. Und ich habe mich für meine eigene Haut geschämt.</p>
+
+    <!-- VORHER IMAGES -->
+    <div class="vh-grid">
+      <div class="vh-item">
+        <span class="vh-label">Vorher</span>
+        <img src="images/Vorher_1.jpeg" alt="Kristin Vorher – gerötete Haut">
+      </div>
+      <div class="vh-item">
+        <span class="vh-label">Vorher</span>
+        <img src="images/Vorher_2.jpeg" alt="Kristin Vorher – Rötungen am Hals">
+      </div>
+    </div>
+
+    <p>Was folgte, war eine Odyssee: vier Ärzte, immer nur Cortison, eine private Praxis, die mir ohne echten Befund viel Geld kostete. Cortison hat meine Haut kurzfristig ruhiggestellt. <b>Aufatmen ließ sie etwas ganz anderes.</b></p>
+    <div class="pull">„3 Wochen Nordsee haben mehr für meine Haut getan als jede Creme davor."</div>
+    <p>Nach einer Reha an der Nordsee verstand ich, was wirklich den Unterschied macht: <b>Ruhe, Bewegung, Ernährung und das Nervensystem.</b></p>
+    <p>Genau das bringe ich jetzt in jeden Augenöffner mit. 20 Jahre Kosmetikerin, eigene Neurodermitis-Erfahrung, meine Produktlinie PURVIDUAL – und das Wissen, was hinter der Haut steckt.</p>
+  </div>
+
+  <!-- ATMOSPHERIC NORDSEE IMAGE -->
+  <img class="img-atmo" src="images/Dastatich.jpeg" alt="Kristin an der Nordsee – die Erkenntnis">
+
+  <!-- TESTIMONIALS -->
+  <div class="section-head">
+    <h2>Was andere Frauen sagen</h2>
+  </div>
+
+  <div class="testi">
+    <div class="quote">„Nach knapp einem Jahr: Die trockenen Stellen sind nahezu komplett verschwunden, die Pickel extrem selten, die Haut weniger rot, und ich bekomme Komplimente, dass ich frischer ausschaue."</div>
+    <div class="who">Angelika W., 60 · PURVIDUAL Pflegeserie</div>
+  </div>
+
+  <div class="testi">
+    <div class="quote">„Da ich seit Jahren unter perioraler Dermatitis leide, war ich anfangs sehr vorsichtig. Kristin hat mich sanft herangeführt. Meine Haut ist gut wie nie."</div>
+    <div class="who">Katharina D. · skeptisch → überzeugt</div>
+  </div>
+
+  <div class="testi">
+    <div class="quote">„Mein Hautbild hat sich um 100 Prozent verbessert. Feuchtigkeit, feineres Hautbild, super Ausstrahlung, die ich auch von meinem Umfeld immer wieder höre."</div>
+    <div class="who">Monika R., 59 · PURVIDUAL + Behandlung</div>
+  </div>
+
+  <div class="testi">
+    <div class="quote">„Durch die richtige Pflege haben sich Rötungen und Spannungen so gut wie aufgelöst, die Poren sind feiner."</div>
+    <div class="who">Claudia W. · gerötete, trockene Haut</div>
+  </div>
+
+  <!-- PRICING BOX -->
+  <div class="pricing">
+    <div class="lab">Dein Augenöffner</div>
+    <h2>60 Minuten, die<br>wirklich etwas verändern</h2>
+    <ul>
+      <li>60 Minuten 1:1 mit Kristin via Video-Call</li>
+      <li>Ganzheitlicher Blick: <b>Haut, Psyche und Ernährung</b></li>
+      <li>Deine individuelle Pflegeroutine (clean, reizarm)</li>
+      <li>PURVIDUAL-Empfehlung auf deine Haut abgestimmt</li>
+      <li>Schriftliche Zusammenfassung danach</li>
+    </ul>
+    <a class="cta-btn" href="https://alfima.com/kristin_schnoedt/deine-personliche-aufatmen-session" style="font-size:1.05rem; padding: 20px 52px;">Jetzt buchen</a>
+    <div class="cta-note" style="color:#9A8A90; margin-top:14px;">Nach deiner Buchung erhältst du alle Details direkt per E-Mail.</div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section-head" style="margin-top: 0;">
+    <h2>So läuft es ab</h2>
+  </div>
+
+  <div class="card">
+    <div class="process">
+      <div class="process-item">
+        <div class="pt">
+          <b>Du buchst deinen Termin</b>
+          Du wählst direkt einen Wunschtermin, der zu dir passt.
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="pt">
+          <b>Du bekommst eine Bestätigung</b>
+          Alle Details und den Video-Call-Link kommen direkt per E-Mail zu dir.
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="pt">
+          <b>Du schickst mir vorab ein paar Infos</b>
+          Was deine Haut beschäftigt, was du schon probiert hast – damit wir die 60 Minuten wirklich nutzen können.
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="pt">
+          <b>Dein Augenöffner</b>
+          Wir schauen gemeinsam auf deine Haut, dein Nervensystem und deine Ernährung. Du stellst alle Fragen, die du schon immer loswerden wolltest.
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="pt">
+          <b>Deine Zusammenfassung</b>
+          Innerhalb von 48 Stunden bekommst du alles Besprochene schriftlich – deine persönliche Routine, Empfehlungen und nächste Schritte.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-head">
+    <h2>Häufige Fragen</h2>
+  </div>
+
+  <div class="card">
+    <dl>
+      <div class="faq-item">
+        <dt>Ist das eine medizinische Beratung?</dt>
+        <dd>Nein. Ich bin Kosmetikerin, keine Ärztin. Was ich teile, ist kosmetische Pflege und meine persönliche Erfahrung. Dein Augenöffner ersetzt keinen Arztbesuch. Wenn du eine medizinische Diagnose brauchst, empfehle ich dir eine Dermatologin.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Ich habe keine Neurodermitis-Diagnose – ist dein Augenöffner trotzdem für mich?</dt>
+        <dd>Ja. Wenn du mit sensibler, gestresster, gereizter oder roter Haut lebst und das Gefühl hast, dass nichts wirklich hilft, ist dein Augenöffner genau richtig. Du brauchst keine Diagnose.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Muss ich PURVIDUAL-Produkte kaufen?</dt>
+        <dd>Nein. Ich mache dir eine Empfehlung, wenn es passt – aber es gibt keine Verpflichtung. Dein Augenöffner hat für dich Wert, unabhängig davon, welche Produkte du danach verwendest.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Was, wenn ich einen Termin verschieben muss?</dt>
+        <dd>Kein Problem. Du kannst deinen Termin bis 24 Stunden vorher verschieben.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Kann ich nach dem Augenöffner weiter mit dir arbeiten?</dt>
+        <dd>Ja. Nach deinem Augenöffner kannst du entscheiden, ob du tiefer gehen möchtest. Ich stelle dir dann gerne vor, wie eine längere Begleitung aussehen kann.</dd>
+      </div>
+    </dl>
+  </div>
+
+  <!-- FINAL IMAGE + CTA -->
+  <div class="final-section">
+    <img class="final-img" src="images/Nachher_3.jpeg" alt="Kristin – nach der Reha an der Nordsee">
+    <div class="final-text">
+      <p>„Deine Haut darf aufatmen."</p>
+      <a class="cta-btn" href="https://alfima.com/kristin_schnoedt/deine-personliche-aufatmen-session">Jetzt deinen Augenöffner buchen</a>
+      <div class="cta-note" style="margin-top:12px;">60 Minuten · 1:1 mit Kristin</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="kbc-footer">
+    <span class="kbc-byline" style="margin-top:0; margin-bottom:10px;">Lass auch deine Haut zur</span>
+    <span class="kbc-title">GÖTTINNEN</span>
+    <span class="kbc-club">HAUT</span>
+    <span class="kbc-byline" style="margin-top:6px; margin-bottom:0;">werden.</span>
+    <span class="kbc-byline">Kristin Schnödt · Kosmetikerin mit Neurodermitis-Erfahrung</span>
+  </div>
+
+</div>
+</body>
+</html>
