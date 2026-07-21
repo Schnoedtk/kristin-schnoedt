@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gesicht in Ruhe – 5 Workouts · Kristin Schnödt</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  /* ===== KRISTIN SCHNÖDT · GESICHT IN RUHE · Sales Page =====
+     Alabaster #F8F3F5 · Mauve-200 #ECDDE1 · Mauve-300 #D9C0C8
+     Mauve-400 #C49EAA · Kühles Mauve #B5818C · Beerenpflaume #7A4A58
+     Tiefpflaume #2E2028 · Display: Cormorant Garamond · Text: Montserrat */
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    background: linear-gradient(160deg, #F8F3F5 0%, #F1E7EB 55%, #ECDDE1 100%);
+    min-height: 100%;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: transparent;
+    color: #574E54;
+    padding: 56px 24px 80px;
+    line-height: 1.65;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; }
+
+  /* ── MODULE TAG ── */
+  .module-tag {
+    display: inline-block; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: #7A4A58; background: #ECDDE1; border: 1px solid #C49EAA;
+    border-radius: 100px; padding: 6px 18px; margin-bottom: 22px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 36px;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  .hero-text { text-align: left; }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3.2rem; font-weight: 600; line-height: 1.05; color: #2E2028;
+  }
+  .hero h1 em { font-style: italic; color: #7A4A58; }
+
+  .hero .sub {
+    font-style: italic; font-weight: 400; font-size: 1.05rem;
+    color: #9A8A90; margin-top: 16px; line-height: 1.55;
+  }
+
+  /* Portrait */
+  .portrait-frame {
+    position: relative;
+    flex-shrink: 0;
+  }
+  .portrait-frame::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 44% 56% 60% 40% / 46% 44% 56% 54%;
+    border: 2px solid rgba(196, 158, 170, 0.45);
+    animation: morph 8s ease-in-out infinite;
+  }
+  .portrait-frame::after {
+    content: '';
+    position: absolute;
+    inset: -16px;
+    border-radius: 40% 60% 55% 45% / 50% 48% 52% 50%;
+    border: 1px solid rgba(181, 129, 140, 0.2);
+    animation: morph 10s ease-in-out infinite reverse;
+  }
+  @keyframes morph {
+    0%, 100% { border-radius: 44% 56% 60% 40% / 46% 44% 56% 54%; }
+    33%       { border-radius: 56% 44% 48% 52% / 54% 40% 60% 46%; }
+    66%       { border-radius: 40% 60% 52% 48% / 44% 56% 44% 56%; }
+  }
+  .portrait-img {
+    width: 100%; aspect-ratio: 3/4;
+    object-fit: cover; object-position: center top;
+    border-radius: 44% 56% 60% 40% / 46% 44% 56% 54%;
+    animation: morph 8s ease-in-out infinite;
+    display: block;
+    box-shadow: 0 12px 48px rgba(122, 74, 88, 0.22);
+  }
+
+  /* ── LABEL ── */
+  .label {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #7A4A58; margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-weight: 500; font-size: 1.5rem; color: #5E4A53; line-height: 1.35;
+    border-left: 3px solid #B5818C; padding: 6px 0 6px 20px; margin: 20px 0;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: #FFFFFF; border: 1.5px solid #ECDDE1;
+    border-radius: 14px; padding: 26px 30px; margin-bottom: 14px;
+  }
+
+  /* ── PROBLEM BLOCK ── */
+  .problem {
+    background: #FFFFFF; border: 1.5px solid #ECDDE1;
+    border-radius: 16px; padding: 32px 36px; margin-bottom: 20px;
+  }
+  .problem .lead {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.7rem; font-weight: 600; color: #2E2028; line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .problem p { font-size: 1rem; color: #574E54; margin-bottom: 12px; }
+  .problem p:last-child { margin-bottom: 0; }
+  .problem b { color: #2E2028; font-weight: 600; }
+
+  /* ── DARK BOX ── */
+  .dark {
+    background: #2E2028; color: #F8F3F5;
+    border-radius: 16px; padding: 34px 38px; margin-bottom: 20px;
+  }
+  .dark .lab {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: #C49EAA; margin-bottom: 14px;
+  }
+  .dark h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2rem; font-weight: 600; color: #F8F3F5; line-height: 1.2; margin-bottom: 18px;
+  }
+  .dark p { font-size: 1rem; color: #E2CCD4; margin-bottom: 10px; line-height: 1.6; }
+  .dark p:last-child { margin-bottom: 0; }
+  .dark b { color: #D9C0C8; font-weight: 600; }
+
+  /* ── SECTION HEADING ── */
+  .section-head { text-align: center; margin: 52px 0 24px; }
+  .section-head h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.4rem; font-weight: 600; color: #2E2028; line-height: 1.15;
+  }
+  .section-head p { font-size: 0.96rem; color: #9A8A90; margin-top: 8px; font-style: italic; }
+
+  /* ── STATS GRID ── */
+  .session-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .session-item {
+    background: #ECDDE1; border: 1px solid #D9C0C8;
+    border-radius: 12px; padding: 18px 20px; text-align: center;
+  }
+  .session-item .si-val {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.2rem; font-weight: 600; color: #7A4A58; line-height: 1;
+  }
+  .session-item .si-label {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; color: #574E54; margin-top: 6px;
+  }
+
+  /* ── GETS LIST ── */
+  .gets { list-style: none; margin: 0; padding: 0; }
+  .gets li {
+    display: flex; gap: 14px; padding: 12px 0;
+    border-top: 1px solid #F1E7EB; align-items: flex-start;
+  }
+  .gets li:first-child { border-top: none; padding-top: 0; }
+  .gets li .icon {
+    flex-shrink: 0; width: 28px; height: 28px;
+    background: #2E2028; color: #F8F3F5;
+    border-radius: 8px; font-size: 0.8rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  }
+  .gets li b { color: #2E2028; font-weight: 600; display: block; margin-bottom: 2px; }
+  .gets li span { display: block; font-size: 0.9rem; color: #7A8A84; }
+
+  /* ── CHECK LIST ── */
+  .check-list { list-style: none; margin: 4px 0 0; padding: 0; }
+  .check-list li {
+    font-size: 0.98rem; color: #574E54;
+    padding: 8px 0 8px 28px; position: relative;
+    border-top: 1px solid #F1E7EB;
+  }
+  .check-list li:first-child { border-top: none; }
+  .check-list li::before {
+    content: ""; position: absolute; left: 0; top: 16px;
+    width: 14px; height: 14px; border-radius: 50%; background: #B5818C;
+  }
+  .check-list li b { color: #2E2028; }
+
+  /* ── DISCLAIMER ── */
+  .disclaimer {
+    background: #F3EEF1; border: 1.5px solid #E0C8D0;
+    border-left: 5px solid #7A4A58; border-radius: 14px;
+    padding: 18px 24px; margin-bottom: 20px;
+  }
+  .disclaimer p { font-size: 0.88rem; color: #574E54; font-style: italic; line-height: 1.6; }
+
+  /* ── TESTIMONIALS ── */
+  .testi {
+    background: #ECDDE1; border: 1px solid #D9C0C8;
+    border-radius: 12px; padding: 18px 20px; margin-bottom: 12px;
+  }
+  .testi .quote {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-weight: 500; font-size: 1.22rem; color: #4A3540; line-height: 1.35;
+  }
+  .testi .testi-detail {
+    font-size: 0.88rem; color: #574E54; margin-top: 8px; line-height: 1.6;
+  }
+  .testi .who { font-size: 0.8rem; font-weight: 600; color: #7A4A58; margin-top: 10px; }
+
+  /* ── PRICING BOX ── */
+  .pricing {
+    background: #2E2028; color: #F8F3F5;
+    border-radius: 20px; padding: 40px 44px; margin: 44px 0; text-align: center;
+  }
+  .pricing .lab { color: #C49EAA; margin-bottom: 10px; }
+  .pricing h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.4rem; font-weight: 600; color: #F8F3F5; line-height: 1.1; margin-bottom: 28px;
+  }
+  .pricing ul {
+    text-align: left; list-style: none; margin: 0 0 32px;
+    display: inline-block; padding: 0;
+  }
+  .pricing ul li {
+    font-size: 0.96rem; color: #E2CCD4; padding: 7px 0 7px 26px; position: relative;
+  }
+  .pricing ul li::before {
+    content: ""; position: absolute; left: 0; top: 15px;
+    width: 10px; height: 10px; border-radius: 50%; background: #B5818C;
+  }
+  .pricing ul li b { color: #D9C0C8; }
+
+  /* ── CTA BUTTON ── */
+  .cta-wrap { text-align: center; margin: 8px 0; }
+  .cta-btn {
+    display: inline-block; background: #B5818C; color: #F8F3F5;
+    font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 700;
+    letter-spacing: 0.04em; text-decoration: none;
+    border-radius: 100px; padding: 18px 44px;
+    border: none; cursor: pointer; transition: background 0.2s;
+  }
+  .cta-btn:hover { background: #9A6A78; }
+  .cta-note { font-size: 0.82rem; color: #9A8A90; margin-top: 12px; font-style: italic; text-align: center; }
+
+  /* ── PROCESS ── */
+  .process { counter-reset: step; }
+  .process-item {
+    display: flex; gap: 16px; padding: 14px 0;
+    border-top: 1px solid #F1E7EB; align-items: flex-start;
+  }
+  .process-item:first-child { border-top: none; }
+  .process-item::before {
+    counter-increment: step; content: counter(step);
+    flex-shrink: 0; width: 30px; height: 30px;
+    background: #7A4A58; color: #F8F3F5; border-radius: 8px;
+    font-size: 0.82rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; margin-top: 2px;
+  }
+  .process-item .pt { font-size: 0.98rem; color: #574E54; }
+  .process-item .pt b { display: block; color: #2E2028; font-weight: 600; margin-bottom: 2px; }
+
+  /* ── FAQ ── */
+  .faq-item { padding: 16px 0; border-top: 1px solid #ECDDE1; }
+  .faq-item:first-child { border-top: none; padding-top: 0; }
+  .faq-item dt { font-size: 1rem; font-weight: 600; color: #2E2028; margin-bottom: 6px; }
+  .faq-item dd { font-size: 0.96rem; color: #574E54; margin: 0; line-height: 1.6; }
+
+  /* ── FINAL SECTION ── */
+  .final-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: end;
+    margin-top: 44px;
+  }
+  .final-section .final-img {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 14px 56px rgba(122, 74, 88, 0.22);
+    image-orientation: from-image;
+  }
+  .final-section .final-text { padding-bottom: 4px; }
+  .final-section .final-text p {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-size: 1.9rem; font-weight: 500; color: #2E2028; line-height: 1.25;
+    margin-bottom: 24px;
+  }
+
+  /* ── FOOTER ── */
+  .kbc-footer {
+    margin-top: 64px; padding: 48px 32px 8px; text-align: center;
+    border-top: 1.5px solid rgba(122, 74, 88, 0.15);
+  }
+  .kbc-footer .kbc-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3rem; font-weight: 600; color: #2E2028;
+    letter-spacing: 0.02em; line-height: 1; display: block;
+  }
+  .kbc-footer .kbc-club {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3rem; font-weight: 600; color: #B5818C;
+    letter-spacing: 0.02em; line-height: 1; display: block; margin-top: 2px;
+  }
+  .kbc-footer .kbc-byline {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-size: 1.1rem; color: #9A8A90; margin-top: 14px; display: block;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .hero { grid-template-columns: 1fr; text-align: center; }
+    .hero-text { order: 2; }
+    .portrait-frame { order: 1; max-width: 200px; margin: 0 auto; }
+    .hero h1 { font-size: 2.6rem; }
+    .session-grid { grid-template-columns: 1fr 1fr; }
+    .dark { padding: 26px 22px; }
+    .pricing { padding: 30px 24px; }
+    .card, .problem { padding: 22px 20px; }
+    .final-section { grid-template-columns: 1fr; }
+    .final-section .final-text { text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <span class="module-tag">Online-Kurs · Kristin Schnödt</span>
+      <h1>Gesicht in Ruhe.<br><em>5 Workouts.</em></h1>
+      <div class="sub">10 Minuten am Tag. Videogeführt. Sofort anwendbar.<br>Kein Equipment, keine Vorkenntnisse nötig.</div>
+    </div>
+    <div class="portrait-frame">
+      <img class="portrait-img" src="images/Dasbinich.PNG" alt="Kristin Schnödt – Face-Yoga-Expertin">
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <div class="problem">
+    <div class="lead">Dein Gesicht zeigt, was du trägst.<br>Lass es aufatmen.</div>
+    <p>Stress, Bildschirmzeit, Anspannung – das alles schreibt sich ins Gesicht. Kinnspannung, schwere Lider, müde Konturen. Nicht weil du älter wirst, sondern weil der Alltag seine Spuren hinterlässt.</p>
+    <p>Face Yoga ist kein Wunder. Aber es ist die ehrlichste Arbeit, die du für dein Gesicht tun kannst: <b>kurz, konsequent, wirkungsvoll</b> – und ohne Kosten, Nadeln oder Versprechen, die nicht halten.</p>
+    <div class="pull">„10 Minuten täglich. Sichtbare Veränderung in wenigen Wochen."</div>
+    <p>In diesen 5 Workouts zeige ich dir genau, was ich selbst täglich mache. Keine langen Abläufe, keine komplizierte Technik – sondern das Wesentliche. Kompakt, videogeführt, sofort machbar.</p>
+  </div>
+
+  <!-- FIRST CTA -->
+  <div class="cta-wrap" style="margin: 28px 0;">
+    <a class="cta-btn" href="https://start.kristin-schnoedt.de/42d86b6e" target="_blank" rel="noopener">Jetzt Kurs starten</a>
+    <div class="cta-note">5 Workouts · videogeführt · sofort verfügbar</div>
+  </div>
+
+  <!-- STATS -->
+  <div class="section-head">
+    <h2>Was dich erwartet</h2>
+  </div>
+
+  <div class="session-grid">
+    <div class="session-item">
+      <div class="si-val">5</div>
+      <div class="si-label">Videogeführte Workouts</div>
+    </div>
+    <div class="session-item">
+      <div class="si-val">10</div>
+      <div class="si-label">Minuten pro Workout</div>
+    </div>
+    <div class="session-item">
+      <div class="si-val">0</div>
+      <div class="si-label">Equipment nötig</div>
+    </div>
+    <div class="session-item">
+      <div class="si-val">sofort</div>
+      <div class="si-label">verfügbar & anwendbar</div>
+    </div>
+  </div>
+
+  <!-- WHAT YOU GET -->
+  <div class="card">
+    <div class="label">Das bekommst du aus dem Kurs</div>
+    <ul class="gets">
+      <li>
+        <span class="icon">1</span>
+        <div>
+          <b>5 strukturierte Workouts – Schritt für Schritt</b>
+          <span>Jedes Workout führt dich durch eine komplette Übungsfolge. Du machst einfach mit – kein Auswendiglernen, kein Suchen.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">2</span>
+        <div>
+          <b>Sofort sichtbare Entspannung im Gesicht</b>
+          <span>Verspannte Kaumuskulatur, schwere Lider, Stirnfalten – du lernst, gezielt dort loszulassen, wo der Alltag sitzt.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">3</span>
+        <div>
+          <b>Aufgebaute Routine, die hält</b>
+          <span>10 Minuten täglich. Kein riesiger Aufwand, aber konsequent genug, um Ergebnisse zu sehen.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">4</span>
+        <div>
+          <b>Das Wissen dahinter</b>
+          <span>Ich erkläre kurz, warum jede Übung wirkt. Das hilft dir, dranzubleiben – und es wirklich zu verstehen, nicht nur nachzumachen.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">5</span>
+        <div>
+          <b>Zugang ohne Ablaufdatum</b>
+          <span>Du kannst jederzeit wiederholen – morgens beim Kaffee, abends auf dem Sofa, wann immer du magst.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- FOR WHOM -->
+  <div class="section-head">
+    <h2>Für wen dieser Kurs ist</h2>
+  </div>
+
+  <div class="card">
+    <div class="label">Der Kurs ist für dich, wenn …</div>
+    <ul class="check-list">
+      <li>du merkst, dass <b>Stress und Anspannung</b> sich in deinem Gesicht zeigen</li>
+      <li>du keine Zeit für lange Routinen hast, aber etwas Wirkungsvolles tun möchtest</li>
+      <li>du <b>keine Vorkenntnisse</b> hast und einfach loslegen willst</li>
+      <li>du neugierig auf Face Yoga bist und erstmal <b>reinschnuppern</b> möchtest</li>
+      <li>du dein Gesicht <b>frischer, entspannter und lebendiger</b> sehen willst</li>
+    </ul>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="section-head">
+    <h2>Was Kursteilnehmerinnen sagen</h2>
+  </div>
+
+  <div class="testi">
+    <div class="quote">„Meine Lider wirken weniger schwer und das Oval ist deutlich straffer."</div>
+    <div class="testi-detail">Das Beste: Es kostet keine Zeit. Ich mache es beim Kaffee — und mein Gesicht sieht frischer aus als seit Jahren. Kristin erklärt so verständlich, warum jede Übung wirkt. Das hat mir geholfen, am Ball zu bleiben. Keine Magie — einfach Konsequenz.</div>
+    <div class="who">Manu D. · Kursteilnehmerin Gesicht in Ruhe – 5 Workouts</div>
+  </div>
+
+  <div class="testi">
+    <div class="quote">„Hier lerne ich wirklich nachhaltige Dinge für meine Gesichtspflege — weit über eine kurze Begleitung hinaus."</div>
+    <div class="testi-detail">Besonders schätze ich Kristins optimistische und lustige Art. Ich fühle mich bei ihr nie unter Druck gesetzt, nie als würde ich etwas falsch machen oder müsste schon weiter oder besser sein. Ein Gefühl, das mich motiviert dranzubleiben.</div>
+    <div class="who">Stephanie H. · Kursteilnehmerin</div>
+  </div>
+
+  <div class="testi">
+    <div class="quote">„Ich wollte Frische, Festigkeit und ein strahlendes Aussehen zurück. Ich kann nur sagen: absolut begeistert."</div>
+    <div class="testi-detail">Es ist wirklich unglaublich, wie viel Wissen und wertvolle Tools man hier an die Hand bekommt. Kristin liefert weit mehr, als ich erwartet hatte — und ich bin unfassbar zufrieden mit dem, was ich gelernt habe und täglich anwenden kann.</div>
+    <div class="who">Miriam L., Mutter, 40 · erst skeptisch, dann begeistert</div>
+  </div>
+
+  <!-- PRICING BOX -->
+  <div class="pricing">
+    <div class="lab label">Gesicht in Ruhe – 5 Workouts</div>
+    <h2>Dein Einstieg in<br>entspanntes Face Yoga</h2>
+    <ul>
+      <li>5 videogeführte Workouts, je ca. 10 Minuten</li>
+      <li><b>Sofort verfügbar</b> – kein Warten, kein Termin</li>
+      <li>Kein Equipment, keine Vorkenntnisse nötig</li>
+      <li>Zugang ohne Ablaufdatum</li>
+    </ul>
+    <a class="cta-btn" href="https://start.kristin-schnoedt.de/42d86b6e" target="_blank" rel="noopener" style="font-size:1.05rem; padding: 20px 52px;">Jetzt starten</a>
+    <div class="cta-note" style="color:#9A8A90; margin-top:14px;">Nach deiner Buchung erhältst du sofort Zugang per E-Mail.</div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section-head" style="margin-top: 0;">
+    <h2>So läuft es ab</h2>
+  </div>
+
+  <div class="card">
+    <div class="process">
+      <div class="process-item">
+        <div class="pt">
+          <b>Du buchst den Kurs</b>
+          Einmalige Zahlung, sofortiger Zugang – kein Abo, keine versteckten Kosten.
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="pt">
+          <b>Du bekommst deinen Zugang per E-Mail</b>
+          Direkt nach der Buchung erhältst du alle Details – du kannst sofort loslegen.
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="pt">
+          <b>Du startest mit Workout 1</b>
+          Einfach Video starten und mitmachen. Ich erkläre alles Schritt für Schritt.
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="pt">
+          <b>Du baust deine Routine auf</b>
+          10 Minuten täglich – beim Kaffee, nach dem Aufwachen, wann immer es passt.
+        </div>
+      </div>
+      <div class="process-item">
+        <div class="pt">
+          <b>Du siehst, was sich verändert</b>
+          Nach wenigen Wochen: entspanntere Züge, frischeres Aussehen, weniger Spannung im Gesicht.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-head">
+    <h2>Häufige Fragen</h2>
+  </div>
+
+  <div class="card">
+    <dl>
+      <div class="faq-item">
+        <dt>Brauche ich Vorerfahrung mit Face Yoga?</dt>
+        <dd>Nein. Der Kurs ist explizit als Einstieg konzipiert. Ich erkläre jede Übung so, dass du sofort mitmachen kannst – ganz ohne Vorkenntnisse.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Wie lange habe ich Zugang zum Kurs?</dt>
+        <dd>Der Zugang läuft nicht ab. Du kannst die Workouts so oft wiederholen wie du möchtest – heute, nächsten Monat, in einem Jahr.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Was brauche ich außer dem Kurs?</dt>
+        <dd>Nichts. Kein Equipment, kein Öl, kein Tool. Nur deine Hände und 10 Minuten täglich.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Wann sehe ich erste Ergebnisse?</dt>
+        <dd>Direkt nach dem ersten Workout merkst du, dass dein Gesicht entspannter wirkt. Sichtbare Veränderungen in Kontur und Ausstrahlung zeigen sich bei regelmäßiger Praxis innerhalb weniger Wochen.</dd>
+      </div>
+      <div class="faq-item">
+        <dt>Kann ich danach tiefer einsteigen?</dt>
+        <dd>Ja. Wenn du Lust auf mehr hast, ist der Göttinnen-Booster der nächste Schritt – mein umfassendes Face-Yoga-Programm. Du entscheidest, wann und ob du weitergehst.</dd>
+      </div>
+    </dl>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="final-section">
+    <img class="final-img" src="images/Dasbinich.PNG" alt="Kristin Schnödt – Kosmetikerin und Face-Yoga-Expertin">
+    <div class="final-text">
+      <p>„Dein Gesicht darf aufatmen."</p>
+      <a class="cta-btn" href="https://start.kristin-schnoedt.de/42d86b6e" target="_blank" rel="noopener">Jetzt Kurs starten</a>
+      <div class="cta-note" style="margin-top:12px;">5 Workouts · videogeführt · sofort verfügbar</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="kbc-footer">
+    <span class="kbc-byline" style="margin-top:0; margin-bottom:10px;">Lass auch deine Haut zur</span>
+    <span class="kbc-title">GÖTTINNEN</span>
+    <span class="kbc-club">HAUT</span>
+    <span class="kbc-byline" style="margin-top:6px; margin-bottom:0;">werden.</span>
+    <span class="kbc-byline">Kristin Schnödt · Kosmetikerin &amp; Face-Yoga-Expertin</span>
+  </div>
+
+</div>
+</body>
+</html>
