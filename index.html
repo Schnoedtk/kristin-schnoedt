@@ -1335,24 +1335,14 @@
     })();
 
     /* COOKIE BANNER */
-    function loadMailerLite(){
-      if(window._mlLoaded) return;
-      window._mlLoaded = true;
-      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-      ml('account','1097175');
-    }
-
     const cookieBar=document.getElementById('cookieBar');
     const savedConsent=localStorage.getItem('cookie_consent');
     if(!savedConsent){
       setTimeout(()=>cookieBar.classList.add('show'),1200);
-    } else if(savedConsent==='accepted'){
-      loadMailerLite();
     }
     document.getElementById('cookieAccept').addEventListener('click',()=>{
       localStorage.setItem('cookie_consent','accepted');
       cookieBar.classList.remove('show');
-      loadMailerLite();
     });
     document.getElementById('cookieDecline').addEventListener('click',()=>{
       localStorage.setItem('cookie_consent','declined');
@@ -1419,7 +1409,7 @@
       <div class="lead-modal-eyebrow">Gratis für dich</div>
       <h2 class="lead-modal-h">6-Minuten<br><em>Lifting-Workout</em></h2>
       <p class="lead-modal-sub">Trag deinen Namen und deine E-Mail ein — ich schicke dir das Video direkt zu. Keine Vorkenntnisse nötig, nur 6 Minuten für sichtbare Frische.</p>
-      <div class="ml-embedded" data-form="QXPpcZ"></div>
+      <script id="form-script-tag-24814169" src="https://start.kristin-schnoedt.de/public/remote/page/42822920cb4c02c81f740cdaa8a9130cd8010c3c.js"></script>
       <p class="lead-modal-note">Kein Spam. Keine Weitergabe. Jederzeit abmeldbar.</p>
     </div>
   </div>
