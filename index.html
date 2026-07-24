@@ -1385,18 +1385,43 @@
         goTo(0);
       });
     })();
-    /* LEAD MODAL */
+    /* LEAD MODAL – lazy-load systeme.io script to prevent auto-popup on page load */
+    var _sioReady = false;
+    var _sioOpenPending = false;
+
+    window.addEventListener('load', function() {
+      var s = document.createElement('script');
+      s.id = 'form-script-tag-24814169';
+      s.src = 'https://start.kristin-schnoedt.de/public/remote/page/42822920cb4c02c81f740cdaa8a9130cd8010c3c.js';
+      s.onload = function() {
+        _sioReady = true;
+        if (_sioOpenPending) {
+          _sioOpenPending = false;
+          _triggerSioPopup();
+        }
+      };
+      document.body.appendChild(s);
+    });
+
+    function _triggerSioPopup() {
+      if (typeof window.onload === 'function') {
+        var fn = window.onload;
+        window.onload = null;
+        fn();
+      }
+    }
+
     function openLeadModal() {
-      document.getElementById('leadModal').classList.add('open');
-      document.body.style.overflow = 'hidden';
+      if (_sioReady) {
+        _triggerSioPopup();
+      } else {
+        _sioOpenPending = true;
+      }
     }
     function closeLeadModal() {
       document.getElementById('leadModal').classList.remove('open');
       document.body.style.overflow = '';
     }
-    document.getElementById('leadModal').addEventListener('click', function(e) {
-      if (e.target === this) closeLeadModal();
-    });
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeLeadModal();
     });
@@ -1409,7 +1434,7 @@
       <div class="lead-modal-eyebrow">Gratis für dich</div>
       <h2 class="lead-modal-h">6-Minuten<br><em>Lifting-Workout</em></h2>
       <p class="lead-modal-sub">Trag deinen Namen und deine E-Mail ein — ich schicke dir das Video direkt zu. Keine Vorkenntnisse nötig, nur 6 Minuten für sichtbare Frische.</p>
-      <script id="form-script-tag-24814169" src="https://start.kristin-schnoedt.de/public/remote/page/42822920cb4c02c81f740cdaa8a9130cd8010c3c.js"></script>
+
       <p class="lead-modal-note">Kein Spam. Keine Weitergabe. Jederzeit abmeldbar.</p>
     </div>
   </div>
