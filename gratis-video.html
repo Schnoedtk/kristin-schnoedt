@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gratis-Video: 6 Minuten Face Yoga · Kristin Schnödt</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  /* ===== KRISTIN SCHNÖDT · GRATIS-VIDEO · Landing Page =====
+     Beige #EDEAE0 · Sage-hell #E3E7DC · Sand #D8C9AE · Sage-Rahmen #B9C2A8
+     Salbei #9CAA8C · Bordeaux #7A4A58 · Warmgrau #6E6A5C · Dunkel #3D2A2E
+     Display: Cormorant Garamond · Text: Montserrat */
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    background: linear-gradient(160deg, #EDEAE0 0%, #EDE6D8 55%, #E3E7DC 100%);
+    min-height: 100%;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: transparent;
+    color: #5A5648;
+    padding: 56px 24px 80px;
+    line-height: 1.65;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; }
+
+  /* ── MODULE TAG ── */
+  .module-tag {
+    display: inline-block; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: #7A4A58; background: #E3E7DC; border: 1px solid #B9C2A8;
+    border-radius: 100px; padding: 6px 18px; margin-bottom: 22px;
+  }
+
+  /* ── GRATIS BADGE ── */
+  .gratis-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: #EDEAE0;
+    background: #7A4A58; border-radius: 100px;
+    padding: 7px 20px; margin-bottom: 20px;
+  }
+  .gratis-badge::before {
+    content: "✦"; font-size: 0.7rem;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 36px;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  .hero-text { text-align: left; }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3.2rem; font-weight: 600; line-height: 1.05; color: #3D2A2E;
+  }
+  .hero h1 em { font-style: italic; color: #7A4A58; }
+
+  .hero .sub {
+    font-style: italic; font-weight: 400; font-size: 1.05rem;
+    color: #8C8776; margin-top: 16px; line-height: 1.55;
+  }
+
+  /* Portrait */
+  .portrait-frame { position: relative; flex-shrink: 0; }
+  .portrait-frame::before {
+    content: '';
+    position: absolute; inset: -8px;
+    border-radius: 44% 56% 60% 40% / 46% 44% 56% 54%;
+    border: 2px solid rgba(185, 194, 168, 0.45);
+    animation: morph 8s ease-in-out infinite;
+  }
+  .portrait-frame::after {
+    content: '';
+    position: absolute; inset: -16px;
+    border-radius: 40% 60% 55% 45% / 50% 48% 52% 50%;
+    border: 1px solid rgba(156, 170, 140, 0.2);
+    animation: morph 10s ease-in-out infinite reverse;
+  }
+  @keyframes morph {
+    0%, 100% { border-radius: 44% 56% 60% 40% / 46% 44% 56% 54%; }
+    33%       { border-radius: 56% 44% 48% 52% / 54% 40% 60% 46%; }
+    66%       { border-radius: 40% 60% 52% 48% / 44% 56% 44% 56%; }
+  }
+  .portrait-img {
+    width: 100%; aspect-ratio: 3/4;
+    object-fit: cover; object-position: center top;
+    border-radius: 44% 56% 60% 40% / 46% 44% 56% 54%;
+    animation: morph 8s ease-in-out infinite;
+    display: block;
+    box-shadow: 0 12px 48px rgba(122, 74, 88, 0.22);
+  }
+
+  /* ── LABEL ── */
+  .label {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: #7A4A58; margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* ── PULL QUOTE ── */
+  .pull {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-weight: 500; font-size: 1.5rem; color: #6E6A5C; line-height: 1.35;
+    border-left: 3px solid #9CAA8C; padding: 6px 0 6px 20px; margin: 20px 0;
+  }
+
+  /* ── CARDS ── */
+  .card {
+    background: #FBF8F2; border: 1.5px solid #E3E7DC;
+    border-radius: 14px; padding: 26px 30px; margin-bottom: 14px;
+  }
+
+  /* ── PROBLEM BLOCK ── */
+  .problem {
+    background: #FBF8F2; border: 1.5px solid #E3E7DC;
+    border-radius: 16px; padding: 32px 36px; margin-bottom: 20px;
+  }
+  .problem .lead {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.7rem; font-weight: 600; color: #3D2A2E; line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .problem p { font-size: 1rem; color: #5A5648; margin-bottom: 12px; }
+  .problem p:last-child { margin-bottom: 0; }
+  .problem b { color: #3D2A2E; font-weight: 600; }
+
+  /* ── DARK BOX ── */
+  .dark {
+    background: #3D2A2E; color: #EDEAE0;
+    border-radius: 16px; padding: 34px 38px; margin-bottom: 20px;
+  }
+  .dark .lab {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: #B9C2A8; margin-bottom: 14px;
+  }
+  .dark h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2rem; font-weight: 600; color: #EDEAE0; line-height: 1.2; margin-bottom: 18px;
+  }
+  .dark p { font-size: 1rem; color: #E8DFC9; margin-bottom: 10px; line-height: 1.6; }
+  .dark p:last-child { margin-bottom: 0; }
+  .dark b { color: #D8C9AE; font-weight: 600; }
+
+  /* ── SECTION HEADING ── */
+  .section-head { text-align: center; margin: 52px 0 24px; }
+  .section-head h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.4rem; font-weight: 600; color: #3D2A2E; line-height: 1.15;
+  }
+  .section-head p { font-size: 0.96rem; color: #8C8776; margin-top: 8px; font-style: italic; }
+
+  /* ── STATS GRID ── */
+  .session-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+  .session-item {
+    background: #E3E7DC; border: 1px solid #D8C9AE;
+    border-radius: 12px; padding: 18px 20px; text-align: center;
+  }
+  .session-item .si-val {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.2rem; font-weight: 600; color: #7A4A58; line-height: 1;
+  }
+  .session-item .si-label {
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; color: #5A5648; margin-top: 6px;
+  }
+
+  /* ── GETS LIST ── */
+  .gets { list-style: none; margin: 0; padding: 0; }
+  .gets li {
+    display: flex; gap: 14px; padding: 12px 0;
+    border-top: 1px solid #EDE6D8; align-items: flex-start;
+  }
+  .gets li:first-child { border-top: none; padding-top: 0; }
+  .gets li .icon {
+    flex-shrink: 0; width: 28px; height: 28px;
+    background: #3D2A2E; color: #EDEAE0;
+    border-radius: 8px; font-size: 0.8rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  }
+  .gets li b { color: #3D2A2E; font-weight: 600; display: block; margin-bottom: 2px; }
+  .gets li span { display: block; font-size: 0.9rem; color: #6E6A5C; }
+
+  /* ── CHECK LIST ── */
+  .check-list { list-style: none; margin: 4px 0 0; padding: 0; }
+  .check-list li {
+    font-size: 0.98rem; color: #5A5648;
+    padding: 8px 0 8px 28px; position: relative;
+    border-top: 1px solid #EDE6D8;
+  }
+  .check-list li:first-child { border-top: none; }
+  .check-list li::before {
+    content: ""; position: absolute; left: 0; top: 16px;
+    width: 14px; height: 14px; border-radius: 50%; background: #9CAA8C;
+  }
+  .check-list li b { color: #3D2A2E; }
+
+  /* ── TESTIMONIALS ── */
+  .testi {
+    background: #E3E7DC; border: 1px solid #D8C9AE;
+    border-radius: 12px; padding: 18px 20px; margin-bottom: 12px;
+  }
+  .testi .quote {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-weight: 500; font-size: 1.22rem; color: #7A4A58; line-height: 1.35;
+  }
+  .testi .testi-detail {
+    font-size: 0.88rem; color: #5A5648; margin-top: 8px; line-height: 1.6;
+  }
+  .testi .who { font-size: 0.8rem; font-weight: 600; color: #7A4A58; margin-top: 10px; }
+
+  /* ── CTA BOX (dunkel, für Haupteintragung) ── */
+  .cta-box {
+    background: #3D2A2E; color: #EDEAE0;
+    border-radius: 20px; padding: 40px 44px; margin: 44px 0; text-align: center;
+  }
+  .cta-box .lab { color: #B9C2A8; margin-bottom: 10px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; }
+  .cta-box h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.4rem; font-weight: 600; color: #EDEAE0; line-height: 1.1; margin-bottom: 12px;
+  }
+  .cta-box p { font-size: 0.96rem; color: #E8DFC9; margin-bottom: 28px; line-height: 1.6; }
+  .cta-box ul {
+    text-align: left; list-style: none; margin: 0 0 32px;
+    display: inline-block; padding: 0;
+  }
+  .cta-box ul li {
+    font-size: 0.96rem; color: #E8DFC9; padding: 6px 0 6px 26px; position: relative;
+  }
+  .cta-box ul li::before {
+    content: ""; position: absolute; left: 0; top: 14px;
+    width: 10px; height: 10px; border-radius: 50%; background: #9CAA8C;
+  }
+  .cta-box ul li b { color: #D8C9AE; }
+
+  /* ── CTA BUTTON ── */
+  .cta-wrap { text-align: center; margin: 8px 0; }
+  .cta-btn {
+    display: inline-block; background: #9CAA8C; color: #EDEAE0;
+    font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 700;
+    letter-spacing: 0.04em; text-decoration: none;
+    border-radius: 100px; padding: 18px 44px;
+    border: none; cursor: pointer; transition: background 0.2s;
+  }
+  .cta-btn:hover { background: #7D9070; }
+  .cta-note { font-size: 0.82rem; color: #8C8776; margin-top: 12px; font-style: italic; text-align: center; }
+
+  /* ── FINAL SECTION ── */
+  .final-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    align-items: end;
+    margin-top: 44px;
+  }
+  .final-section .final-img {
+    width: 100%; display: block;
+    border-radius: 20px;
+    box-shadow: 0 14px 56px rgba(61, 42, 46, 0.22);
+    image-orientation: from-image;
+  }
+  .final-section .final-text { padding-bottom: 4px; }
+  .final-section .final-text p {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-size: 1.9rem; font-weight: 500; color: #3D2A2E; line-height: 1.25;
+    margin-bottom: 24px;
+  }
+
+  /* ── FOOTER ── */
+  .kbc-footer {
+    margin-top: 64px; padding: 48px 32px 8px; text-align: center;
+    border-top: 1.5px solid rgba(122, 74, 88, 0.15);
+  }
+  .kbc-footer .kbc-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3rem; font-weight: 600; color: #3D2A2E;
+    letter-spacing: 0.02em; line-height: 1; display: block;
+  }
+  .kbc-footer .kbc-club {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 3rem; font-weight: 600; color: #7A4A58;
+    letter-spacing: 0.02em; line-height: 1; display: block; margin-top: 2px;
+  }
+  .kbc-footer .kbc-byline {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-size: 1.1rem; color: #8C8776; margin-top: 14px; display: block;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .hero { grid-template-columns: 1fr; text-align: center; }
+    .hero-text { order: 2; }
+    .portrait-frame { order: 1; max-width: 200px; margin: 0 auto; }
+    .hero h1 { font-size: 2.6rem; }
+    .session-grid { grid-template-columns: 1fr 1fr; }
+    .dark { padding: 26px 22px; }
+    .cta-box { padding: 30px 24px; }
+    .card, .problem { padding: 22px 20px; }
+    .final-section { grid-template-columns: 1fr; }
+    .final-section .final-text { text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <span class="gratis-badge">100 % kostenlos</span><br>
+      <span class="module-tag" style="margin-top: 10px;">Gratis-Video · Kristin Schnödt</span>
+      <h1>6 Minuten.<br><em>Sofort spürbar.</em></h1>
+      <div class="sub">Mein erstes Face-Yoga-Video, das ich dir einfach schenken möchte.<br>Kein Equipment. Keine Vorkenntnisse. Nur deine Hände und 6 Minuten.</div>
+    </div>
+    <div class="portrait-frame">
+      <img class="portrait-img" src="images/Dasbinich.PNG" alt="Kristin Schnödt – Face-Yoga-Expertin">
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <div class="problem">
+    <div class="lead">Du weißt, dass dein Gesicht mehr Aufmerksamkeit verdient.<br>Du weißt nur nicht, womit du anfangen sollst.</div>
+    <p>Jeden Tag schauen wir in den Spiegel und sehen, wie Stress, Schlafmangel und der Alltag ihre Spuren hinterlassen. Schwere Lider. Verspannte Kaumuskulatur. Müde Konturen. Nicht weil wir älter werden – sondern weil wir uns keine Zeit nehmen.</p>
+    <p>Face Yoga ist keine Magie. Aber es ist die ehrlichste, günstigste und sofort spürbarste Sache, die du für dein Gesicht tun kannst. Und genau deshalb schenke ich dir diesen Einstieg.</p>
+    <div class="pull">„6 Minuten, die du spürst – direkt nach der ersten Übung."</div>
+    <p>In diesem kostenlosen Video zeige ich dir genau, wie ich selbst täglich einsteige. Keine langen Erklärungen, keine komplizierte Technik – nur das Wesentliche. Damit du sofort anfangen kannst.</p>
+    <p><b>Einfach eintragen, sofort schauen.</b></p>
+  </div>
+
+  <!-- FIRST CTA -->
+  <div class="cta-wrap" style="margin: 28px 0;">
+    <button class="cta-btn" id="gratis-video-cta-1">Jetzt gratis Video anfordern</button>
+    <div class="cta-note">Kostenlos · kein Abo · direkt in dein Postfach</div>
+  </div>
+
+  <!-- STATS -->
+  <div class="section-head">
+    <h2>Was dich erwartet</h2>
+  </div>
+
+  <div class="session-grid">
+    <div class="session-item">
+      <div class="si-val">6</div>
+      <div class="si-label">Minuten</div>
+    </div>
+    <div class="session-item">
+      <div class="si-val">0 €</div>
+      <div class="si-label">Komplett kostenlos</div>
+    </div>
+    <div class="session-item">
+      <div class="si-val">0</div>
+      <div class="si-label">Equipment nötig</div>
+    </div>
+    <div class="session-item">
+      <div class="si-val">sofort</div>
+      <div class="si-label">verfügbar & anwendbar</div>
+    </div>
+  </div>
+
+  <!-- WHAT YOU GET -->
+  <div class="card">
+    <div class="label">Was du im Gratis-Video lernst</div>
+    <ul class="gets">
+      <li>
+        <span class="icon">1</span>
+        <div>
+          <b>Die wirkungsvollsten Entspannungsübungen</b>
+          <span>Dort ansetzen, wo der Alltag sitzt: Kiefer, Stirn, Augenlider – gezielt loslassen in wenigen Minuten.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">2</span>
+        <div>
+          <b>Warum Face Yoga mehr ist als Mimiktraining</b>
+          <span>Ich erkläre kurz, was wirklich passiert, wenn du dein Gesicht bewusst entspannst – und warum das jede Creme übertrifft.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">3</span>
+        <div>
+          <b>Dein Einstieg in eine tägliche Routine</b>
+          <span>6 Minuten, die sich in jede Morgenroutine einbauen lassen – beim Kaffee, vor dem Spiegel, wann immer du magst.</span>
+        </div>
+      </li>
+      <li>
+        <span class="icon">4</span>
+        <div>
+          <b>Das sofortige Erfolgserlebnis</b>
+          <span>Direkt nach dem Video wirst du den Unterschied spüren. Das ist kein Versprechen – das ist Face Yoga.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- FOR WHOM -->
+  <div class="section-head">
+    <h2>Für wen dieses Video ist</h2>
+  </div>
+
+  <div class="card">
+    <div class="label">Das Video ist für dich, wenn …</div>
+    <ul class="check-list">
+      <li>du noch <b>nie Face Yoga</b> gemacht hast und einfach mal reinschnuppern möchtest</li>
+      <li>du merkst, dass <b>Stress und Anspannung</b> sich in deinem Gesicht zeigen</li>
+      <li>du keine Zeit für lange Routinen hast, aber etwas Wirkungsvolles tun möchtest</li>
+      <li>du dein Gesicht <b>frischer, entspannter und lebendiger</b> sehen willst</li>
+      <li>du bereit bist, <b>6 Minuten für dich</b> zu investieren – ohne Kosten, ohne Risiko</li>
+    </ul>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <div class="section-head">
+    <h2>Was andere Frauen sagen</h2>
+  </div>
+
+  <div class="testi">
+    <div class="quote">„Ich mache es beim Kaffee — und mein Gesicht sieht frischer aus als seit Jahren."</div>
+    <div class="testi-detail">Kristin erklärt so verständlich, warum jede Übung wirkt. Das hat mir geholfen, am Ball zu bleiben. Keine Magie — einfach Konsequenz. Und meine Lider wirken weniger schwer, das Oval ist straffer.</div>
+    <div class="who">Manu D. · Face-Yoga-Teilnehmerin</div>
+  </div>
+
+  <div class="testi">
+    <div class="quote">„Ich fühle mich bei ihr nie unter Druck gesetzt. Ein Gefühl, das mich motiviert dranzubleiben."</div>
+    <div class="testi-detail">Besonders schätze ich Kristins optimistische und warme Art. Sie erklärt, warum es wirkt – nicht nur, was man tun soll. Das macht den riesigen Unterschied.</div>
+    <div class="who">Stephanie H. · Kursteilnehmerin</div>
+  </div>
+
+  <div class="testi">
+    <div class="quote">„Ich wollte Frische und Festigkeit zurück. Ich kann nur sagen: absolut begeistert."</div>
+    <div class="testi-detail">Was ich hier an die Hand bekomme, übersteigt alles, was ich erwartet hatte. Und es kostet mich täglich kaum mehr als ein paar Minuten.</div>
+    <div class="who">Miriam L., 40 · erst skeptisch, dann begeistert</div>
+  </div>
+
+  <!-- CTA BOX (dunkel) -->
+  <div class="cta-box">
+    <div class="lab">Dein kostenloser Einstieg</div>
+    <h2>6 Minuten.<br>Für dich. Kostenlos.</h2>
+    <p>Trag dich ein und ich schicke dir das Video direkt zu — kein Abo, kein Risiko, keine versteckten Kosten. Nur ein ehrliches Geschenk von mir.</p>
+    <ul>
+      <li>6-minütiges Face-Yoga-Video von Kristin</li>
+      <li>Sofort anwendbar, <b>kein Equipment nötig</b></li>
+      <li>Direkter Zugang per E-Mail</li>
+      <li>100 % kostenlos, kein Abo</li>
+    </ul>
+    <button class="cta-btn" id="gratis-video-cta-2" style="font-size:1.05rem; padding: 20px 52px;">Jetzt gratis Video anfordern</button>
+    <div class="cta-note" style="color:#8C8776; margin-top:14px;">Kein Spam. Kein Abo. Jederzeit abmeldbar.</div>
+  </div>
+
+  <!-- ÜBER KRISTIN -->
+  <div class="section-head">
+    <h2>Warum ich dir das schenke</h2>
+  </div>
+
+  <div class="card">
+    <div class="label">Ein Wort von Kristin</div>
+    <p style="font-size:1rem; color:#5A5648; margin-bottom:12px;">Ich bin Kosmetikerin mit 20 Jahren Erfahrung. Ich habe selbst erlebt, was es bedeutet, mit der eigenen Haut zu kämpfen – Neurodermitis, Arzttermine, Cortison, das Gefühl, allein gelassen zu werden.</p>
+    <p style="font-size:1rem; color:#5A5648; margin-bottom:12px;">Irgendwann habe ich verstanden: Haut braucht Ruhe. Entspannung. Und Face Yoga war für mich der Moment, in dem ich meinem Gesicht diese Ruhe geschenkt habe.</p>
+    <p style="font-size:1rem; color:#5A5648; margin-bottom:0;">Dieses Video ist mein Einstiegsgeschenk an dich. Weil ich möchte, dass du selbst spürst, was möglich ist – bevor du irgendetwas kaufst.</p>
+    <div class="pull">„Ich bin Kosmetikerin. Und Face Yoga hat meine tägliche Routine verändert."</div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="final-section">
+    <img class="final-img" src="images/Dasbinich.PNG" alt="Kristin Schnödt – Kosmetikerin und Face-Yoga-Expertin">
+    <div class="final-text">
+      <p>„Dein Gesicht darf aufatmen."</p>
+      <button class="cta-btn" id="gratis-video-cta-3">Jetzt gratis Video anfordern</button>
+      <div class="cta-note" style="margin-top:12px;">Kostenlos · direkt in dein Postfach</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="kbc-footer">
+    <span class="kbc-byline" style="margin-top:0; margin-bottom:10px;">Lass auch deine Haut zur</span>
+    <span class="kbc-title">GÖTTINNEN</span>
+    <span class="kbc-club">HAUT</span>
+    <span class="kbc-byline" style="margin-top:6px; margin-bottom:0;">werden.</span>
+    <span class="kbc-byline">Kristin Schnödt · Kosmetikerin &amp; Face-Yoga-Expertin</span>
+  </div>
+
+</div>
+
+<!-- systeme.io Popup-Formular -->
+<script id="form-script-tag-24890680" src="https://start.kristin-schnoedt.de/public/remote/page/4311472810ddf82603664c970b9eec48ac0376c0.js"></script>
+</body>
+</html>
