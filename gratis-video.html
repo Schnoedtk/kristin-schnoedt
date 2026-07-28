@@ -337,7 +337,7 @@
 
   <!-- FIRST CTA -->
   <div class="cta-wrap" style="margin: 28px 0;">
-    <button class="cta-btn systeme-show-popup-24890680">Jetzt gratis Video anfordern</button>
+    <button class="cta-btn" onclick="openGratisForm()">Jetzt gratis Video anfordern</button>
     <div class="cta-note">Kostenlos · kein Abo · direkt in dein Postfach</div>
   </div>
 
@@ -450,7 +450,7 @@
       <li>Direkter Zugang per E-Mail</li>
       <li>100 % kostenlos, kein Abo</li>
     </ul>
-    <button class="cta-btn systeme-show-popup-24890680" style="font-size:1.05rem; padding: 20px 52px;">Jetzt gratis Video anfordern</button>
+    <button class="cta-btn" onclick="openGratisForm()" style="font-size:1.05rem; padding: 20px 52px;">Jetzt gratis Video anfordern</button>
     <div class="cta-note" style="color:#8C8776; margin-top:14px;">Kein Spam. Kein Abo. Jederzeit abmeldbar.</div>
   </div>
 
@@ -472,7 +472,7 @@
     <img class="final-img" src="images/Dasbinich.PNG" alt="Kristin Schnödt – Kosmetikerin und Face-Yoga-Expertin">
     <div class="final-text">
       <p>„Dein Gesicht darf aufatmen."</p>
-      <button class="cta-btn systeme-show-popup-24890680">Jetzt gratis Video anfordern</button>
+      <button class="cta-btn" onclick="openGratisForm()">Jetzt gratis Video anfordern</button>
       <div class="cta-note" style="margin-top:12px;">Kostenlos · direkt in dein Postfach</div>
     </div>
   </div>
@@ -488,10 +488,38 @@
 
 </div>
 
-<script id="form-script-tag-24890680" src="https://start.kristin-schnoedt.de/public/remote/page/4311472810ddf82603664c970b9eec48ac0376c0.js"></script>
 <script>
-  if (document.readyState === 'complete' && typeof window.onload === 'function') {
-    window.onload();
+  var _sioReady = false;
+  var _sioOpenPending = false;
+
+  window.addEventListener('load', function() {
+    var s = document.createElement('script');
+    s.id = 'form-script-tag-24890680';
+    s.src = 'https://start.kristin-schnoedt.de/public/remote/page/4311472810ddf82603664c970b9eec48ac0376c0.js';
+    s.onload = function() {
+      _sioReady = true;
+      if (_sioOpenPending) {
+        _sioOpenPending = false;
+        _triggerSioPopup();
+      }
+    };
+    document.body.appendChild(s);
+  });
+
+  function _triggerSioPopup() {
+    if (typeof window.onload === 'function') {
+      var fn = window.onload;
+      window.onload = null;
+      fn();
+    }
+  }
+
+  function openGratisForm() {
+    if (_sioReady) {
+      _triggerSioPopup();
+    } else {
+      _sioOpenPending = true;
+    }
   }
 </script>
 </body>
