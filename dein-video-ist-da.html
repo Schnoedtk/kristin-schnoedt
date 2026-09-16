@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Dein Video ist da · Kristin Schnödt</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { height: 100%; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(165deg, #EDEAE0 0%, #EDE6D8 50%, #E3E7DC 100%);
+    color: #5A5648;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+  }
+
+  .wrap { max-width: 620px; width: 100%; text-align: center; }
+
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #3D2A2E;
+    margin-bottom: 10px;
+  }
+
+  .sub {
+    font-size: 1rem;
+    color: #5A5648;
+    margin-bottom: 26px;
+  }
+
+  .video-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 14px 40px rgba(61, 42, 46, 0.2);
+    margin-bottom: 28px;
+    background: #3D2A2E;
+  }
+  .video-frame iframe {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+
+  .bridge {
+    font-size: 1rem;
+    color: #5A5648;
+    margin-bottom: 20px;
+  }
+
+  .cta {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.02rem; font-weight: 700; letter-spacing: 0.02em;
+    color: #EDEAE0; background: #7A4A58;
+    border: none; border-radius: 100px;
+    padding: 17px 42px;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(122,74,88,0.28);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(122,74,88,0.34); }
+
+  .cta-note {
+    display: block;
+    font-size: 0.8rem;
+    color: #8C8776;
+    margin-top: 12px;
+  }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <h1>Dein Video ist da</h1>
+  <p class="sub">Nimm dir ein paar Minuten Zeit dafür.</p>
+
+  <div class="video-frame">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/zsT5-ryWe7A"
+      title="Dein Video von Kristin Schnödt"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <p class="bridge">Wenn du tiefer einsteigen willst: Der Glow-Code, meine 14-Tage-Challenge für Frauen ab 40, startet am 12. Oktober.</p>
+  <a class="cta" href="https://kristin-schnoedt.de/glow-code">Jetzt Platz sichern für 30 €</a>
+  <span class="cta-note">14 Tage, ein paar Minuten am Tag</span>
+</div>
+
+</body>
+</html>
