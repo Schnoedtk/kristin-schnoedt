@@ -69,7 +69,7 @@
   .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
   .hero h1 {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 3.6rem; font-weight: 600; line-height: 1.08; color: #3D2A2E;
+    font-size: 2.7rem; font-weight: 600; line-height: 1.12; color: #3D2A2E;
   }
   .hero .answer {
     font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
@@ -101,6 +101,7 @@
   /* PHOTOS */
   .photo { display: block; width: 100%; border-radius: 18px; object-fit: cover; }
   .photo-hero { max-height: 620px; object-position: top; }
+  .photo-fill { height: 100%; }
 
   /* TRUST BAR */
   .trustbar { background: #FBF8F2; border-top: 1px solid #E3E7DC; border-bottom: 1px solid #E3E7DC; padding: 40px 0; }
@@ -144,7 +145,7 @@
   /* STORY */
   .story { background: #3D2A2E; color: #EDEAE0; }
   .story h2 { color: #EDEAE0; }
-  .story-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: center; }
+  .story-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: stretch; }
   .story p { color: #D9D2C4; margin-bottom: 16px; font-size: 1.02rem; }
   .story b { color: #D8C9AE; }
   .story .quote {
@@ -170,8 +171,8 @@
   /* VALUE STACK */
   .stack { background: #FBF8F2; }
   .stack h2 { font-size: 2.1rem; }
-  .stack-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; }
-  .stack-list { display: flex; flex-direction: column; gap: 12px; margin-top: 26px; }
+  .stack-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; margin-top: 26px; }
+  .stack-list { display: flex; flex-direction: column; gap: 12px; }
   .stack-list .row {
     display: flex; gap: 14px; align-items: flex-start;
     background: #EDEAE0; border: 1px solid #E3E7DC; border-radius: 12px; padding: 14px 18px;
@@ -197,10 +198,11 @@
 
   /* TESTIMONIALS */
   .testis { background: #E3E7DC; }
-  .testi-grid { columns: 2; column-gap: 18px; margin-top: 36px; }
+  .testi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
+  .testi-col { display: flex; flex-direction: column; gap: 18px; }
   .testi-card {
-    break-inside: avoid; background: #FBF8F2; border: 1px solid #D8C9AE;
-    border-radius: 16px; padding: 26px 26px 22px; margin-bottom: 18px;
+    background: #FBF8F2; border: 1px solid #D8C9AE;
+    border-radius: 16px; padding: 26px 26px 22px;
   }
   .testi-card .tq {
     font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 500;
@@ -230,7 +232,7 @@
 
   /* ABOUT */
   .about { background: #E3E7DC; }
-  .about-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center; }
+  .about-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: stretch; }
   .about p { margin-bottom: 16px; font-size: 1.02rem; }
   .about b { color: #3D2A2E; }
 
@@ -238,6 +240,7 @@
   .final { background: #3D2A2E; text-align: center; }
   .final h2 { color: #EDEAE0; }
   .final .fsub { color: #B9C2A8; font-size: 1.05rem; max-width: 560px; margin: 0 auto 34px; }
+  .final .fsub.pyramid { max-width: 740px; }
   .final .facts { color: #D8C9AE; font-size: 0.9rem; margin-top: 22px; }
 
   /* FOOTER */
@@ -263,11 +266,12 @@
     .hero h1 { font-size: 2.5rem; }
     .hero-grid, .reframe-grid, .story-grid, .stack-grid, .about-grid { grid-template-columns: 1fr; gap: 36px; }
     .steps { grid-template-columns: 1fr; }
-    .testi-grid { columns: 1; }
+    .testi-grid { grid-template-columns: 1fr; }
     .match-grid { grid-template-columns: 1fr; }
     .pricebox { position: static; }
     .ph-hero { min-height: 320px; }
     .sticky-cta { display: block; }
+    .pyramid-break { display: none; }
     body { padding-bottom: 70px; }
   }
 </style>
@@ -290,7 +294,7 @@
       <h1>Deine Haut zum Strahlen bringen, ganz ohne Spritzen</h1>
       <div class="answer">Mit Gesichtsschröpfen reduzierst du Falten, straffst deine Haut und löst Verspannungen, ganz ohne invasive Eingriffe.</div>
       <p class="sub">Perfekt für Frauen über 40, die eine einfache und effektive Technik suchen, um ihre Haut zu pflegen und gleichzeitig Verspannungen zu lösen.</p>
-      <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/a519ad10-2be62172-179dc760">Jetzt Kurs sichern für 49 €</a>
+      <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Jetzt Kurs sichern für 49 €</a>
       <span class="cta-note">11 Videos, 90 Minuten. Direkt startklar.</span>
       <div class="hero-facts">
         <span>11 Videos</span>
@@ -345,14 +349,16 @@
 
 <!-- STORY -->
 <section class="story">
-  <div class="wrap story-grid">
-    <img class="photo" src="Angebot-Challenge/images/nachher_3.jpeg?v=2" alt="Kristin Schnödt, Porträt">
-    <div>
-      <span class="eyebrow" style="background:rgba(216,201,174,0.14); color:#D8C9AE; border-color:rgba(216,201,174,0.3);">Meine Geschichte</span>
-      <h2>In 20 Jahren habe ich unzählige Gesichter gesehen</h2>
-      <p>Seit 20 Jahren liegen Frauen auf meiner Kosmetikliege. Jedes Gesicht ist anders, und jede Geschichte dazu auch. Und für eine Stunde konnte ich jeder Einzelnen etwas geben, das im Alltag oft fehlt: Ruhe, Berührung, Zeit nur für sich.</p>
-      <p>Eine Technik hat sich dabei immer wieder als besonders wirkungsvoll gezeigt: das Gesichtscupping. Ich habe gesehen, wie sich Gesichter darunter regelrecht entspannen, wie Schwellungen zurückgehen und die Haut an Spannkraft gewinnt. Also habe ich angefangen, genau diese Technik so aufzubereiten, dass du sie auch zu Hause sicher anwenden kannst.</p>
-      <div class="quote">„Cupping ist die Technik, bei der ich am häufigsten sehe, wie sich ein Gesicht direkt vor meinen Augen entspannt.“</div>
+  <div class="wrap">
+    <span class="eyebrow" style="background:rgba(216,201,174,0.14); color:#D8C9AE; border-color:rgba(216,201,174,0.3);">Meine Geschichte</span>
+    <div class="story-grid">
+      <img class="photo photo-fill" src="Angebot-Challenge/images/nachher_3.jpeg?v=2" alt="Kristin Schnödt, Porträt">
+      <div>
+        <h2>In 20 Jahren habe ich unzählige Gesichter gesehen</h2>
+        <p>Seit 20 Jahren liegen Frauen auf meiner Kosmetikliege. Jedes Gesicht ist anders, und jede Geschichte dazu auch. Und für eine Stunde konnte ich jeder Einzelnen etwas geben, das im Alltag oft fehlt: Ruhe, Berührung, Zeit nur für sich.</p>
+        <p>Eine Technik hat sich dabei immer wieder als besonders wirkungsvoll gezeigt: das Gesichtscupping. Ich habe gesehen, wie sich Gesichter darunter regelrecht entspannen, wie Schwellungen zurückgehen und die Haut an Spannkraft gewinnt. Also habe ich angefangen, genau diese Technik so aufzubereiten, dass du sie auch zu Hause sicher anwenden kannst.</p>
+        <div class="quote">„Cupping ist die Technik, bei der ich am häufigsten sehe, wie sich ein Gesicht direkt vor meinen Augen entspannt.“</div>
+      </div>
     </div>
   </div>
 </section>
@@ -375,29 +381,29 @@
 
 <!-- VALUE STACK + PRICE -->
 <section class="stack" id="checkout-info">
-  <div class="wrap stack-grid">
-    <div>
-      <span class="eyebrow">Alles drin</span>
-      <h2>Das bekommst du für deine 49 €</h2>
-      <div class="stack-list">
+  <div class="wrap">
+    <span class="eyebrow">Alles drin</span>
+    <h2>Das bekommst du für deine 49 €</h2>
+    <div class="stack-grid">
+    <div class="stack-list">
         <div class="row"><p><b>11 Videos, 90 Minuten:</b> Erklär- und Mitmachvideos für jeden Schritt</p></div>
         <div class="row"><p><b>Grundlagen des Cuppings:</b> Sicherheit und Technik für Anfänger</p></div>
         <div class="row"><p><b>Reinigungs- und Intensivsequenzen</b> für eine tiefenwirksame Pflege</p></div>
         <div class="row"><p><b>Gezielte Faltenreduktion:</b> Stirn-, Zornes-, Nasolabial- und Marionettenfalten</p></div>
         <div class="row"><p><b>Spezialtechniken für sensible Zonen:</b> Augen-, Lippen- und Kieferpartie</p></div>
         <div class="row"><p><b>Produktempfehlungen</b> von Purvidual für die passende Anwendung</p></div>
-      </div>
     </div>
     <div class="pricebox" id="checkout">
       <div class="pb-label">Göttinnen Cupping Kurs</div>
       <div class="price">49 €</div>
       <div class="anchor">Der Kurs zeigt dir Technik und Sicherheit im Detail. Passende Cups von Purvidual empfehle ich dir zusätzlich, die Empfehlung bekommst du im Kurs.</div>
-      <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/a519ad10-2be62172-179dc760">Jetzt Kurs sichern</a>
+      <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Jetzt Kurs sichern</a>
       <ul>
         <li>Sofortiger Zugang nach dem Kauf</li>
         <li>11 Videos, 90 Minuten</li>
         <li>In deinem eigenen Tempo</li>
       </ul>
+    </div>
     </div>
   </div>
 </section>
@@ -408,29 +414,33 @@
     <span class="eyebrow">Echte Stimmen</span>
     <h2>Frauen, die schon mit mir gearbeitet haben</h2>
     <div class="testi-grid">
-      <div class="testi-card">
-        <div class="tq">„Sie hat mir gezeigt, wie ich mit wenig Zeitaufwand aber sehr effektiv kleine Übungen machen kann, um meine Haut zu straffen. Ich liebe das Cupping, das geht so einfach und schnell. Ich verstehe jetzt endlich, was meine Haut braucht.“</div>
-        <div class="twho"><div class="tava">MD</div><div><div class="tname">Manuela D.</div><div class="tsub">Göttinnen-Booster</div></div></div>
+      <div class="testi-col">
+        <div class="testi-card">
+          <div class="tq">„Ich habe eine super Erfahrung mit diesem Cuppingkurs bei Kristin machen und erleben dürfen. Die Anwendung ist sehr einfach zu verstehen, so dass auch Unerfahrene gut einsteigen können. Fazit: Man merkt eine Veränderung im ganzen Gesicht.“</div>
+          <div class="twho"><div class="tava">BI</div><div><div class="tname">Bianka I.</div><div class="tsub">Cupping-Kurs</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="tq">„Ich liebe diese Cupps, meine Haut hat sich deutlich verbessert und ich werde auch tatsächlich darauf angesprochen, was ich wohl mache, weil ich viel frischer aussehe.“</div>
+          <div class="twho"><div class="tava">MD</div><div><div class="tname">Manuela D.</div><div class="tsub">Göttinnen-Booster</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="tq">„Ich bekam von allen Seiten: Wow, Tanja, du siehst ja 10 Jahre jünger aus. Das tat unwahrscheinlich gut, die haben mich ein Jahr nicht gesehen. Cupping mache ich wirklich regelmäßig, und ich liebe es und möchte es nicht mehr missen.“</div>
+          <div class="twho"><div class="tava">TW</div><div><div class="tname">Tanja W.</div><div class="tsub">Göttinnen-Programm</div></div></div>
+        </div>
       </div>
-      <div class="testi-card">
-        <div class="tq">„Die Anwendung ist sehr einfach zu verstehen, so dass auch Unerfahrene gut einsteigen können. Man merkt eine Veränderung im ganzen Gesicht.“</div>
-        <div class="twho"><div class="tava">BI</div><div><div class="tname">Bianka I.</div><div class="tsub">Cupping-Kurs</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="tq">„Ich bekam von allen Seiten: Wow, Tanja, du siehst ja 10 Jahre jünger aus. Das tat unwahrscheinlich gut, die haben mich ein Jahr nicht gesehen. Das habe ich dir zu verdanken.“</div>
-        <div class="twho"><div class="tava">TW</div><div><div class="tname">Tanja W.</div><div class="tsub">Göttinnen-Programm</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="tq">„Es ist wirklich unglaublich, wie viel Wissen und wertvolle Tools man hier an die Hand bekommt. Ich fühle mich bei ihr nie unter Druck gesetzt. Sie beantwortet jede Frage ausführlich, und man spürt in jedem Moment, dass sie genau weiß, wovon sie spricht.“</div>
-        <div class="twho"><div class="tava">ML</div><div><div class="tname">Miriam L., 40</div><div class="tsub">Online-Programm</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="tq">„Nach 6 Wochen mit wirksamen Face-Yoga-Workouts, entspannenden Meditationen und vielen Infos und Tipps bin ich sehr begeistert. Es tut so gut, sich diese wertvolle Zeit für sich selbst zu nehmen.“</div>
-        <div class="twho"><div class="tava">DH</div><div><div class="tname">Dunja H.</div><div class="tsub">Göttinnen-Booster</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="tq">„Die Haut ist weniger rot, nicht mehr so trocken und ich habe Komplimente bekommen, dass ich frischer ausschaue. Ich bin bald 59 und da hört man das doch besonders gern.“</div>
-        <div class="twho"><div class="tava">AW</div><div><div class="tname">Angelika W., 59</div><div class="tsub">Pflege-Begleitung</div></div></div>
+      <div class="testi-col">
+        <div class="testi-card">
+          <div class="tq">„Es ist wirklich unglaublich, wie viel Wissen und wertvolle Tools man hier an die Hand bekommt. Was ich vor allem total gern mag, weil es auch super schnell geht, ist die Cupping-Methode mit den soften Silikon-Cupps. Mit 2 kleinen Kindern muss es meist immer sehr schnell gehen, aber die Zeit nehme ich mir.“</div>
+          <div class="twho"><div class="tava">ML</div><div><div class="tname">Miriam L., 40</div><div class="tsub">Online-Programm</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="tq">„Nach einigen Wochen mit den Facial Cupps, ich habe die Kur gemacht, die im Kurs vorgeschlagen wird, habe ich deutlich straffere Haut und bin sehr begeistert. Es tut so gut, sich diese wertvolle Zeit für sich selbst zu nehmen.“</div>
+          <div class="twho"><div class="tava">DH</div><div><div class="tname">Dunja H.</div><div class="tsub">Göttinnen-Booster</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="tq">„Die Haut ist weniger rot, nicht mehr so trocken und ich habe Komplimente bekommen, dass ich frischer ausschaue. Ich bin bald 59 und da hört man das doch besonders gern.“</div>
+          <div class="twho"><div class="tava">AW</div><div><div class="tname">Angelika W., 59</div><div class="tsub">Pflege-Begleitung</div></div></div>
+        </div>
       </div>
     </div>
     <p class="fineprint">Persönliche Erfahrungen einzelner Kundinnen aus meinen bisherigen Programmen und Behandlungen. Jede Haut ist anders, Ergebnisse lassen sich nicht garantieren.</p>
@@ -463,14 +473,16 @@
 
 <!-- ABOUT -->
 <section class="about">
-  <div class="wrap about-grid">
-    <img class="photo" src="Angebot-Challenge/images/face-yoga-4700.jpg" alt="Kristin Schnödt, Porträt">
-    <div>
-      <span class="eyebrow">Deine Begleiterin</span>
-      <h2>Ich bin Kristin</h2>
-      <p>Seit 20 Jahren arbeite ich als Kosmetikerin mit Frauen und ihrer Haut. Ich habe eine eigene Pflegelinie entwickelt (PURVIDUAL, clean und reizarm), weil mir das Bestehende für empfindliche Haut zu aggressiv war. Und ich kenne beide Seiten der Kabine: die professionelle und die betroffene.</p>
-      <p>Mit 44 hat sich meine eigene Haut verändert, und ich habe am eigenen Gesicht erlebt, wie es sich anfühlt, wenn einem niemand erklärt, was los ist. Heute verbinde ich in meiner Arbeit Hautwissen, Übungen wie Face Yoga und Cupping, Ernährung und das Thema, über das zu selten gesprochen wird: was Wechseljahre und Stress mit deinem Gesicht machen.</p>
-      <p><b>Im Kurs bekommst du genau dieses Wissen.</b> Kompakt, verständlich und so, dass du es sofort umsetzen kannst.</p>
+  <div class="wrap">
+    <span class="eyebrow">Deine Begleiterin</span>
+    <div class="about-grid">
+      <img class="photo photo-fill" src="Angebot-Challenge/images/face-yoga-4700.jpg" alt="Kristin Schnödt, Porträt">
+      <div>
+        <h2>Ich bin Kristin</h2>
+        <p>Seit 20 Jahren arbeite ich als Kosmetikerin mit Frauen und ihrer Haut. Ich habe eine eigene Pflegelinie entwickelt (PURVIDUAL, clean und reizarm), weil mir das Bestehende für empfindliche Haut zu aggressiv war. Und ich kenne beide Seiten der Kabine: die professionelle und die betroffene.</p>
+        <p>Mit 44 hat sich meine eigene Haut verändert, und ich habe am eigenen Gesicht erlebt, wie es sich anfühlt, wenn einem niemand erklärt, was los ist. Heute verbinde ich in meiner Arbeit Hautwissen, Übungen wie Face Yoga und Cupping, Ernährung und das Thema, über das zu selten gesprochen wird: was Wechseljahre und Stress mit deinem Gesicht machen.</p>
+        <p><b>Im Kurs bekommst du genau dieses Wissen.</b> Kompakt, verständlich und so, dass du es sofort umsetzen kannst.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -480,8 +492,8 @@
   <div class="wrap">
     <span class="eyebrow" style="background:rgba(216,201,174,0.14); color:#D8C9AE; border-color:rgba(216,201,174,0.3);">Sofortiger Zugang</span>
     <h2>5 Minuten am Tag.<br>Für ein Gesicht, das sich gut anfühlt.</h2>
-    <p class="fsub">Du hast lange genug überlegt, ob Cupping wirklich etwas für dich ist. Jetzt kannst du es einfach ausprobieren, sicher angeleitet, Schritt für Schritt.</p>
-    <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/a519ad10-2be62172-179dc760">Jetzt Kurs sichern für 49 €</a>
+    <p class="fsub pyramid">Du hast lange genug überlegt,<br class="pyramid-break">ob Cupping wirklich etwas für dich ist.<br class="pyramid-break">Jetzt kannst du es einfach ausprobieren, sicher angeleitet, Schritt für Schritt.</p>
+    <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Jetzt Kurs sichern für 49 €</a>
     <div class="facts">11 Videos · 90 Minuten · 5 Minuten am Tag</div>
   </div>
 </section>
@@ -502,7 +514,7 @@
 
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta">
-  <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/a519ad10-2be62172-179dc760">Jetzt Kurs sichern für 49 €</a>
+  <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Jetzt Kurs sichern für 49 €</a>
 </div>
 
 <script>
