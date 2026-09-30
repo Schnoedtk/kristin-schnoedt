@@ -268,10 +268,17 @@
 
   /* 14 CHALLENGE-BRÜCKE */
   .bridge-box { background: var(--paper); padding: 0 0 128px; }
-  .bridge-box .box { max-width: 820px; margin: 0 auto; border: 1px solid var(--sand); padding: 44px 52px; display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: start; }
-  .bridge-box .ico { font-family: var(--serif); font-style: italic; font-size: 3rem; line-height: 1; color: var(--sand); }
-  .bridge-box h3 { font-size: 1.55rem; }
-  .bridge-box p { font-size: 0.98rem; }
+  .bridge-box .box {
+    position: relative; max-width: 900px; margin: 0 auto; text-align: center;
+    background: radial-gradient(120% 140% at 50% 0%, #5A3A42 0%, var(--dark) 60%);
+    color: #D9D2C4; padding: 72px 72px 64px; box-shadow: 0 40px 80px -40px rgba(61,42,46,0.55);
+  }
+  .bridge-box .box::before { content: ""; position: absolute; inset: 14px; border: 1px solid rgba(216,201,174,0.35); pointer-events: none; }
+  .bridge-box .kicker { color: var(--sand); }
+  .bridge-box .kicker::after { content: ""; width: 36px; height: 1px; background: currentColor; opacity: 0.7; }
+  .bridge-box h3 { font-size: 2.4rem; line-height: 1.2; color: var(--beige); margin-bottom: 20px; }
+  .bridge-box h3 em { color: var(--sand); }
+  .bridge-box p { font-size: 1.05rem; max-width: 640px; margin: 0 auto 36px; }
 
   /* 15 PREIS */
   .price { background: var(--beige); }
@@ -421,7 +428,8 @@
     .pricebox { position: static; padding: 44px 28px; }
     .dates { grid-template-columns: 1fr; }
     .bridge-box { padding-bottom: 88px; }
-    .bridge-box .box { grid-template-columns: 1fr; padding: 34px 26px; gap: 10px; }
+    .bridge-box .box { padding: 56px 28px 48px; }
+    .bridge-box h3 { font-size: 1.9rem; }
     .sticky-cta { display: block; }
     body { padding-bottom: 72px; }
   }
@@ -448,7 +456,7 @@
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="https://kristin-schnoedt.de/">Kristin Schnödt · <span>Göttinnen-Haut</span></a>
-    <a class="toplink" href="#anmeldung">Platz sichern</a>
+    <a class="toplink" href="https://start.kristin-schnoedt.de/42d86b6e-41448dc7-be912e49">Platz sichern</a>
   </div>
 </header>
 
@@ -462,7 +470,7 @@
     <p class="what">Persönliche Begleitung für Frauen ab 40 mit Pflege, Cupping, Face Yoga und den entscheidenden Stellschrauben aus Alltag, Regeneration und Ernährung.</p>
     <p class="signature">Frisch statt faltenfrei.</p>
     <div class="cta-row">
-      <a class="cta" href="#anmeldung">Ich möchte am 26. Oktober starten</a>
+      <a class="cta" href="https://start.kristin-schnoedt.de/42d86b6e-41448dc7-be912e49">Ich möchte am 26. Oktober starten</a>
     </div>
     <div class="hero-meta"><span>Start 26. Oktober</span><span>8 Wochen</span><span>Maximal 12 Frauen</span></div>
   </div>
@@ -618,7 +626,7 @@
     </div>
 
     <div class="cta-row center reveal">
-      <a class="cta" href="#anmeldung">Ja, das passt zu mir</a>
+      <a class="cta" href="https://start.kristin-schnoedt.de/42d86b6e-41448dc7-be912e49">Ja, das passt zu mir</a>
     </div>
   </div>
 </section>
@@ -699,7 +707,7 @@
     </div>
 
     <div class="cta-row center reveal">
-      <a class="cta" href="#anmeldung">Zu den Details und zur Anmeldung</a>
+      <a class="cta" href="https://start.kristin-schnoedt.de/42d86b6e-41448dc7-be912e49">Zu den Details und zur Anmeldung</a>
     </div>
   </div>
 </section>
@@ -717,12 +725,12 @@
         <li>Gemeinsame Gruppe für Fragen und Austausch mit den anderen Frauen</li>
         <li>Werktags erreichbar, Antwort meist innerhalb von 24 bis 48 Stunden</li>
         <li>Persönliches Feedback per Text oder Sprachnachricht</li>
-        <li>Zwei Live-Calls, in Woche 4 und in Woche 8</li>
+        <li>Zwei Live-Calls, in Woche 1 und in Woche 6</li>
         <li>Dein Kurszugang bleibt auch nach den 8 Wochen bestehen</li>
       </ul>
       <p class="voice">„Ich fühle mich bei ihr nie unter Druck gesetzt, nie als würde ich etwas falsch machen oder müsste schon weiter oder besser sein. Ein Gefühl, das mich motiviert dranzubleiben.“<span>Stephanie H. · Göttinnen-Booster</span></p>
       <div class="cta-row">
-        <a class="cta light" href="#anmeldung">Ich möchte persönlich begleitet werden</a>
+        <a class="cta light" href="https://start.kristin-schnoedt.de/42d86b6e-41448dc7-be912e49">Ich möchte persönlich begleitet werden</a>
       </div>
     </div>
     <img class="reveal wipe" src="Angebot-Challenge/images/dasbinich.jpg" alt="Kristin Schnödt">
@@ -786,7 +794,7 @@
     </div>
     <p class="fineprint reveal">Persönliche Erfahrungen einzelner Kundinnen aus meinen bisherigen Programmen und Behandlungen. Jede Haut ist anders, Ergebnisse lassen sich nicht garantieren.</p>
     <div class="cta-row center reveal">
-      <a class="cta" href="#anmeldung">Platz sichern</a>
+      <a class="cta" href="https://start.kristin-schnoedt.de/42d86b6e-41448dc7-be912e49">Platz sichern</a>
     </div>
   </div>
 </section>
@@ -847,11 +855,10 @@
 <div class="bridge-box">
   <div class="wrap">
     <div class="box reveal">
-      <span class="ico">14</span>
-      <div>
-        <h3>Du warst bei meiner 14-Tage-Challenge dabei?</h3>
-        <p>Dann hast du schon erlebt, wie viel kleine Veränderungen bewirken können. Göttinnenhaut geht deutlich tiefer: Wir schauen auf deine persönliche Haut, deine Schwerpunkte und deine Routine und bauen daraus einen Weg, der auch nach den acht Wochen weiter funktioniert.</p>
-      </div>
+      <span class="kicker">Für Challenge-Teilnehmerinnen</span>
+      <h3>Du warst bei meiner <em>14-Tage-Challenge</em> dabei?</h3>
+      <p>Dann hast du schon erlebt, wie viel kleine Veränderungen bewirken können. Göttinnenhaut geht deutlich tiefer: Wir schauen auf deine persönliche Haut, deine Schwerpunkte und deine Routine und bauen daraus einen Weg, der auch nach den acht Wochen weiter funktioniert.</p>
+      <a class="cta light" href="https://start.kristin-schnoedt.de/42d86b6e-41448dc7-be912e49">Ich gehe den nächsten Schritt</a>
     </div>
   </div>
 </div>
@@ -938,7 +945,7 @@
     <h2>Jünger werden musst du nicht. Du darfst wieder so frisch aussehen, <em>wie du dich innerlich fühlst.</em></h2>
     <p class="lead">Wenn du bereit bist, deine Haut und dein Gesicht in den nächsten acht Wochen wirklich zu verstehen und deine eigene Routine aufzubauen, freue ich mich, dich dabei persönlich zu begleiten.</p>
     <div class="cta-row">
-      <a class="cta" href="#anmeldung">Ich möchte am 26. Oktober starten</a>
+      <a class="cta" href="https://start.kristin-schnoedt.de/42d86b6e-41448dc7-be912e49">Ich möchte am 26. Oktober starten</a>
       <span class="note">8 Wochen · maximal 12 Frauen · Starterset inklusive</span>
     </div>
     <p class="disclaimer">Ich bin Kosmetikerin, keine Ärztin. Was ich teile, ist kosmetische Pflege und persönliche Erfahrung. Es ist keine medizinische Diagnose oder Therapie und ersetzt keinen Arztbesuch.</p>
@@ -959,7 +966,7 @@
   </div>
 </footer>
 
-<div class="sticky-cta"><a class="cta" href="#anmeldung">Platz sichern</a></div>
+<div class="sticky-cta"><a class="cta" href="https://start.kristin-schnoedt.de/42d86b6e-41448dc7-be912e49">Platz sichern</a></div>
 
 <script>
   (function () {
