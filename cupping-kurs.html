@@ -183,10 +183,45 @@
   }
   .stack-list .row p { font-size: 0.96rem; }
   .stack-list .row b { color: #3D2A2E; }
+  .price-col { display: flex; flex-direction: column; gap: 22px; }
   .pricebox {
     background: #3D2A2E; color: #EDEAE0; border-radius: 20px; padding: 38px 36px;
-    text-align: center; position: sticky; top: 24px;
+    text-align: center; position: relative;
   }
+  .pricebox .pb-badge {
+    position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+    background: #9CAA8C; color: #FBF8F2; white-space: nowrap;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    border-radius: 100px; padding: 5px 16px;
+  }
+  .pricebox .strike { font-size: 0.95rem; color: #B9C2A8; margin-top: 4px; }
+  .pricebox .strike s { color: #B9C2A8; }
+  .pricebox .strike b { color: #D8C9AE; }
+  .pricebox.light { background: #EDEAE0; color: #5A5648; border: 1px solid #D8C9AE; padding: 30px 32px; }
+  .pricebox.light .pb-label { color: #7A4A58; }
+  .pricebox.light .price { color: #3D2A2E; font-size: 3.4rem; }
+  .pricebox.light .anchor { color: #8C8776; }
+  .pricebox.light .cta { background: transparent; color: #7A4A58; border: 2px solid #7A4A58; box-shadow: none; }
+  .pricebox.light li { color: #5A5648; border-top-color: rgba(140,135,118,0.18); }
+
+  /* SET */
+  .set { background: #E3E7DC; }
+  .set-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center; }
+  .set p { margin-bottom: 16px; font-size: 1.02rem; }
+  .set b { color: #3D2A2E; }
+  .set-items { display: flex; flex-direction: column; gap: 10px; margin: 22px 0 26px; }
+  .set-items div {
+    display: flex; gap: 14px; align-items: flex-start;
+    background: #FBF8F2; border: 1px solid #D5DEC9; border-radius: 12px; padding: 12px 16px; font-size: 0.96rem;
+  }
+  .set-items div::before {
+    content: "✓"; flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
+    background: #7A4A58; color: #FBF8F2; font-weight: 700; font-size: 0.8rem;
+    display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  }
+  .set-price { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; color: #3D2A2E; margin-bottom: 18px; }
+  .set-price s { color: #8C8776; font-size: 1.2rem; margin-right: 8px; }
+  .set-price b { color: #7A4A58; font-size: 2rem; }
   .pricebox .pb-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #B9C2A8; }
   .pricebox .price { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 4.6rem; font-weight: 600; color: #D8C9AE; line-height: 1.1; margin: 10px 0 4px; }
   .pricebox .anchor { font-size: 0.9rem; color: #B9C2A8; margin-bottom: 22px; }
@@ -264,13 +299,13 @@
     h2 { font-size: 2rem; }
     .hero { padding: 64px 0 56px; }
     .hero h1 { font-size: 2.5rem; }
-    .hero-grid, .reframe-grid, .story-grid, .stack-grid, .about-grid { grid-template-columns: 1fr; gap: 36px; }
+    .hero-grid, .reframe-grid, .story-grid, .stack-grid, .about-grid, .set-grid { grid-template-columns: 1fr; gap: 36px; }
     .steps { grid-template-columns: 1fr; }
     .testi-grid { grid-template-columns: 1fr; }
     .match-grid { grid-template-columns: 1fr; }
-    .pricebox { position: static; }
     .ph-hero { min-height: 320px; }
     .sticky-cta { display: block; }
+    footer .flinks { flex-wrap: wrap; justify-content: center; gap: 12px 24px; }
     .pyramid-break { display: none; }
     body { padding-bottom: 70px; }
   }
@@ -280,8 +315,9 @@
 
 <!-- ============================================================
      HINWEIS FÜR KRISTIN:
-     Checkout-Link ist eingebaut. Preis: 49 €. Cups sind NICHT
-     im Kurs enthalten, nur Produktempfehlungen von Purvidual.
+     Checkout-Link ist eingebaut (ein Link für beide Optionen).
+     Nur Kurs: 49 €. Komplett-Set (Kurs + Cupping-Set im Säckchen +
+     Double Cleanse Oil 200 ml): 99 € statt 132 €, inkl. Versand.
      ============================================================ -->
 
 <!-- HERO -->
@@ -292,8 +328,8 @@
       <h1>Deine Haut zum Strahlen bringen, ganz ohne Spritzen</h1>
       <div class="answer">Mit Gesichtsschröpfen reduzierst du Falten, straffst deine Haut und löst Verspannungen, ganz ohne invasive Eingriffe.</div>
       <p class="sub">Perfekt für Frauen über 40, die eine einfache und effektive Technik suchen, um ihre Haut zu pflegen und gleichzeitig Verspannungen zu lösen.</p>
-      <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Jetzt Kurs sichern für 49 €</a>
-      <span class="cta-note">11 Videos, 90 Minuten. Direkt startklar.</span>
+      <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Jetzt sichern, ab 49 €</a>
+      <span class="cta-note">Oder gleich als <a href="#starter-set" style="color:#7A4A58; font-weight:600;">Komplett-Set mit Cups und Öl für 99 €</a></span>
       <div class="hero-facts">
         <span>11 Videos</span>
         <span>90 Minuten</span>
@@ -367,7 +403,7 @@
     <span class="eyebrow">So funktioniert es</span>
     <h2>In drei Schritten zu deiner eigenen Cupping-Routine</h2>
     <div class="steps">
-      <div class="step"><span class="n">1</span><h4>Kurs sichern</h4><p>Du sicherst dir deinen Zugang für 49 €. Danach bekommst du sofort deine Zugangsdaten zu den Videos.</p></div>
+      <div class="step"><span class="n">1</span><h4>Kurs oder Set wählen</h4><p>Du wählst den Kurs allein für 49 € oder das Komplett-Set mit Cups und Öl für 99 €. Deine Zugangsdaten zu den Videos bekommst du sofort.</p></div>
       <div class="step"><span class="n">2</span><h4>Video für Video lernen</h4><p>Du schaust die 11 Videos in deinem eigenen Tempo, von den Grundlagen bis zu den Spezialtechniken.</p></div>
       <div class="step"><span class="n">3</span><h4>Loslegen</h4><p>Du baust dir Schritt für Schritt deine eigene Routine auf, nur 5 Minuten am Tag.</p></div>
     </div>
@@ -375,11 +411,31 @@
   </div>
 </section>
 
+<!-- STARTER-SET -->
+<section class="set" id="starter-set">
+  <div class="wrap set-grid">
+    <img class="photo" src="Angebot-Challenge/images/double-cleanse-oil-cups-kurs-handy.png" alt="Komplett-Set: PURVIDUAL Double Cleanse Oil, zwei große und zwei kleine Cups und der Cupping Kurs auf dem Smartphone">
+    <div>
+      <span class="eyebrow">Das Komplett-Set</span>
+      <h2>Alles, was du brauchst, in einem Paket</h2>
+      <p>Die häufigste Frage nach dem Kauf war immer: <b>„Welche Cups soll ich mir holen?“</b> Mit dem Set musst du nicht mehr suchen. Du bekommst genau die Cups und das Öl, mit denen ich selbst arbeite und die ich dir in den Videos zeige.</p>
+      <div class="set-items">
+        <div><span><b>Göttinnen Cupping Kurs:</b> 11 Videos, 90 Minuten, sofort startklar</span></div>
+        <div><span><b>PURVIDUAL Cupping-Set im Baumwollsäckchen:</b> 2 große Cups für Wangen, Stirn und Hals, 2 kleine für Augen, Lippen und Falten, dazu ein Reinigungsbürstchen</span></div>
+        <div><span><b>Double Cleanse Oil, 200 ml:</b> damit die Cups sanft über die Haut gleiten, vegan, für morgens und abends</span></div>
+      </div>
+      <div class="set-price"><s>132 €</s> <b>99 €</b> inklusive Versand</div>
+      <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Komplett-Set sichern</a>
+      <span class="cta-note">Den Kurs kannst du sofort starten, Cups und Öl kommen per Post.</span>
+    </div>
+  </div>
+</section>
+
 <!-- VALUE STACK + PRICE -->
 <section class="stack" id="checkout-info">
   <div class="wrap">
     <span class="eyebrow">Alles drin</span>
-    <h2>Das bekommst du für deine 49 €</h2>
+    <h2>Das steckt im Kurs</h2>
     <div class="stack-grid">
     <div class="stack-list">
         <div class="row"><p><b>11 Videos, 90 Minuten:</b> Erklär- und Mitmachvideos für jeden Schritt</p></div>
@@ -387,18 +443,32 @@
         <div class="row"><p><b>Reinigungs- und Intensivsequenzen</b> für eine tiefenwirksame Pflege</p></div>
         <div class="row"><p><b>Gezielte Faltenreduktion:</b> Stirn-, Zornes-, Nasolabial- und Marionettenfalten</p></div>
         <div class="row"><p><b>Spezialtechniken für sensible Zonen:</b> Augen-, Lippen- und Kieferpartie</p></div>
-        <div class="row"><p><b>Produktempfehlungen</b> von Purvidual für die passende Anwendung</p></div>
+        <div class="row"><p><b>Pflege-Tipps</b> für die passende Anwendung mit Öl und Cups</p></div>
     </div>
-    <div class="pricebox" id="checkout">
-      <div class="pb-label">Göttinnen Cupping Kurs</div>
-      <div class="price">49 €</div>
-      <div class="anchor">Der Kurs zeigt dir Technik und Sicherheit im Detail. Passende Cups von Purvidual empfehle ich dir zusätzlich, die Empfehlung bekommst du im Kurs.</div>
-      <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Jetzt Kurs sichern</a>
-      <ul>
-        <li>Sofortiger Zugang nach dem Kauf</li>
-        <li>11 Videos, 90 Minuten</li>
-        <li>In deinem eigenen Tempo</li>
-      </ul>
+    <div class="price-col" id="checkout">
+      <div class="pricebox">
+        <span class="pb-badge">Meine Empfehlung</span>
+        <div class="pb-label">Komplett-Set</div>
+        <div class="price">99 €</div>
+        <div class="strike"><s>132 €</s> · <b>du sparst 33 €</b></div>
+        <div class="anchor" style="margin-top:8px;">Kurs, Cupping-Set im Baumwollsäckchen und Double Cleanse Oil. Versand inklusive.</div>
+        <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Komplett-Set sichern</a>
+        <ul>
+          <li>Sofortiger Zugang zum Kurs</li>
+          <li>2 große und 2 kleine PURVIDUAL Cups mit Reinigungsbürstchen im Baumwollsäckchen</li>
+          <li>Double Cleanse Oil, 200 ml</li>
+        </ul>
+      </div>
+      <div class="pricebox light">
+        <div class="pb-label">Nur der Kurs</div>
+        <div class="price">49 €</div>
+        <div class="anchor">Für dich, wenn du schon Cups und Öl zu Hause hast.</div>
+        <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Nur Kurs sichern</a>
+        <ul>
+          <li>Sofortiger Zugang nach dem Kauf</li>
+          <li>11 Videos, 90 Minuten</li>
+        </ul>
+      </div>
     </div>
     </div>
   </div>
@@ -489,8 +559,8 @@
     <span class="eyebrow" style="background:rgba(216,201,174,0.14); color:#D8C9AE; border-color:rgba(216,201,174,0.3);">Sofortiger Zugang</span>
     <h2>5 Minuten am Tag.<br>Für ein Gesicht, das sich gut anfühlt.</h2>
     <p class="fsub pyramid">Du hast lange genug überlegt,<br class="pyramid-break">ob Cupping wirklich etwas für dich ist.<br class="pyramid-break">Jetzt kannst du es einfach ausprobieren, sicher angeleitet, Schritt für Schritt.</p>
-    <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Jetzt Kurs sichern für 49 €</a>
-    <div class="facts">11 Videos · 90 Minuten · 5 Minuten am Tag</div>
+    <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Jetzt sichern, ab 49 €</a>
+    <div class="facts">Kurs 49 € · Komplett-Set mit Cups und Öl 99 € inkl. Versand</div>
   </div>
 </section>
 
@@ -502,6 +572,7 @@
       <a href="https://kristin-schnoedt.de/datenschutz.html">Datenschutz</a>
       <a href="https://kristin-schnoedt.de/agb.html">AGB</a>
       <a href="https://kristin-schnoedt.de/widerruf.html">Widerrufsbelehrung</a>
+      <a href="https://www.purvidual.de/policies/terms-of-service">AGB Onlineshop</a>
     </div>
     <p>Ich bin Kosmetikerin, keine Ärztin. Alle Inhalte dieser Seite und des Kurses sind kosmetische Pflege und persönliche Erfahrung. Sie sind keine medizinische Diagnose oder Therapie und ersetzen keinen Arztbesuch. Kundenstimmen geben persönliche Erfahrungen wieder, Ergebnisse lassen sich nicht garantieren.</p>
     <p>© 2026 Kristin Schnödt · Göttinnen-Haut</p>
@@ -510,7 +581,7 @@
 
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta">
-  <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Jetzt Kurs sichern für 49 €</a>
+  <a class="cta checkout-link" href="https://start.kristin-schnoedt.de/42d86b6e-35259c27">Jetzt sichern, ab 49 €</a>
 </div>
 
 <script>
