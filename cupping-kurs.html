@@ -251,6 +251,31 @@
   }
   .testi-card .tname { font-size: 0.86rem; font-weight: 700; color: #7A4A58; }
   .testi-card .tsub { font-size: 0.76rem; color: #8C8776; }
+  .testi-video {
+    display: grid; grid-template-columns: 300px 1fr; gap: 44px; align-items: center;
+    background: #FBF8F2; border: 1px solid #D8C9AE; border-radius: 20px;
+    padding: 28px; margin-top: 36px;
+  }
+  .testi-video video {
+    display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover;
+    border-radius: 14px; background: #3D2A2E;
+  }
+  .testi-video .tq {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 500;
+    font-size: 1.7rem; color: #3D2A2E; line-height: 1.35;
+  }
+  .testi-video .tlabel {
+    display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #7A4A58; margin-bottom: 14px;
+  }
+  .testi-video .twho { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
+  .testi-video .tava {
+    width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+    background: #9CAA8C; color: #FBF8F2; font-weight: 700; font-size: 0.85rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .testi-video .tname { font-size: 0.86rem; font-weight: 700; color: #7A4A58; }
+  .testi-video .tsub { font-size: 0.76rem; color: #8C8776; }
   .testis .fineprint { margin-top: 18px; font-size: 0.78rem; color: #8C8776; text-align: center; }
 
   /* MATCH */
@@ -302,6 +327,9 @@
     .hero-grid, .reframe-grid, .story-grid, .stack-grid, .about-grid, .set-grid { grid-template-columns: 1fr; gap: 36px; }
     .steps { grid-template-columns: 1fr; }
     .testi-grid { grid-template-columns: 1fr; }
+    .testi-video { grid-template-columns: 1fr; gap: 24px; padding: 20px; }
+    .testi-video video { max-width: 320px; margin: 0 auto; }
+    .testi-video .tq { font-size: 1.4rem; }
     .match-grid { grid-template-columns: 1fr; }
     .ph-hero { min-height: 320px; }
     .sticky-cta { display: block; }
@@ -479,15 +507,21 @@
   <div class="wrap">
     <span class="eyebrow">Echte Stimmen</span>
     <h2>Frauen, die schon mit mir gearbeitet haben</h2>
+    <div class="testi-video">
+      <video controls playsinline preload="none" poster="Angebot-Challenge/images/testimonial-manuela-poster.jpg">
+        <source src="videos/testimonial-manuela.mp4" type="video/mp4">
+      </video>
+      <div>
+        <span class="tlabel">▶ Manuela erzählt</span>
+        <div class="tq">„Ich liebe es. Ich habe es mittlerweile sogar bei meinem Mann eingesetzt, der ist total begeistert. Wir hatten es im Urlaub dabei, das ist ein bisschen wie Wellness.“</div>
+        <div class="twho"><div class="tava">MD</div><div><div class="tname">Manuela D.</div><div class="tsub">Cupping · 17 Sekunden Video</div></div></div>
+      </div>
+    </div>
     <div class="testi-grid">
       <div class="testi-col">
         <div class="testi-card">
           <div class="tq">„Ich habe eine super Erfahrung mit diesem Cuppingkurs bei Kristin machen und erleben dürfen. Die Anwendung ist sehr einfach zu verstehen, so dass auch Unerfahrene gut einsteigen können. Fazit: Man merkt eine Veränderung im ganzen Gesicht.“</div>
           <div class="twho"><div class="tava">BI</div><div><div class="tname">Bianka I.</div><div class="tsub">Cupping-Kurs</div></div></div>
-        </div>
-        <div class="testi-card">
-          <div class="tq">„Ich liebe diese Cupps, meine Haut hat sich deutlich verbessert und ich werde auch tatsächlich darauf angesprochen, was ich wohl mache, weil ich viel frischer aussehe.“</div>
-          <div class="twho"><div class="tava">MD</div><div><div class="tname">Manuela D.</div><div class="tsub">Göttinnen-Booster</div></div></div>
         </div>
         <div class="testi-card">
           <div class="tq">„Ich bekam von allen Seiten: Wow, Tanja, du siehst ja 10 Jahre jünger aus. Das tat unwahrscheinlich gut, die haben mich ein Jahr nicht gesehen. Cupping mache ich wirklich regelmäßig, und ich liebe es und möchte es nicht mehr missen.“</div>

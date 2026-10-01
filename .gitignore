@@ -6,3 +6,6 @@
 .DS_Store
 *.mp4
 *.MOV
+
+# Ausnahme: komprimiertes Testimonial-Video für die Cupping-Seite
+!videos/testimonial-manuela.mp4
