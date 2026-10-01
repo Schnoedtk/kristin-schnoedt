@@ -136,14 +136,6 @@
   @media (min-width: 961px) { .pull { white-space: nowrap; } }
   .pull small { display: block; font-size: 1.55rem; color: var(--dark); margin-top: 12px; }
 
-  /* 5 EINZELNE LÖSUNGEN */
-  .single { background: var(--cream); }
-  .single h2 { max-width: 820px; margin-left: auto; margin-right: auto; }
-  .qa-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; margin-top: 64px; text-align: left; }
-  .qa-pair h3 { font-size: 1.6rem; padding-bottom: 16px; border-bottom: 1px solid var(--sand); margin-bottom: 20px; }
-  .single .bridge { font-family: var(--serif); font-size: 2.1rem; line-height: 1.3; color: var(--dark); margin-top: 72px; }
-  .single .bridge em { color: var(--bordeaux); }
-
   /* 6 PRINZIP */
   .prinzip-head { display: grid; grid-template-columns: 1fr 1fr; gap: 88px; align-items: center; }
   .attempts { font-family: var(--serif); font-style: italic; font-size: 1.5rem; color: var(--dark); line-height: 1.6; margin: 10px 0 20px; }
@@ -167,7 +159,6 @@
   .wheel .no { font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--sage); }
   .wheel h3 { font-size: 1.9rem; margin: 0; }
   .wheel p { margin: 0; font-size: 1.04rem; }
-  .prinzip .example { margin-top: 56px; font-size: 1.04rem; }
   .prinzip .result { margin-top: 64px; background: var(--bordeaux); color: var(--paper); padding: 48px 56px; text-align: center; }
   .prinzip .result .r-lbl { font-size: 0.7rem; letter-spacing: 0.26em; text-transform: uppercase; font-weight: 600; color: var(--sand); }
   .prinzip .result p { font-family: var(--serif); font-style: italic; font-size: 2rem; line-height: 1.3; margin: 12px auto 0; max-width: 720px; }
@@ -185,24 +176,22 @@
   .change-arrow { display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 2.4rem; color: var(--sage); }
 
   /* 8 MODULE */
-  .mod-list { margin-top: 64px; }
-  .mod { display: grid; grid-template-columns: 120px 1fr 1.25fr; gap: 32px; padding: 38px 0; border-top: 1px solid var(--line); align-items: baseline; }
+  .modules-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 88px; align-items: start; }
+  .modules-grid > img { width: 100%; display: block; aspect-ratio: 4 / 5; object-fit: cover; position: sticky; top: 40px; }
+  .lead-in { font-family: var(--serif); font-size: 2.2rem; line-height: 1.3; color: var(--dark); text-align: center; margin: 0 auto 110px; }
+  .lead-in em { color: var(--bordeaux); }
+  .mod-list { margin-top: 48px; }
+  .mod { display: grid; grid-template-columns: 72px 1fr; gap: 20px; padding: 26px 0; border-top: 1px solid var(--line); align-items: baseline; }
   .mod:last-child { border-bottom: 1px solid var(--line); }
   .mod .n { font-family: var(--serif); font-style: italic; font-size: 3.4rem; line-height: 1; color: var(--sand); }
-  .mod h3 { font-size: 1.85rem; margin: 0; }
+  .mod h3 { font-size: 1.65rem; margin: 0 0 4px; }
   .mod p { margin: 0; font-size: 1.02rem; }
-  .mod p .dl { display: block; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage-deep); margin-bottom: 6px; }
-  .rhythm { margin-top: 56px; display: grid; grid-template-columns: 3fr 1fr; gap: 4px; }
+  .rhythm { margin-top: 44px; display: grid; grid-template-columns: 2.4fr 1.6fr; gap: 4px; }
+  .rhythm div { white-space: nowrap; }
   .rhythm div { padding: 14px 0 0; border-top: 3px solid var(--sage); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage-deep); }
   .rhythm div + div { border-color: var(--sand); color: #9A8866; }
   .rhythm-note { margin-top: 22px; max-width: 760px; }
 
-  .week1 { margin-top: 110px; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 80px; align-items: center; }
-  .week1 img { width: 100%; display: block; aspect-ratio: 4 / 5; object-fit: cover; }
-  .week1 .steps-inline { margin: 6px 0 24px; list-style: none; }
-  .week1 .steps-inline li { padding: 10px 0; border-top: 1px solid var(--line); }
-  .week1 blockquote { font-family: var(--serif); font-style: italic; font-size: 1.7rem; line-height: 1.35; color: var(--bordeaux); margin: 30px 0; }
-  .week1 .minimal { font-size: 0.95rem; color: var(--muted); }
 
   /* 9 BEGLEITUNG */
   .care { background: var(--dark); color: #D9D2C4; }
@@ -248,15 +237,9 @@
 
   /* 12 FÜR WEN */
   .fit { background: var(--cream); }
-  .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 88px; margin-top: 64px; }
-  .fit-col h3 { font-size: 0.74rem; font-family: var(--sans); font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; margin-bottom: 14px; }
-  .fit-col.yes h3 { color: var(--sage-deep); }
-  .fit-col.no h3 { color: var(--bordeaux); }
-  .fit-col ul { list-style: none; }
-  .fit-col li { padding: 16px 0 16px 34px; border-top: 1px solid var(--line); position: relative; font-size: 1.02rem; }
-  .fit-col li::before { position: absolute; left: 2px; top: 13px; font-family: var(--serif); font-size: 1.35rem; }
-  .fit-col.yes li::before { content: "✓"; color: var(--sage); }
-  .fit-col.no li::before { content: "×"; color: var(--bordeaux); }
+  .fit-list { list-style: none; margin-top: 48px; border-top: 1px solid var(--line); }
+  .fit-list li { padding: 20px 0 20px 40px; border-bottom: 1px solid var(--line); position: relative; font-family: var(--serif); font-size: 1.45rem; line-height: 1.35; color: var(--dark); }
+  .fit-list li::before { content: "×"; position: absolute; left: 4px; top: 17px; font-size: 1.6rem; color: var(--bordeaux); }
 
   /* 13 ÜBER KRISTIN */
   .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 88px; align-items: center; }
@@ -406,10 +389,11 @@
     .mirror-text h2 { font-size: 2.2rem; }
     .final-text { padding: 80px 24px; }
     .final h2 { font-size: 2.3rem; }
-    .reframe-grid, .prinzip-head, .care-grid, .set-grid, .about-grid, .price-grid, .week1, .qa-pair, .fit-grid { grid-template-columns: 1fr; gap: 48px; }
-    .care-grid img { position: static; }
+    .reframe-grid, .prinzip-head, .care-grid, .set-grid, .about-grid, .price-grid, .modules-grid { grid-template-columns: 1fr; gap: 48px; }
+    .care-grid img, .modules-grid > img { position: static; }
+    .lead-in { font-size: 1.7rem; margin-bottom: 72px; }
+    .fit-list li { font-size: 1.25rem; }
     .pull { font-size: 2rem; }
-    .single .bridge { font-size: 1.7rem; }
     .wheel { grid-template-columns: 44px 1fr; gap: 6px 16px; }
     .wheel p { grid-column: 2; }
     .wheel h3 { font-size: 1.6rem; }
@@ -417,9 +401,8 @@
     .prinzip .result p { font-size: 1.55rem; }
     .change-grid { grid-template-columns: 1fr; }
     .change-arrow { transform: rotate(90deg); padding: 18px 0; }
-    .mod { grid-template-columns: 60px 1fr; gap: 10px 16px; }
+    .mod { grid-template-columns: 48px 1fr; gap: 10px 14px; }
     .mod .n { font-size: 2.4rem; }
-    .mod p { grid-column: 2; }
     .t-grid { grid-template-columns: 1fr; gap: 48px; }
     .t.wide { grid-column: auto; grid-template-columns: 1fr; gap: 20px; }
     .t.wide > img { width: 110px; height: 110px; }
@@ -536,31 +519,10 @@
   </div>
 </section>
 
-<!-- 5 · WARUM EINZELNE LÖSUNGEN OFT NICHT REICHEN -->
-<section class="single">
-  <div class="wrap center">
-    <div class="reveal">
-      <span class="kicker">Warum einzelne Lösungen oft nicht reichen</span>
-      <h2>Du brauchst einen Weg, der die richtigen Dinge <em>für dich</em> zusammenbringt.</h2>
-      <p class="lead narrow">Tipps hast du wahrscheinlich schon genug gesammelt. Zwei Fragen höre ich dazu besonders oft.</p>
-    </div>
-    <div class="qa-pair">
-      <div class="reveal">
-        <h3>Warum nicht einfach Übungen von Instagram?</h3>
-        <p>Weil dir dort niemand sagt, welche Übung für dein Gesicht sinnvoll ist, ob du sie richtig machst und was du weglassen kannst. Du sammelst einzelne Ideen, probierst sie ein paar Wochen aus, und dann gehen sie im Alltag wieder unter. Mir geht es darum, dass du weißt, was du tust und warum.</p>
-      </div>
-      <div class="reveal">
-        <h3>Warum nicht einfach eine gute Creme?</h3>
-        <p>Eine gute Pflege ist wichtig, und du bekommst sie auch. Sie ist aber nur einer von fünf Bereichen. Wenn du schlecht schläfst, abends den Kiefer anspannst und den ganzen Tag mit hochgezogenen Schultern am Schreibtisch sitzt, kann auch das beste Serum nur begrenzt etwas ausrichten.</p>
-      </div>
-    </div>
-    <p class="bridge reveal">Instagram gibt dir einzelne Impulse.<br><em>Göttinnenhaut gibt dir einen Plan.</em></p>
-  </div>
-</section>
-
 <!-- 6 · DAS GÖTTINNENHAUT-PRINZIP -->
 <section class="prinzip">
   <div class="wrap">
+    <p class="lead-in reveal">Instagram gibt dir einzelne Impulse.<br><em>Göttinnenhaut gibt dir einen Plan.</em></p>
     <div class="prinzip-head">
       <div class="reveal">
         <span class="kicker">Das Göttinnenhaut-Prinzip</span>
@@ -611,14 +573,13 @@
     </div>
 
     <div class="wheels">
-      <div class="wheel reveal"><span class="no">01</span><h3>Pflege</h3><p>Damit du weißt, was deine Haut wirklich braucht, und nicht länger zwischen Produkten hin und her wechselst.</p></div>
-      <div class="wheel reveal"><span class="no">02</span><h3>Aktivierung</h3><p>Damit du mit Cupping und Face Yoga gezielt an den Bereichen arbeitest, die dich stören, und nur die Übungen machst, die für dein Gesicht sinnvoll sind.</p></div>
-      <div class="wheel reveal"><span class="no">03</span><h3>Regeneration</h3><p>Damit Müdigkeit und Stress nicht mehr so deutlich in deinem Gesicht zu sehen sind.</p></div>
-      <div class="wheel reveal"><span class="no">04</span><h3>Ernährung</h3><p>Damit du weißt, welche alltäglichen Gewohnheiten deine Haut von innen unterstützen. Ohne Diät und ohne Verbotsliste.</p></div>
-      <div class="wheel reveal"><span class="no">05</span><h3>Alltag &amp; Haltung</h3><p>Damit Nacken, Anspannung, Haltung und Gewohnheiten mit deiner Gesichtsroutine zusammenarbeiten.</p></div>
+      <div class="wheel reveal"><span class="no">01</span><h3>Pflege</h3><p>Was deine Haut wirklich braucht.</p></div>
+      <div class="wheel reveal"><span class="no">02</span><h3>Aktivierung</h3><p>Cupping und Face Yoga gezielt für dein Gesicht.</p></div>
+      <div class="wheel reveal"><span class="no">03</span><h3>Regeneration</h3><p>Schlaf und Stress mitdenken.</p></div>
+      <div class="wheel reveal"><span class="no">04</span><h3>Ernährung</h3><p>Deine Haut von innen unterstützen.</p></div>
+      <div class="wheel reveal"><span class="no">05</span><h3>Alltag &amp; Haltung</h3><p>Spannungen erkennen und lösen.</p></div>
     </div>
 
-    <p class="example reveal">Ein Beispiel aus meiner Praxis: <b>Wer schlecht schläft und abends unbewusst den Kiefer zusammenpresst, erreicht mit dem besten Serum nur wenig.</b> Die Anspannung sitzt in der Muskulatur, und die Haut bekommt nachts nicht die Ruhe, die sie braucht. Erst wenn du die Kieferpartie lockerst, besser schläfst und die Pflege dazu passt, sieht man den Unterschied.</p>
 
     <div class="result reveal">
       <span class="r-lbl">Wenn alles zusammenwirkt</span>
@@ -670,39 +631,26 @@
 <!-- 8 · DIE SECHS SCHRITTE -->
 <section class="modules">
   <div class="wrap">
-    <div class="reveal">
-      <span class="kicker">Deine 8 Wochen</span>
-      <h2>Sechs Schritte zu <em>deiner</em> Routine</h2>
-    </div>
-    <div class="mod-list">
-      <div class="mod reveal"><span class="n">1</span><h3>Startklar</h3><p><span class="dl">Danach</span>weißt du, wo du stehst und wohin du möchtest. Mit Vorher-Fotos und einer persönlichen Richtung für deine 8 Wochen.</p></div>
-      <div class="mod reveal"><span class="n">2</span><h3>Deine Basis</h3><p><span class="dl">Danach</span>weißt du, was in deinen Badezimmerschrank gehört und was gehen darf. Deine Pflege ist einfacher und passt zu deiner Haut.</p></div>
-      <div class="mod reveal"><span class="n">3</span><h3>Dein Gesicht in Bewegung</h3><p><span class="dl">Danach</span>weißt du genau, welche Übungen und Cupping-Griffe du für deine Schwerpunkte brauchst, ob Kieferlinie, Augen, Stirn, Hals oder Wangen. Und welche du getrost weglassen kannst.</p></div>
-      <div class="mod reveal"><span class="n">4</span><h3>Von innen sichtbar</h3><p><span class="dl">Danach</span>kennst du die zwei, drei Stellschrauben bei Schlaf, Stress und Ernährung, die bei dir am meisten bewirken.</p></div>
-      <div class="mod reveal"><span class="n">5</span><h3>Was dein Alltag mit deinem Gesicht macht</h3><p><span class="dl">Danach</span>merkst du, wann Nacken, Schultern und Haltung dein Gesicht beeinflussen, und weißt, was in den Wechseljahren für deine Haut wichtig wird.</p></div>
-      <div class="mod reveal"><span class="n">6</span><h3>Deine Routine, die bleibt</h3><p><span class="dl">Danach</span>hast du deine persönliche Minimalroutine und machst nach den 8 Wochen selbstständig weiter.</p></div>
-    </div>
-    <div class="rhythm reveal">
-      <div>Woche 1 bis 6 · Kernprogramm</div>
-      <div>Woche 7 und 8 · Integration</div>
-    </div>
-    <p class="rhythm-note reveal">Nach sechs Wochen Kernprogramm hast du zwei Wochen Zeit, alles in deinen Alltag einzubauen. Danach bleibt dein Zugang bestehen. Die 8 Wochen enden am 20. Dezember, die Weihnachtswoche ist bewusst frei. Du gehst also mit deiner eigenen Routine in die Feiertage.</p>
-
-    <div class="week1">
+    <div class="modules-grid">
       <img class="reveal wipe" src="Angebot-Challenge/images/cupping-stirn.jpg" alt="Gesichtscupping an der Stirn">
-      <div class="reveal">
-        <span class="kicker">Die erste Woche</span>
-        <h2>Nach Woche 1 hast du einen klaren Startpunkt.</h2>
-        <p>Die erste Woche ist eine Sortierphase, und nicht alles passiert täglich. Du</p>
-        <ul class="steps-inline">
-          <li>sortierst deinen Badezimmerschrank,</li>
-          <li>schaust dir deine bisherigen Gewohnheiten an,</li>
-          <li>legst eine einfache Basisroutine fest,</li>
-          <li>lernst das Cupping kennen</li>
-          <li>und ergänzt eine kurze Face-Yoga-Einheit.</li>
-        </ul>
-        <blockquote>„Ich habe eine einfache Routine, die ich schaffe, und ich weiß, was ich dafür wirklich brauche.“</blockquote>
-        <p class="minimal"><b>Und wenn das Leben dazwischenkommt?</b> Für stressige Wochen gibt es eine Minimalroutine: deine tägliche Pflege, zwei- bis dreimal pro Woche Cupping und möglichst regelmäßiger Schlaf. Damit bleibst du dran.</p>
+      <div>
+        <div class="reveal">
+          <span class="kicker">Deine 8 Wochen</span>
+          <h2>Sechs Schritte zu <em>deiner</em> Routine</h2>
+        </div>
+        <div class="mod-list">
+          <div class="mod reveal"><span class="n">1</span><div><h3>Startklar</h3><p>Wir klären, wo du stehst und was du dir für die 8 Wochen wünschst.</p></div></div>
+          <div class="mod reveal"><span class="n">2</span><div><h3>Deine Basis</h3><p>Du vereinfachst deine Pflege und weißt, was in deinen Badezimmerschrank gehört.</p></div></div>
+          <div class="mod reveal"><span class="n">3</span><div><h3>Dein Gesicht in Bewegung</h3><p>Cupping und Face Yoga gezielt für deine Schwerpunkte, von der Kieferlinie bis zur Stirn.</p></div></div>
+          <div class="mod reveal"><span class="n">4</span><div><h3>Von innen sichtbar</h3><p>Schlaf, Stress und Ernährung, reduziert auf das, was bei dir am meisten bewirkt.</p></div></div>
+          <div class="mod reveal"><span class="n">5</span><div><h3>Was dein Alltag mit deinem Gesicht macht</h3><p>Nacken, Haltung und Wechseljahre und was sie in deinem Gesicht verändern.</p></div></div>
+          <div class="mod reveal"><span class="n">6</span><div><h3>Deine Routine, die bleibt</h3><p>Deine persönliche Minimalroutine, mit der du nach den 8 Wochen selbstständig weitermachst.</p></div></div>
+        </div>
+        <div class="rhythm reveal">
+          <div>Woche 1 bis 6 · Kernprogramm</div>
+          <div>Woche 7 und 8 · Integration</div>
+        </div>
+        <p class="rhythm-note reveal">Nach sechs Wochen Kernprogramm hast du zwei Wochen Zeit, alles in deinen Alltag einzubauen. Dein Zugang bleibt danach bestehen.</p>
       </div>
     </div>
 
@@ -799,34 +747,19 @@
   </div>
 </section>
 
-<!-- 12 · FÜR WEN -->
+<!-- 12 · NICHT PASSEND -->
 <section class="fit">
-  <div class="wrap">
-    <div class="narrow center reveal">
+  <div class="wrap narrow">
+    <div class="center reveal">
       <span class="kicker">Ehrlich gesagt</span>
-      <h2>Für wen Göttinnenhaut gemacht ist</h2>
+      <h2>Göttinnenhaut ist nichts für dich, wenn …</h2>
     </div>
-    <div class="fit-grid">
-      <div class="fit-col yes reveal">
-        <h3>Göttinnenhaut passt zu dir, wenn …</h3>
-        <ul>
-          <li>du natürlich frisch aussehen möchtest und keinem faltenfreien Ideal hinterherlaufen willst.</li>
-          <li>du nicht mehr jede neue Creme ausprobieren willst.</li>
-          <li>du selbst etwas tun möchtest, aber keine stundenlange Beauty-Routine brauchst.</li>
-          <li>du dir wünschst, dass dir jemand sagt, was für dich sinnvoll ist.</li>
-          <li>du bereit bist, mehrere Wochen wirklich dranzubleiben.</li>
-        </ul>
-      </div>
-      <div class="fit-col no reveal">
-        <h3>Nicht passend ist es, wenn …</h3>
-        <ul>
-          <li>du ein Sofortergebnis ohne eigenes Zutun erwartest.</li>
-          <li>dein einziges Ziel ist, jede Falte zu entfernen.</li>
-          <li>du nur einen günstigen Videokurs suchst.</li>
-          <li>du eigentlich keine Zeit oder Lust hast, die Routinen anzuwenden.</li>
-        </ul>
-      </div>
-    </div>
+    <ul class="fit-list">
+      <li>du ein Sofortergebnis ohne eigenes Zutun erwartest.</li>
+      <li>dein einziges Ziel ist, jede Falte zu entfernen.</li>
+      <li>du nur einen günstigen Videokurs suchst.</li>
+      <li>du eigentlich keine Zeit oder Lust hast, die Routinen anzuwenden.</li>
+    </ul>
   </div>
 </section>
 
@@ -883,10 +816,10 @@
         <h2>Was du wirklich bekommst</h2>
         <p class="lead">Du bekommst Klarheit, eine persönliche Strategie und acht Wochen Begleitung. Damit du diesmal dranbleibst, auch über die dritte Woche hinaus.</p>
         <ul class="incl">
-          <li><b>8 Wochen Begleitung</b> in sechs Schritten, vom Startpunkt bis zu deiner Routine, die bleibt</li>
-          <li><b>Persönliches Startgespräch</b> und deine individuelle Pflegeempfehlung</li>
-          <li><b>Gruppe, persönliches Feedback</b> per Text oder Sprachnachricht und <b>zwei Live-Calls</b></li>
-          <li><b>Starterset</b> mit Cups, Öl, Serum, Creme und Maske im Wert von 267 €</li>
+          <li><b>8 Wochen Programm</b> in sechs Schritten</li>
+          <li><b>Persönliches Startgespräch</b> und Pflegeempfehlung</li>
+          <li><b>Gruppe, persönliches Feedback</b> und zwei Live-Calls</li>
+          <li><b>PURVIDUAL Starterset inklusive</b> · Wert 267 €</li>
           <li><b>Dauerhafter Zugang</b> zu allen Inhalten</li>
         </ul>
         <p class="studio">Eine Behandlung im Studio kann deiner Haut einen wunderschönen Impuls geben. In Göttinnenhaut lernst du zusätzlich, was du selbst zwischen den Behandlungen tun kannst, jeden Tag und langfristig.</p>
@@ -924,18 +857,12 @@
       <span class="kicker">Häufige Fragen</span>
       <h2>Was du vielleicht noch wissen möchtest</h2>
     </div>
-    <!-- PRÜFEN: Zeitangabe an dein Programm anpassen. -->
-    <details><summary>Wie viel Zeit brauche ich pro Tag?</summary><p>An den meisten Tagen reichen 10 bis 20 Minuten. Deine Pflege machst du jeden Tag, Cupping und Face Yoga kommen zwei- bis dreimal pro Woche dazu. Für volle Wochen gibt es eine Minimalroutine, mit der du trotzdem dranbleibst.</p></details>
-    <details><summary>Was, wenn ich noch nie gecuppt habe?</summary><p>Dann fängst du genau richtig an. Ich zeige dir Schritt für Schritt, wie du die Cups ansetzt, wie viel Druck angenehm ist und in welche Richtung du arbeitest. Wenn du unsicher bist, schickst du mir eine Nachricht, und ich schaue es mir mit dir an.</p></details>
+        <details><summary>Was, wenn ich noch nie gecuppt habe?</summary><p>Dann fängst du genau richtig an. Ich zeige dir Schritt für Schritt, wie du die Cups ansetzt, wie viel Druck angenehm ist und in welche Richtung du arbeitest. Wenn du unsicher bist, schickst du mir eine Nachricht, und ich schaue es mir mit dir an.</p></details>
     <details><summary>Ich habe empfindliche Haut. Ist das trotzdem etwas für mich?</summary><p>Ja. Empfindliche Haut kenne ich selbst sehr gut, und die Produkte im Starterset sind reizarm. Im Startgespräch sprechen wir über deine Haut, und ich passe meine Empfehlung daran an. Bei einer akuten Hauterkrankung klärst du die Teilnahme bitte vorher mit deiner Ärztin.</p></details>
-    <details><summary>Ich habe schon PURVIDUAL oder andere Pflege zu Hause. Muss ich alles neu kaufen?</summary><p>Nein. In der ersten Woche sortieren wir gemeinsam deinen Badezimmerschrank. Was gut zu deiner Haut passt, darfst du weiter verwenden. Das Starterset deckt die Basis ab, alles Weitere empfehle ich dir nur, wenn du es wirklich brauchst.</p></details>
-    <details><summary>Was passiert, wenn ich eine Woche nicht mitmachen kann?</summary><p>Dann machst du eine Woche Pause und steigst danach wieder ein. Die Inhalte bleiben freigeschaltet, dein Zugang bleibt auch nach den 8 Wochen bestehen. Und in den Integrationswochen 7 und 8 ist ohnehin Zeit zum Nachholen.</p></details>
-    <details><summary>Ist das Face Yoga?</summary><p>Face Yoga ist ein Baustein davon. Dazu kommen Cupping, deine Pflege, Schlaf und Stress, Ernährung und das, was dein Alltag mit deinem Gesicht macht. Gerade das Zusammenspiel dieser Bereiche macht den Unterschied.</p></details>
-    <!-- PRÜFEN: Ablauf der Ratenzahlung bestätigen. -->
+        <details><summary>Was passiert, wenn ich eine Woche nicht mitmachen kann?</summary><p>Dann machst du eine Woche Pause und steigst danach wieder ein. Die Inhalte bleiben freigeschaltet, dein Zugang bleibt auch nach den 8 Wochen bestehen. Und in den Integrationswochen 7 und 8 ist ohnehin Zeit zum Nachholen.</p></details>
+        <!-- PRÜFEN: Ablauf der Ratenzahlung bestätigen. -->
     <details><summary>Wie läuft die Ratenzahlung?</summary><p>Du zahlst drei Raten zu je 439 €. Die erste Rate wird bei der Anmeldung fällig, die beiden weiteren jeweils im Abstand von einem Monat.</p></details>
-    <!-- PRÜFEN: Widerrufs- und Rückgaberegelung vor dem Livegang klären und hier eintragen. -->
-    <details><summary>Gibt es eine Rückgabe- oder Widerrufsregelung?</summary><p>[Hier deine Regelung eintragen.] Alle Details findest du in der <a href="https://kristin-schnoedt.de/widerruf.html">Widerrufsbelehrung</a>.</p></details>
-  </div>
+      </div>
 </section>
 
 <!-- 17 · ABSCHLUSSBILD + CTA -->
@@ -973,7 +900,7 @@
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     /* Listen und Karten nacheinander einblenden */
-    const groups = ['.voice-list p', '.wheel', '.mod', '.change-col li', '.t', '.fit-col li', '.incl li', '.worries > div', '.care li', '.steps-inline li', '.band .pt', '.dates > div', '.faq details'];
+    const groups = ['.voice-list p', '.wheel', '.mod', '.change-col li', '.t', '.fit-list li', '.incl li', '.worries > div', '.care li', '.band .pt', '.dates > div', '.faq details'];
     groups.forEach(sel => {
       document.querySelectorAll(sel).forEach(el => {
         const sibs = [...el.parentElement.children].filter(c => c.matches(sel));
