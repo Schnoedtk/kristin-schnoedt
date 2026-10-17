@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Widerruf – Kristin Schnödt</title>
+  <title>Widerruf · Kristin Schnödt</title>
   <meta name="robots" content="noindex">  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/LogoNeu_2026_final_OH.png">
   <style>
-    :root{--alabaster:#F8F3F5;--m100:#F8F3F5;--m200:#ECDDE1;--m300:#D9C0C8;--m400:#C49EAA;--m500:#B5818C;--m700:#7A4A58;--m900:#2E2028;--schiefer:#696E6B;--white:#FFFFFF;--display:'Cormorant Garamond',Georgia,serif;--body:'Montserrat',system-ui,sans-serif;--ease:cubic-bezier(0.25,1,0.5,1);}
+    :root{--alabaster:#EDEAE0;--m100:#F3EEE4;--m200:#E3E7DC;--m300:#B9C2A8;--m400:#D8C9AE;--m500:#9CAA8C;--m700:#7A4A58;--m900:#3D2A2E; --label: #5F6F52;--schiefer:#5A5648;--white:#FBF8F2;--display:'Cormorant Garamond',Georgia,serif;--body:'Montserrat',system-ui,sans-serif;--ease:cubic-bezier(0.25,1,0.5,1);}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;font-size:16px;}
     body{font-family:var(--body);color:var(--schiefer);background:var(--alabaster);-webkit-font-smoothing:antialiased;}
     /* NAV */
-    .nav{position:sticky;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 4rem;background:rgba(248,243,245,0.97);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(46,32,40,0.07);}
+    .nav{position:sticky;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 4rem;background:rgba(237,234,224,0.97);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(61,42,46,0.07);}
     .nav-logo{text-decoration:none;display:flex;align-items:center;}
     .nav-logo img{height:42px;width:auto;}
     .nav-links{display:flex;gap:2.5rem;list-style:none;}
     .nav-links a{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--schiefer);text-decoration:none;transition:color 0.3s;}
     .nav-links a:hover{color:var(--m500);}
-    .nav-btn{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.75rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;}
-    .nav-btn:hover{background:var(--m700);}
+    .nav-btn{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.75rem;background:var(--m700);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;}
+    .nav-btn:hover{background:var(--m900);}
     .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
     .nav-hamburger span{display:block;width:24px;height:1.5px;background:var(--m900);}
     /* PAGE HERO */
     .page-hero{background:var(--m900);padding:6rem 4rem;position:relative;overflow:hidden;}
-    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 10% 100%,rgba(181,129,140,0.25) 0%,transparent 55%);}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 10% 100%,rgba(156,170,140,0.25) 0%,transparent 55%);}
     .page-hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;}
     .page-eyebrow{font-size:0.66rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--m400);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;}
     .page-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--m500);}
@@ -45,7 +45,7 @@
     /* FOOTER */
     .footer{background:var(--m900);padding:4rem 4rem 2.5rem;}
     .footer-inner{max-width:1200px;margin:0 auto;}
-    .footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;border-top:1px solid rgba(181,129,140,0.14);}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;border-top:1px solid rgba(156,170,140,0.14);}
     .footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.28);}
     .footer-legal{display:flex;gap:2rem;list-style:none;}
     .footer-legal a{font-size:0.75rem;color:rgba(255,255,255,0.28);text-decoration:none;transition:color 0.3s;}
@@ -61,7 +61,33 @@
       .footer-bottom{flex-direction:column;gap:1rem;text-align:center;}
       .footer-legal{flex-wrap:wrap;justify-content:center;}
     }
-  </style>
+  
+    /* ---- NAV auf Laptop-Breite: alles passt in eine Zeile ---- */
+    @media (min-width: 769px) {
+      .nav-links a { white-space: nowrap; }
+    }
+    @media (min-width: 769px) and (max-width: 1480px) {
+      .nav { padding-left: 2rem !important; padding-right: 2rem !important; gap: 1.1rem; }
+      .nav-links { gap: 1.2rem !important; }
+      .nav-links a { letter-spacing: 0.08em !important; }
+      .nav-gift { display: none !important; }
+      .nav-btn { padding: 0.7rem 1.1rem !important; white-space: nowrap; }
+    }
+    @media (min-width: 769px) and (max-width: 1280px) {
+      .nav-links-gift-item { display: none !important; }
+    }
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .nav-links { gap: 0.9rem !important; }
+      .nav-links a { font-size: 0.6rem !important; letter-spacing: 0.06em !important; }
+    }
+    @media (min-width: 769px) and (max-width: 960px) {
+      .nav { padding-left: 1.25rem !important; padding-right: 1.25rem !important; gap: 0.7rem; }
+      .nav-links { gap: 0.7rem !important; }
+      .nav-links a { font-size: 0.56rem !important; letter-spacing: 0.03em !important; }
+      .nav-logo img { height: 34px !important; }
+      .nav-btn { font-size: 0.58rem !important; padding: 0.6rem 0.8rem !important; }
+    }
+</style>
 </head>
 <body>
 
@@ -71,7 +97,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="behandlungen.html">Behandlungen</a></li>
-      <li><a href="face-yoga.html">Online-Kurse</a></li>
+      <li><a href="online-kurse.html">Online-Kurse</a></li>
       <li><a href="index.html#purvidual">PURVIDUAL</a></li>
       <li><a href="schulungen.html">Schulungen</a></li>
       <li><a href="kristin-schnoedt.html">Über mich</a></li>
@@ -201,7 +227,7 @@ Datum</p>
         navUl.style.top='100%';
         navUl.style.left='0';
         navUl.style.right='0';
-        navUl.style.background='rgba(248,243,245,0.97)';
+        navUl.style.background='rgba(237,234,224,0.97)';
         navUl.style.padding='1rem 1.75rem 1.5rem';
         navUl.style.gap='1.25rem';
       }

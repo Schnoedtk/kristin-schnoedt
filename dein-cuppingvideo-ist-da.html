@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Dein Cupping-Video ist da · Kristin Schnödt</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { height: 100%; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(165deg, #EDEAE0 0%, #EDE6D8 50%, #E3E7DC 100%);
+    color: #5A5648;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 32px 20px;
+  }
+
+  .wrap { max-width: 620px; width: 100%; text-align: center; margin: auto 0; }
+
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #3D2A2E;
+    margin-bottom: 10px;
+  }
+
+  .sub {
+    font-size: 1rem;
+    color: #5A5648;
+    margin-bottom: 26px;
+  }
+
+  .video-frame {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 14px 40px rgba(61, 42, 46, 0.2);
+    margin-bottom: 28px;
+    background: #3D2A2E;
+  }
+  .video-frame iframe, .video-frame video {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+
+  .bridge {
+    font-size: 1rem;
+    color: #5A5648;
+    margin-bottom: 20px;
+  }
+
+  .cta {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.02rem; font-weight: 700; letter-spacing: 0.02em;
+    color: #EDEAE0; background: #7A4A58;
+    border: none; border-radius: 100px;
+    padding: 17px 42px;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(122,74,88,0.28);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(122,74,88,0.34); }
+
+  .cta-note {
+    display: block;
+    font-size: 0.8rem;
+    color: #8C8776;
+    margin-top: 12px;
+  }
+
+  .sum {
+    text-align: left; background: #FBF8F2; border: 1.5px solid #E3E7DC;
+    border-radius: 16px; padding: 24px 26px; margin-bottom: 30px;
+  }
+  .sum-lab {
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #5F6F52; margin-bottom: 12px;
+  }
+  .sum ul { list-style: none; }
+  .sum li { font-size: 0.95rem; color: #5A5648; padding: 7px 0 7px 26px; position: relative; border-top: 1px solid #EDE6D8; }
+  .sum li:first-child { border-top: none; }
+  .sum li::before { content: ""; position: absolute; left: 2px; top: 15px; width: 10px; height: 10px; border-radius: 50%; background: #9CAA8C; }
+  .sum li b { color: #3D2A2E; }
+  .legal { font-size: 0.74rem; color: #8C8776; margin-top: 30px; line-height: 1.6; }
+
+  @media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <h1>Dein Cupping-Video ist da</h1>
+  <p class="sub">Schön, dass du da bist. Nimm dir ein paar Minuten Zeit, am besten mit Ton.</p>
+
+  <!-- PRÜFEN: Video
+       Im Moment ist die Datei videos/cupping-systeme-erklaert.mp4 eingebunden.
+       Wenn das Video auf YouTube liegt (am besten "nicht gelistet"), diesen <video>-Block
+       ersetzen durch:
+       <iframe src="https://www.youtube-nocookie.com/embed/VIDEO-ID" title="Cupping-Video von Kristin Schnödt"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe> -->
+  <div class="video-frame">
+    <video controls preload="metadata" playsinline poster="Angebot-Challenge/images/cupping-stirn.jpg">
+      <source src="videos/cupping-systeme-erklaert.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="sum">
+    <div class="sum-lab">Das Wichtigste in Kürze</div>
+    <ul>
+      <li><b>Weiche Silikoncups</b> sind fürs Gesicht die beste Wahl: sanft, leicht zu dosieren und unzerbrechlich.</li>
+      <li><b>Zwei Größen</b> reichen: große Cups für Wangen, Stirn, Kiefer und Hals, kleine für Augen und Mundpartie.</li>
+      <li><b>Immer in Bewegung</b> bleiben und mit etwas Öl arbeiten. Ein stehender Cup macht im Gesicht schnell Flecken.</li>
+      <li><b>Wenig Sog</b> genügt. Wenn es zieht oder unangenehm wird, ist es zu viel.</li>
+    </ul>
+  </div>
+
+  <p class="bridge">Wenn du es richtig lernen willst: Im Cupping Kurs zeige ich dir Schritt für Schritt jede Gesichtspartie. Auf Wunsch mit Komplett-Set, also 2 großen und 2 kleinen PURVIDUAL Cups und Öl.</p>
+  <a class="cta" href="https://kristin-schnoedt.de/cupping-kurs.html">Zum Cupping Kurs</a>
+  <span class="cta-note">Kurs 49 € · Komplett-Set mit Cups und Öl 99 € inkl. Versand</span>
+
+  <p class="legal">Ich bin Kosmetikerin, keine Ärztin. Alle Inhalte sind kosmetische Pflege und persönliche Erfahrung, keine medizinische Diagnose oder Therapie. Bei gereizter oder entzündeter Haut, offenen Stellen, Blutverdünnern oder in der Schwangerschaft bitte vorher ärztlich abklären.</p>
+</div>
+
+</body>
+</html>

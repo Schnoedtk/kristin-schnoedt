@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kristin Schnödt – Kosmetikerin in Auerbach i.d.Opf.</title>
-  <meta name="description" content="Kristin Schnödt – Spezialistin für natürliche Hautverjüngung in Auerbach. 18+ Jahre Erfahrung, anti-Botox, Gründerin von PURVIDUAL. Meine Geschichte & Philosophie.">  <link rel="stylesheet" href="fonts/fonts.css">
+  <title>Kristin Schnödt · Kosmetikerin in Auerbach i.d.Opf.</title>
+  <meta name="description" content="Kristin Schnödt, Kosmetikerin seit 2006, eigenes Studio in Auerbach seit 2008, Gründerin von PURVIDUAL. Meine Geschichte & Philosophie.">  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/LogoNeu_2026_final_OH.png">
 
   <style>
     :root{
-      --alabaster:#F8F3F5;--m100:#F8F3F5;--m200:#ECDDE1;--m300:#D9C0C8;
-      --m400:#C49EAA;--m500:#B5818C;--m700:#7A4A58;--m900:#2E2028;
-      --schiefer:#696E6B;--white:#FFFFFF;
+      --alabaster:#EDEAE0;--m100:#F3EEE4;--m200:#E3E7DC;--m300:#B9C2A8;
+      --m400:#D8C9AE;--m500:#9CAA8C;--m700:#7A4A58;--m900:#3D2A2E; --label: #5F6F52;
+      --schiefer:#5A5648;--white:#FBF8F2;
       --display:'Cormorant Garamond',Georgia,serif;
       --body:'Montserrat',system-ui,sans-serif;
       --ease:cubic-bezier(0.25,1,0.5,1);
@@ -26,14 +26,14 @@
     .d1{transition-delay:0.05s;}.d2{transition-delay:0.15s;}.d3{transition-delay:0.25s;}.d4{transition-delay:0.35s;}.d5{transition-delay:0.45s;}
 
     /* ── NAV ── */
-    .nav{position:sticky;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 4rem;background:rgba(248,243,245,0.97);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(46,32,40,0.07);}
+    .nav{position:sticky;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 4rem;background:rgba(237,234,224,0.97);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(61,42,46,0.07);}
     .nav-logo{text-decoration:none;display:flex;align-items:center;}
     .nav-logo img{height:42px;width:auto;}
     .nav-links{display:flex;gap:2.5rem;list-style:none;}
     .nav-links a{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--schiefer);text-decoration:none;transition:color 0.3s;}
     .nav-links a:hover{color:var(--m500);}
-    .nav-btn{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.75rem;background:var(--m500);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;}
-    .nav-btn:hover{background:var(--m700);}
+    .nav-btn{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.75rem 1.75rem;background:var(--m700);color:var(--white);text-decoration:none;border-radius:2px;transition:background 0.3s;}
+    .nav-btn:hover{background:var(--m900);}
     .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
     .nav-hamburger span{display:block;width:24px;height:1.5px;background:var(--m900);}
 
@@ -43,22 +43,22 @@
     /* Blob decoration (top-left) */
     .ks-hero-blobs{position:absolute;top:0;left:0;width:480px;height:480px;z-index:5;pointer-events:none;}
     .ks-blob{position:absolute;filter:blur(1px);}
-    .ks-blob-1{width:300px;height:340px;top:30px;left:60px;background:radial-gradient(ellipse at 40% 40%,rgba(181,129,140,0.16) 0%,rgba(181,129,140,0.04) 70%,transparent 100%);border:1.5px solid rgba(181,129,140,0.32);border-radius:58% 42% 65% 35%/45% 55% 45% 55%;animation:ksblob1 10s ease-in-out infinite;}
+    .ks-blob-1{width:300px;height:340px;top:30px;left:60px;background:radial-gradient(ellipse at 40% 40%,rgba(156,170,140,0.16) 0%,rgba(156,170,140,0.04) 70%,transparent 100%);border:1.5px solid rgba(156,170,140,0.32);border-radius:58% 42% 65% 35%/45% 55% 45% 55%;animation:ksblob1 10s ease-in-out infinite;}
     .ks-blob-2{width:240px;height:280px;top:120px;left:10px;background:radial-gradient(ellipse at 60% 60%,rgba(122,74,88,0.12) 0%,rgba(122,74,88,0.03) 70%,transparent 100%);border:1.5px solid rgba(122,74,88,0.28);border-radius:42% 58% 35% 65%/55% 45% 55% 45%;animation:ksblob2 12s ease-in-out infinite;}
     @keyframes ksblob1{0%,100%{border-radius:58% 42% 65% 35%/45% 55% 45% 55%;transform:translateY(0) rotate(0deg);}33%{border-radius:42% 58% 35% 65%/55% 45% 55% 45%;transform:translateY(-16px) rotate(4deg);}66%{border-radius:65% 35% 42% 58%/35% 65% 45% 55%;transform:translateY(10px) rotate(-3deg);}}
     @keyframes ksblob2{0%,100%{border-radius:42% 58% 35% 65%/55% 45% 55% 45%;transform:translateY(0) rotate(0deg);}33%{border-radius:58% 42% 65% 35%/45% 55% 45% 55%;transform:translateY(14px) rotate(-5deg);}66%{border-radius:35% 65% 58% 42%/65% 35% 55% 45%;transform:translateY(-8px) rotate(3deg);}}
 
     .ks-hero-img{position:relative;z-index:3;overflow:hidden;background:var(--m900);}
     .ks-hero-img img{width:100%;height:133%;object-fit:cover;object-position:center top;display:block;clip-path:inset(0 0 20% 0);}
-    .ks-hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(46,32,40,0) 50%,rgba(46,32,40,0.8) 100%);}
+    .ks-hero-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(61,42,46,0) 50%,rgba(61,42,46,0.8) 100%);}
     .ks-hero-content{display:flex;flex-direction:column;justify-content:flex-end;padding:5rem 5rem 5rem 4rem;position:relative;z-index:4;}
-    .ks-hero-content::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 80% 90%,rgba(181,129,140,0.15) 0%,transparent 60%);}
+    .ks-hero-content::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 80% 90%,rgba(156,170,140,0.15) 0%,transparent 60%);}
     .ks-eyebrow{font-size:0.65rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:var(--m400);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;position:relative;z-index:1;}
     .ks-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--m500);}
     .ks-h1{font-family:var(--display);font-size:clamp(1.6rem,2vw,2.65rem);font-weight:300;color:var(--white);line-height:1.08;position:relative;z-index:1;}
     .ks-h1 em{font-style:italic;color:var(--m400);}
     .ks-hero-tagline{font-size:0.93rem;line-height:1.85;color:rgba(255,255,255,0.62);max-width:420px;margin-top:1.5rem;position:relative;z-index:1;}
-    .ks-hero-quote{font-family:var(--display);font-size:1.45rem;font-style:italic;font-weight:400;color:var(--m300);line-height:1.5;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(181,129,140,0.25);position:relative;z-index:1;}
+    .ks-hero-quote{font-family:var(--display);font-size:1.45rem;font-style:italic;font-weight:400;color:var(--m300);line-height:1.5;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(156,170,140,0.25);position:relative;z-index:1;}
 
     /* ── SECTION BASE ── */
     .sec{padding:7rem 4rem;}
@@ -95,12 +95,12 @@
     .ks-philo-text strong{color:var(--white);}
     .ks-philo-img{position:relative;}
     .ks-philo-img img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:2px;}
-    .ks-philo-img-frame{position:absolute;bottom:-1.5rem;left:-1.5rem;right:1.5rem;top:1.5rem;border:1.5px solid rgba(181,129,140,0.3);border-radius:2px;pointer-events:none;}
+    .ks-philo-img-frame{position:absolute;bottom:-1.5rem;left:-1.5rem;right:1.5rem;top:1.5rem;border:1.5px solid rgba(156,170,140,0.3);border-radius:2px;pointer-events:none;}
 
     /* Values */
     .ks-values{display:flex;flex-direction:column;gap:1rem;margin-top:2.5rem;}
-    .ks-value{display:flex;align-items:flex-start;gap:1.25rem;background:rgba(181,129,140,0.08);border:1px solid rgba(181,129,140,0.18);padding:1.25rem 1.5rem;border-radius:2px;}
-    .ks-value-icon{width:36px;height:36px;border-radius:50%;background:rgba(181,129,140,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .ks-value{display:flex;align-items:flex-start;gap:1.25rem;background:rgba(156,170,140,0.08);border:1px solid rgba(156,170,140,0.18);padding:1.25rem 1.5rem;border-radius:2px;}
+    .ks-value-icon{width:36px;height:36px;border-radius:50%;background:rgba(156,170,140,0.18);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
     .ks-value-icon svg{stroke:var(--m400);fill:none;stroke-width:1.5;}
     .ks-value-body h4{font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--m300);margin-bottom:0.3rem;}
     .ks-value-body p{font-size:0.85rem;line-height:1.75;color:rgba(255,255,255,0.58);margin:0;}
@@ -130,7 +130,7 @@
     .ks-sl-track{display:flex;transition:transform 0.65s var(--ease);}
     .ks-sl-slide{flex:0 0 100%;width:100%;display:flex;align-items:center;justify-content:center;padding:1.5rem 5rem;min-height:420px;background:var(--m900);}
     .ks-sl-slide img{height:clamp(280px,48vh,480px);width:auto;max-width:100%;object-fit:contain;display:block;border-radius:2px;}
-    .ks-sl-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(248,243,245,0.85);border:none;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.3s;backdrop-filter:blur(8px);}
+    .ks-sl-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:10;background:rgba(237,234,224,0.85);border:none;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background 0.3s;backdrop-filter:blur(8px);}
     .ks-sl-btn:hover{background:var(--white);}
     .ks-sl-btn svg{stroke:var(--m700);fill:none;stroke-width:1.5;}
     .ks-sl-prev{left:1.5rem;}
@@ -150,7 +150,7 @@
     .ks-brand-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:2px;display:block;}
 
     /* ── CTA ── */
-    .ks-cta{background:var(--m500);padding:6rem 4rem;text-align:center;}
+    .ks-cta{background:var(--m700);padding:6rem 4rem;text-align:center;}
     .ks-cta h2{font-family:var(--display);font-size:clamp(2.2rem,3.8vw,3.5rem);font-weight:400;color:var(--white);line-height:1.15;margin-bottom:1rem;}
     .ks-cta h2 em{font-style:italic;color:var(--m200);}
     .ks-cta p{font-size:0.9rem;line-height:1.85;color:rgba(255,255,255,0.75);max-width:480px;margin:0 auto 2.5rem;}
@@ -166,7 +166,7 @@
     /* ── FOOTER ── */
     .footer{background:var(--m900);padding:4rem 4rem 2.5rem;}
     .footer-inner{max-width:1200px;margin:0 auto;}
-    .footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;border-top:1px solid rgba(181,129,140,0.14);}
+    .footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;border-top:1px solid rgba(156,170,140,0.14);}
     .footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.28);}
     .footer-legal{display:flex;gap:2rem;list-style:none;}
     .footer-legal a{font-size:0.75rem;color:rgba(255,255,255,0.28);text-decoration:none;transition:color 0.3s;}
@@ -212,7 +212,33 @@
       .footer-bottom{flex-direction:column;gap:1rem;text-align:center;}
       .footer-legal{flex-wrap:wrap;justify-content:center;}
     }
-  </style>
+  
+    /* ---- NAV auf Laptop-Breite: alles passt in eine Zeile ---- */
+    @media (min-width: 769px) {
+      .nav-links a { white-space: nowrap; }
+    }
+    @media (min-width: 769px) and (max-width: 1480px) {
+      .nav { padding-left: 2rem !important; padding-right: 2rem !important; gap: 1.1rem; }
+      .nav-links { gap: 1.2rem !important; }
+      .nav-links a { letter-spacing: 0.08em !important; }
+      .nav-gift { display: none !important; }
+      .nav-btn { padding: 0.7rem 1.1rem !important; white-space: nowrap; }
+    }
+    @media (min-width: 769px) and (max-width: 1280px) {
+      .nav-links-gift-item { display: none !important; }
+    }
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .nav-links { gap: 0.9rem !important; }
+      .nav-links a { font-size: 0.6rem !important; letter-spacing: 0.06em !important; }
+    }
+    @media (min-width: 769px) and (max-width: 960px) {
+      .nav { padding-left: 1.25rem !important; padding-right: 1.25rem !important; gap: 0.7rem; }
+      .nav-links { gap: 0.7rem !important; }
+      .nav-links a { font-size: 0.56rem !important; letter-spacing: 0.03em !important; }
+      .nav-logo img { height: 34px !important; }
+      .nav-btn { font-size: 0.58rem !important; padding: 0.6rem 0.8rem !important; }
+    }
+</style>
 </head>
 <body>
 
@@ -223,7 +249,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="behandlungen.html">Behandlungen</a></li>
-      <li><a href="face-yoga.html">Online-Kurse</a></li>
+      <li><a href="online-kurse.html">Online-Kurse</a></li>
       <li><a href="index.html#purvidual">PURVIDUAL</a></li>
       <li><a href="schulungen.html">Schulungen</a></li>
       <li><a href="kristin-schnoedt.html">Über mich</a></li>
@@ -263,14 +289,14 @@
         <div class="sec-eyebrow rv d1">Meine Geschichte</div>
         <h2 class="sec-h2 rv d2" style="font-size:clamp(1.85rem,2.8vw,2.8rem);">Wie aus einer Leidenschaft<br><em>eine Berufung wurde</em></h2>
         <div class="rv d3">
-          <p>Seit über 18 Jahren arbeite ich täglich mit Gesichtshaut, und noch immer begeistert mich jeden Tag aufs Neue, was möglich ist, wenn man der Haut wirklich zuhört.</p>
+          <p>Seit 2006 arbeite ich täglich mit Gesichtshaut, seit 2008 in meinem eigenen Studio in Auerbach, und noch immer begeistert mich jeden Tag aufs Neue, was möglich ist, wenn man der Haut wirklich zuhört.</p>
           <p>Was mich von Anfang an angetrieben hat, ist nicht die Schönheitsindustrie mit ihren Versprechen, sondern die tiefe Überzeugung, dass jede Frau das Recht hat, <strong>sich in ihrer Haut wohlzufühlen</strong>. Ohne Kompromisse, ohne Eingriffe.</p>
           <p>Aus diesem Antrieb heraus habe ich PURVIDUAL gegründet, Face Yoga in meine Arbeit integriert und ein Angebot geschaffen, das weit über eine klassische Kosmetikbehandlung hinausgeht.</p>
         </div>
         <div class="ks-stat-row rv d4">
           <div class="ks-stat">
-            <span class="ks-stat-num">18+</span>
-            <span class="ks-stat-label">Jahre Erfahrung</span>
+            <span class="ks-stat-num">20</span>
+            <span class="ks-stat-label">Jahre Kosmetikerin</span>
           </div>
           <div class="ks-stat">
             <span class="ks-stat-num">10</span>
@@ -305,12 +331,12 @@
   <section class="ks-philo sec" id="philosophie">
     <div class="sec-inner">
       <div class="sec-eyebrow rv d1">Meine Philosophie</div>
-      <h2 class="sec-h2 rv d2">Ich bin gegen Botox,<br><em>und ich zeig dir, was wirklich funktioniert.</em></h2>
+      <h2 class="sec-h2 rv d2">Frisch statt faltenfrei.<br><em>Mit deinem Gesicht, nicht gegen es.</em></h2>
       <div class="ks-philo-grid">
         <div class="ks-philo-text rv d3">
-          <p>Das klingt provokant, und das ist es auch. Nicht weil ich anderen ihre Entscheidungen absprechen will, sondern weil ich täglich erlebe, was passiert, wenn Frauen aufhören, ihrer Haut zu vertrauen, und stattdessen nach außen delegieren, was von innen kommen könnte.</p>
-          <p>Botox lähmt. Es löst keine Ursache. Es gibt keine Kontrolle zurück, denn es nimmt sie. <strong>Ich glaube an das Gegenteil.</strong></p>
-          <p>Ich glaube daran, dass jede Frau, die lernt, mit ihrer Haut zu arbeiten, mit Bewegung, mit Berührung, mit dem richtigen Wissen, mehr erreichen kann als jede Spritze. Nachhaltiger. Echter. Und mit einem Gefühl für sich selbst, das bleibt.</p>
+          <p>Ich arbeite ohne Botox und ohne Filler. Nicht weil ich anderen ihre Entscheidung absprechen will, sondern weil ich täglich erlebe, wie viel möglich ist, wenn Frauen wieder lernen, ihrer Haut zu vertrauen.</p>
+          <p>Falten sind für mich nicht das Problem. Frisch aussehen heißt, dass man dir ansieht, dass es dir gut geht. <strong>Und dafür kannst du selbst viel tun.</strong></p>
+          <p>Ich glaube daran, dass jede Frau mit Bewegung, Berührung und dem richtigen Wissen gut für ihr Gesicht sorgen kann. Auf natürliche Weise und mit einem Gefühl für sich selbst, das bleibt.</p>
           <p>Das ist mein Warum. Und das ist der Grund, warum ich nicht aufhöre, dieses Wissen weiterzugeben.</p>
 
           <div class="ks-values rv d4">
@@ -338,7 +364,7 @@
               </div>
               <div class="ks-value-body">
                 <h4>Intuition</h4>
-                <p>Nach 18 Jahren spüre ich, was eine Haut braucht, oft bevor du es selbst weißt. Ich vertraue diesem Gespür und bringe es mit Präzision und Sorgfalt genau auf den Punkt.</p>
+                <p>Nach 20 Jahren spüre ich, was eine Haut braucht, oft bevor du es selbst weißt. Ich vertraue diesem Gespür und bringe es mit Präzision und Sorgfalt genau auf den Punkt.</p>
               </div>
             </div>
           </div>
@@ -388,7 +414,7 @@
             </div>
             <div>
               <div class="ks-tl-year">Gründung</div>
-              <div class="ks-tl-title">PURVIDUAL — meine eigene Pflegelinie</div>
+              <div class="ks-tl-title">Seit 2021: PURVIDUAL, meine eigene Pflegelinie</div>
               <div class="ks-tl-desc">Weil ich nicht mehr auf Kompromisse eingehen wollte: Pflege, die wirklich zur Haut passt.</div>
             </div>
           </div>
@@ -440,9 +466,9 @@
         <h2 class="sec-h2 rv d2">Pflege, so <em>individuell</em><br>wie deine Haut.</h2>
         <div class="rv d3">
           <p>Der Name sagt alles: <strong>PURe</strong> Pflege. <strong>VIDU</strong>: ich sehe dich. <strong>INDIVIDUAL</strong>: du bist einzigartig. Hinter PURVIDUAL steckt meine tiefste Überzeugung: Hautpflege muss so einzigartig sein wie der Mensch, der sie trägt.</p>
-          <p>Keine Einheitslösungen. Keine Kompromisse. Formeln, die mit der Haut arbeiten, nicht gegen sie. Entwickelt aus 18 Jahren täglicher Praxis, unzähligen Gesprächen mit Kundinnen und dem ehrlichen Wunsch, es besser zu machen.</p>
+          <p>Keine Einheitslösungen. Keine Kompromisse. Formeln, die mit der Haut arbeiten, nicht gegen sie. Entwickelt aus meiner täglichen Praxis im Studio, unzähligen Gesprächen mit Kundinnen und dem ehrlichen Wunsch, es besser zu machen.</p>
         </div>
-        <a href="https://purvidual.de" class="ks-cta-btn" style="align-self:flex-start;margin-top:1rem;background:var(--m500);color:var(--white);display:inline-block;" target="_blank" rel="noopener">Zur PURVIDUAL Welt</a>
+        <a href="https://purvidual.de" class="ks-cta-btn" style="align-self:flex-start;margin-top:1rem;background:var(--m700);color:var(--white);display:inline-block;" target="_blank" rel="noopener">Zur PURVIDUAL Welt</a>
       </div>
       <div class="ks-brand-visual rv d2">
         <img class="ks-brand-photo" src="Bilder/Purvidual/IMG_9551-Edit_web.png" alt="PURVIDUAL Gruppe">
@@ -459,17 +485,17 @@
       <div style="padding:2rem;background:var(--white);border-top:3px solid var(--m500);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--m400);margin-bottom:1rem;line-height:1;">01</div>
         <h3 style="font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m900);margin-bottom:0.75rem;">Keine leeren Versprechen</h3>
-        <p style="font-size:0.82rem;line-height:1.75;color:var(--schiefer);">Ich sage dir genau was du erwarten kannst — und was nicht. Sichtbare Ergebnisse entstehen nach 2 bis 6 Wochen bei regelmäßiger Anwendung.</p>
+        <p style="font-size:0.82rem;line-height:1.75;color:var(--schiefer);">Ich sage dir offen, was realistisch ist und was nicht. Wie schnell sich etwas verändert, ist bei jeder Haut anders.</p>
       </div>
       <div style="padding:2rem;background:var(--white);border-top:3px solid var(--m500);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--m400);margin-bottom:1rem;line-height:1;">02</div>
         <h3 style="font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m900);margin-bottom:0.75rem;">Nur was ich selbst nutze</h3>
-        <p style="font-size:0.82rem;line-height:1.75;color:var(--schiefer);">Jede Methode und jedes Produkt das ich empfehle, nutze ich selbst. Keine Empfehlung ohne eigene Überzeugung.</p>
+        <p style="font-size:0.82rem;line-height:1.75;color:var(--schiefer);">Jede Methode und jedes Produkt, das ich empfehle, nutze ich selbst. Keine Empfehlung ohne eigene Überzeugung.</p>
       </div>
       <div style="padding:2rem;background:var(--white);border-top:3px solid var(--m500);">
         <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:var(--m400);margin-bottom:1rem;line-height:1;">03</div>
-        <h3 style="font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m900);margin-bottom:0.75rem;">Echte Haut, echte Ergebnisse</h3>
-        <p style="font-size:0.82rem;line-height:1.75;color:var(--schiefer);">Alle Bilder auf dieser Seite sind unbearbeitet. Echte Frauen, echte Haut — keine Retusche, keine Filterversprechen.</p>
+        <h3 style="font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--m900);margin-bottom:0.75rem;">Zeit für dich</h3>
+        <p style="font-size:0.82rem;line-height:1.75;color:var(--schiefer);">In meinem Studio gibt es keinen Zeitdruck. Ich nehme mir für jede Behandlung die Ruhe, die du und deine Haut brauchen.</p>
       </div>
     </div>
   </div>
@@ -478,12 +504,12 @@
   <!-- ── CTA ── -->
   <section class="ks-cta">
     <h2 class="rv d1">Bereit, deine Haut <em>zu verändern?</em></h2>
-    <p class="rv d2">Buche deinen Termin im Studio oder starte direkt mit meiner Mini-Glow-Challenge. Ich freue mich auf dich.</p>
+    <p class="rv d2">Buche deinen Termin im Studio oder starte mit einem meiner Online-Kurse. Ich freue mich auf dich.</p>
     <div class="ks-cta-btns rv d3">
       <a href="https://kristin-schnoedt-kosmetik.belbo.com/login" class="ks-cta-btn" target="_blank" rel="noopener">Termin buchen</a>
-      <a href="face-yoga.html" class="ks-cta-btn outline">Face Yoga entdecken</a>
+      <a href="online-kurse.html" class="ks-cta-btn outline">Online-Kurse entdecken</a>
     </div>
-    <p style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-top:2rem;line-height:1.75;">Noch nicht sicher? <a href="face-yoga.html" style="color:rgba(255,255,255,0.65);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.3);">Starte mit dem kostenlosen Kurs</a> — keine Vorkenntnisse nötig.</p>
+    <p style="font-size:0.75rem;color:rgba(255,255,255,0.45);margin-top:2rem;line-height:1.75;">Noch nicht sicher? <a href="https://kristin-schnoedt.de/gratis-video" style="color:rgba(255,255,255,0.65);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.3);">Starte mit dem kostenlosen Face-Yoga-Video</a>, ganz ohne Vorkenntnisse.</p>
   </section>
 
   <!-- ── WHATSAPP KONTAKT ── -->
@@ -538,7 +564,7 @@
         navUl.style.top = '100%';
         navUl.style.left = '0';
         navUl.style.right = '0';
-        navUl.style.background = 'rgba(248,243,245,0.97)';
+        navUl.style.background = 'rgba(237,234,224,0.97)';
         navUl.style.padding = '1rem 1.75rem 1.5rem';
         navUl.style.gap = '1.25rem';
       }
