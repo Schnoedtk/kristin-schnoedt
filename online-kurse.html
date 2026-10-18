@@ -195,9 +195,11 @@
       .sec-head { flex-direction: column; align-items: start; gap: 0.8rem; }
       .card-body, .card-feature .card-body { padding: 1.6rem 1.4rem 1.8rem; }
       .card-feature h3, .card-body h3 { font-size: 2rem; }
-      .free-card { grid-template-columns: 1fr; }
-      .free-card img { aspect-ratio: 16 / 9; }
-      .stats { gap: 1.8rem; }
+      .free-card { display: flex; flex-direction: column; }
+      .free-card img { height: 210px; flex: none; object-position: center 30%; }
+      .stats { flex-wrap: nowrap; justify-content: space-between; gap: 0.75rem; }
+      .stat b { font-size: 1.75rem; }
+      .stat span { font-size: 0.6rem; letter-spacing: 0.05em; display: block; margin-top: 0.3rem; }
       .card-foot .btn, .program-ctas .btn { width: 100%; justify-content: center; }
       .program { padding: 2.4rem 1.4rem; border-radius: 22px; }
     }
