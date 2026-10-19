@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online-Kurse für zu Hause | Kristin Schnödt</title>
-  <meta name="description" content="Alle Online-Kurse von Kristin Schnödt auf einen Blick: Glow-Code 14-Tage-Programm, Cupping Kurs, Mini-Glow-Challenge und zwei Gratis-Videos. Sofort starten, in deinem Tempo.">
+  <meta name="description" content="Alle Online-Kurse von Kristin Schnödt auf einen Blick: Glow-Code 14-Tage-Programm, Cupping, Gua Sha und Beauty-Taping im Paket, Cupping Kurs, Mini-Glow-Challenge und zwei Gratis-Videos. Sofort starten, in deinem Tempo.">
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/LogoNeu_2026_final_OH.png">
   <style>
@@ -110,6 +110,8 @@
 
     /* ---- GRATIS ---- */
     .free-sec { background: var(--sage-light); }
+    .card-img.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+    .card-img.trio img { height: 100%; }
     .free-card { display: grid; grid-template-columns: 180px 1fr; background: var(--card); border-radius: 22px; overflow: hidden; text-decoration: none; transition: transform 0.4s var(--ease), box-shadow 0.4s; }
     .free-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(46,32,40,0.1); }
     .free-card img { width: 100%; height: 100%; object-fit: cover; }
@@ -236,7 +238,7 @@
         </a>
         <a class="path" href="#technik">
           <div class="path-q">Ich will eine Technik lernen.</div>
-          <div class="path-a">Cupping &amp; Mini-Glow →</div>
+          <div class="path-a">Cupping, Gua Sha &amp; Taping →</div>
         </a>
         <a class="path" href="#kurse">
           <div class="path-q">Ich will richtig einsteigen.</div>
@@ -279,7 +281,31 @@
         </div>
       </article>
 
-      <div class="grid-2" id="technik">
+      <!-- KURS: Paket Cupping, Gua Sha, Beauty-Taping -->
+      <article class="card card-feature" id="technik">
+        <div class="card-img trio">
+          <img src="Angebot-Challenge/images/technik-cupping.webp" alt="Kristin Schnödt beim Gesichtscupping an der Stirn" style="object-position:50% 20%;">
+          <img src="Angebot-Challenge/images/technik-gua-sha.webp" alt="Kristin Schnödt bei einer Gua-Sha-Anwendung" style="object-position:57% 50%;">
+          <img src="Angebot-Challenge/images/technik-beauty-taping.webp" alt="Kristin Schnödt mit Beauty-Tape auf der Stirn" style="object-position:57% 50%;">
+          <span class="tag tag-free feature-ribbon">Neu</span>
+        </div>
+        <div class="card-body">
+          <span class="tag">Kurs-Paket</span>
+          <h3>Cupping, Gua Sha &amp; Beauty-Taping</h3>
+          <p>Drei Techniken für zu Hause in einem Paket: Du lernst, Spannung im Gesicht zu lösen, deine Haut zu straffen und Falten zu mildern. Mit dem Mini-Glow-Kurs als Bonus.</p>
+          <div class="facts">
+            <span>3 Kurse im Paket</span>
+            <span>Sofort startklar</span>
+            <span>Bonus: Mini-Glow</span>
+          </div>
+          <div class="card-foot">
+            <div class="price">99 €<small>statt 147 € einzeln</small></div>
+            <a href="cupping-gua-sha-taping.html" class="btn btn-primary">Mehr erfahren <span class="arr">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <div class="grid-2">
 
         <!-- KURS: Cupping -->
         <article class="card">
@@ -429,7 +455,7 @@
       </details>
       <details>
         <summary>Mit welchem Kurs soll ich anfangen?</summary>
-        <p>Wenn du unsicher bist, starte mit einem der Gratis-Videos. Der Glow-Code ist der beste Einstieg, wenn du in 14 Tagen eine Routine aufbauen willst. Wenn dich eine bestimmte Technik reizt, nimm den Cupping Kurs oder die Mini-Glow-Challenge.</p>
+        <p>Wenn du unsicher bist, starte mit einem der Gratis-Videos. Der Glow-Code ist der beste Einstieg, wenn du in 14 Tagen eine Routine aufbauen willst. Wenn dich eine bestimmte Technik reizt, nimm den Cupping Kurs, das Paket aus Cupping, Gua Sha und Beauty-Taping oder die Mini-Glow-Challenge.</p>
       </details>
       <details>
         <summary>Gibt es auch eine persönliche Begleitung?</summary>
