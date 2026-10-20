@@ -110,8 +110,7 @@
 
     /* ---- GRATIS ---- */
     .free-sec { background: var(--sage-light); }
-    .card-img.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
-    .card-img.trio img { height: 100%; }
+    .card-feature .card-img.tall { aspect-ratio: auto; }
     .free-card { display: grid; grid-template-columns: 180px 1fr; background: var(--card); border-radius: 22px; overflow: hidden; text-decoration: none; transition: transform 0.4s var(--ease), box-shadow 0.4s; }
     .free-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(46,32,40,0.1); }
     .free-card img { width: 100%; height: 100%; object-fit: cover; }
@@ -283,10 +282,8 @@
 
       <!-- KURS: Paket Cupping, Gua Sha, Beauty-Taping -->
       <article class="card card-feature" id="technik">
-        <div class="card-img trio">
-          <img src="Angebot-Challenge/images/technik-cupping.webp" alt="Kristin Schnödt beim Gesichtscupping an der Stirn" style="object-position:50% 20%;">
-          <img src="Angebot-Challenge/images/technik-gua-sha.webp" alt="Kristin Schnödt bei einer Gua-Sha-Anwendung" style="object-position:57% 50%;">
-          <img src="Angebot-Challenge/images/technik-beauty-taping.webp" alt="Kristin Schnödt mit Beauty-Tape auf der Stirn" style="object-position:57% 50%;">
+        <div class="card-img tall">
+          <img src="images/Kristin_3erTools.jpg" alt="Kristin Schnödt zeigt die drei Techniken: Cupping, Gua Sha und Face Taping">
           <span class="tag tag-free feature-ribbon">Neu</span>
         </div>
         <div class="card-body">
