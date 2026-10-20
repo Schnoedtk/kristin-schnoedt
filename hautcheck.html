@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Welches PURVIDUAL-Produkt passt zu dir? | Dein Haut-Check</title>
+<meta name="description" content="Dein Haut-Check in 3 Minuten: Beantworte 8 kurze Fragen und erfahre, welche PURVIDUAL-Pflege deine Haut gerade braucht.">
+<meta property="og:title" content="Welches PURVIDUAL-Produkt passt zu dir?">
+<meta property="og:description" content="Dein Haut-Check in 3 Minuten mit Kristin Schnödt.">
+<meta property="og:image" content="https://www.purvidual.de/cdn/shop/files/Set_Durst.png?v=1790703795&width=1200">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%239CAA8C'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --beige:#EDEAE0; --salbei:#9CAA8C; --sand:#D8C9AE; --bordeaux:#7A4A58; --dunkel:#3D2A2E;
+    --hell:#F6F4EE; --weiss:#FFFFFF;
+    --serif:"Cormorant Garamond", Garamond, "Times New Roman", serif;
+    --sans:"Montserrat", "Helvetica Neue", Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:var(--beige); color:var(--dunkel); font-family:var(--sans);
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+    padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0);
+  }
+  .wrap{max-width:560px;margin:0 auto;padding:28px 22px 48px;min-height:100%;display:flex;flex-direction:column}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;min-height:28px}
+  .brand{font-family:var(--serif);font-size:1.15rem;font-weight:600;letter-spacing:.02em}
+  .back{background:none;border:none;font:inherit;font-size:.85rem;color:var(--dunkel);cursor:pointer;padding:6px 0;visibility:hidden}
+  .back.show{visibility:visible}
+  .back:focus-visible,.btn:focus-visible,.answer:focus-visible,.link:focus-visible{outline:2px solid var(--bordeaux);outline-offset:3px;border-radius:6px}
+
+  .progress{height:3px;background:var(--sand);border-radius:2px;overflow:hidden;margin-bottom:10px}
+  .progress span{display:block;height:100%;background:var(--salbei);width:0;transition:width .35s ease}
+  .count{font-size:.8rem;color:var(--dunkel);opacity:.7;margin-bottom:22px}
+
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.3rem,8vw,3.1rem);line-height:1.05;margin-bottom:18px}
+  h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.7rem,6vw,2.1rem);line-height:1.15;margin-bottom:26px}
+  .lead{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.35;color:var(--bordeaux);margin-bottom:22px}
+  p{margin-bottom:14px}
+  .small{font-size:.8rem;line-height:1.55;opacity:.8}
+
+  .signature{display:flex;gap:14px;align-items:center;margin:26px 0 30px;padding:16px 0;border-top:1px solid var(--sand);border-bottom:1px solid var(--sand)}
+  .signature .dot{flex:0 0 44px;height:44px;border-radius:50%;background:var(--salbei);display:grid;place-items:center;color:var(--weiss);font-family:var(--serif);font-size:1.3rem;font-weight:600}
+  .signature p{margin:0;font-size:.88rem;line-height:1.5}
+
+  .btn{display:inline-block;width:100%;text-align:center;background:var(--bordeaux);color:var(--weiss);border:none;border-radius:40px;
+       font:600 1rem var(--sans);padding:17px 24px;cursor:pointer;text-decoration:none;transition:background .2s}
+  .btn:hover{background:#633b47}
+  .btn.ghost{background:transparent;color:var(--dunkel);border:1px solid var(--dunkel)}
+  .btn.ghost:hover{background:var(--hell)}
+
+  .answers{display:flex;flex-direction:column;gap:12px}
+  .answer{display:flex;gap:14px;align-items:flex-start;text-align:left;width:100%;background:var(--hell);border:1px solid var(--sand);
+          border-radius:14px;padding:17px 18px;font:inherit;font-size:.97rem;line-height:1.45;color:var(--dunkel);cursor:pointer;
+          transition:border-color .15s, background .15s}
+  .answer:hover{border-color:var(--salbei)}
+  .answer .ring{flex:0 0 22px;height:22px;border-radius:50%;border:1.5px solid var(--salbei);margin-top:1px;position:relative}
+  .answer.picked{border-color:var(--salbei);background:#F0F2EA}
+  .answer.picked .ring::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--salbei)}
+
+  /* Ergebnis */
+  .result-img{width:100%;aspect-ratio:1155/1362;max-height:420px;object-fit:contain;background:var(--hell);border-radius:18px;margin-bottom:26px}
+  .kicker{font-size:.85rem;color:var(--salbei);font-weight:600;margin-bottom:6px}
+  .contents{list-style:none;margin:6px 0 22px}
+  .contents li{padding:13px 0;border-bottom:1px solid var(--sand);display:flex;flex-direction:column}
+  .contents li:first-child{border-top:1px solid var(--sand)}
+  .contents strong{font-weight:600;font-size:.95rem}
+  .contents span{font-size:.88rem;opacity:.85}
+  .gift{background:var(--weiss);border-left:3px solid var(--bordeaux);border-radius:4px 12px 12px 4px;padding:14px 16px;margin:0 0 22px;font-size:.92rem}
+  .gift strong{color:var(--bordeaux)}
+  .tip{font-size:.92rem;margin:22px 0 6px}
+  .tip b{font-weight:600}
+  .actions{display:flex;flex-direction:column;gap:12px;margin:26px 0 20px}
+  .link{background:none;border:none;font:inherit;font-size:.88rem;color:var(--dunkel);text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:4px 0;align-self:center}
+  .disclaimer{margin-top:28px;padding-top:18px;border-top:1px solid var(--sand)}
+  footer{margin-top:auto;padding-top:30px;font-size:.75rem;opacity:.65;text-align:center}
+  footer a{color:inherit}
+
+  .screen{animation:in .35s ease}
+  @keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.screen{animation:none}.progress span{transition:none}}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <button class="back" id="back" type="button" aria-label="Zurück zur vorherigen Frage">‹ Zurück</button>
+    <div class="brand">PURVIDUAL</div>
+  </header>
+
+  <main id="app" aria-live="polite"></main>
+
+  <footer>
+    Kristin Schnödt · Göttinnen-Haut · <a href="https://www.purvidual.de">purvidual.de</a> ·
+    <a href="https://www.purvidual.de/policies/legal-notice">Impressum</a> ·
+    <a href="https://www.purvidual.de/policies/privacy-policy">Datenschutz</a>
+  </footer>
+</div>
+
+<script>
+/* ============ INHALTE – hier kannst du Texte, Links und die Aktion ändern ============ */
+const AKTION_BIS = "2026-10-30";   // Bis zu diesem Tag (einschließlich) erscheinen der Geschenk-Hinweis und der Gua Sha in der Set-Liste
+const AKTION_TEXT = "<strong>Challenge-Geschenk bis 30.10.:</strong> Der Rosenquarz Gua Sha im Wert von 39 € ist in deinem Set gratis dabei.";
+
+const FRAGEN = [
+  ["Wie fühlt sich deine Haut direkt nach der Reinigung an?",
+   ["Etwas trocken, aber mit Creme schnell wieder angenehm","Sie spannt deutlich, manchmal kribbelt oder brennt es leicht","Angenehm, ich spüre nichts Besonderes","Sie fühlt sich sauber an, glänzt aber nach kurzer Zeit wieder"]],
+  ["Wie wirkt deine Haut gegen Mittag?",
+   ["Matt, etwas fahl, irgendwie „durstig“","Gerötet an einzelnen Stellen, oder sie spannt wieder","Frisch und ausgeglichen","Sie glänzt, vor allem an Stirn, Nase und Kinn"]],
+  ["Welche Linien und Stellen fallen dir auf?",
+   ["Feine Trockenheitsfältchen, die mit Pflege weicher werden","Raue oder schuppige Stellen, die trotz Creme bleiben","Kaum etwas, was mich stört","Vergrößerte Poren und kleine Unreinheiten"]],
+  ["Wie reagiert deine Haut auf neue Produkte?",
+   ["Meistens gut, manchmal fühlt sie sich danach trockener an","Oft mit Rötung, Kribbeln oder kleinen Pickelchen","Unkompliziert, ich vertrage fast alles"]],
+  ["Heizungsluft, Wind oder Kälte: Was passiert mit deiner Haut?",
+   ["Sie fühlt sich trockener und müder an","Sie wird rot, rau und spannt","Ich merke kaum einen Unterschied"]],
+  ["Wie erlebst du deine jetzige Pflege?",
+   ["Sie reicht meistens, abends ist die Haut aber wieder trocken","Ich creme mehrmals am Tag nach, und es reicht trotzdem nicht","Ich bin zufrieden damit","Die meisten Cremes sind mir zu schwer"]],
+  ["Wie beständig ist dein Hautbild?",
+   ["Eher gleichmäßig, aber müde und ohne Glow","Wechselhaft: mal ölig, mal trocken, Unreinheiten und trockene Stellen gleichzeitig","Stabil, von Tag zu Tag ähnlich"]],
+  ["Wie zeigen sich Stress, wenig Schlaf oder unruhige Phasen auf deiner Haut?",
+   ["Sie sieht blass, fahl und erschöpft aus","Sie reagiert mit Rötungen, Spannen oder Unreinheiten","Man sieht es mir kaum an"]]
+];
+
+const SETS = {
+  durst: {
+    name: "Set „Durst“",
+    link: "https://www.purvidual.de/products/set-durst",
+    bild: "https://www.purvidual.de/cdn/shop/files/Set_Durst.png?v=1790703795&width=900",
+    inhalt: [
+      ["Barrier SOS Essence","Feuchtigkeit und Bausteine für die Schutzschicht deiner Haut"],
+      ["Barrier Hydra Cream","Leichte Feuchtigkeitspflege für Tag und Nacht"],
+      ["Rosenquarz Gua Sha","Für deine tägliche Ausstreich-Massage", "nurAktion"]
+    ]
+  },
+  schutz: {
+    name: "Set „Schutz“",
+    link: "https://www.purvidual.de/products/set-schutz",
+    bild: "https://www.purvidual.de/cdn/shop/files/Set_Schutz.png?v=1790704105&width=900",
+    inhalt: [
+      ["Barrier SOS Essence","Feuchtigkeit und Bausteine für die Schutzschicht deiner Haut"],
+      ["Barrier Repair Cream","Reichhaltige Pflege mit Ceramiden, die deine Schutzschicht unterstützt"],
+      ["Rosenquarz Gua Sha","Für deine tägliche Ausstreich-Massage", "nurAktion"]
+    ]
+  }
+};
+
+const ERGEBNISSE = {
+  A: { set:"durst", titel:"Deine Haut ist durstig",
+       text:"Deiner Haut fehlt vor allem Feuchtigkeit. Ihre Schutzschicht ist noch recht stabil, hält Wasser aber nicht mehr so gut wie früher. Deshalb wirkt sie fahl und zeigt feine Trockenheitsfältchen. Sie braucht jetzt leichte, tiefe Feuchtigkeit und eine sanfte Hand." },
+  B: { set:"schutz", titel:"Deine Haut braucht Schutz und Ausgleich",
+       text:"Die Schutzschicht deiner Haut ist gerade dünnhäutig geworden. Deshalb spannt sie, reagiert schneller, und deine Pflege „reicht nicht“. Sie braucht jetzt reichhaltige Hautfette, die sie wieder geschmeidig machen, und so wenig Reize wie möglich." },
+  C: { set:"durst", titel:"Deine Haut ist im Gleichgewicht",
+       text:"Schön, deine Haut ist gerade stabil. Damit das auch in Herbst und Winter und in unruhigen Phasen so bleibt, reicht eine leichte Pflege, die Feuchtigkeit hält und die Schutzschicht versorgt. Beobachte deine Haut, sobald die Heizperiode beginnt." },
+  D: { set:"durst", titel:"Deine Haut glänzt und ist trotzdem durstig",
+       text:"Deine Haut bildet viel Fett, und trotzdem fehlt ihr oft Feuchtigkeit. Ab 40 ist das gar nicht selten: Wenn der Haut Wasser fehlt, produziert sie mehr Talg, um sich zu schützen. Schwere Cremes machen das eher schlimmer. Sie braucht jetzt leichte Feuchtigkeit, die schnell einzieht, und eine Reinigung, die sie nicht austrocknet." }
+};
+/* ============ ENDE INHALTE ============ */
+
+const app = document.getElementById("app");
+const back = document.getElementById("back");
+let antworten = [];
+let schritt = -1;
+
+function aktionAktiv(){
+  const heute = new Date(); heute.setHours(0,0,0,0);
+  const ende = new Date(AKTION_BIS + "T00:00:00");
+  return heute <= ende;
+}
+
+function start(){
+  schritt = -1; antworten = [];
+  back.classList.remove("show");
+  app.innerHTML = `
+    <section class="screen">
+      <h1>Welches PURVIDUAL-Produkt passt zu dir?</h1>
+      <p class="lead">Dein Haut-Check in 3 Minuten.</p>
+      <p>Ab 40 verändert sich die Schutzschicht deiner Haut. Hormone, Stress, Heizungsluft oder eine zu kräftige Reinigung setzen ihr zu. Plötzlich spannt die Haut, wirkt fahl oder reagiert schneller als früher.</p>
+      <p>Wenn du weißt, was deine Haut gerade braucht, kannst du sie gezielt pflegen. Beantworte 8 kurze Fragen. Es gibt kein Richtig oder Falsch, nur deine Haut, so wie sie heute ist.</p>
+      <div class="signature">
+        <div class="dot" aria-hidden="true">K</div>
+        <p>Kristin Schnödt, Kosmetikerin seit über 20 Jahren und Gründerin von PURVIDUAL</p>
+      </div>
+      <button class="btn" id="los" type="button">Haut-Check starten</button>
+    </section>`;
+  document.getElementById("los").onclick = () => frage(0);
+}
+
+function frage(i){
+  schritt = i;
+  back.classList.add("show");
+  const [text, opts] = FRAGEN[i];
+  const buchst = ["A","B","C","D"];
+  app.innerHTML = `
+    <section class="screen">
+      <div class="progress" aria-hidden="true"><span style="width:${(i/FRAGEN.length)*100}%"></span></div>
+      <p class="count">Frage ${i+1} von ${FRAGEN.length}</p>
+      <h2 id="q">${text}</h2>
+      <div class="answers" role="group" aria-labelledby="q">
+        ${opts.map((o,j)=>`
+          <button class="answer${antworten[i]===buchst[j]?" picked":""}" type="button" data-v="${buchst[j]}">
+            <span class="ring" aria-hidden="true"></span><span>${o}</span>
+          </button>`).join("")}
+      </div>
+    </section>`;
+  requestAnimationFrame(()=>{ const bar = app.querySelector(".progress span"); if(bar) bar.style.width = ((i+0.001)/FRAGEN.length*100)+"%"; });
+  app.querySelectorAll(".answer").forEach(b=>{
+    b.onclick = () => {
+      antworten[i] = b.dataset.v;
+      app.querySelectorAll(".answer").forEach(x=>x.classList.remove("picked"));
+      b.classList.add("picked");
+      app.querySelector(".progress span").style.width = ((i+1)/FRAGEN.length*100)+"%";
+      setTimeout(()=> i+1 < FRAGEN.length ? frage(i+1) : ergebnis(), 280);
+    };
+  });
+  app.querySelector("h2").setAttribute("tabindex","-1");
+  app.querySelector("h2").focus({preventScroll:true});
+  window.scrollTo({top:0});
+}
+
+function auswerten(){
+  const n = {A:0,B:0,C:0,D:0};
+  antworten.forEach(a=> n[a]++);
+  // Glänzende Haut: D gibt es nur bei 4 Fragen, ab 3 D-Antworten gilt Ergebnis D (außer B ist häufiger)
+  if(n.D >= 3 && n.D >= n.B) return "D";
+  // Sonst bei Gleichstand: B vor A vor C
+  const max = Math.max(n.A,n.B,n.C);
+  if(n.B === max) return "B";
+  if(n.A === max) return "A";
+  return "C";
+}
+
+function ergebnis(){
+  schritt = FRAGEN.length;
+  back.classList.add("show");
+  const key = auswerten();
+  const e = ERGEBNISSE[key];
+  const s = SETS[e.set];
+  const anderes = SETS[e.set === "durst" ? "schutz" : "durst"];
+  app.innerHTML = `
+    <section class="screen">
+      <p class="kicker">Dein Ergebnis</p>
+      <h2 tabindex="-1">${e.titel}</h2>
+      <img class="result-img" src="${s.bild}" alt="${s.name} von PURVIDUAL" loading="eager">
+      <p>${e.text}</p>
+      <p class="tip"><b>Meine Empfehlung für dich:</b> das ${s.name}</p>
+      <ul class="contents">
+        ${s.inhalt.filter(([t,d,nur])=> !nur || aktionAktiv()).map(([t,d])=>`<li><strong>${t}</strong><span>${d}</span></li>`).join("")}
+      </ul>
+      ${aktionAktiv() ? `<div class="gift">${AKTION_TEXT}</div>` : ""}
+      <div class="actions">
+        <a class="btn" href="${s.link}">Zum ${s.name}</a>
+        <a class="btn ghost" href="${anderes.link}">Lieber das ${anderes.name} ansehen</a>
+        <button class="link" id="neu" type="button">Haut-Check neu starten</button>
+      </div>
+      <p class="small">Du hast Fragen zu deinem Ergebnis? Schreib mir gern an <a href="mailto:kontakt@purvidual.de" style="color:inherit">kontakt@purvidual.de</a>.</p>
+      <p class="small disclaimer">Ich bin Kosmetikerin, keine Ärztin. Was ich teile, ist kosmetische Pflege und persönliche Erfahrung. Es ist keine medizinische Diagnose oder Therapie und ersetzt keinen Arztbesuch. Wenn deine Haut stark gerötet ist, juckt, nässt oder die Beschwerden länger anhalten, lass das bitte ärztlich abklären.</p>
+    </section>`;
+  document.getElementById("neu").onclick = start;
+  app.querySelector("h2").focus({preventScroll:true});
+  window.scrollTo({top:0});
+}
+
+back.onclick = () => {
+  if(schritt <= 0) return start();
+  if(schritt >= FRAGEN.length) return frage(FRAGEN.length-1);
+  frage(schritt-1);
+};
+
+start();
+</script>
+</body>
+</html>
