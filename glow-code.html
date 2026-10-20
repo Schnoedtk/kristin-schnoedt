@@ -101,6 +101,7 @@
   /* PHOTOS */
   .photo { display: block; width: 100%; border-radius: 18px; object-fit: cover; }
   .photo-hero { max-height: 620px; object-position: top; }
+  .photo-fill { height: 100%; }
 
   /* TRUST BAR */
   .trustbar { background: #FBF8F2; border-top: 1px solid #E3E7DC; border-bottom: 1px solid #E3E7DC; padding: 40px 0; }
@@ -230,7 +231,7 @@
 
   /* ABOUT */
   .about { background: #E3E7DC; }
-  .about-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center; }
+  .about-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: stretch; }
   .about p { margin-bottom: 16px; font-size: 1.02rem; }
   .about b { color: #3D2A2E; }
 
@@ -342,20 +343,6 @@
   </div>
 </section>
 
-<!-- STORY -->
-<section class="story">
-  <div class="wrap story-grid">
-    <img class="photo" src="Angebot-Challenge/images/nachher_3.jpeg?v=2" alt="Kristin Schnödt, Porträt">
-    <div>
-      <span class="eyebrow" style="background:rgba(216,201,174,0.14); color:#D8C9AE; border-color:rgba(216,201,174,0.3);">Meine Geschichte</span>
-      <h2>In 20 Jahren habe ich unzählige Gesichter gesehen</h2>
-      <p>Seit 20 Jahren liegen Frauen auf meiner Kosmetikliege. Jedes Gesicht ist anders, und jede Geschichte dazu auch. Und für eine Stunde konnte ich jeder Einzelnen etwas geben, das im Alltag oft fehlt: Ruhe, Berührung, Zeit nur für sich.</p>
-      <p>Mit der Zeit kam von immer mehr Kundinnen dieselbe Frage: Was kann ich denn zu Hause tun, für ein strafferes Gesicht? Also habe ich angefangen zu suchen und zu recherchieren. Und bin auf Face Yoga gestoßen, mit einer Begeisterung, die bis heute anhält und die ich mit Freude weitergebe.</p>
-      <div class="quote">„Ich wollte, dass meine Kundinnen die Wirkung mit nach Hause nehmen können und selbst das Handwerkszeug und Wissen in der Hand haben.“</div>
-    </div>
-  </div>
-</section>
-
 <!-- ABLAUF -->
 <section class="ablauf">
   <div class="wrap">
@@ -463,14 +450,16 @@
 
 <!-- ABOUT -->
 <section class="about">
-  <div class="wrap about-grid">
-    <img class="photo" src="Angebot-Challenge/images/face-yoga-4700.jpg" alt="Kristin Schnödt, Porträt">
+  <div class="wrap">
+    <span class="eyebrow">Deine Begleiterin</span>
+    <div class="about-grid">
+    <img class="photo photo-fill" src="images/Kristin_Leinenblazer_Hintergrundsalbei.jpg" alt="Kristin Schnödt, Porträt im Leinenblazer" style="object-position:50% 25%;">
     <div>
-      <span class="eyebrow">Deine Begleiterin</span>
       <h2>Ich bin Kristin, 47 Jahre</h2>
       <p>Seit 20 Jahren arbeite ich als Kosmetikerin mit Frauen und ihrer Haut. Ich habe eine eigene Pflegelinie entwickelt (PURVIDUAL, clean und reizarm), weil mir das Bestehende für empfindliche Haut zu aggressiv war. Cupping ist ein Baustein meiner Methode, auf den ich nicht mehr verzichten möchte.</p>
       <p>Mit 44 hat sich meine eigene Haut verändert, und ich habe am eigenen Gesicht erlebt, wie es sich anfühlt, wenn einem niemand erklärt, was los ist. Heute spreche ich offen über das Thema, das viel zu oft verschwiegen wird: was Wechseljahre und Stress mit deinem Gesicht machen. Ich weiß inzwischen, was meiner Haut in dieser Phase guttut. Face Yoga, die passende Pflege und Cupping gehören fest zu meiner Routine.</p>
       <p><b>Im Programm bekommst du genau diese Verbindung.</b> Kompakt, verständlich und so, dass es in dein Leben passt.</p>
+    </div>
     </div>
   </div>
 </section>
