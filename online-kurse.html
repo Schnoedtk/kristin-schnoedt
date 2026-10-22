@@ -2,483 +2,738 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Online-Kurse für zu Hause | Kristin Schnödt</title>
-  <meta name="description" content="Alle Online-Kurse von Kristin Schnödt auf einen Blick: Glow-Code 14-Tage-Programm, Cupping, Gua Sha und Beauty-Taping im Paket, Cupping Kurs, Mini-Glow-Challenge und zwei Gratis-Videos. Sofort starten, in deinem Tempo.">
+  <meta name="description" content="Online-Kurse von Kristin Schnödt für Frauen ab 40: Glow Code, Cupping-Kurs, Schönheit in deinen Händen, das Vier-Wochen-Programm mit Live-Call und die persönliche Acht-Wochen-Begleitung. Dazu zwei kostenlose Videos.">
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="icon" type="image/png" href="Logo%20und%20Farbcodes/LogoNeu_2026_final_OH.png">
-  <style>
-    /* ============================================================
-       ONLINE-KURSE · Übersicht
-       Farben wie Glow-Code / Brand-Manifest (Salbei-Beige)
-    ============================================================ */
+<style>
+    /* Layout: weicher Einstieg mit auslaufendem Porträt, dann Wiedererkennen, Kurse mit Bildern,
+       fließende Kundinnenstimmen, die Begleitung als einziges dunkles Band, persönliche Geschichte.
+       Bewusst nur helles Farbschema gemäß Brand-Manifest V3, alle Farben explizit gesetzt. */
     :root {
-      /* Salbei & Bordeaux, wie Glow-Code, Cupping und Shop */
       --beige: #EDEAE0;
+      --beige-warm: #EDE6D8;
+      --paper: #FBF8F2;
       --sage-light: #E3E7DC;
+      --sage: #9CAA8C;
+      --sage-photo: #94A486;
+      --sage-line: #B9C2A8;
       --sand: #D8C9AE;
-      --sage-border: #B9C2A8;
-      --salbei: #9CAA8C;
-      --label: #5F6F52;
       --bordeaux: #7A4A58;
-      --dunkel: #3D2A2E;
-      --text: #5A5648;
-      --card: #FBF8F2;
-      --display: 'Cormorant Garamond', Georgia, serif;
-      --body: 'Montserrat', system-ui, sans-serif;
+      --bordeaux-deep: #5F3844;
+      --warmgrey: #6E6A5C;
+      --label: #5F6F52;
+      --text: #4F4B3F;
+      --dark: #3D2A2E;
+      --cream-on-dark: #E8DFC9;
+      --display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --body: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
       --ease: cubic-bezier(0.25, 1, 0.5, 1);
+      --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+      --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+      color-scheme: light;
     }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: var(--body); color: var(--text); background: var(--beige); overflow-x: hidden; -webkit-font-smoothing: antialiased; line-height: 1.65; }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; }
-
-    /* ---- NAV ---- */
-    .nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.1rem 4rem; background: rgba(237,234,224,0.95); backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(46,32,40,0.07); }
-    .nav-logo img { height: 46px; width: auto; }
-    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
-    .nav-links a { text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dunkel); font-weight: 500; }
-    .nav-links a:hover, .nav-links a.active { color: var(--bordeaux); }
-    .nav-links a.active { border-bottom: 1px solid var(--salbei); padding-bottom: 3px; }
-    .nav-btn { text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--card); background: var(--bordeaux); padding: 0.8rem 1.5rem; border-radius: 100px; white-space: nowrap; }
-    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 6px; }
-    .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--dunkel); margin: 5px 0; }
-
-    /* ---- BASICS ---- */
-    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 2rem; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 0.8rem; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--label); }
-    .eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--salbei); }
-    h1, h2, h3 { font-family: var(--display); color: var(--dunkel); font-weight: 500; line-height: 1.08; }
+  
+    * { box-sizing: border-box; }
+    html { background: var(--beige); scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--beige); color: var(--text);
+      font-family: var(--body); font-size: 1rem; line-height: 1.7;
+      -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    h1, h2, h3 { font-family: var(--display); color: var(--dark); font-weight: 500; line-height: 1.08; margin: 0; text-wrap: balance; }
     h1 em, h2 em, h3 em { font-style: italic; color: var(--bordeaux); }
-    .btn { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 1rem 1.9rem; border-radius: 100px; transition: transform 0.3s var(--ease), background 0.3s, box-shadow 0.3s; }
-    .btn-primary { background: var(--bordeaux); color: var(--card); }
-    .btn-primary:hover { background: var(--dunkel); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(122,74,88,0.28); }
-    .btn-ghost { border: 1px solid var(--sage-border); color: var(--bordeaux); }
-    .btn-ghost:hover { background: var(--sage-light); }
-    .btn .arr { transition: transform 0.3s var(--ease); }
-    .btn:hover .arr { transform: translateX(4px); }
-
-    /* ---- HERO ---- */
-    .hero { padding: 6rem 0 4rem; text-align: center; position: relative; }
-    .hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(165deg, #EDEAE0 0%, #EDE6D8 50%, #E3E7DC 100%); z-index: -1; }
-    .hero h1 { font-size: clamp(2.6rem, 5.5vw, 4.4rem); margin: 1.2rem auto 1.4rem; max-width: 820px; }
-    .hero p { max-width: 600px; margin: 0 auto; font-size: 1.05rem; }
-
-    /* Wegweiser */
-    .paths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 900px; margin: 3rem auto 0; }
-    .path { display: block; text-decoration: none; background: var(--card); border: 1px solid var(--sage-light); border-radius: 18px; padding: 1.3rem 1.4rem; text-align: left; transition: border-color 0.3s, transform 0.3s var(--ease), box-shadow 0.3s; }
-    .path:hover { border-color: var(--sage-border); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(46,32,40,0.07); }
-    .path-q { font-family: var(--display); font-size: 1.3rem; font-style: italic; color: var(--dunkel); line-height: 1.2; }
-    .path-a { margin-top: 0.6rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bordeaux); }
-
-    /* ---- SECTIONS ---- */
-    section { padding: 4.5rem 0; }
-    .sec-head { display: flex; align-items: end; justify-content: space-between; gap: 2rem; margin-bottom: 2.4rem; }
-    .sec-head h2 { font-size: clamp(2rem, 3.6vw, 2.9rem); margin-top: 0.8rem; }
-    .sec-head p { max-width: 380px; font-size: 0.95rem; }
-
-    /* ---- KURSKARTEN ---- */
-    .tag { display: inline-block; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--bordeaux); background: var(--sage-light); border-radius: 100px; padding: 0.35rem 0.9rem; }
-    .card-body .tag, .free-body .tag { align-self: flex-start; }
-    .tag-free { background: var(--bordeaux); color: var(--card); }
-    .facts { display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; font-size: 0.82rem; color: var(--dunkel); }
-    .facts span::before { content: '✦'; color: var(--salbei); font-size: 0.7rem; margin-right: 0.45rem; }
-    .price { font-family: var(--display); font-size: 2.4rem; font-weight: 600; color: var(--dunkel); line-height: 1; }
-    .price small { font-family: var(--body); font-size: 0.78rem; font-weight: 500; color: var(--text); margin-left: 0.4rem; letter-spacing: 0.02em; }
-    .price s { font-family: var(--body); font-size: 0.9rem; color: var(--sage-border); font-weight: 400; margin-left: 0.4rem; }
-
-    .card { background: var(--card); border-radius: 26px; overflow: hidden; border: 1px solid var(--sage-light); display: flex; flex-direction: column; transition: transform 0.4s var(--ease), box-shadow 0.4s; }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 22px 50px rgba(46,32,40,0.09); }
-    .card-img { aspect-ratio: 3 / 2; overflow: hidden; background: var(--sage-light); }
-    .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
-    .card:hover .card-img img { transform: scale(1.04); }
-    .card-body { padding: 2rem 2.2rem 2.3rem; display: flex; flex-direction: column; gap: 1.1rem; flex: 1; }
-    .card-body h3 { font-size: 2.1rem; }
-    .card-body p { font-size: 0.95rem; }
-    .card-foot { margin-top: auto; padding-top: 1.3rem; border-top: 1px solid var(--sage-light); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
-
-    /* Hauptkarte: Glow-Code */
-    .card-feature { display: grid; grid-template-columns: 1.15fr 1fr; margin-bottom: 1.6rem; }
-    .card-feature .card-img { aspect-ratio: auto; min-height: 100%; }
-    .card-feature .card-body { padding: 3rem 3rem 3rem; justify-content: center; }
-    .card-feature h3 { font-size: 2.8rem; }
-    .feature-ribbon { position: absolute; top: 1.4rem; left: 1.4rem; }
-    .card-feature .card-img { position: relative; }
-
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; }
-
-    /* ---- GRATIS ---- */
-    .free-sec { background: var(--sage-light); }
-    .card-feature .card-img.tall { aspect-ratio: auto; }
-    .free-card { display: grid; grid-template-columns: 180px 1fr; background: var(--card); border-radius: 22px; overflow: hidden; text-decoration: none; transition: transform 0.4s var(--ease), box-shadow 0.4s; }
-    .free-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(46,32,40,0.1); }
-    .free-card img { width: 100%; height: 100%; object-fit: cover; }
-    .free-body { padding: 1.7rem 1.8rem; display: flex; flex-direction: column; gap: 0.7rem; }
-    .free-body h3 { font-size: 1.65rem; }
-    .free-body p { font-size: 0.9rem; }
-    .free-link { margin-top: auto; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bordeaux); }
-
-    /* ---- ÜBER MICH ---- */
-    .about { display: grid; grid-template-columns: 340px 1fr; gap: 4rem; align-items: center; }
-    .about-img { border-radius: 200px 200px 26px 26px; overflow: hidden; aspect-ratio: 3 / 4; }
-    .about-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-    .about h2 { font-size: clamp(2rem, 3.4vw, 2.8rem); margin: 0.8rem 0 1.2rem; }
-    .about p { margin-bottom: 1rem; }
-    .about > * { min-width: 0; }
-    .stats { display: flex; flex-wrap: wrap; gap: 1.2rem 2.6rem; margin: 1.8rem 0 2rem; }
-    .stat b { display: block; font-family: var(--display); font-size: 2.4rem; font-weight: 600; color: var(--bordeaux); line-height: 1; }
-    .stat span { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
-    .quote { border-left: 2px solid var(--sage-border); padding-left: 1.3rem; font-family: var(--display); font-style: italic; font-size: 1.35rem; color: var(--dunkel); line-height: 1.4; }
-    .quote cite { display: block; margin-top: 0.6rem; font-family: var(--body); font-style: normal; font-size: 0.78rem; color: var(--text); }
-
-    /* ---- PERSÖNLICHE BEGLEITUNG (großes Programm) ---- */
-    .program { background: var(--dunkel); color: var(--beige); border-radius: 30px; padding: 4rem 4rem 3.6rem; display: grid; grid-template-columns: 1.2fr 1fr; gap: 3.5rem; align-items: center; }
-    .program .eyebrow { color: var(--sage-border); }
-    .program h2 { color: var(--beige); font-size: clamp(2rem, 3.6vw, 2.9rem); margin: 0.9rem 0 1.3rem; }
-    .program h2 em { color: var(--sand); }
-    .program p { color: #E8DFC9; margin-bottom: 1rem; }
-    .program .pull-light { font-family: var(--display); font-style: italic; font-size: 1.7rem; color: var(--sand); margin-top: 1.4rem; }
-    .pillar-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
-    .pillar-list li { display: flex; align-items: baseline; gap: 1rem; padding: 0.9rem 1.2rem; border: 1px solid rgba(216,201,174,0.28); border-radius: 14px; background: rgba(216,201,174,0.07); }
-    .pillar-list b { font-family: var(--display); font-style: italic; font-size: 1.4rem; color: var(--sand); font-weight: 600; min-width: 1.8rem; }
-    .pillar-list span { font-size: 0.9rem; color: #E8DFC9; }
-    .pillar-list span strong { color: var(--beige); font-weight: 600; }
-    .program-ctas { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; padding-top: 2rem; border-top: 1px solid rgba(216,201,174,0.22); }
-    .program .btn-primary { background: var(--beige); color: var(--dunkel); }
-    .program .btn-primary:hover { background: var(--card); box-shadow: none; }
-    .program .btn-ghost { border-color: rgba(216,201,174,0.5); color: var(--beige); }
-    .program .btn-ghost:hover { background: rgba(216,201,174,0.12); }
-    .program-note { font-size: 0.8rem; color: var(--sage-border); flex-basis: 100%; }
-
-    /* ---- FAQ ---- */
-    .faq { max-width: 780px; margin: 0 auto; }
-    .faq h2 { text-align: center; font-size: clamp(2rem, 3.4vw, 2.6rem); margin: 0.8rem 0 2rem; }
-    .faq details { border-bottom: 1px solid var(--sand); padding: 1.2rem 0; }
-    .faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 1rem; font-weight: 600; color: var(--dunkel); font-size: 0.98rem; }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after { content: '+'; font-family: var(--display); font-size: 1.6rem; line-height: 1; color: var(--salbei); transition: transform 0.3s; }
-    .faq details[open] summary::after { transform: rotate(45deg); }
-    .faq details p { margin-top: 0.8rem; font-size: 0.93rem; }
-
-    /* ---- DISCLAIMER + FOOTER ---- */
-    .disclaimer { max-width: 780px; margin: 0 auto; text-align: center; font-size: 0.8rem; color: var(--text); padding: 0 2rem 3.5rem; }
-    .footer { background: var(--dunkel); color: rgba(255,255,255,0.6); padding: 3rem 0; font-size: 0.85rem; }
-    .footer .wrap { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; }
-    .footer-brand { font-family: var(--display); font-size: 1.5rem; color: var(--beige); }
-    .footer ul { list-style: none; display: flex; gap: 1.4rem; flex-wrap: wrap; align-items: center; }
-    .footer a { text-decoration: none; color: rgba(255,255,255,0.6); }
-    .footer a:hover { color: var(--card); }
-
-    /* ---- ENTWURFS-HINWEIS (vor Livegang löschen) ---- */
-    .draft-note { background: var(--dunkel); color: var(--card); text-align: center; font-size: 0.75rem; letter-spacing: 0.08em; padding: 0.55rem 1rem; }
-
-    /* ---- RESPONSIVE ---- */
+    p { margin: 0; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--bordeaux); outline-offset: 3px; border-radius: 4px; }
+  
+    .band { padding-block: clamp(64px, 9vw, 112px); padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+    .inner { max-width: 1120px; margin: 0 auto; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--label);
+    }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--sage); }
+    .sec-head { display: grid; gap: 14px; margin-bottom: 44px; max-width: 720px; }
+    .sec-head h2 { font-size: clamp(2.1rem, 4.4vw, 3.2rem); }
+    .sec-head p { font-size: 1.02rem; max-width: 60ch; }
+    .sec-head:has(.one-line) { max-width: none; }
+    @media (min-width: 900px) { .one-line { white-space: nowrap; } }
+  
+    /* Entwurfshinweis */
+    .draft {
+      background: var(--dark); color: var(--sand); font-size: 0.74rem; letter-spacing: 0.05em; text-align: center;
+      padding-block: 8px; padding-left: var(--gutter-l); padding-right: var(--gutter-r);
+    }
+    .draft b { color: var(--paper); font-weight: 600; }
+  
+    /* Navigation: wie auf den übrigen Seiten der Website */
+    body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 110; background: var(--beige); }
+    .nav {
+      position: sticky; top: env(safe-area-inset-top, 0px); z-index: 100;
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+      padding: 1.1rem max(4rem, env(safe-area-inset-right, 0px)) 1.1rem max(4rem, env(safe-area-inset-left, 0px));
+      background: rgba(237, 234, 224, 0.95); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      box-shadow: 0 1px 0 rgba(46, 32, 40, 0.07);
+    }
+    .nav-logo img { height: 46px; width: auto; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark); font-weight: 500; }
+    .nav-links a:hover, .nav-links a.active { color: var(--bordeaux); }
+    .nav-links a.active { border-bottom: 1px solid var(--sage); padding-bottom: 3px; }
+    .nav-btn { text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--paper); background: var(--bordeaux); padding: 0.8rem 1.5rem; border-radius: 100px; white-space: nowrap; }
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 6px; }
+    .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--dark); margin: 5px 0; }
     @media (max-width: 1000px) {
-      .nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--beige); box-shadow: 0 10px 20px rgba(46,32,40,0.08); }
+      .nav { padding: 1rem max(1.5rem, env(safe-area-inset-right, 0px)) 1rem max(1.5rem, env(safe-area-inset-left, 0px)); }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--beige); box-shadow: 0 10px 20px rgba(46, 32, 40, 0.08); }
       .nav-links.open { display: flex; }
       .nav-links a { display: block; padding: 1rem 1.5rem; border-bottom: 1px solid var(--sage-light); }
       .nav-links a.active { border-bottom: 1px solid var(--sage-light); padding-bottom: 1rem; }
       .nav-toggle { display: block; }
       .nav-btn { display: none; }
-      .card-feature { grid-template-columns: 1fr; }
-      .card-feature .card-img { aspect-ratio: 3 / 2; }
-      .card-feature .card-body { padding: 2rem 2.2rem 2.3rem; }
-      .about { grid-template-columns: 1fr; gap: 2.5rem; }
-      .about-img { max-width: 320px; margin: 0 auto; }
-      .program { grid-template-columns: 1fr; gap: 2.4rem; padding: 3rem 2.4rem; }
+    }
+  
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      font-family: var(--body); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      text-decoration: none; text-align: center; padding: 15px 26px; border-radius: 100px;
+      background: var(--bordeaux); color: var(--paper); border: 1.5px solid var(--bordeaux);
+      transition: transform .3s var(--ease), background .3s, box-shadow .3s, color .3s;
+    }
+    .btn:hover { background: var(--dark); border-color: var(--dark); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(122, 74, 88, 0.25); }
+    .btn .arr { transition: transform .3s var(--ease); }
+    .btn:hover .arr { transform: translateX(4px); }
+    .btn.ghost { background: transparent; color: var(--bordeaux); border-color: var(--sage-line); }
+    .btn.ghost:hover { background: var(--sage-light); color: var(--bordeaux); box-shadow: none; }
+    .btn.light { background: var(--beige); border-color: var(--beige); color: var(--dark); }
+    .btn.light:hover { background: var(--paper); border-color: var(--paper); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25); }
+  .btn.soon, .btn.soon:hover { background: transparent; color: var(--warmgrey); border: 1.5px dashed var(--sage-line); cursor: default; transform: none; box-shadow: none; }
+  
+    /* ===== EINSTIEG ===== */
+    .hero {
+      position: relative; overflow: hidden;
+      background: linear-gradient(100deg, var(--beige) 0%, var(--beige-warm) 42%, #C7CFBA 70%, var(--sage-photo) 100%);
+      padding-left: var(--gutter-l); padding-right: var(--gutter-r);
+    }
+    .hero .inner { position: relative; min-height: min(640px, 82vh); display: flex; align-items: center; }
+    .hero-photo {
+      position: absolute; top: 0; bottom: 0; right: calc(-1 * var(--gutter-r)); width: 56%;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.35) 22%, #000 48%);
+              mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.35) 22%, #000 48%);
+    }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 22%; animation: breathe 22s ease-in-out infinite alternate; transform-origin: 60% 30%; }
+    @keyframes breathe { from { transform: scale(1); } to { transform: scale(1.06); } }
+    .hero-text { position: relative; z-index: 2; max-width: 560px; padding-block: 72px; }
+    .hero h1 { font-size: clamp(2.6rem, 5.6vw, 4.5rem); margin: 18px 0 22px; }
+    .hero .lead { font-size: 1.06rem; max-width: 50ch; }
+    .hero-sign { margin-top: 26px; font-family: var(--display); font-style: italic; font-size: 1.35rem; color: var(--bordeaux); }
+    .paths { display: grid; gap: 10px; margin-top: 32px; max-width: 480px; }
+    .path {
+      display: flex; justify-content: space-between; align-items: center; gap: 16px; text-decoration: none;
+      background: rgba(251, 248, 242, 0.82); border: 1px solid rgba(185, 194, 168, 0.6); border-radius: 100px;
+      padding: 12px 14px 12px 22px; transition: background .3s, transform .3s var(--ease), box-shadow .3s;
+    }
+    .path:hover { background: var(--paper); transform: translateX(6px); box-shadow: 0 10px 24px rgba(61, 42, 46, 0.08); }
+    .path .q { font-family: var(--display); font-style: italic; font-size: 1.25rem; color: var(--dark); line-height: 1.2; }
+    .path .go {
+      flex: none; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+      background: var(--bordeaux); color: var(--paper); font-size: 0.9rem; transition: transform .3s var(--ease);
+    }
+    .path:hover .go { transform: rotate(-45deg); }
+    .hero-free { margin-top: 18px; font-size: 0.86rem; }
+    .hero-free a { color: var(--bordeaux); font-weight: 600; text-underline-offset: 3px; }
+  
+    /* ===== KENNST DU DAS ===== */
+    .feel { background: var(--beige); }
+    .feel-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .feel-card {
+      background: var(--paper); border-radius: 22px; padding: 30px 26px 26px; min-width: 0;
+      display: flex; flex-direction: column; gap: 18px; position: relative;
+      transition: transform .4s var(--ease), box-shadow .4s;
+    }
+    .feel-card:nth-child(even) { transform: translateY(26px); }
+    .feel-card:hover { box-shadow: 0 20px 44px rgba(61, 42, 46, 0.08); }
+    .feel-card .mark { font-family: var(--display); font-size: 3.4rem; line-height: 0.6; color: var(--sage); height: 22px; }
+    .feel-card p { font-family: var(--display); font-style: italic; font-size: 1.38rem; line-height: 1.32; color: var(--dark); }
+    .feel-answer {
+      margin: 76px auto 0; max-width: 760px; text-align: center;
+      font-family: var(--display); font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.3; color: var(--dark);
+    }
+    .feel-answer em { color: var(--bordeaux); }
+    .feel-answer small { display: block; font-family: var(--body); font-size: 1rem; line-height: 1.7; color: var(--text); margin-top: 18px; }
+  
+    /* ===== KURSE ===== */
+    .self { background: var(--sage-light); }
+    .access {
+      display: inline-flex; gap: 12px; align-items: flex-start; font-size: 0.92rem;
+      padding: 14px 20px; background: var(--paper); border-radius: 14px; border: 1px solid var(--sage-line);
+    }
+    .access::before { content: "✦"; color: var(--sage); }
+    .card {
+      background: var(--paper); border-radius: 26px; overflow: hidden; display: flex; flex-direction: column; min-width: 0;
+      transition: transform .45s var(--ease), box-shadow .45s;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 26px 56px rgba(61, 42, 46, 0.1); }
+    .card-img { overflow: hidden; aspect-ratio: 16 / 9; background: var(--beige); position: relative; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.1s var(--ease); }
+    .card:hover .card-img img { transform: scale(1.045); }
+    .ribbon {
+      position: absolute; top: 16px; left: 16px; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      background: var(--bordeaux); color: var(--paper); border-radius: 100px; padding: 6px 14px;
+    }
+    .card-body { padding: 30px 32px 32px; display: flex; flex-direction: column; gap: 16px; flex: 1; }
+    .tag { align-self: flex-start; font-size: 0.66rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bordeaux); background: var(--sage-light); border-radius: 100px; padding: 5px 13px; }
+    .card-body h3 { font-size: 2.1rem; }
+    .card-body p { font-size: 0.95rem; }
+    .facts { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.82rem; color: var(--dark); }
+    .facts span::before { content: "✦"; color: var(--sage); font-size: 0.68rem; margin-right: 7px; }
+    .card-foot { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--sage-light); display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+    .price { font-family: var(--display); font-size: 2.3rem; font-weight: 600; color: var(--dark); line-height: 1; }
+    .price small { font-family: var(--body); font-size: 0.76rem; font-weight: 500; color: var(--warmgrey); margin-left: 6px; }
+    /* Bilder mit eingebautem Text immer vollständig zeigen: natürliches Seitenverhältnis, kein Zuschnitt */
+    .card-img.full { aspect-ratio: auto; }
+    .card-img.full img { height: auto; object-fit: initial; }
+    .card.feature { margin-bottom: 22px; }
+    .card.feature .card-body { display: grid; grid-template-columns: 1.3fr 1fr; gap: 18px 48px; align-items: start; padding: 36px 42px 38px; }
+    .card.feature .card-body > * { min-width: 0; }
+    .card.feature .feature-main { display: flex; flex-direction: column; gap: 14px; }
+    .card.feature .feature-side { display: flex; flex-direction: column; gap: 18px; }
+    .card.feature .card-foot { margin-top: 0; }
+    .card.feature h3 { font-size: 2.7rem; }
+    .access-small { margin-top: 26px; text-align: center; font-size: 0.82rem; color: var(--warmgrey); }
+    .access-small::before { content: "✦"; color: var(--sage); margin-right: 8px; font-size: 0.7rem; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  
+    /* ===== STIMMEN (Laufband) ===== */
+    .voices { background: var(--beige); padding-left: 0; padding-right: 0; overflow: hidden; }
+    .voices .sec-head { margin-left: auto; margin-right: auto; text-align: center; justify-items: center; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+    .marquee {
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+              mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+    .track { display: flex; gap: 22px; width: max-content; padding-block: 8px 18px; animation: flow 110s linear infinite; }
+    .marquee:hover .track, .marquee:focus-within .track { animation-play-state: paused; }
+    @keyframes flow { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 11px)); } }
+    .voice {
+      width: min(380px, 78vw); flex: none; background: var(--paper); border-radius: 22px; padding: 30px 30px 26px;
+      display: flex; flex-direction: column; gap: 18px; border: 1px solid var(--sage-light);
+    }
+    .voice .stars { color: var(--bordeaux); letter-spacing: 3px; font-size: 0.82rem; }
+    .voice blockquote { margin: 0; font-family: var(--display); font-style: italic; font-size: 1.3rem; line-height: 1.38; color: var(--dark); }
+    .voice .who { margin-top: auto; display: flex; align-items: center; gap: 12px; font-size: 0.8rem; color: var(--warmgrey); }
+    .voice .who b { display: block; color: var(--dark); font-weight: 600; font-size: 0.86rem; }
+    .voice .ini {
+      flex: none; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center;
+      background: var(--sage-light); color: var(--bordeaux); font-family: var(--display); font-weight: 600; font-size: 1.1rem;
+    }
+    .voices-note { text-align: center; font-size: 0.8rem; color: var(--warmgrey); margin-top: 18px; padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+  
+    /* ===== CHALLENGE ===== */
+    .challenge-sec { background: var(--sage-light); }
+    .challenge { background: var(--paper); border-radius: 28px; padding: clamp(28px, 5vw, 56px); display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(28px, 5vw, 56px); align-items: center; }
+    .challenge > * { min-width: 0; }
+    .challenge h3 { font-size: clamp(2rem, 3.6vw, 2.6rem); margin: 14px 0 16px; }
+    .challenge p { font-size: 0.98rem; }
+    .challenge .note { font-size: 0.84rem; color: var(--warmgrey); margin-top: 14px; }
+    .challenge-foot { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 24px; margin-top: 26px; }
+    .weeks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .week {
+      aspect-ratio: 3 / 4; border-radius: 100px 100px 16px 16px; background: var(--sage-light); border: 1px solid var(--sage-line);
+      display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: 14px 6px; position: relative; overflow: hidden;
+    }
+    .week::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: var(--fill); background: linear-gradient(180deg, var(--sage) 0%, #8A9A7A 100%); opacity: 0.55; }
+    .week b { position: relative; font-family: var(--display); font-size: 2.2rem; font-weight: 600; color: var(--dark); line-height: 1; }
+    .week span { position: relative; font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dark); }
+    .weeks-cap { margin-top: 16px; display: grid; gap: 8px; }
+    .weeks-cap li { list-style: none; font-size: 0.9rem; color: var(--dark); }
+    .weeks-cap li::before { content: "✦"; color: var(--sage); margin-right: 10px; font-size: 0.7rem; }
+    .weeks-cap { padding: 0; margin-bottom: 0; }
+  
+    /* ===== BEGLEITUNG ===== */
+    .program-band { background: var(--dark); color: var(--cream-on-dark); position: relative; overflow: hidden; }
+    .program-band::before {
+      content: ""; position: absolute; width: 620px; height: 620px; right: -180px; top: -200px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(156, 170, 140, 0.22) 0%, transparent 65%);
+    }
+    .program-band .inner { position: relative; }
+    .program-band .eyebrow { color: var(--sage-line); }
+    .program-band .eyebrow::before { background: var(--sage-line); }
+    .program-band h2 { color: var(--beige); font-size: clamp(2.1rem, 4.2vw, 3.2rem); margin: 16px 0 20px; }
+    .program-band h2 em { color: var(--sand); }
+    .program-img { border-radius: 24px; overflow: hidden; margin-bottom: clamp(36px, 6vw, 64px); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35); }
+    .program-img img { width: 100%; height: auto; }
+    .program-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(32px, 6vw, 72px); align-items: start; }
+    .program-grid > * { min-width: 0; }
+    .program-grid p { margin-bottom: 16px; }
+    .pull-light { font-family: var(--display); font-style: italic; font-size: clamp(1.7rem, 3vw, 2.2rem); color: var(--sand); margin-top: 26px; line-height: 1.25; }
+    .timeline { list-style: none; margin: 0; padding: 0; display: grid; }
+    .timeline li { display: grid; grid-template-columns: 104px 1fr; gap: 18px; padding: 18px 0; border-bottom: 1px solid rgba(216, 201, 174, 0.18); }
+    .timeline li:first-child { padding-top: 0; }
+    .timeline .when { font-family: var(--display); font-style: italic; font-size: 1.3rem; color: var(--sand); line-height: 1.2; }
+    .timeline .what b { display: block; color: var(--beige); font-weight: 600; font-size: 0.96rem; }
+    .timeline .what span { font-size: 0.9rem; }
+    .included { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+    .included span { font-size: 0.78rem; padding: 6px 14px; border-radius: 100px; background: rgba(216, 201, 174, 0.1); border: 1px solid rgba(216, 201, 174, 0.3); }
+    .program-ctas { margin-top: 44px; padding-top: 30px; border-top: 1px solid rgba(216, 201, 174, 0.2); display: flex; flex-wrap: wrap; align-items: center; gap: 16px 26px; }
+    .program-ctas p { font-size: 0.84rem; color: var(--sage-line); max-width: 52ch; margin: 0; }
+  
+    /* ===== ÜBER MICH ===== */
+    .about { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(36px, 7vw, 88px); align-items: center; }
+    .about > * { min-width: 0; }
+    .about-img { position: relative; }
+    .about-img img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 25%; border-radius: 220px 220px 26px 26px; }
+    .about-img::after {
+      content: "Frisch aussehen und dich mit dir wohlfühlen."; position: absolute; left: -14px; bottom: 26px; max-width: 230px;
+      background: var(--paper); color: var(--bordeaux); font-family: var(--display); font-style: italic; font-size: 1.15rem; line-height: 1.3;
+      padding: 14px 18px; border-radius: 16px; box-shadow: 0 16px 36px rgba(61, 42, 46, 0.12);
+    }
+    .about h2 { font-size: clamp(2.2rem, 4.2vw, 3.2rem); margin: 14px 0 22px; }
+    .about p { margin-bottom: 16px; }
+    .stats { display: flex; flex-wrap: wrap; gap: 16px 40px; margin-top: 28px; padding-top: 26px; border-top: 1px solid var(--sand); }
+    .stat b { display: block; font-family: var(--display); font-size: 2.5rem; font-weight: 600; color: var(--bordeaux); line-height: 1; }
+    .stat span { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; }
+  
+    /* ===== GRATIS ===== */
+    .free-sec { background: var(--sage-light); }
+    .free-card {
+      display: grid; grid-template-columns: 190px 1fr; background: var(--paper); border-radius: 22px; overflow: hidden;
+      text-decoration: none; min-width: 0; transition: transform .4s var(--ease), box-shadow .4s;
+    }
+    .free-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(61, 42, 46, 0.1); }
+    .free-card img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; }
+    .free-body { padding: 26px 26px 24px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+    .free-body .tag { background: var(--bordeaux); color: var(--paper); }
+    .free-body h3 { font-size: 1.6rem; }
+    .free-body p { font-size: 0.9rem; }
+    .free-link { margin-top: auto; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bordeaux); }
+    .free-note { margin-top: 18px; font-size: 0.85rem; color: var(--warmgrey); }
+  
+    /* ===== ENTSCHEIDUNG + FAQ ===== */
+    .choose { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: clamp(64px, 9vw, 104px); }
+    .choose a {
+      display: flex; flex-direction: column; gap: 10px; text-decoration: none; background: var(--paper); border-radius: 22px; padding: 26px 26px 24px;
+      border: 1px solid var(--sage-light); transition: border-color .3s, transform .3s var(--ease), box-shadow .3s;
+    }
+    .choose a:hover { border-color: var(--sage-line); transform: translateY(-4px); box-shadow: 0 16px 36px rgba(61, 42, 46, 0.07); }
+    .choose .q { font-family: var(--display); font-style: italic; font-size: 1.45rem; color: var(--dark); line-height: 1.2; }
+    .choose .a { font-size: 0.9rem; }
+    .choose .to { margin-top: auto; padding-top: 6px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bordeaux); }
+    .faq { max-width: 780px; margin: 0 auto; }
+    .faq .sec-head { text-align: center; justify-items: center; margin-left: auto; margin-right: auto; }
+    details { border-bottom: 1px solid var(--sand); }
+    summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; padding: 20px 0; font-weight: 600; color: var(--dark); font-size: 0.98rem; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; font-family: var(--display); font-size: 1.7rem; line-height: 0.8; color: var(--sage); transition: transform .3s; }
+    details[open] summary::after { transform: rotate(45deg); }
+    details p { padding-bottom: 20px; font-size: 0.94rem; max-width: 64ch; }
+  
+    /* ===== ABSCHLUSS ===== */
+    .closing { text-align: center; background: linear-gradient(180deg, var(--beige) 0%, var(--sage-light) 100%); }
+    .closing h2 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 760px; margin: 18px auto 18px; }
+    .closing p { max-width: 54ch; margin: 0 auto 30px; }
+    .closing .row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    footer { text-align: center; padding-block: 56px 40px; padding-left: var(--gutter-l); padding-right: var(--gutter-r); background: var(--sage-light); }
+    footer .mark { font-family: var(--display); font-size: clamp(2rem, 6vw, 3rem); font-weight: 600; letter-spacing: 0.08em; color: var(--dark); }
+    footer .by { font-family: var(--display); font-style: italic; font-size: 1.15rem; color: var(--warmgrey); margin-top: 6px; }
+    footer .legal { font-size: 0.78rem; color: var(--warmgrey); max-width: 62ch; margin: 26px auto 0; }
+    .legal-links { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; font-size: 0.8rem; }
+    .legal-links a { color: var(--dark); text-decoration: none; }
+    .legal-links a:hover { color: var(--bordeaux); }
+  
+    .toast {
+      position: fixed; left: 50%; transform: translateX(-50%) translateY(20px); bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+      background: var(--dark); color: var(--paper); font-size: 0.85rem; padding: 12px 20px; border-radius: 100px;
+      opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; max-width: calc(100% - 32px); text-align: center; z-index: 80;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  
+    /* Sanftes Hereingleiten beim Scrollen (nur wo der Browser es kann; Inhalte sind immer sichtbar) */
+    @supports (animation-timeline: view()) {
+      .rise { animation: rise linear both; animation-timeline: view(); animation-range: entry 0% entry 55%; }
+      @keyframes rise { from { opacity: 0.15; translate: 0 34px; } to { opacity: 1; translate: 0 0; } }
+    }
+    .hero-text > * { animation: enter .9s var(--ease) both; }
+    .hero-text > *:nth-child(2) { animation-delay: .08s; }
+    .hero-text > *:nth-child(3) { animation-delay: .16s; }
+    .hero-text > *:nth-child(4) { animation-delay: .24s; }
+    .hero-text > *:nth-child(5) { animation-delay: .32s; }
+    @keyframes enter { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  
+    @media (max-width: 1000px) {
+      .top nav .hide-md { display: none; }
+      .feel-grid { grid-template-columns: 1fr 1fr; }
+      .card.feature .card-body { grid-template-columns: 1fr; padding: 30px 32px 32px; }
+      .challenge, .program-grid, .about { grid-template-columns: 1fr; }
+      .about-img { max-width: 380px; width: 100%; margin: 0 auto; }
+      .choose { grid-template-columns: 1fr; }
     }
     @media (max-width: 760px) {
-      .wrap { padding: 0 1rem; }
-      .hero { padding: 4rem 0 3rem; }
-      .paths, .grid-2 { grid-template-columns: 1fr; }
-      .sec-head { flex-direction: column; align-items: start; gap: 0.8rem; }
-      .card-body, .card-feature .card-body { padding: 1.6rem 1.4rem 1.8rem; }
-      .card-feature h3, .card-body h3 { font-size: 2rem; }
-      .free-card { display: flex; flex-direction: column; }
-      .free-card img { height: 210px; flex: none; object-position: center 30%; }
-      .stats { flex-wrap: nowrap; justify-content: space-between; gap: 0.75rem; }
-      .stat b { font-size: 1.75rem; }
-      .stat span { font-size: 0.6rem; letter-spacing: 0.05em; display: block; margin-top: 0.3rem; }
-      .card-foot .btn, .program-ctas .btn { width: 100%; justify-content: center; }
-      .program { padding: 2.4rem 1.4rem; border-radius: 22px; }
+      .hero .inner { flex-direction: column; min-height: 0; align-items: stretch; }
+      .hero { background: linear-gradient(180deg, var(--sage-photo) 0%, #C7CFBA 30%, var(--beige-warm) 52%, var(--beige) 100%); }
+      .hero-photo {
+        position: relative; width: auto; height: 380px; margin: 0 calc(-1 * var(--gutter-r)) 0 calc(-1 * var(--gutter-l)); right: auto;
+        -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent 100%);
+                mask-image: linear-gradient(180deg, #000 60%, transparent 100%);
+      }
+      .hero-photo img { object-position: 60% 18%; }
+      .hero-text { padding-block: 0 56px; margin-top: -40px; }
+      .top nav { display: none; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .feel-grid { grid-template-columns: 1fr; }
+      .feel-card:nth-child(even) { transform: none; }
+      .feel-answer { margin-top: 48px; }
+      .card-body, .card.feature .card-body { padding: 26px 22px 26px; }
+      .card-body h3, .card.feature h3 { font-size: 2rem; }
+      .card-foot .btn, .challenge-foot .btn, .program-ctas .btn, .closing .btn { width: 100%; }
+      .free-card { grid-template-columns: 1fr; }
+      .free-card img { height: 280px; object-position: 50% 32%; }
+      .timeline li { grid-template-columns: 1fr; gap: 4px; }
+      .about-img::after { left: 10px; right: 10px; max-width: none; bottom: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .marquee { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
     }
   </style>
 </head>
 <body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo"><img src="Logo%20und%20Farbcodes/04_Alabaster_Dunkelpflaume.png?v=2" alt="Kristin Schnödt"></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="behandlungen.html">Behandlungen</a></li>
+    <li><a href="online-kurse.html" class="active">Online-Kurse</a></li>
+    <li><a href="index.html#purvidual">PURVIDUAL</a></li>
+    <li><a href="schulungen.html">Schulungen</a></li>
+    <li><a href="kristin-schnoedt.html">Über mich</a></li>
+  </ul>
+  <a href="#selbststaendig" class="nav-btn">Kurse ansehen</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="index.html" class="nav-logo"><img src="Logo%20und%20Farbcodes/04_Alabaster_Dunkelpflaume.png?v=2" alt="Kristin Schnödt"></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="behandlungen.html">Behandlungen</a></li>
-      <li><a href="online-kurse.html" class="active">Online-Kurse</a></li>
-      <li><a href="index.html#purvidual">PURVIDUAL</a></li>
-      <li><a href="schulungen.html">Schulungen</a></li>
-      <li><a href="kristin-schnoedt.html">Über mich</a></li>
-    </ul>
-    <a href="#kurse" class="nav-btn">Kurse ansehen</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menü"><span></span><span></span><span></span></button>
-  </nav>
+<main id="start">
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="wrap">
-      <div class="eyebrow">Online-Kurse</div>
-      <h1>Schöne Haut beginnt <em>bei dir zu Hause.</em></h1>
-      <p>Kleine Programme, die du sofort starten kannst. In deinem Tempo, direkt im Browser, mit lebenslangem Zugang. Angeleitet von mir, Schritt für Schritt.</p>
-
-      <!-- Wegweiser: hilft bei der Auswahl -->
-      <div class="paths">
-        <a class="path" href="#gratis">
-          <div class="path-q">Ich will erst mal reinschnuppern.</div>
-          <div class="path-a">Gratis-Videos →</div>
-        </a>
-        <a class="path" href="#technik">
-          <div class="path-q">Ich will eine Technik lernen.</div>
-          <div class="path-a">Cupping, Gua Sha &amp; Taping →</div>
-        </a>
-        <a class="path" href="#kurse">
-          <div class="path-q">Ich will richtig einsteigen.</div>
-          <div class="path-a">Glow-Code →</div>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- KURSE -->
-  <section id="kurse">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <div class="eyebrow">Meine Programme</div>
-          <h2>Starte dort, <em>wo du gerade stehst.</em></h2>
+  <!-- EINSTIEG -->
+  <section class="hero">
+    <div class="inner">
+      <div class="hero-photo"><img src="images/Kristin_Leinenblazer_Hintergrundsalbei.jpg" alt="Kristin Schnödt lächelt, im beigen Leinenblazer vor salbeigrünem Hintergrund" width="1222" height="1287"></div>
+      <div class="hero-text">
+        <span class="eyebrow">Online-Kurse für Frauen ab 40</span>
+        <h1>Deine Zeit für dich. <em>Deine Routine für dein Gesicht.</em></h1>
+        <p class="lead">Face Yoga, natürliche Methoden und Pflegeimpulse, die in deinen Alltag passen. Ob du selbstständig üben, dir einen festen Rahmen wünschst oder persönlich begleitet werden möchtest: Hier findest du deinen Weg.</p>
+        <div class="paths">
+          <a class="path" href="#selbststaendig"><span class="q">Ich übe gern selbstständig.</span><span class="go" aria-hidden="true">→</span></a>
+          <a class="path" href="#challenge"><span class="q">Ich wünsche mir einen festen Rahmen.</span><span class="go" aria-hidden="true">→</span></a>
+          <a class="path" href="#begleitung"><span class="q">Ich wünsche mir persönliche Begleitung.</span><span class="go" aria-hidden="true">→</span></a>
         </div>
-        <p>Alle Kurse sind ohne feste Termine. Du kaufst, bekommst sofort deine Zugangsdaten und legst los.</p>
-      </div>
-
-      <!-- KURS: Glow-Code (Hauptkarte) -->
-      <article class="card card-feature">
-        <div class="card-img">
-          <img src="Angebot-Challenge/images/Mockup_Kurs.png" alt="Glow-Code 14-Tage-Programm auf Laptop und Handy">
-          <span class="tag tag-free feature-ribbon">Der beste Einstieg</span>
-        </div>
-        <div class="card-body">
-          <span class="tag">14-Tage-Programm</span>
-          <h3>Glow-Code</h3>
-          <p>Für Frauen ab 40 und 50: Du verstehst, was sich in deiner Haut verändert. Und du tust jeden Tag ein paar Minuten genau das, was jetzt hilft.</p>
-          <div class="facts">
-            <span>14 Tage</span>
-            <span>5 bis 15 Min. täglich</span>
-            <span>Videos, PDFs &amp; Meditationen</span>
-          </div>
-          <div class="card-foot">
-            <div class="price">49 €<small>Wert 199 €</small></div>
-            <a href="glow-code.html" class="btn btn-primary">Mehr erfahren <span class="arr">→</span></a>
-          </div>
-        </div>
-      </article>
-
-      <!-- KURS: Paket Cupping, Gua Sha, Beauty-Taping -->
-      <article class="card card-feature" id="technik">
-        <div class="card-img tall">
-          <img src="images/Kristin_3erTools.jpg" alt="Kristin Schnödt zeigt die drei Techniken: Cupping, Gua Sha und Face Taping">
-        </div>
-        <div class="card-body">
-          <span class="tag">Kurs-Paket</span>
-          <h3>Cupping, Gua Sha &amp; Beauty-Taping</h3>
-          <p>Drei Techniken für zu Hause in einem Paket: Du lernst, Spannung im Gesicht zu lösen, deine Haut zu straffen und Falten zu mildern. Mit dem Mini-Glow-Kurs als Bonus.</p>
-          <div class="facts">
-            <span>3 Kurse im Paket</span>
-            <span>Sofort startklar</span>
-            <span>Bonus: Mini-Glow</span>
-          </div>
-          <div class="card-foot">
-            <div class="price">99 €<small>statt 147 € einzeln</small></div>
-            <a href="cupping-gua-sha-taping.html" class="btn btn-primary">Mehr erfahren <span class="arr">→</span></a>
-          </div>
-        </div>
-      </article>
-
-      <div class="grid-2">
-
-        <!-- KURS: Cupping -->
-        <article class="card">
-          <div class="card-img"><img src="Angebot-Challenge/images/cupping-mockup-kurs.webp" alt="Göttinnen Cupping Kurs"></div>
-          <div class="card-body">
-            <span class="tag">Spezialkurs</span>
-            <h3>Cupping Kurs</h3>
-            <p>Gesichtsschröpfen für zu Hause: Spannung im Gesicht lösen, die Durchblutung anregen und deiner Haut sichtbar Frische schenken.</p>
-            <div class="facts">
-              <span>11 Videos</span>
-              <span>90 Minuten</span>
-              <span>Optional mit Set</span>
-            </div>
-            <div class="card-foot">
-              <div class="price">ab 49 €<small>mit Set 99 €</small></div>
-              <a href="cupping-kurs.html" class="btn btn-primary">Mehr erfahren <span class="arr">→</span></a>
-            </div>
-          </div>
-        </article>
-
-        <!-- KURS: Mini-Glow -->
-        <article class="card">
-          <div class="card-img"><img src="images/mini-glow-mockup.jpg" alt="Mini-Glow-Challenge auf Laptop, Tablet und Handy"></div>
-          <div class="card-body">
-            <span class="tag">Einstieg</span>
-            <h3>Mini-Glow-Challenge</h3>
-            <p>Erst verstehen, dann üben: Du lernst, was Face Yoga wirklich bewirkt, welche Gesichtsmuskeln zählen und wie du richtig loslässt. Danach folgen 5 Workouts von der Stirn bis zum Hals.</p>
-            <div class="facts">
-              <span>4 Grundlagen-Lektionen</span>
-              <span>5 Workouts</span>
-              <span>Bonus: Gesichtsmassage</span>
-            </div>
-            <div class="card-foot">
-              <div class="price">29 €</div>
-              <a href="miniglow.html" class="btn btn-primary">Mehr erfahren <span class="arr">→</span></a>
-            </div>
-          </div>
-        </article>
-
-        <!-- NEUER KURS: einen <article class="card"> Block kopieren und hier einfügen -->
-
+        <p class="hero-free">Oder erst einmal <a href="#gratis">kostenlos reinschnuppern</a>.</p>
       </div>
     </div>
   </section>
 
-  <!-- GRATIS -->
-  <section class="free-sec" id="gratis">
-    <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <div class="eyebrow">Kostenlos</div>
-          <h2>Erst mal <em>ausprobieren?</em></h2>
-        </div>
-        <p>Zwei kurze Videos, die ich dir schenke. Ohne Abo, ohne Haken.</p>
+  <!-- KENNST DU DAS -->
+  <section class="band feel">
+    <div class="inner">
+      <div class="sec-head rise">
+        <span class="eyebrow">Kennst du das?</span>
+        <h2>Momente, die viele Frauen ab 40 <em>gut kennen.</em></h2>
+      </div>
+      <div class="feel-grid">
+        <div class="feel-card rise"><span class="mark" aria-hidden="true">„</span><p>Ich schaue in den Spiegel und frage mich, warum sich meine Haut gerade so verändert.</p></div>
+        <div class="feel-card rise"><span class="mark" aria-hidden="true">„</span><p>Ich habe schon so viel ausprobiert und weiß trotzdem nicht, was mir wirklich guttut.</p></div>
+        <div class="feel-card rise"><span class="mark" aria-hidden="true">„</span><p>Ich nehme mir die Übungen fest vor. Und dann ist der Tag wieder voll.</p></div>
+        <div class="feel-card rise"><span class="mark" aria-hidden="true">„</span><p>Ich will nicht aussehen wie 30. Ich will mich einfach wieder wohlfühlen.</p></div>
+      </div>
+      <p class="feel-answer rise">Du musst nicht alles auf einmal ändern. <em>Ein paar Minuten am Tag, die nur dir gehören,</em> sind ein guter Anfang.
+        <small>Genau dafür sind meine Kurse da: verständlich erklärt, alltagstauglich und ohne Druck. Du darfst in deinem Tempo ankommen.</small>
+      </p>
+    </div>
+  </section>
+
+  <!-- SELBSTSTÄNDIG ÜBEN -->
+  <section class="band self" id="selbststaendig">
+    <div class="inner">
+      <div class="sec-head rise">
+        <span class="eyebrow">Selbstständig üben</span>
+        <h2>Lerne in <em>deinem eigenen Tempo.</em></h2>
       </div>
 
+      <article class="card feature rise">
+        <div class="card-img full">
+          <img src="images/kurse/glow-code.webp" alt="Glow Code, 14-Tage Göttinnenhaut: Gua-Sha-Stein, Pflegeflasche und Leinentuch auf Travertin" width="1672" height="941">
+          <span class="ribbon">Dein Einstieg</span>
+        </div>
+        <div class="card-body">
+          <div class="feature-main">
+            <span class="tag">Dein 14-Tage-Programm</span>
+            <h3>Glow Code</h3>
+            <p>Dein Einstieg in Face Yoga und bewusste Selbstfürsorge: fünf Face-Yoga-Videos, PDFs, Meditationen und Impulse rund um die Wechseljahre. Eine aufgezeichnete Face-Yoga- und Fragerunde ergänzt das Selbstlernprogramm.</p>
+          </div>
+          <div class="feature-side">
+            <div class="facts"><span>14 Tage</span><span>5 bis 15 Min. täglich</span><span>Videos, PDFs und Meditationen</span></div>
+            <div class="card-foot">
+              <div class="price">49 €</div>
+              <a class="btn" href="glow-code.html">14-Tage-Programm entdecken <span class="arr">→</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
       <div class="grid-2">
-        <a class="free-card" href="https://kristin-schnoedt.de/gratis-video">
-          <img src="Bilder/Face-Yoga/Gro%C3%9F%20(DSC_4549).jpeg" alt="Face-Yoga-Übung">
-          <div class="free-body">
-            <span class="tag tag-free">Gratis · 6 Min.</span>
-            <h3>Face-Yoga-Video</h3>
-            <p>Die wirkungsvollsten Entspannungsübungen für Kiefer, Stirn und Augenlider. Nur deine Hände und 6 Minuten.</p>
-            <span class="free-link">Video holen →</span>
+        <article class="card rise">
+          <div class="card-img full"><img src="images/kurse/cupping-kurs.webp" alt="Kristin Schnödt setzt mit geschlossenen Augen ein Cupping-Glas an der Stirn an" width="1672" height="941"></div>
+          <div class="card-body">
+            <span class="tag">Methodenkurs</span>
+            <h3>Cupping-Kurs</h3>
+            <p>Du möchtest Cupping kennenlernen und selbstständig üben? Dieser Kurs führt dich durch die Methode und lässt dir Raum, in deinem eigenen Tempo zu lernen.</p>
+            <div class="facts"><span>11 Videos</span><span>90 Minuten</span><span>Optional mit Set</span></div>
+            <div class="card-foot">
+              <div class="price">49 €<small>mit Set 99 €</small></div>
+              <a class="btn" href="cupping-kurs.html">Cupping-Kurs entdecken <span class="arr">→</span></a>
+            </div>
           </div>
-        </a>
-        <a class="free-card" href="cupping-video.html">
-          <img src="Angebot-Challenge/images/cupping-stirn.jpg" alt="Gesichtscupping an der Stirn">
-          <div class="free-body">
-            <span class="tag tag-free">Gratis · 4 Min.</span>
-            <h3>Mehr Frische durch Cupping</h3>
-            <p>Was Cupping ist, was es deiner Haut bringt und wie mein Gesicht nach nur einer Sequenz aussieht.</p>
-            <span class="free-link">Video holen →</span>
+        </article>
+        <article class="card rise">
+          <div class="card-img full"><img src="images/kurse/schoenheit-in-deinen-haenden.webp" alt="Cupping-Gläser, rosafarbener Gua-Sha-Stein und Beauty-Tape auf Travertin" width="1672" height="941"></div>
+          <div class="card-body">
+            <span class="tag">Drei Methoden in einem Kurs</span>
+            <h3>Schönheit in deinen Händen</h3>
+            <p>Entdecke Cupping, Gua Sha und Beauty Taping in einem Kurs. Drei wohltuende Rituale für dein Gesicht und deine innere Ruhe. Utensilien sind nicht enthalten.</p>
+            <div class="facts"><span>3 Methoden</span><span>Cupping, Gua Sha, Taping</span></div>
+            <div class="card-foot">
+              <div class="price">99 €</div>
+              <a class="btn" href="cupping-gua-sha-taping.html">Drei-Tools-Kurs entdecken <span class="arr">→</span></a>
+            </div>
           </div>
-        </a>
+        </article>
+      </div>
+      <p class="access-small">Dauerhafter Zugang bei allen Kursen: zum Lernen, Wiederholen und Üben, ohne zeitliche Begrenzung.</p>
+    </div>
+  </section>
+
+  <!-- STIMMEN -->
+  <section class="band voices" aria-labelledby="stimmen-titel">
+    <div class="sec-head rise">
+      <span class="eyebrow">Stimmen aus meinen Kursen</span>
+      <h2 id="stimmen-titel">Was Teilnehmerinnen <em>erzählen.</em></h2>
+    </div>
+    <div class="marquee" tabindex="0" aria-label="Kundinnenstimmen, laufen langsam durch. Mit der Maus darauf bleiben sie stehen.">
+      <div class="track">
+        <!-- Gruppe A -->
+        <figure class="voice"><span class="stars" aria-label="Fünf Sterne">★★★★★</span><blockquote>„Ich fühle mich bei ihr nie unter Druck gesetzt, nie als würde ich etwas falsch machen oder müsste schon weiter oder besser sein. Ein Gefühl, das mich motiviert dranzubleiben.“</blockquote><figcaption class="who"><span class="ini">S</span><span><b>Stephanie H.</b>Kursteilnehmerin</span></figcaption></figure>
+        <figure class="voice"><span class="stars" aria-label="Fünf Sterne">★★★★★</span><blockquote>„Kristin hat mich total begeistert mit ihrem Programm. Sie hat mir gezeigt, wie ich mit wenig Zeitaufwand aber sehr effektiv kleine Übungen machen kann.“</blockquote><figcaption class="who"><span class="ini">M</span><span><b>Manuela D.</b>Göttinnen-Booster</span></figcaption></figure>
+        <figure class="voice"><span class="stars" aria-label="Fünf Sterne">★★★★★</span><blockquote>„Was ich hier an die Hand bekomme, übersteigt alles, was ich erwartet hatte. Und es kostet mich täglich kaum mehr als ein paar Minuten.“</blockquote><figcaption class="who"><span class="ini">M</span><span><b>Miriam L., 40</b>erst skeptisch, dann begeistert</span></figcaption></figure>
+        <figure class="voice"><span class="stars" aria-label="Fünf Sterne">★★★★★</span><blockquote>„Kristin leitet einen in ihrem Kurs richtig toll an, damit man auch nichts falsch machen kann.“</blockquote><figcaption class="who"><span class="ini">K</span><span><b>Kundin</b>Cupping-Kurs</span></figcaption></figure>
+        <figure class="voice"><span class="stars" aria-label="Fünf Sterne">★★★★★</span><blockquote>„Kristin erklärt so verständlich, warum jede Übung wirkt. Das hat mir geholfen, am Ball zu bleiben.“</blockquote><figcaption class="who"><span class="ini">M</span><span><b>Manu D.</b>Mini-Glow-Challenge</span></figcaption></figure>
+        <figure class="voice"><span class="stars" aria-label="Fünf Sterne">★★★★★</span><blockquote>„Ich liebe das Cupping, das geht so einfach und schnell.“</blockquote><figcaption class="who"><span class="ini">K</span><span><b>Kundin</b>Cupping</span></figcaption></figure>
+        <figure class="voice"><span class="stars" aria-label="Fünf Sterne">★★★★★</span><blockquote>„Es ist leicht anzuwenden, und die Handhabung mit den Cupps ist echt klasse.“</blockquote><figcaption class="who"><span class="ini">K</span><span><b>Kundin</b>Cupping-Kurs</span></figcaption></figure>
+        <!-- Gruppe B: Kopie für den nahtlosen Lauf -->
+        <figure class="voice" aria-hidden="true"><span class="stars">★★★★★</span><blockquote>„Ich fühle mich bei ihr nie unter Druck gesetzt, nie als würde ich etwas falsch machen oder müsste schon weiter oder besser sein. Ein Gefühl, das mich motiviert dranzubleiben.“</blockquote><figcaption class="who"><span class="ini">S</span><span><b>Stephanie H.</b>Kursteilnehmerin</span></figcaption></figure>
+        <figure class="voice" aria-hidden="true"><span class="stars">★★★★★</span><blockquote>„Kristin hat mich total begeistert mit ihrem Programm. Sie hat mir gezeigt, wie ich mit wenig Zeitaufwand aber sehr effektiv kleine Übungen machen kann.“</blockquote><figcaption class="who"><span class="ini">M</span><span><b>Manuela D.</b>Göttinnen-Booster</span></figcaption></figure>
+        <figure class="voice" aria-hidden="true"><span class="stars">★★★★★</span><blockquote>„Was ich hier an die Hand bekomme, übersteigt alles, was ich erwartet hatte. Und es kostet mich täglich kaum mehr als ein paar Minuten.“</blockquote><figcaption class="who"><span class="ini">M</span><span><b>Miriam L., 40</b>erst skeptisch, dann begeistert</span></figcaption></figure>
+        <figure class="voice" aria-hidden="true"><span class="stars">★★★★★</span><blockquote>„Kristin leitet einen in ihrem Kurs richtig toll an, damit man auch nichts falsch machen kann.“</blockquote><figcaption class="who"><span class="ini">K</span><span><b>Kundin</b>Cupping-Kurs</span></figcaption></figure>
+        <figure class="voice" aria-hidden="true"><span class="stars">★★★★★</span><blockquote>„Kristin erklärt so verständlich, warum jede Übung wirkt. Das hat mir geholfen, am Ball zu bleiben.“</blockquote><figcaption class="who"><span class="ini">M</span><span><b>Manu D.</b>Mini-Glow-Challenge</span></figcaption></figure>
+        <figure class="voice" aria-hidden="true"><span class="stars">★★★★★</span><blockquote>„Ich liebe das Cupping, das geht so einfach und schnell.“</blockquote><figcaption class="who"><span class="ini">K</span><span><b>Kundin</b>Cupping</span></figcaption></figure>
+        <figure class="voice" aria-hidden="true"><span class="stars">★★★★★</span><blockquote>„Es ist leicht anzuwenden, und die Handhabung mit den Cupps ist echt klasse.“</blockquote><figcaption class="who"><span class="ini">K</span><span><b>Kundin</b>Cupping-Kurs</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEMEINSAM STARTEN -->
+  <section class="band challenge-sec" id="challenge">
+    <div class="inner">
+      <div class="sec-head rise">
+        <span class="eyebrow">Fester Rahmen mit Live-Call</span>
+        <h2 class="one-line">Ein Rahmen, der dich <em>dranbleiben lässt.</em></h2>
+        <p>Wenn du dir eine klare Struktur und einen festen Live-Termin wünschst, ist das Vier-Wochen-Programm dein Weg.</p>
+      </div>
+      <div class="challenge rise">
+        <div>
+          <span class="tag">Vier-Wochen-Programm</span>
+          <h3>Vier Wochen Zeit für dich und dein Gesicht</h3>
+          <p>Vorgegebene Workouts von etwa zehn Minuten und ein fester Live-Call: Dieses Programm gibt dir einen klaren Rahmen, um regelmäßig zu üben und dir Zeit für dich zu nehmen. Die Videos schaust du dann, wenn es in deinen Tag passt.</p>
+          <p class="note">Das Vier-Wochen-Programm ist gerade in Vorbereitung. Starttermin und Buchung findest du bald hier. Eine persönliche Betreuung über WhatsApp oder Telegram ist nicht enthalten. Die Kursinhalte bleiben auch nach den vier Wochen dauerhaft verfügbar.</p>
+          <div class="challenge-foot">
+            <div class="price">297 €<small>Vier Wochen</small></div>
+            <span class="btn soon" aria-disabled="true">In Vorbereitung</span>
+          </div>
+        </div>
+        <div>
+          <div class="weeks" aria-hidden="true">
+            <div class="week" style="--fill:25%"><b>1</b><span>Woche</span></div>
+            <div class="week" style="--fill:50%"><b>2</b><span>Woche</span></div>
+            <div class="week" style="--fill:75%"><b>3</b><span>Woche</span></div>
+            <div class="week" style="--fill:100%"><b>4</b><span>Woche</span></div>
+          </div>
+          <ul class="weeks-cap">
+            <li>Videos, wann es dir passt</li>
+            <li>Workouts von etwa zehn Minuten</li>
+            <li>Ein fester Live-Call</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSÖNLICH BEGLEITET -->
+  <section class="band program-band" id="begleitung">
+    <div class="inner">
+      <div class="program-img rise"><img src="images/kurse/acht-wochen-begleitung.webp" alt="8 Wochen Programm: Damit du wieder gern in den Spiegel schaust, ohne dem Ideal eines faltenfreien Gesichts hinterherzulaufen. Daneben Kristin Schnödt." width="1672" height="941"></div>
+      <div class="program-grid">
+        <div class="rise">
+          <span class="eyebrow">Persönlich begleitet</span>
+          <h2>Göttinnenhaut: <em>deine persönliche Acht-Wochen-Begleitung.</em></h2>
+          <p>Du möchtest eine Routine finden, die zu deiner Haut und zu deinem Leben passt? Wir schauen gemeinsam auf deine bisherige Pflege und deinen Alltag. Daraus entwickeln wir passende Schritte und finden heraus, wann deine Workouts für dich gut machbar sind.</p>
+          <p>Mit einem persönlichen Startgespräch, sechs Einzelterminen und Motivation unter der Woche begleite ich dich beim Umsetzen. In zwei anschließenden Integrationswochen bleibe ich über Nachrichten an deiner Seite.</p>
+          <p class="pull-light">„Wir finden eine Routine, die zu dir passt.“</p>
+        </div>
+        <div class="rise">
+          <ol class="timeline" aria-label="Ablauf der acht Wochen">
+            <li><span class="when">Zum Start</span><span class="what"><b>Startgespräch, 60 Minuten</b><span>Wünsche, bisherige Pflege und Alltag gemeinsam ansehen. Daraus entsteht dein erster machbarer Plan.</span></span></li>
+            <li><span class="when">Woche 1 bis 6</span><span class="what"><b>Ein Einzelcall pro Woche, je 30 Minuten</b><span>Gemeinsam üben, Erfahrungen besprechen, Pflegefragen einordnen und den Plan anpassen.</span></span></li>
+            <li><span class="when">Woche 7 und 8</span><span class="what"><b>Integration in deinen Alltag</b><span>Du übst selbstständiger. Ich bleibe über Nachrichten erreichbar, wenn etwas hakt.</span></span></li>
+            <li><span class="when">Danach</span><span class="what"><b>Dein Videozugang bleibt</b><span>Die Videos stehen dir weiter ohne zeitliche Begrenzung zur Verfügung.</span></span></li>
+          </ol>
+          <div class="included">
+            <span>Individuelle Workouts</span><span>WhatsApp oder Telegram</span><span>Produkte im Wert von ca. 270 € inklusive</span>
+          </div>
+        </div>
+      </div>
+      <div class="program-ctas">
+        <a class="btn light" href="https://cal.meetergo.com/kristin-schnodt/30-min-meeting-mit-kristin" target="_blank" rel="noopener">Kostenloses Gespräch buchen <span class="arr">→</span></a>
+        <p>Die Plätze vergebe ich nicht über einen Kauf-Button, sondern in einem kostenlosen 30-Minuten-Gespräch mit mir. Dort sprechen wir auch offen über den Preis.</p>
       </div>
     </div>
   </section>
 
   <!-- ÜBER MICH -->
-  <section>
-    <div class="wrap about">
-      <div class="about-img"><img src="Angebot-Challenge/images/dasbinich.jpg" alt="Kristin Schnödt"></div>
-      <div>
-        <div class="eyebrow">Wer dich begleitet</div>
+  <section class="band" id="kristin">
+    <div class="inner about">
+      <div class="about-img rise"><img src="images/das-bin-ich.jpg" alt="Kristin Schnödt im warmen Abendlicht, die Hand am Kinn, lächelnd" width="1077" height="1600"></div>
+      <div class="rise">
+        <span class="eyebrow">Wer dich begleitet</span>
         <h2>Hallo, ich bin <em>Kristin.</em></h2>
-        <p>Seit 2006 bin ich Kosmetikerin, seit 2008 mit eigenem Studio in Auerbach. In meinen Online-Kursen zeige ich dir genau das, was ich selbst täglich mache und was ich mit meinen Kundinnen im Studio erlebt habe. Ehrlich, alltagstauglich und ohne Spritzen.</p>
+        <p>Seit 2006 bin ich Kosmetikerin, seit 2008 mit eigenem Studio. Ich weiß aber nicht nur aus dem Studio, wie es sich anfühlt, wenn die Haut nicht so will, wie man selbst. Ich kenne Neurodermitis aus eigener Erfahrung und auch Zeiten, in denen ich mich in meiner Haut nicht wohlgefühlt habe.</p>
+        <p>Bei meiner Reha an der Nordsee habe ich erlebt, wie viel Pflege, Ruhe, Bewegung und Zeit für mich für mein Wohlbefinden bedeutet haben. Diese Erfahrung trage ich in jeden Kurs: kleine, machbare Schritte statt großer Versprechen.</p>
+        <p>In meinen Online-Kursen zeige ich dir das, was ich selbst täglich mache und mit meinen Kundinnen erlebe. Ehrlich, alltagstauglich und ohne Spritzen.</p>
         <div class="stats">
           <div class="stat"><b>20</b><span>Jahre Kosmetikerin</span></div>
           <div class="stat"><b>500+</b><span>Kundinnen</span></div>
-          <div class="stat"><b>4,9★</b><span>bei Google</span></div>
-        </div>
-        <blockquote class="quote">„Kristin hat mir gezeigt, wie ich mit wenig Zeitaufwand aber sehr effektiv kleine Übungen machen kann. Absolut begeistert!“
-          <cite>Manu D., 61 · Online-Kurs</cite>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- PERSÖNLICHE BEGLEITUNG
-       Bewusst OHNE Link zur Göttinnenhaut-Seite. Zugang nur über Gespräch oder Webinar. -->
-  <section id="begleitung" style="padding-top:1rem;">
-    <div class="wrap">
-      <div class="program">
-        <div>
-          <div class="eyebrow">Persönliche Begleitung</div>
-          <h2>Wenn du dir <em>mich an deiner Seite</em> wünschst.</h2>
-          <p>Die Kurse geben dir Werkzeuge für zu Hause. In meinem großen Programm <b>Göttinnenhaut</b> begleite ich dich persönlich über mehrere Wochen. Wir bringen die einzelnen Teile zusammen, damit die Wirkung bleibt.</p>
-          <p>In kleiner Gruppe, damit ich jede Frau wirklich kenne und für sie da sein kann.</p>
-          <div class="pull-light">Frisch statt faltenfrei.</div>
-        </div>
-        <ul class="pillar-list">
-          <li><b>01</b><span><strong>Pflege:</strong> was deine Haut wirklich braucht</span></li>
-          <li><b>02</b><span><strong>Aktivierung:</strong> Cupping und Face Yoga gezielt für dein Gesicht</span></li>
-          <li><b>03</b><span><strong>Regeneration:</strong> Schlaf und Stress mitdenken</span></li>
-          <li><b>04</b><span><strong>Ernährung:</strong> deine Haut von innen unterstützen</span></li>
-          <li><b>05</b><span><strong>Alltag &amp; Haltung:</strong> Spannungen erkennen und lösen</span></li>
-        </ul>
-        <div class="program-ctas">
-          <a href="https://cal.meetergo.com/kristin-schnodt/30-min-meeting-mit-kristin" class="btn btn-primary" target="_blank" rel="noopener">Kostenloses Gespräch buchen <span class="arr">→</span></a>
-          <!-- WEBINAR: ausgeblendet, bis es einen Anmeldelink gibt. Dann Link eintragen, Kommentar entfernen
-               und den Hinweis darunter um "oder nach meinem Webinar" ergänzen.
-          <a href="LINK-WEBINAR" class="btn btn-ghost">Zum Webinar vormerken</a>
-          -->
-          <p class="program-note">Die Plätze vergebe ich nicht über einen Kauf-Button, sondern in einem kostenlosen 30-Minuten-Gespräch mit mir.</p>
+          <div class="stat"><b>4,9 ★</b><span>bei Google</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section style="padding-top:1rem;">
-    <div class="faq">
-      <div style="text-align:center;"><div class="eyebrow">Gut zu wissen</div></div>
-      <h2>Häufige <em>Fragen</em></h2>
-      <details>
-        <summary>Wie bekomme ich Zugang zu den Kursen?</summary>
-        <p>Direkt nach dem Kauf bekommst du deine Zugangsdaten per E-Mail. Du schaust alles im Browser, ohne App.</p>
-      </details>
-      <details>
-        <summary>Wie lange habe ich Zugriff?</summary>
-        <p>Du hast lebenslangen Zugang und kannst jedes Video so oft ansehen, wie du möchtest.</p>
-      </details>
-      <details>
-        <summary>Brauche ich Vorkenntnisse?</summary>
-        <p>Nein. Alle Kurse sind für Einsteigerinnen gemacht. Ich führe dich Schritt für Schritt durch jede Übung.</p>
-      </details>
-      <details>
-        <summary>Mit welchem Kurs soll ich anfangen?</summary>
-        <p>Wenn du unsicher bist, starte mit einem der Gratis-Videos. Der Glow-Code ist der beste Einstieg, wenn du in 14 Tagen eine Routine aufbauen willst. Wenn dich eine bestimmte Technik reizt, nimm den Cupping Kurs, das Paket aus Cupping, Gua Sha und Beauty-Taping oder die Mini-Glow-Challenge.</p>
-      </details>
-      <details>
-        <summary>Gibt es auch eine persönliche Begleitung?</summary>
-        <p>Ja. In meinem Programm Göttinnenhaut begleite ich dich persönlich über mehrere Wochen. Ob es zu dir passt, klären wir in einem kostenlosen Gespräch.</p>
-      </details>
+  <!-- KOSTENLOS -->
+  <section class="band free-sec" id="gratis">
+    <div class="inner">
+      <div class="sec-head rise">
+        <span class="eyebrow">Kostenlos kennenlernen</span>
+        <h2>Du möchtest mich und meine Übungen <em>erst kennenlernen?</em></h2>
+      </div>
+      <div class="grid-2">
+        <a class="free-card rise" href="https://kristin-schnoedt.de/gratis-video">
+          <img src="images/kurse/gratis-face-yoga.webp" alt="Kristin Schnödt macht mit geschlossenen Augen eine Face-Yoga-Übung an Stirn und Augenbrauen" width="1024" height="1536">
+          <div class="free-body">
+            <span class="tag">Gratis · 6 Min.</span>
+            <h3>Dein sechsminütiger Face-Yoga-Einstieg</h3>
+            <p>Ein kurzes Video, mit dem du anfangen kannst: Entspannungsübungen für Kiefer, Stirn und Augenlider, nur mit deinen Händen.</p>
+            <span class="free-link">Kostenloses Face-Yoga-Video ansehen →</span>
+          </div>
+        </a>
+        <a class="free-card rise" href="cupping-video.html">
+          <img src="images/kurse/gratis-cupping.webp" alt="Kristin Schnödt setzt lächelnd ein Cupping-Glas an der Stirn an" width="1024" height="1536">
+          <div class="free-body">
+            <span class="tag">Gratis · 4 Min.</span>
+            <h3>Mehr Frische durch Cupping</h3>
+            <p>Ein kostenloser Einblick in meine Arbeit: was Cupping ist und wie du es für dich ausprobieren kannst.</p>
+            <span class="free-link">Kostenloses Cupping-Video entdecken →</span>
+          </div>
+        </a>
+      </div>
+      <p class="free-note">Die Videos erhältst du nach Anmeldung mit deiner E-Mail-Adresse.</p>
     </div>
   </section>
 
-  <p class="disclaimer">Ich bin Kosmetikerin, keine Ärztin. Was ich teile, ist kosmetische Pflege und persönliche Erfahrung. Es ist keine medizinische Diagnose oder Therapie und ersetzt keinen Arztbesuch.</p>
+  <!-- ENTSCHEIDUNGSHILFE + FAQ -->
+  <section class="band">
+    <div class="inner">
+      <div class="sec-head rise">
+        <span class="eyebrow">Entscheidungshilfe</span>
+        <h2>Welcher Weg <em>passt zu dir?</em></h2>
+      </div>
+      <div class="choose">
+        <a href="#selbststaendig" class="rise"><span class="q">Du übst gerne selbstständig?</span><span class="a">Schau dir das 14-Tage-Programm oder einen Methodenkurs an.</span><span class="to">Zu den Kursen →</span></a>
+        <a href="#challenge" class="rise"><span class="q">Du wünschst dir einen festen Rahmen?</span><span class="a">Die Vier-Wochen-Programm gibt dir eine klare Struktur über vier Wochen und einen festen Live-Call.</span><span class="to">Zum Vier-Wochen-Programm →</span></a>
+        <a href="#begleitung" class="rise"><span class="q">Du wünschst dir persönliche Anleitung?</span><span class="a">In der Acht-Wochen-Begleitung entwickeln wir deine Routine gemeinsam und passen sie an deinen Alltag an.</span><span class="to">Zur Begleitung →</span></a>
+      </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="wrap">
-      <div class="footer-brand">Kristin Schnödt</div>
-      <ul>
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
-        <li><a href="agb.html">AGB</a></li>
-        <li><a href="widerruf.html">Widerruf</a></li>
-      </ul>
+      <div class="faq">
+        <div class="sec-head rise">
+          <span class="eyebrow">Gut zu wissen</span>
+          <h2>Häufige <em>Fragen</em></h2>
+        </div>
+        <details id="faq-1"><summary>Wie bekomme ich Zugang zu den Kursen?</summary><p>Direkt nach dem Kauf bekommst du deine Zugangsdaten per E-Mail. Du schaust alles im Browser, ohne App.</p></details>
+        <details id="faq-2"><summary>Wie lange kann ich auf die Kursinhalte zugreifen?</summary><p>Die Inhalte aller Kurse stehen dir dauerhaft und ohne zeitliche Begrenzung zur Verfügung. Du kannst Videos und Materialien auch nach dem jeweiligen Programmzeitraum in deinem eigenen Tempo wiederholen. Live-Termine und persönliche Begleitung finden innerhalb des jeweils gebuchten Zeitraums statt.</p></details>
+        <details id="faq-3"><summary>Muss ich zuerst einen anderen Kurs machen?</summary><p>Nein. Du kannst den Weg wählen, der zu deinem gewünschten Maß an Unterstützung passt.</p></details>
+        <details id="faq-4"><summary>Brauche ich Vorkenntnisse?</summary><p>Nein. Alle Kurse sind für Einsteigerinnen gemacht. Ich führe dich Schritt für Schritt durch jede Übung.</p></details>
+        <details id="faq-5"><summary>Sind die Angebote auch für Frauen über 50 geeignet?</summary><p>Die Angebote richten sich an Frauen ab 40 und sprechen ausdrücklich auch ältere Frauen an. Auf den jeweiligen Unterseiten findest du weitere Angaben zum Kurs und seinen Voraussetzungen.</p></details>
+        <details id="faq-6"><summary>Was ist der Unterschied zwischen dem 14-Tage-Programm und der Vier-Wochen-Programm?</summary><p>Das 14-Tage-Programm ist zum Selbstlernen mit einer aufgezeichneten Einheit. Die Vier-Wochen-Programm gibt dir über vier Wochen eine klare Struktur und enthält einen festen Live-Call. Eine persönliche Betreuung über Nachrichten gibt es nur in der Acht-Wochen-Begleitung.</p></details>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    document.getElementById('navToggle').addEventListener('click', function () {
-      document.getElementById('navLinks').classList.toggle('open');
+  <!-- ABSCHLUSS -->
+  <section class="band closing">
+    <div class="inner rise">
+      <span class="eyebrow">Dein nächster Schritt</span>
+      <h2>Du darfst dir <em>Zeit für dich</em> nehmen.</h2>
+      <p>Fang mit dem an, was sich für dich heute richtig anfühlt. Ein kostenloses Video, ein Kurs oder ein persönliches Gespräch mit mir.</p>
+      <div class="row">
+        <a class="btn" href="#selbststaendig">Kurse ansehen <span class="arr">→</span></a>
+        <a class="btn ghost" href="#gratis">Kostenlos starten</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="mark">GÖTTINNENHAUT</div>
+  <div class="by">Kristin Schnödt · Klar. Warm. Persönlich.</div>
+  <p class="legal">Ich bin Kosmetikerin, keine Ärztin. Was ich teile, ist kosmetische Pflege und persönliche Erfahrung. Es ist keine medizinische Diagnose oder Therapie und ersetzt keinen Arztbesuch.</p>
+  <ul class="legal-links">
+    <li><a href="impressum.html">Impressum</a></li>
+    <li><a href="datenschutz.html">Datenschutz</a></li>
+    <li><a href="agb.html">AGB</a></li>
+    <li><a href="widerruf.html">Widerruf</a></li>
+  </ul>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function () {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  // Platzhalter: Die URL des Vier-Wochen-Programms wird ergänzt, sobald sie vorliegt.
+  const toast = document.getElementById('toast');
+  let timer;
+  document.querySelectorAll('a[data-ziel]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      toast.textContent = 'Link zu „' + a.dataset.ziel + '“ wird noch ergänzt.';
+      toast.classList.add('show');
+      clearTimeout(timer);
+      timer = setTimeout(() => toast.classList.remove('show'), 2600);
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
