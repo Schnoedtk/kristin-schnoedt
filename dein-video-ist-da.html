@@ -56,6 +56,31 @@
     width: 100%; height: 100%;
     border: 0;
   }
+  .video-poster {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    padding: 0; border: 0; cursor: pointer;
+    background: #3D2A2E;
+  }
+  .video-poster img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .video-poster .play {
+    position: absolute; top: 50%; left: 50%;
+    width: 84px; height: 84px; margin: -42px 0 0 -42px;
+    border-radius: 50%;
+    background: rgba(122, 74, 88, 0.92);
+    box-shadow: 0 8px 28px rgba(61, 42, 46, 0.35);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  .video-poster .play::after {
+    content: "";
+    position: absolute; top: 50%; left: 50%;
+    margin: -15px 0 0 -9px;
+    border-style: solid;
+    border-width: 15px 0 15px 26px;
+    border-color: transparent transparent transparent #EDEAE0;
+  }
+  .video-poster:hover .play { transform: scale(1.08); background: #7A4A58; }
+  .video-poster:focus-visible { outline: 3px solid #EDEAE0; outline-offset: -6px; }
 
   .bridge {
     font-size: 1rem;
@@ -94,20 +119,41 @@
   <h1>Dein Video ist da</h1>
   <p class="sub">Nimm dir ein paar Minuten Zeit dafür.</p>
 
-  <div class="video-frame">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/zsT5-ryWe7A"
-      title="Dein Video von Kristin Schnödt"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-      loading="lazy">
-    </iframe>
+  <div class="video-frame" id="videoFrame">
+    <button class="video-poster" id="videoPoster" type="button" aria-label="Video abspielen">
+      <img src="images/gesichtsyoga-shorty.webp" alt="Gesichts-Yoga Shorty: 6 Minuten, liftend und konturierend" width="1672" height="941">
+      <span class="play" aria-hidden="true"></span>
+    </button>
+    <noscript>
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/zsT5-ryWe7A"
+        title="Dein Video von Kristin Schnödt"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </noscript>
   </div>
 
   <p class="bridge">Wenn du tiefer einsteigen willst: Der Glow-Code, mein 14-Tage-Programm für Frauen ab 40 und 50. Du startest sofort.</p>
   <a class="cta" href="https://kristin-schnoedt.de/glow-code">Mehr zum Glow-Code</a>
   <span class="cta-note">14 Tage, ein paar Minuten am Tag</span>
 </div>
+
+<script>
+  (function () {
+    var poster = document.getElementById('videoPoster');
+    var frame = document.getElementById('videoFrame');
+    if (!poster || !frame) return;
+    poster.addEventListener('click', function () {
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/zsT5-ryWe7A?autoplay=1&rel=0';
+      iframe.title = 'Dein Video von Kristin Schnödt';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      frame.replaceChild(iframe, poster);
+    });
+  })();
+</script>
 
 </body>
 </html>
