@@ -429,7 +429,7 @@
       <div class="testi-viewport" id="testiViewport" tabindex="0" role="region" aria-label="Stimmen von Kundinnen">
       <div class="testi-track">
         <div class="testi-card">
-          <div class="tq">„Mit ganz vielen wertvollen Impulsen hat sie mir gezeigt, wie ich mir selbst etwas Gutes tun kann: mit Face Yoga, wohltuenden Massagen und kleinen, bewussten Ritualen für mein Gesicht und meinen Körper. … Kristin vermittelt ihr Wissen so verständlich und alltagstauglich, dass es mir leichtfällt, vieles davon auch wirklich in meinen Alltag zu integrieren.“</div>
+          <div class="tq">„Mit ganz vielen wertvollen Impulsen hat Kristin mir gezeigt, wie ich mir selbst etwas Gutes tun kann: mit Face Yoga, wohltuenden Massagen und kleinen, bewussten Ritualen für mein Gesicht und meinen Körper. … Sie vermittelt ihr Wissen so verständlich und alltagstauglich, dass es mir leichtfällt, vieles davon auch wirklich in meinen Alltag zu integrieren.“</div>
           <div class="twho"><div class="tava">AL</div><div><div class="tname">Anny L.</div><div class="tsub">Glow-Code</div></div></div>
         </div>
         <div class="testi-card">
@@ -576,26 +576,14 @@
     }
     measure();
     viewport.scrollLeft = W;
-    window.addEventListener('load', function () { measure(); viewport.scrollLeft = W; pos = W; });
-
-    var hovering = false, focused = false, idleUntil = 0, last = 0, pos = W, speed = 28;
-    function pauseFor(ms) { idleUntil = performance.now() + ms; }
+    window.addEventListener('load', function () { measure(); viewport.scrollLeft = W; });
 
     function step(dir) {
-      pauseFor(7000);
       normalize();
       viewport.scrollBy({ left: dir * cardW, behavior: reduce ? 'auto' : 'smooth' });
     }
     document.getElementById('testiPrev').addEventListener('click', function () { step(-1); });
     document.getElementById('testiNext').addEventListener('click', function () { step(1); });
-
-    carousel.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') hovering = true; });
-    carousel.addEventListener('pointerleave', function () { hovering = false; });
-    carousel.addEventListener('focusin', function () { focused = true; });
-    carousel.addEventListener('focusout', function () { focused = false; });
-    ['touchstart', 'pointerdown', 'wheel', 'keydown'].forEach(function (ev) {
-      viewport.addEventListener(ev, function () { pauseFor(6000); }, { passive: true });
-    });
 
     var timer;
     viewport.addEventListener('scroll', function () {
@@ -611,22 +599,6 @@
       measure();
       viewport.scrollLeft = W + ratio * W;
     });
-
-    function frame(ts) {
-      if (!last) last = ts;
-      var dt = Math.min(ts - last, 64) / 1000;
-      last = ts;
-      var paused = hovering || focused || document.hidden || performance.now() < idleUntil;
-      if (paused) {
-        pos = viewport.scrollLeft;
-      } else {
-        pos += speed * dt;
-        if (pos >= 2 * W) pos -= W;
-        viewport.scrollLeft = pos;
-      }
-      requestAnimationFrame(frame);
-    }
-    if (!reduce) requestAnimationFrame(frame);
   })();
 </script>
 
