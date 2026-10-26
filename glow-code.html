@@ -198,7 +198,15 @@
 
   /* TESTIMONIALS */
   .testis { background: #E3E7DC; }
-  .testi-marquee { margin-top: 36px; overflow-x: auto; padding-bottom: 6px; }
+  .testi-carousel { position: relative; margin-top: 36px; }
+  .testi-viewport {
+    overflow-x: auto; padding: 4px 0 6px;
+    scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 4%, #000 96%, transparent 100%);
+  }
+  .testi-viewport::-webkit-scrollbar { display: none; }
+  .testi-viewport:focus-visible { outline: 2px solid #7A4A58; outline-offset: 4px; border-radius: 16px; }
   .testi-track { display: flex; width: max-content; }
   .testi-card {
     flex: 0 0 380px; margin-right: 18px;
@@ -206,15 +214,19 @@
     background: #FBF8F2; border: 1px solid #D8C9AE;
     border-radius: 16px; padding: 26px 26px 22px;
   }
-  .testi-marquee.is-running {
-    overflow: hidden;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
-    mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
+  .testi-btn {
+    position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+    width: 46px; height: 46px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: #FBF8F2; color: #7A4A58; border: 1px solid #B9C2A8;
+    box-shadow: 0 6px 18px rgba(61,42,46,0.16); cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
   }
-  .testi-marquee.is-running .testi-track { animation: testi-scroll 80s linear infinite; }
-  .testi-marquee.is-running:hover .testi-track,
-  .testi-marquee.is-running:focus-within .testi-track { animation-play-state: paused; }
-  @keyframes testi-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .testi-btn:hover { background: #7A4A58; color: #FBF8F2; }
+  .testi-btn:active { transform: translateY(-50%) scale(0.94); }
+  .testi-btn:focus-visible { outline: 2px solid #7A4A58; outline-offset: 3px; }
+  .testi-btn.prev { left: -6px; }
+  .testi-btn.next { right: -6px; }
   .testi-card .tq {
     font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 500;
     font-size: 1.22rem; color: #3D2A2E; line-height: 1.45;
@@ -277,6 +289,9 @@
     .hero-grid, .reframe-grid, .story-grid, .stack-grid, .about-grid { grid-template-columns: 1fr; gap: 36px; }
     .steps { grid-template-columns: 1fr; }
     .testi-card { flex-basis: 300px; }
+    .testi-btn { width: 38px; height: 38px; }
+    .testi-btn.prev { left: 0; }
+    .testi-btn.next { right: 0; }
     .match-grid { grid-template-columns: 1fr; }
     .pricebox { position: static; }
     .ph-hero { min-height: 320px; }
@@ -406,7 +421,9 @@
   <div class="wrap">
     <span class="eyebrow">Echte Stimmen</span>
     <h2>Frauen, die schon mit mir gearbeitet haben</h2>
-    <div class="testi-marquee" id="testiMarquee">
+    <div class="testi-carousel" id="testiCarousel">
+      <button class="testi-btn prev" id="testiPrev" type="button" aria-label="Vorherige Stimme"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="testi-viewport" id="testiViewport" tabindex="0" role="region" aria-label="Stimmen von Kundinnen">
       <div class="testi-track">
         <div class="testi-card">
           <div class="tq">„Mit ganz vielen wertvollen Impulsen hat sie mir gezeigt, wie ich mir selbst etwas Gutes tun kann: mit Face Yoga, wohltuenden Massagen und kleinen, bewussten Ritualen für mein Gesicht und meinen Körper. … Kristin vermittelt ihr Wissen so verständlich und alltagstauglich, dass es mir leichtfällt, vieles davon auch wirklich in meinen Alltag zu integrieren.“</div>
@@ -429,6 +446,8 @@
           <div class="twho"><div class="tava">DH</div><div><div class="tname">Dunja H.</div><div class="tsub">Göttinnen-Booster</div></div></div>
         </div>
       </div>
+      </div>
+      <button class="testi-btn next" id="testiNext" type="button" aria-label="Nächste Stimme"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     </div>
     <p class="fineprint">Persönliche Erfahrungen einzelner Kundinnen aus meinen bisherigen Programmen und Behandlungen. Jede Haut ist anders, Ergebnisse lassen sich nicht garantieren.</p>
   </div>
@@ -526,16 +545,84 @@
 
 <script>
   (function () {
-    var marquee = document.getElementById('testiMarquee');
-    if (!marquee) return;
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var track = marquee.querySelector('.testi-track');
-    Array.prototype.slice.call(track.children).forEach(function (card) {
-      var copy = card.cloneNode(true);
-      copy.setAttribute('aria-hidden', 'true');
-      track.appendChild(copy);
+    var carousel = document.getElementById('testiCarousel');
+    if (!carousel) return;
+    var viewport = document.getElementById('testiViewport');
+    var track = viewport.querySelector('.testi-track');
+    var originals = Array.prototype.slice.call(track.children);
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* zwei Kopien, damit das Band in beide Richtungen endlos läuft */
+    for (var i = 0; i < 2; i++) {
+      originals.forEach(function (card) {
+        var copy = card.cloneNode(true);
+        copy.setAttribute('aria-hidden', 'true');
+        track.appendChild(copy);
+      });
+    }
+
+    var W = 0, cardW = 0;
+    function measure() {
+      W = track.scrollWidth / 3;
+      cardW = originals.length > 1 ? originals[1].offsetLeft - originals[0].offsetLeft : W;
+    }
+    function normalize() {
+      var sl = viewport.scrollLeft;
+      if (sl >= 2 * W) viewport.scrollLeft = sl - W;
+      else if (sl < W) viewport.scrollLeft = sl + W;
+    }
+    measure();
+    viewport.scrollLeft = W;
+
+    var hovering = false, focused = false, idleUntil = 0, last = 0, pos = W, speed = 28;
+    function pauseFor(ms) { idleUntil = performance.now() + ms; }
+
+    function step(dir) {
+      pauseFor(7000);
+      normalize();
+      viewport.scrollBy({ left: dir * cardW, behavior: reduce ? 'auto' : 'smooth' });
+    }
+    document.getElementById('testiPrev').addEventListener('click', function () { step(-1); });
+    document.getElementById('testiNext').addEventListener('click', function () { step(1); });
+
+    carousel.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') hovering = true; });
+    carousel.addEventListener('pointerleave', function () { hovering = false; });
+    carousel.addEventListener('focusin', function () { focused = true; });
+    carousel.addEventListener('focusout', function () { focused = false; });
+    ['touchstart', 'pointerdown', 'wheel', 'keydown'].forEach(function (ev) {
+      viewport.addEventListener(ev, function () { pauseFor(6000); }, { passive: true });
     });
-    marquee.classList.add('is-running');
+
+    var timer;
+    viewport.addEventListener('scroll', function () {
+      clearTimeout(timer);
+      timer = setTimeout(normalize, 160);
+    }, { passive: true });
+
+    var width = window.innerWidth;
+    window.addEventListener('resize', function () {
+      if (window.innerWidth === width) return;
+      width = window.innerWidth;
+      var ratio = W ? (viewport.scrollLeft - W) / W : 0;
+      measure();
+      viewport.scrollLeft = W + ratio * W;
+    });
+
+    function frame(ts) {
+      if (!last) last = ts;
+      var dt = Math.min(ts - last, 64) / 1000;
+      last = ts;
+      var paused = hovering || focused || document.hidden || performance.now() < idleUntil;
+      if (paused) {
+        pos = viewport.scrollLeft;
+      } else {
+        pos += speed * dt;
+        if (pos >= 2 * W) pos -= W;
+        viewport.scrollLeft = pos;
+      }
+      requestAnimationFrame(frame);
+    }
+    if (!reduce) requestAnimationFrame(frame);
   })();
 </script>
 
