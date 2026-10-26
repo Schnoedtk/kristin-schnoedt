@@ -198,24 +198,20 @@
 
   /* TESTIMONIALS */
   .testis { background: #E3E7DC; }
-  .testi-carousel { position: relative; margin-top: 36px; }
+  .testi-carousel { position: relative; margin: 36px auto 0; max-width: 680px; padding: 0 60px; }
   .testi-viewport {
     overflow-x: auto; padding: 4px 0 6px;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch;
   }
-  .testi-carousel::before, .testi-carousel::after {
-    content: ""; position: absolute; top: 0; bottom: 0; width: 40px; z-index: 1; pointer-events: none;
-  }
-  .testi-carousel::before { left: 0; background: linear-gradient(90deg, #E3E7DC, rgba(227,231,220,0)); }
-  .testi-carousel::after { right: 0; background: linear-gradient(270deg, #E3E7DC, rgba(227,231,220,0)); }
   .testi-viewport::-webkit-scrollbar { display: none; }
   .testi-viewport:focus-visible { outline: 2px solid #7A4A58; outline-offset: 4px; border-radius: 16px; }
-  .testi-track { display: flex; width: max-content; }
+  .testi-track { display: flex; width: 100%; }
   .testi-card {
-    flex: 0 0 380px; margin-right: 18px;
+    flex: 0 0 100%; box-sizing: border-box; scroll-snap-align: start;
     display: flex; flex-direction: column; justify-content: space-between;
     background: #FBF8F2; border: 1px solid #D8C9AE;
-    border-radius: 16px; padding: 26px 26px 22px;
+    border-radius: 16px; padding: 30px 32px 26px;
   }
   .testi-btn {
     position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
@@ -228,8 +224,8 @@
   .testi-btn:hover { background: #7A4A58; color: #FBF8F2; }
   .testi-btn:active { transform: translateY(-50%) scale(0.94); }
   .testi-btn:focus-visible { outline: 2px solid #7A4A58; outline-offset: 3px; }
-  .testi-btn.prev { left: -6px; }
-  .testi-btn.next { right: -6px; }
+  .testi-btn.prev { left: 4px; }
+  .testi-btn.next { right: 4px; }
   .testi-card .tq {
     font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 500;
     font-size: 1.22rem; color: #3D2A2E; line-height: 1.45;
@@ -291,7 +287,8 @@
     .hero h1 { font-size: 2.5rem; }
     .hero-grid, .reframe-grid, .story-grid, .stack-grid, .about-grid { grid-template-columns: 1fr; gap: 36px; }
     .steps { grid-template-columns: 1fr; }
-    .testi-card { flex-basis: 300px; }
+    .testi-carousel { padding: 0 46px; }
+    .testi-card { padding: 24px 22px 20px; }
     .testi-btn { width: 38px; height: 38px; }
     .testi-btn.prev { left: 0; }
     .testi-btn.next { right: 0; }
@@ -566,7 +563,7 @@
 
     var W = 0, cardW = 0;
     function measure() {
-      W = track.scrollWidth / 3;
+      W = viewport.scrollWidth / 3;
       cardW = originals.length > 1 ? originals[1].offsetLeft - originals[0].offsetLeft : W;
     }
     function normalize() {
