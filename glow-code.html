@@ -198,11 +198,23 @@
 
   /* TESTIMONIALS */
   .testis { background: #E3E7DC; }
-  .testi-grid { columns: 2; column-gap: 18px; margin-top: 36px; }
+  .testi-marquee { margin-top: 36px; overflow-x: auto; padding-bottom: 6px; }
+  .testi-track { display: flex; width: max-content; }
   .testi-card {
-    break-inside: avoid; background: #FBF8F2; border: 1px solid #D8C9AE;
-    border-radius: 16px; padding: 26px 26px 22px; margin-bottom: 18px;
+    flex: 0 0 380px; margin-right: 18px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    background: #FBF8F2; border: 1px solid #D8C9AE;
+    border-radius: 16px; padding: 26px 26px 22px;
   }
+  .testi-marquee.is-running {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 5%, #000 95%, transparent 100%);
+  }
+  .testi-marquee.is-running .testi-track { animation: testi-scroll 80s linear infinite; }
+  .testi-marquee.is-running:hover .testi-track,
+  .testi-marquee.is-running:focus-within .testi-track { animation-play-state: paused; }
+  @keyframes testi-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   .testi-card .tq {
     font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-weight: 500;
     font-size: 1.22rem; color: #3D2A2E; line-height: 1.45;
@@ -264,7 +276,7 @@
     .hero h1 { font-size: 2.5rem; }
     .hero-grid, .reframe-grid, .story-grid, .stack-grid, .about-grid { grid-template-columns: 1fr; gap: 36px; }
     .steps { grid-template-columns: 1fr; }
-    .testi-grid { columns: 1; }
+    .testi-card { flex-basis: 300px; }
     .match-grid { grid-template-columns: 1fr; }
     .pricebox { position: static; }
     .ph-hero { min-height: 320px; }
@@ -394,30 +406,28 @@
   <div class="wrap">
     <span class="eyebrow">Echte Stimmen</span>
     <h2>Frauen, die schon mit mir gearbeitet haben</h2>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="tq">„Ich bekam von allen Seiten: Wow, Tanja, du siehst ja 10 Jahre jünger aus. Das tat unwahrscheinlich gut, die haben mich ein Jahr nicht gesehen. Das habe ich dir zu verdanken.“</div>
-        <div class="twho"><div class="tava">TW</div><div><div class="tname">Tanja W.</div><div class="tsub">Göttinnen-Programm</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="tq">„Es ist wirklich unglaublich, wie viel Wissen und wertvolle Tools man hier an die Hand bekommt. Ich fühle mich bei ihr nie unter Druck gesetzt. Sie beantwortet jede Frage ausführlich, und man spürt in jedem Moment, dass sie genau weiß, wovon sie spricht.“</div>
-        <div class="twho"><div class="tava">ML</div><div><div class="tname">Miriam L., 40</div><div class="tsub">Online-Programm</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="tq">„Sie hat mir gezeigt, wie ich mit wenig Zeitaufwand aber sehr effektiv kleine Übungen machen kann, um meine Haut zu straffen. Ich liebe das Cupping, das geht so einfach und schnell. Ich verstehe jetzt endlich, was meine Haut braucht.“</div>
-        <div class="twho"><div class="tava">MD</div><div><div class="tname">Manuela D.</div><div class="tsub">Göttinnen-Booster</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="tq">„Nach 6 Wochen mit wirksamen Face-Yoga-Workouts, entspannenden Meditationen und vielen Infos und Tipps bin ich sehr begeistert. Es tut so gut, sich diese wertvolle Zeit für sich selbst zu nehmen.“</div>
-        <div class="twho"><div class="tava">DH</div><div><div class="tname">Dunja H.</div><div class="tsub">Göttinnen-Booster</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="tq">„Die Anwendung ist sehr einfach zu verstehen, so dass auch Unerfahrene gut einsteigen können. Man merkt eine Veränderung im ganzen Gesicht.“</div>
-        <div class="twho"><div class="tava">BI</div><div><div class="tname">Bianka I.</div><div class="tsub">Cupping-Kurs</div></div></div>
-      </div>
-      <div class="testi-card">
-        <div class="tq">„Die Haut ist weniger rot, nicht mehr so trocken und ich habe Komplimente bekommen, dass ich frischer ausschaue. Ich bin bald 59 und da hört man das doch besonders gern.“</div>
-        <div class="twho"><div class="tava">AW</div><div><div class="tname">Angelika W., 59</div><div class="tsub">Pflege-Begleitung</div></div></div>
+    <div class="testi-marquee" id="testiMarquee">
+      <div class="testi-track">
+        <div class="testi-card">
+          <div class="tq">„Mit ganz vielen wertvollen Impulsen hat sie mir gezeigt, wie ich mir selbst etwas Gutes tun kann: mit Face Yoga, wohltuenden Massagen und kleinen, bewussten Ritualen für mein Gesicht und meinen Körper. … Kristin vermittelt ihr Wissen so verständlich und alltagstauglich, dass es mir leichtfällt, vieles davon auch wirklich in meinen Alltag zu integrieren.“</div>
+          <div class="twho"><div class="tava">AL</div><div><div class="tname">Anny L.</div><div class="tsub">Glow-Code</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="tq">„Ich bekam von allen Seiten: Wow, Tanja, du siehst ja 10 Jahre jünger aus. Das tat unwahrscheinlich gut, die haben mich ein Jahr nicht gesehen. Das habe ich dir zu verdanken.“</div>
+          <div class="twho"><div class="tava">TW</div><div><div class="tname">Tanja W.</div><div class="tsub">Göttinnen-Programm</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="tq">„Es ist wirklich unglaublich, wie viel Wissen und wertvolle Tools man hier an die Hand bekommt. Ich fühle mich bei ihr nie unter Druck gesetzt. Sie beantwortet jede Frage ausführlich, und man spürt in jedem Moment, dass sie genau weiß, wovon sie spricht.“</div>
+          <div class="twho"><div class="tava">ML</div><div><div class="tname">Miriam L., 40</div><div class="tsub">Online-Programm</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="tq">„Sie hat mir gezeigt, wie ich mit wenig Zeitaufwand aber sehr effektiv kleine Übungen machen kann, um meine Haut zu straffen. Ich liebe das Cupping, das geht so einfach und schnell. Ich verstehe jetzt endlich, was meine Haut braucht.“</div>
+          <div class="twho"><div class="tava">MD</div><div><div class="tname">Manuela D.</div><div class="tsub">Göttinnen-Booster</div></div></div>
+        </div>
+        <div class="testi-card">
+          <div class="tq">„Nach 6 Wochen mit wirksamen Face-Yoga-Workouts, entspannenden Meditationen und vielen Infos und Tipps bin ich sehr begeistert. Es tut so gut, sich diese wertvolle Zeit für sich selbst zu nehmen.“</div>
+          <div class="twho"><div class="tava">DH</div><div><div class="tname">Dunja H.</div><div class="tsub">Göttinnen-Booster</div></div></div>
+        </div>
       </div>
     </div>
     <p class="fineprint">Persönliche Erfahrungen einzelner Kundinnen aus meinen bisherigen Programmen und Behandlungen. Jede Haut ist anders, Ergebnisse lassen sich nicht garantieren.</p>
@@ -512,6 +522,21 @@
     }
   }), { threshold: 0.7 });
   document.querySelectorAll('[data-count]').forEach(el => cntObs.observe(el));
+</script>
+
+<script>
+  (function () {
+    var marquee = document.getElementById('testiMarquee');
+    if (!marquee) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var track = marquee.querySelector('.testi-track');
+    Array.prototype.slice.call(track.children).forEach(function (card) {
+      var copy = card.cloneNode(true);
+      copy.setAttribute('aria-hidden', 'true');
+      track.appendChild(copy);
+    });
+    marquee.classList.add('is-running');
+  })();
 </script>
 
 </body>
