@@ -121,7 +121,8 @@
     }
     .hero .inner { position: relative; min-height: min(640px, 82vh); display: flex; align-items: center; }
     .hero-photo {
-      position: absolute; top: 0; bottom: 0; right: calc(-1 * var(--gutter-r)); width: 56%;
+      /* Foto läuft bis an den rechten Bildschirmrand, auch auf breiten Bildschirmen */
+      position: absolute; top: 0; bottom: 0; left: 44%; right: calc((100% - 100vw) / 2);
       -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.35) 22%, #000 48%);
               mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.35) 22%, #000 48%);
     }
@@ -389,7 +390,7 @@
       .hero .inner { flex-direction: column; min-height: 0; align-items: stretch; }
       .hero { background: linear-gradient(180deg, var(--sage-photo) 0%, #C7CFBA 30%, var(--beige-warm) 52%, var(--beige) 100%); }
       .hero-photo {
-        position: relative; width: auto; height: 380px; margin: 0 calc(-1 * var(--gutter-r)) 0 calc(-1 * var(--gutter-l)); right: auto;
+        position: relative; width: auto; height: 380px; margin: 0 calc(-1 * var(--gutter-r)) 0 calc(-1 * var(--gutter-l)); left: auto; right: auto;
         -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent 100%);
                 mask-image: linear-gradient(180deg, #000 60%, transparent 100%);
       }
