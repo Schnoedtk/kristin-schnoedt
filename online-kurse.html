@@ -207,6 +207,16 @@
     .access-small { margin-top: 26px; text-align: center; font-size: 0.82rem; color: var(--warmgrey); }
     .access-small::before { content: "✦"; color: var(--sage); margin-right: 8px; font-size: 0.7rem; }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    /* ADVENT (zeitlich begrenzt, siehe data-from/data-until) */
+    .advent-sec { background: var(--bordeaux); }
+    .advent-sec .eyebrow { color: var(--sand); }
+    .advent-sec .eyebrow::before { background: var(--sand); }
+    .advent-sec .sec-head h2 { color: var(--paper); }
+    .advent-sec .sec-head h2 em { color: var(--sand); }
+    .advent-sec .card-img.full img { aspect-ratio: 21 / 9; height: auto; object-fit: cover; object-position: center 30%; }
+    @media (max-width: 760px) { .advent-sec .card-img.full img { aspect-ratio: 4 / 3; } }
+    .advent-bonus { padding: 12px 14px; border-radius: 10px; background: var(--sage-light); color: var(--dark); font-size: 0.88rem; line-height: 1.5; }
+    .advent-bonus b { color: var(--bordeaux); }
   
     /* ===== STIMMEN (Laufband) ===== */
     .voices { background: var(--beige); padding-left: 0; padding-right: 0; overflow: hidden; }
@@ -435,6 +445,45 @@
         </div>
         <p class="hero-free">Oder erst einmal <a href="#gratis">kostenlos reinschnuppern</a>.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ADVENT · blendet sich ab 1.1.2027 automatisch aus -->
+  <section class="band advent-sec" id="advent" data-until="2027-01-01">
+    <div class="inner">
+      <div class="sec-head rise">
+        <span class="eyebrow">Neu im Advent</span>
+        <h2>Mit Face Yoga <em>entspannt und frisch durch die Adventszeit.</em></h2>
+      </div>
+      <article class="card feature rise">
+        <div class="card-img full">
+          <img src="Bilder/Face-Yoga-Advent/face-yoga-advent-stirn-uebung.webp" alt="Kristin Schnödt bei einer Face-Yoga-Übung an der Stirn" width="1672" height="941">
+          <span class="ribbon">Neu</span>
+        </div>
+        <div class="card-body">
+          <div class="feature-main">
+            <span class="tag">Online-Programm im Advent</span>
+            <h3>Face Yoga im Advent</h3>
+            <p>Der Dezember ist voll. In diesem Programm nimmst du dir ein paar Minuten für dich: angeleitete Face-Yoga-Einheiten, Kosmetik-Tipps für die Winterzeit, eine Extra-Beauty-Woche über Weihnachten und ein Silvester-Workout als Abschluss.</p>
+            <p class="advent-bonus" data-until="2026-11-30"><b>Bonus bei Buchung bis 29.11.:</b> Mini-Glow mit 5 Workouts (sonst 29 €) gratis dazu.</p>
+          </div>
+          <div class="feature-side">
+            <div class="facts">
+              <span data-until="2026-11-30">Start am 30.11.</span>
+              <span data-from="2026-11-30" data-until="2026-12-16">Läuft gerade, komm noch dazu</span>
+              <span data-from="2026-12-16">Einstieg noch bis 31.12.</span>
+              <span>21 Tage bis zum 4. Advent</span>
+              <span>9 Face-Yoga-Einheiten</span>
+              <span data-until="2026-12-16">Live-Call am 16.12. um 20 Uhr</span>
+              <span data-from="2026-12-16">Aufzeichnung vom Live-Call</span>
+            </div>
+            <div class="card-foot">
+              <div class="price">59 €</div>
+              <a class="btn" href="face-yoga-advent.html">Advent-Programm entdecken <span class="arr">→</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -738,5 +787,12 @@
   });
 </script>
 
+<script>
+  // Zeitabhängige Texte: data-from = sichtbar ab diesem Tag, data-until = ab diesem Tag ausgeblendet
+  document.querySelectorAll('[data-from],[data-until]').forEach(function (el) {
+    var now = new Date(), d = el.dataset;
+    if ((d.from && now < new Date(d.from + 'T00:00:00')) || (d.until && now >= new Date(d.until + 'T00:00:00'))) el.remove();
+  });
+</script>
 </body>
 </html>
