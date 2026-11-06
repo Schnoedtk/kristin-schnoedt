@@ -208,16 +208,27 @@
     .access-small { margin-top: 26px; text-align: center; font-size: 0.82rem; color: var(--warmgrey); }
     .access-small::before { content: "✦"; color: var(--sage); margin-right: 8px; font-size: 0.7rem; }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-    /* ADVENT (zeitlich begrenzt, siehe data-from/data-until) */
-    .advent-sec { background: var(--bordeaux); }
-    .advent-sec .eyebrow { color: var(--sand); }
-    .advent-sec .eyebrow::before { background: var(--sand); }
-    .advent-sec .sec-head h2 { color: var(--paper); }
-    .advent-sec .sec-head h2 em { color: var(--sand); }
-    .advent-sec .card-img.full img { aspect-ratio: 21 / 9; height: auto; object-fit: cover; object-position: center 30%; }
-    @media (max-width: 760px) { .advent-sec .card-img.full img { aspect-ratio: 4 / 3; } }
-    .advent-bonus { padding: 12px 14px; border-radius: 10px; background: var(--sage-light); color: var(--dark); font-size: 0.88rem; line-height: 1.5; }
-    .advent-bonus b { color: var(--bordeaux); }
+    /* ADVENT-HINWEIS (zeitlich begrenzt, siehe data-from/data-until) */
+    .advent-band { background: var(--bordeaux); padding: 40px var(--gutter-r) 40px var(--gutter-l); }
+    .advent-inner { max-width: 1120px; margin: 0 auto; display: flex; align-items: center; gap: 36px; }
+    .advent-img { width: 110px; height: 110px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid rgba(251,248,242,0.5); box-shadow: 0 10px 30px rgba(61,42,46,0.25); }
+    .advent-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .advent-text { flex: 1; }
+    .advent-text .eyebrow { color: var(--sand); margin-bottom: 8px; }
+    .advent-text .eyebrow::before { background: var(--sand); }
+    .advent-h { font-family: var(--display); font-size: 2rem; font-weight: 500; line-height: 1.2; color: var(--paper); margin: 0 0 6px; }
+    .advent-h em { color: var(--sand); }
+    .advent-facts { font-size: 0.86rem; color: rgba(251,248,242,0.85); margin: 0; }
+    .advent-facts b { color: var(--paper); }
+    .advent-bonus { margin: 8px 0 0; font-size: 0.86rem; color: var(--paper); }
+    .advent-bonus b { color: var(--sand); }
+    @media (max-width: 760px) {
+      .advent-band { padding-block: 32px; }
+      .advent-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
+      .advent-img { width: 84px; height: 84px; }
+      .advent-h { font-size: 1.6rem; }
+      .advent-band .btn { width: 100%; }
+    }
   
     /* ===== STIMMEN (Laufband) ===== */
     .voices { background: var(--beige); padding-left: 0; padding-right: 0; overflow: hidden; }
@@ -449,42 +460,19 @@
     </div>
   </section>
 
-  <!-- ADVENT · blendet sich ab 1.1.2027 automatisch aus -->
-  <section class="band advent-sec" id="advent" data-until="2027-01-01">
-    <div class="inner">
-      <div class="sec-head rise">
-        <span class="eyebrow">Neu im Advent</span>
-        <h2>Mit Face Yoga <em>entspannt und frisch durch die Adventszeit.</em></h2>
+  <!-- ADVENT-HINWEIS · blendet sich ab 1.1.2027 automatisch aus -->
+  <section class="advent-band" id="advent" data-until="2027-01-01">
+    <div class="advent-inner">
+      <div class="advent-img"><img src="Bilder/Face-Yoga-Advent/face-yoga-advent-stirn-uebung.webp" alt="Kristin Schnödt bei einer Face-Yoga-Übung an der Stirn"></div>
+      <div class="advent-text">
+        <span class="eyebrow">Neu · Online-Programm im Advent</span>
+        <h2 class="advent-h">Mit Face Yoga <em>entspannt und frisch</em> durch die Adventszeit.</h2>
+        <p class="advent-facts" data-until="2026-11-30">Start am <b>30.11.</b> · 21 Tage bis zum 4. Advent · Live-Call am 16.12. um 20 Uhr · <b>59 €</b></p>
+        <p class="advent-bonus" data-until="2026-11-30"><b>Bonus bei Buchung bis 29.11.:</b> Mini-Glow mit 5 Workouts (sonst 29 €) gratis dazu</p>
+        <p class="advent-facts" data-from="2026-11-30" data-until="2026-12-16"><b>Läuft gerade, komm noch dazu</b> · Live-Call am 16.12. um 20 Uhr · <b>59 €</b></p>
+        <p class="advent-facts" data-from="2026-12-16">Einstieg noch bis <b>31.12.</b> möglich · inklusive Aufzeichnung vom Live-Call · <b>59 €</b></p>
       </div>
-      <article class="card feature rise">
-        <div class="card-img full">
-          <img src="Bilder/Face-Yoga-Advent/face-yoga-advent-stirn-uebung.webp" alt="Kristin Schnödt bei einer Face-Yoga-Übung an der Stirn" width="1672" height="941">
-          <span class="ribbon">Neu</span>
-        </div>
-        <div class="card-body">
-          <div class="feature-main">
-            <span class="tag">Online-Programm im Advent</span>
-            <h3>Face Yoga im Advent</h3>
-            <p>Der Dezember ist voll. In diesem Programm nimmst du dir ein paar Minuten für dich: angeleitete Face-Yoga-Einheiten, Kosmetik-Tipps für die Winterzeit, eine Extra-Beauty-Woche über Weihnachten und ein Silvester-Workout als Abschluss.</p>
-            <p class="advent-bonus" data-until="2026-11-30"><b>Bonus bei Buchung bis 29.11.:</b> Mini-Glow mit 5 Workouts (sonst 29 €) gratis dazu.</p>
-          </div>
-          <div class="feature-side">
-            <div class="facts">
-              <span data-until="2026-11-30">Start am 30.11.</span>
-              <span data-from="2026-11-30" data-until="2026-12-16">Läuft gerade, komm noch dazu</span>
-              <span data-from="2026-12-16">Einstieg noch bis 31.12.</span>
-              <span>21 Tage bis zum 4. Advent</span>
-              <span>9 Face-Yoga-Einheiten</span>
-              <span data-until="2026-12-16">Live-Call am 16.12. um 20 Uhr</span>
-              <span data-from="2026-12-16">Aufzeichnung vom Live-Call</span>
-            </div>
-            <div class="card-foot">
-              <div class="price">59 €</div>
-              <a class="btn" href="face-yoga-advent.html">Advent-Programm entdecken <span class="arr">→</span></a>
-            </div>
-          </div>
-        </div>
-      </article>
+      <a class="btn light" href="face-yoga-advent.html">Mehr erfahren <span class="arr">→</span></a>
     </div>
   </section>
 
