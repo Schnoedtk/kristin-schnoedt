@@ -557,6 +557,30 @@
     .online-list { list-style: none; margin: 0 0 2.25rem; border-top: 1px solid var(--m300); }
     .online-list li { display: flex; justify-content: space-between; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid var(--m300); font-size: 0.88rem; color: var(--m900); }
     .online-list li span { color: var(--schiefer); white-space: nowrap; }
+    .online-list li.advent-item a { color: var(--m700); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--m300); }
+    .online-list li.advent-item a:hover { border-color: var(--m700); }
+    /* ADVENT-HINWEIS (blendet sich ab dem Datum in data-until automatisch aus) */
+    .advent-band { background: var(--m700); padding: 2.75rem 4rem; }
+    .advent-band .eyebrow { color: var(--m400); }
+    .advent-band .btn-primary { background: var(--white); color: var(--m700); }
+    .advent-band .btn-primary:hover { color: var(--white); }
+    .advent-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; gap: 2.5rem; }
+    .advent-img { width: 110px; height: 110px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid rgba(251,248,242,0.5); box-shadow: 0 10px 30px rgba(61,42,46,0.25); }
+    .advent-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .advent-text { flex: 1; }
+    .advent-text .eyebrow { margin-bottom: 0.6rem; }
+    .advent-h { font-family: var(--display); font-size: 2rem; font-weight: 400; line-height: 1.2; color: var(--white); margin-bottom: 0.5rem; }
+    .advent-h em { color: var(--m400); }
+    .advent-facts { font-size: 0.85rem; color: rgba(251,248,242,0.85); }
+    .advent-facts b { color: var(--white); }
+    .advent-bonus { margin-top: 0.6rem; font-size: 0.85rem; color: var(--white); }
+    .advent-bonus b { color: var(--m400); letter-spacing: 0.04em; }
+    @media (max-width: 768px) {
+      .advent-band { padding: 2.25rem 1.75rem; }
+      .advent-inner { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+      .advent-img { width: 84px; height: 84px; }
+      .advent-h { font-size: 1.6rem; }
+    }
     .online-actions { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; }
     .online-free { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--m700); background: none; border: none; border-bottom: 1px solid var(--m300); padding-bottom: 1px; cursor: pointer; font-family: var(--body); }
     @media (max-width: 768px) {
@@ -633,6 +657,25 @@
     <div class="hero-scroll">
       <span class="hero-scroll-t">Entdecken</span>
       <div class="hero-scroll-l"></div>
+    </div>
+  </section>
+
+  <!-- ADVENT-HINWEIS · blendet sich ab 1.1.2027 automatisch aus -->
+  <section class="advent-band" data-until="2027-01-01">
+    <div class="advent-inner">
+      <div class="advent-img"><img src="Bilder/Face-Yoga-Advent/face-yoga-advent-stirn-uebung.webp" alt="Kristin bei einer Face-Yoga-Übung an der Stirn"></div>
+      <div class="advent-text">
+        <div class="eyebrow">Neu · Online-Programm im Advent</div>
+        <h2 class="advent-h">Mit Face Yoga <em>entspannt und frisch</em> durch die Adventszeit.</h2>
+        <p class="advent-facts" data-until="2026-11-30">Start am <b>30.11.</b> · 21 Tage bis zum 4. Advent · Live-Call am 16.12. um 20 Uhr · <b>59 €</b></p>
+        <p class="advent-bonus" data-until="2026-11-30"><b>Bonus bei Buchung bis 29.11.:</b> Mini-Glow mit 5 Workouts (sonst 29 €) gratis dazu</p>
+        <p class="advent-facts" data-from="2026-11-30" data-until="2026-12-16">Läuft gerade · Einstieg noch bis <b>31.12.</b> möglich · Live-Call am 16.12. um 20 Uhr · <b>59 €</b></p>
+        <p class="advent-facts" data-from="2026-12-16">Einstieg noch bis <b>31.12.</b> möglich · inklusive Aufzeichnung vom Live-Call · <b>59 €</b></p>
+      </div>
+      <a href="face-yoga-advent.html" class="btn-primary">
+        <span>Mehr erfahren</span>
+        <svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg>
+      </a>
     </div>
   </section>
 
@@ -888,9 +931,10 @@
         <h2 class="sec-h2 rv d1">Lieber <em>zu Hause</em> üben?</h2>
         <p class="rv d2">Kleine Online-Kurse, die du sofort starten kannst. In deinem Tempo, direkt im Browser, mit lebenslangem Zugang.</p>
         <ul class="online-list rv d2">
+          <li class="advent-item" data-until="2027-01-01"><a href="face-yoga-advent.html">Neu: Face Yoga im Advent<span data-until="2026-11-30"> · Start 30.11.</span><span data-from="2026-11-30"> · Einstieg bis 31.12.</span></a> <span>59 €</span></li>
           <li>Glow-Code · 14-Tage-Programm <span>49 €</span></li>
           <li>Cupping Kurs <span>ab 49 €</span></li>
-          <li>Mini-Glow-Challenge <span>29 €</span></li>
+          <li>Mini-Glow <span>29 €</span></li>
         </ul>
         <div class="online-actions rv d3">
           <a href="online-kurse.html" class="btn-primary"><span>Alle Online-Kurse</span><svg class="arrow-svg" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 5h12M8 1l5 4-5 4"/></svg></a>
@@ -1394,5 +1438,12 @@
       <p class="lead-modal-note">Kein Spam. Keine Weitergabe. Jederzeit abmeldbar.</p>
     </div>
   </div>
+<script>
+  // Zeitabhängige Texte: data-from = sichtbar ab diesem Tag, data-until = ab diesem Tag ausgeblendet
+  document.querySelectorAll('[data-from],[data-until]').forEach(function (el) {
+    var now = new Date(), d = el.dataset;
+    if ((d.from && now < new Date(d.from + 'T00:00:00')) || (d.until && now >= new Date(d.until + 'T00:00:00'))) el.remove();
+  });
+</script>
 </body>
 </html>

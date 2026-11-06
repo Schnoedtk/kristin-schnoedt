@@ -117,6 +117,9 @@
     .inc-grid li.hl b { color: var(--paper); }
     .inc-grid li.hl .num { color: var(--sand); }
     .inc-grid li.hl span.d { color: #EADDE0; }
+    .inc-grid li.bonus { grid-column: 1 / -1; }
+    .offer-bonus { margin: 14px 0 0; padding: 12px 14px; border-radius: 10px; background: var(--bordeaux); color: var(--paper); font-size: 0.86rem; line-height: 1.5; }
+    .offer-bonus b { color: var(--sand); }
 
     /* ===== FÜR WEN ===== */
     .who { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(32px, 6vw, 72px); align-items: center; }
@@ -209,9 +212,11 @@
           <div class="price">59 €</div>
           <ul class="offer-facts">
             <li>Start am Montag, 30.11.2026</li>
+            <li data-from="2026-11-30">Einstieg bis 31.12.2026 möglich</li>
             <li>Einmalzahlung</li>
             <li>Dauerhafter Zugriff auf die Programminhalte</li>
           </ul>
+          <p class="offer-bonus" data-until="2026-11-30"><b>Bonus bei Buchung bis 29.11.:</b> Mini-Glow mit 5 Workouts (sonst 29 €) gratis dazu.</p>
           <a class="btn" href="https://start.kristin-schnoedt.de/42d86b6e-41448dc7-be912e49">Jetzt Platz sichern <span class="arr">→</span></a>
         </div>
       </div>
@@ -229,9 +234,10 @@
         <li class="rise hl"><span class="num">01</span><b>9 Face-Yoga-Einheiten in 21 Tagen</b><span class="d">Vom 30.11. bis zum 4. Advent. Angeleitete Übungen, die zu deinem Alltag passen.</span></li>
         <li class="rise"><span class="num">02</span><b>Kosmetik-Tipps für die Winterzeit</b><span class="d">Was deine Haut braucht, wenn Kälte und Heizungsluft ihr zusetzen.</span></li>
         <li class="rise"><span class="num">03</span><b>PURVIDUAL-Hautberatungstool als Bonus</b><span class="d">So findest du heraus, welche Pflege zu deiner Haut passt.</span></li>
-        <li class="rise"><span class="num">04</span><b>Live-Call am 16.12.2026 um 20 Uhr</b><span class="d">Wir üben zusammen und ich beantworte deine Fragen.</span></li>
+        <li class="rise"><span class="num">04</span><b data-until="2026-12-16">Live-Call am 16.12.2026 um 20 Uhr</b><b data-from="2026-12-16">Aufzeichnung vom Live-Call am 16.12.</b><span class="d"><span data-until="2026-12-16">Wir üben zusammen und ich beantworte deine Fragen.</span><span data-from="2026-11-30" data-until="2026-12-16"> Steigst du später ein, bekommst du die Aufzeichnung.</span><span data-from="2026-12-16">Gemeinsame Übungen und Antworten auf die Fragen der Teilnehmerinnen. Du schaust sie dir an, wann es dir passt.</span></span></li>
         <li class="rise"><span class="num">05</span><b>Extra-Beauty-Woche über Weihnachten</b><span class="d">Kleine Pflege-Rituale für die freien Tage.</span></li>
         <li class="rise"><span class="num">06</span><b>Silvester-Workout als Abschluss</b><span class="d">Damit du frisch und gut gelaunt ins neue Jahr gehst.</span></li>
+        <li class="rise hl bonus" data-until="2026-11-30"><span class="num">07</span><b>Bonus bei Buchung bis 29.11.: Mini-Glow</b><span class="d">5 zusätzliche Face-Yoga-Workouts, die du sonst für 29 € kaufst. Gratis dazu, wenn du vor dem Start buchst.</span></li>
       </ul>
       <p class="inc-note"><span>✦</span>&nbsp; Alle Programminhalte bleiben dauerhaft verfügbar. Du kannst sie auch nach dem Advent jederzeit wiederholen.</p>
     </div>
@@ -278,7 +284,8 @@
     <div class="inner rise">
       <h2>Schenk dir diesen Advent <em>Zeit für dich.</em></h2>
       <a class="btn" href="https://start.kristin-schnoedt.de/42d86b6e-41448dc7-be912e49">Jetzt Platz sichern <span class="arr">→</span></a>
-      <p class="small">Start am 30.11.2026 · Einmalzahlung · Dauerhafter Zugriff auf die Programminhalte</p>
+      <p class="small" data-until="2026-11-30">Start am 30.11.2026 · Bonus bei Buchung bis 29.11. · Einmalzahlung · Dauerhafter Zugriff auf die Programminhalte</p>
+      <p class="small" data-from="2026-11-30">Einstieg noch bis 31.12. möglich · Einmalzahlung · Dauerhafter Zugriff auf die Programminhalte</p>
     </div>
   </section>
 
@@ -295,5 +302,12 @@
   </ul>
 </footer>
 
+<script>
+  // Zeitabhängige Texte: data-from = sichtbar ab diesem Tag, data-until = ab diesem Tag ausgeblendet
+  document.querySelectorAll('[data-from],[data-until]').forEach(function (el) {
+    var now = new Date(), d = el.dataset;
+    if ((d.from && now < new Date(d.from + 'T00:00:00')) || (d.until && now >= new Date(d.until + 'T00:00:00'))) el.remove();
+  });
+</script>
 </body>
 </html>
