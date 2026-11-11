@@ -9,7 +9,7 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html, body { height: 100%; }
+  html { min-height: 100%; }
 
   body {
     font-family: 'Montserrat', sans-serif;
@@ -108,8 +108,77 @@
     margin-top: 12px;
   }
 
+  .talk h2, .card h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.15;
+    color: #3D2A2E;
+    margin-bottom: 10px;
+  }
+
+  .or {
+    display: flex; align-items: center; gap: 14px;
+    margin: 34px 0 22px;
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #8C8776;
+  }
+  .or::before, .or::after { content: ""; flex: 1; height: 1px; background: rgba(90, 86, 72, 0.25); }
+
+  .card {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(122, 74, 88, 0.15);
+    border-radius: 18px;
+    padding: 28px 26px 30px;
+  }
+  .kicker {
+    display: block;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #7A4A58;
+    margin-bottom: 8px;
+  }
+  .card ul {
+    list-style: none;
+    text-align: left;
+    max-width: 420px;
+    margin: 16px auto 18px;
+  }
+  .card li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+  }
+  .card li::before {
+    content: "✦";
+    position: absolute; left: 0; top: 0;
+    color: #7A4A58;
+    font-size: 0.8rem;
+    line-height: 1.9;
+  }
+  .price {
+    font-size: 0.95rem;
+    color: #3D2A2E;
+    margin-bottom: 6px;
+  }
+  .price b { font-size: 1.15rem; }
+  .bonus {
+    font-size: 0.88rem;
+    color: #7A4A58;
+    margin-bottom: 18px;
+  }
+  .cta-outline {
+    color: #7A4A58; background: transparent;
+    border: 2px solid #7A4A58;
+    box-shadow: none;
+    padding: 15px 36px;
+  }
+  .cta-outline:hover { background: #7A4A58; color: #EDEAE0; box-shadow: 0 10px 24px rgba(122,74,88,0.25); }
+
   @media (max-width: 480px) {
     h1 { font-size: 2rem; }
+    .card { padding: 24px 18px 26px; }
+    .cta { padding: 16px 30px; }
   }
 </style>
 </head>
@@ -134,12 +203,48 @@
     </noscript>
   </div>
 
-  <p class="bridge">Wenn du tiefer einsteigen willst: Der Glow-Code, mein 14-Tage-Programm für Frauen ab 40 und 50. Du startest sofort.</p>
-  <a class="cta" href="https://kristin-schnoedt.de/glow-code">Mehr zum Glow-Code</a>
-  <span class="cta-note">14 Tage, ein paar Minuten am Tag</span>
+  <section class="talk">
+    <h2>Lass uns persönlich sprechen</h2>
+    <p class="bridge">Wie im Video gesagt: Du kannst dir ein Gespräch mit mir buchen. 30 Minuten, in denen wir über deine Haut sprechen und schauen, was dir jetzt hilft.</p>
+    <a class="cta" href="https://cal.meetergo.com/kristin-schnodt/30-min-meeting-mit-kristin" target="_blank" rel="noopener">Gespräch buchen</a>
+    <span class="cta-note">30 Minuten · kostenlos</span>
+  </section>
+
+  <div class="or">oder</div>
+
+  <section class="card" data-until="2027-01-01">
+    <span class="kicker">Face Yoga Advent</span>
+    <h2>21 Tage entspannt und frisch durch den Dezember</h2>
+    <ul>
+      <li>9 Face-Yoga-Einheiten vom 30.11. bis zum 4. Advent</li>
+      <li data-until="2026-12-16">Live-Call am 16.12. um 20 Uhr</li>
+      <li data-from="2026-12-16">Aufzeichnung vom Live-Call am 16.12.</li>
+      <li>Kosmetik-Tipps für die Winterhaut</li>
+      <li>Extra-Beauty-Woche über Weihnachten und ein Silvester-Workout</li>
+      <li>Alle Inhalte bleiben dauerhaft für dich verfügbar</li>
+    </ul>
+    <p class="price" data-until="2026-11-30"><b>59 €</b> · Start am Montag, 30.11.</p>
+    <p class="price" data-from="2026-11-30"><b>59 €</b> · Einstieg bis 31.12. möglich</p>
+    <p class="bonus" data-until="2026-11-30"><b>Bonus bei Buchung bis 29.11.:</b> Mini-Glow mit 5 Workouts gratis dazu (sonst 29 €)</p>
+    <a class="cta cta-outline" href="face-yoga-advent.html">Mehr zum Advent-Programm</a>
+  </section>
+
+  <section class="card" data-from="2027-01-01">
+    <span class="kicker">Glow-Code</span>
+    <h2>Dein 14-Tage-Programm</h2>
+    <p class="bridge">Wenn du tiefer einsteigen willst: Der Glow-Code, mein 14-Tage-Programm für Frauen ab 40 und 50. Du startest sofort.</p>
+    <a class="cta cta-outline" href="https://kristin-schnoedt.de/glow-code">Mehr zum Glow-Code</a>
+    <span class="cta-note">14 Tage, ein paar Minuten am Tag</span>
+  </section>
 </div>
 
 <script>
+  // Zeitabhängige Texte: data-from = sichtbar ab diesem Tag, data-until = ab diesem Tag ausgeblendet
+  document.querySelectorAll('[data-from],[data-until]').forEach(function (el) {
+    var now = new Date(), d = el.dataset;
+    if ((d.from && now < new Date(d.from + 'T00:00:00')) || (d.until && now >= new Date(d.until + 'T00:00:00'))) el.remove();
+  });
+
   (function () {
     var poster = document.getElementById('videoPoster');
     var frame = document.getElementById('videoFrame');
