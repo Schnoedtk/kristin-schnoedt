@@ -1,0 +1,48 @@
+# robots.txt für kristin-schnoedt.de
+# Suchmaschinen und KI-Assistenten sind ausdrücklich willkommen.
+
+User-agent: *
+Allow: /
+Disallow: /Kopien/
+Disallow: /Test_index.html
+Disallow: /Test_index_mobil.html
+Disallow: /_vergleich.html
+Disallow: /goettinnenhaut%20Kopie.html
+Disallow: /online-kurse_alt.html
+Disallow: /blog-post-vorlage.html
+
+# KI-Crawler (Suche und Antworten in ChatGPT, Claude, Perplexity, Gemini, Copilot)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://kristin-schnoedt.de/sitemap.xml

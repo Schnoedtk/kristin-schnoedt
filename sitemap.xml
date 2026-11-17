@@ -2,98 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kristin-schnoedt.de/</loc>
+    <lastmod>2026-11-17</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://kristin-schnoedt.de/kristin-schnoedt.html</loc>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kristin-schnoedt.de/behandlungen.html</loc>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kristin-schnoedt.de/online-kurse.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kristin-schnoedt.de/hallo-ki.html</loc>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kristin-schnoedt.de/glow-code.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kristin-schnoedt.de/cupping-kurs.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kristin-schnoedt.de/cupping-gua-sha-taping.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kristin-schnoedt.de/goettinnenhaut.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kristin-schnoedt.de/miniglow.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kristin-schnoedt.de/face-yoga-advent</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kristin-schnoedt.de/gratis-video.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kristin-schnoedt.de/cupping-video.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kristin-schnoedt.de/schulungen.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kristin-schnoedt.de/purvidual-partner.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kristin-schnoedt.de/hautcheck.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kristin-schnoedt.de/beauty-news.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kristin-schnoedt.de/blog-botox-vs-face-yoga.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kristin-schnoedt.de/blog-face-yoga-5-uebungen.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kristin-schnoedt.de/blog-fruehjahrskurse-2026.html</loc>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kristin-schnoedt.de/blog-haut-ab-40.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kristin-schnoedt.de/blog-koreanisches-wimpernlifting.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kristin-schnoedt.de/blog-gesichtscupping.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kristin-schnoedt.de/blog-purvidual.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kristin-schnoedt.de/blog-weniger-pflege.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kristin-schnoedt.de/hallo-ki.html</loc>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kristin-schnoedt.de/impressum.html</loc>
-    <priority>0.3</priority>
+    <loc>https://kristin-schnoedt.de/blog-botox-vs-face-yoga.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kristin-schnoedt.de/datenschutz.html</loc>
-    <priority>0.3</priority>
+    <loc>https://kristin-schnoedt.de/blog-face-yoga-5-uebungen.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kristin-schnoedt.de/agb.html</loc>
-    <priority>0.3</priority>
+    <loc>https://kristin-schnoedt.de/blog-gesichtscupping.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kristin-schnoedt.de/widerruf.html</loc>
-    <priority>0.3</priority>
+    <loc>https://kristin-schnoedt.de/blog-bio-microneedling.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kristin-schnoedt.de/Online-Shop-AGB.html</loc>
-    <priority>0.3</priority>
+    <loc>https://kristin-schnoedt.de/blog-koreanisches-wimpernlifting.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kristin-schnoedt.de/Online-Shop-Datenschutz.html</loc>
-    <priority>0.3</priority>
+    <loc>https://kristin-schnoedt.de/blog-purvidual.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kristin-schnoedt.de/Widerrufsbelehrung-fuer_alle_Praesenzen_ausser_Amazon_eBay_Etsy_und_Kaufland.html</loc>
-    <priority>0.3</priority>
+    <loc>https://kristin-schnoedt.de/blog-weniger-pflege.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kristin-schnoedt.de/blog-fruehjahrskurse-2026.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
